@@ -1,0 +1,114 @@
+/* OWLT — shared design system.
+   Layout: one fixed 48px bar; below it every section owns its own design language.
+   Colour is taken from the sky itself, not from a swatch tool:
+     --ha        hydrogen-alpha emission, 656.28 nm
+     --o3        doubly ionised oxygen [O III], 500.7 nm   (interactive states only)
+     --sodium    sodium D line, 589.0 nm                    (warnings, lamps)
+     --bstar     a B-class star, ~15 000 K blackbody        (links, data highlights)
+     --starlight a G-class star, ~5 800 K blackbody         (this is "white")
+   The ground is warm because the sky is: most stars are K and M dwarfs.
+   One committed dark look on purpose: this is a night sky. */
+:root{
+  color-scheme:dark;
+  --void:#0B0A0C; --dust:#15110E; --dust2:#1F1914; --dust3:#2B231C;
+  --starlight:#FFEBC4; --text:#E6D9C1; --mute:#B3A696; --faint:#8C7F72;
+  --ha:#E8442C; --o3:#4FD8C4; --sodium:#FFB13B; --bstar:#8FA5D9;
+  --hair:rgba(255,235,196,.16); --hair2:rgba(255,235,196,.08);
+  --f-display:"OWLT Display","Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-text:"OWLT Text","STIX Two Text","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --f-data:"OWLT Mono","IBM Plex Mono",ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  --nav-h:48px;
+  --gut-l:max(16px,env(safe-area-inset-left,0px)); --gut-r:max(16px,env(safe-area-inset-right,0px));
+  --ease:cubic-bezier(.2,.7,.3,1);
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);
+}
+@font-face{font-family:"OWLT Display";src:url(../fonts/archivo-var.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"OWLT Text";src:url(../fonts/stix-var.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"OWLT Text";src:url(../fonts/stix-var-italic.woff2) format("woff2");font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:"OWLT Mono";src:url(../fonts/plex-mono-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"OWLT Mono";src:url(../fonts/plex-mono-500.woff2) format("woff2");font-weight:500;font-display:swap}
+
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100%;background:var(--void);color:var(--text);font-family:var(--f-text);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4{font-family:var(--f-display);font-stretch:112%;font-weight:700;line-height:1.1;margin:0;color:var(--starlight);text-wrap:balance}
+p{margin:0}
+a{color:var(--bstar);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{color:var(--o3)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:1px solid var(--o3);outline-offset:3px}
+img{max-width:100%}
+[hidden]{display:none!important}
+.num{font-family:var(--f-data);font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1,"zero" 1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* ── navigation bar ── */
+#owlt-nav{position:fixed;inset:0 0 auto 0;height:calc(var(--nav-h) + env(safe-area-inset-top,0px));z-index:200;
+  padding:env(safe-area-inset-top,0px) var(--gut-r) 0 var(--gut-l);display:flex;align-items:stretch;gap:4px;
+  background:var(--void);border-bottom:1px solid var(--hair)}
+#owlt-nav .mark{display:flex;align-items:center;padding-right:14px;margin-right:6px;text-decoration:none;
+  font-family:var(--f-display);font-stretch:125%;font-weight:800;font-size:15px;letter-spacing:.14em;color:var(--starlight);flex:none}
+#owlt-nav .mark::after{content:"";width:6px;height:6px;margin-left:10px;background:var(--ha);border-radius:50%}
+#owlt-nav nav{display:flex;align-items:stretch;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+#owlt-nav nav::-webkit-scrollbar{display:none}
+#owlt-nav nav a{position:relative;display:flex;align-items:center;padding:0 11px;white-space:nowrap;text-decoration:none;
+  font-family:var(--f-display);font-stretch:100%;font-weight:500;font-size:13.5px;color:var(--mute);transition:color .18s}
+#owlt-nav nav a:hover{color:var(--starlight)}
+#owlt-nav nav a[aria-current=page]{color:var(--starlight)}
+#owlt-nav nav a[aria-current=page]::after{content:"";position:absolute;left:11px;right:11px;bottom:-1px;height:2px;background:var(--ha)}
+#owlt-nav .tools{display:flex;align-items:center;gap:10px;flex:none;padding-left:8px}
+#owlt-nav .clock{font-family:var(--f-data);font-size:11.5px;color:var(--mute);font-variant-numeric:tabular-nums}
+.owlt-find{display:flex;align-items:center;gap:8px;height:30px;padding:0 10px;background:var(--dust);border:1px solid var(--hair);
+  border-radius:2px;color:var(--mute);cursor:pointer;font-family:var(--f-display);font-size:13px}
+.owlt-find:hover{border-color:var(--o3);color:var(--o3)}
+.owlt-find kbd{font-family:var(--f-data);font-size:10.5px;padding:1px 5px;border:1px solid var(--hair);border-radius:2px;color:var(--mute)}
+body.has-nav{padding-top:var(--nav-h)}
+@media (max-width:820px){#owlt-nav .clock{display:none}.owlt-find span{display:none}}
+
+/* ── search palette ── */
+#owlt-pal{position:fixed;inset:0;z-index:400;display:none;justify-content:center;align-items:flex-start;
+  padding:calc(var(--nav-h) + env(safe-area-inset-top,0px) + 5vh) var(--gut-r) 0 var(--gut-l);background:rgba(6,5,7,.84)}
+#owlt-pal.on{display:flex}
+#owlt-pal .box{width:min(640px,100%);background:var(--dust);border:1px solid var(--hair);display:flex;flex-direction:column;max-height:70vh}
+#owlt-pal input{width:100%;padding:15px 16px;background:transparent;border:0;border-bottom:1px solid var(--hair);outline:0;
+  color:var(--starlight);font-family:var(--f-display);font-size:17px}
+#owlt-pal input::placeholder{color:var(--faint)}
+#owlt-pal .list{overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent}
+#owlt-pal .grp{padding:9px 16px 4px;font-family:var(--f-display);font-size:12px;font-weight:600;color:var(--faint)}
+#owlt-pal a.it{display:flex;align-items:baseline;gap:12px;padding:8px 16px;text-decoration:none;color:var(--text);border-left:2px solid transparent}
+#owlt-pal a.it .n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--f-display);font-size:14.5px}
+#owlt-pal a.it .k{flex:none;font-family:var(--f-display);font-size:11.5px;color:var(--ha)}
+#owlt-pal a.it .d{flex:none;font-family:var(--f-data);font-size:11px;color:var(--mute);max-width:40%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#owlt-pal a.it.sel{background:var(--dust2);border-left-color:var(--o3)}
+#owlt-pal a.it.sel .n{color:var(--o3)}
+#owlt-pal .foot{display:flex;gap:16px;flex-wrap:wrap;padding:9px 16px;border-top:1px solid var(--hair);font-family:var(--f-data);font-size:10.5px;color:var(--faint)}
+
+/* ── shared pieces ── */
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 13px;background:transparent;border:1px solid var(--hair);
+  border-radius:2px;color:var(--text);cursor:pointer;font-family:var(--f-display);font-size:13px;font-weight:500;text-decoration:none;
+  white-space:nowrap;transition:border-color .18s,color .18s,background .18s}
+.btn:hover{border-color:var(--o3);color:var(--o3)}
+.btn[aria-pressed=true],.btn.on{border-color:var(--o3);color:var(--o3);background:rgba(79,216,196,.07)}
+.btn:disabled{opacity:.45;cursor:default;border-color:var(--hair);color:var(--mute)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 9px;border:1px solid var(--hair);border-radius:999px;
+  font-family:var(--f-display);font-size:12px;color:var(--mute);text-decoration:none;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+a.chip:hover{border-color:var(--o3);color:var(--o3)}
+.chip.unseen{border-style:dashed}
+.chip .dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex:none}
+.stamp{font-family:var(--f-data);font-size:10.5px;color:var(--faint);font-variant-numeric:tabular-nums}
+.stamp b{font-weight:400;color:var(--mute)}
+.stamp.stale b{color:var(--sodium)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 18px;margin:0}
+.kv dt{font-family:var(--f-display);color:var(--mute);font-size:12.5px}
+.kv dd{margin:0;font-family:var(--f-data);font-variant-numeric:tabular-nums;color:var(--starlight);font-size:12.5px;text-align:right;min-width:0;overflow-wrap:anywhere}
+.threads{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.threads .lead{font-family:var(--f-display);font-size:12.5px;color:var(--faint);margin-right:4px}
+.notice{padding:10px 14px;border:1px solid var(--hair);border-left:2px solid var(--sodium);background:var(--dust);
+  font-family:var(--f-display);font-size:13px;color:var(--text)}
+.eyebrow{font-family:var(--f-display);font-stretch:112%;font-weight:600;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ha)}
+#owlt-foot{margin-top:72px;border-top:1px solid var(--hair);padding-block:22px 34px;
+  font-family:var(--f-display);font-size:12.5px;color:var(--faint);line-height:1.7}
+#owlt-foot a{color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
