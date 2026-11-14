@@ -79,7 +79,7 @@ GEN = dict(x.split(':') for x in ('And:Andromedae,Ant:Antliae,Aps:Apodis,Aqr:Aqu
   'UMi:Ursae Minoris,Vel:Velorum,Vir:Virginis,Vol:Volantis,Vul:Vulpeculae').split(','))
 def bayer_full(b, con):
     part = b.split('-')
-    return f"{GFULL.get(part[0], part[0])}{'' if len(part) == 1 else ' ' + part[1]} {GEN.get(con, con)}
+    return GFULL.get(part[0], part[0]) + ('' if len(part) == 1 else ' ' + part[1]) + ' ' + GEN.get(con, con)
 def bayer_label(b, con):
     part = b.split('-')
     return f"{GREEK.get(part[0], part[0])}{'' if len(part) == 1 else part[1].translate(SUP)} {con}"
