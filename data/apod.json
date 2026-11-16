@@ -1,7 +1,19 @@
 {
- "fetched": "2026-11-16T05:00:00.000Z",
- "source": "NASA Astronomy Picture of the Day",
+ "fetched": "2026-11-16T06:23:16.636Z",
+ "source": "NASA Astronomy Picture of the Day (science.nasa.gov/apod)",
  "days": [
+  {
+   "date": "2026-11-16",
+   "title": "NGC 7129: Star Formation with Jets from Webb",
+   "text": "How do stars form? To help answer this question, NASA used the James Webb Space Telescope to take the featured detailed image of the star-forming region NGC 7129 in infrared light. Star formation progresses when gravity pulls together massive amounts of gas, but soon things can get complicated when previously formed stars emit powerful jets and winds -- and some then explode. Opaque dust can form in the cool atmospheres of stars and, when dispersed, can obstruct visible-light images. Many stars can be seen to be forming in the featured image, with the young stars on the left, in the gold-colored gas, typically being more mature than the young stars on the right -- in the red region. Jets and wind s likely cause the filamentary nature of the red-colored gas. Studying stars at different stages of development bolsters understanding about what physical processes are most important and when. Tomorrow's picture: sky duel",
+   "media": "image",
+   "url": "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2026/10/weic2620a.jpg?w=1280&h=1194&fit=clip&crop=faces%2Cfocalpoint",
+   "hd": "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2026/10/weic2620a.jpg",
+   "thumb": null,
+   "credit": null,
+   "by": "NASA, ESA, CSA, STScI, JWST; Processing: A. Pagan (STScI)",
+   "page": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb/"
+  },
   {
    "date": "2026-11-15",
    "title": "Leonid Meteors Through Orion",
