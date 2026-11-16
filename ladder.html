@@ -19,6 +19,8 @@ body{background:#000}
   font-family:var(--f-display);font-size:11.5px;font-weight:500;letter-spacing:.02em;color:var(--starlight);text-shadow:0 0 2px #000,0 0 5px #000,0 0 11px #000,0 0 18px rgba(0,0,0,.85);
   will-change:transform;opacity:.9}
 .lb::before{content:"";position:absolute;left:0;top:50%;width:5px;height:1px;background:currentColor;opacity:.6}
+.lb.l{padding:2px 9px 2px 4px;text-align:right}
+.lb.l::before{left:auto;right:0}
 .lb:hover,.lb:focus-visible{color:var(--o3);opacity:1}
 .lb.k-galaxy,.lb.k-satellite,.lb.k-cluster,.lb.k-supercluster,.lb.k-wall,.lb.k-void,.lb.k-structure{color:var(--bstar)}
 .lb.k-nebula,.lb.k-remnant{color:#F29A86}
@@ -62,11 +64,11 @@ body{background:#000}
 
 /* controls */
 #ctl{position:absolute;right:var(--gut-r);bottom:16px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:6;max-width:calc(100% - 32px)}
-#ctl .btn{background:#000}
+#ctl .btn{background:rgba(0,0,0,.92)}
 
 /* the focused object's card */
 #panel{position:absolute;top:12px;right:var(--gut-r);width:344px;max-height:calc(100% - 80px);overflow-y:auto;z-index:6;
-  background:var(--dust);border:1px solid var(--hair);padding:16px 18px 18px;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent}
+  background:rgba(21,17,14,.965);border:1px solid var(--hair);padding:16px 18px 18px;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent}
 #panel .kind{font-family:var(--f-display);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ha)}
 #panel h1{font-size:26px;margin-top:4px;line-height:1.05}
 #panel .alias{font-family:var(--f-display);font-size:12px;color:var(--faint);margin-top:4px}
@@ -89,7 +91,7 @@ body{background:#000}
 #panel .x:hover{color:var(--o3)}
 
 /* tour */
-#tour{position:absolute;left:50%;bottom:74px;transform:translateX(-50%);width:min(620px,calc(100% - 32px));z-index:7;background:#000;border:1px solid var(--hair);
+#tour{position:absolute;left:50%;bottom:74px;transform:translateX(-50%);width:min(620px,calc(100% - 32px));z-index:7;background:rgba(0,0,0,.94);border:1px solid var(--hair);
   padding:14px 18px;display:flex;gap:14px;align-items:flex-start}
 #tour p{flex:1;font-size:16.5px;line-height:1.5;color:var(--starlight)}
 #tour .n{font-family:var(--f-data);font-size:11px;color:var(--ha);margin-bottom:6px}
@@ -106,13 +108,18 @@ body{background:#000}
 
 @media (max-width:900px){
   #rail{display:none}
-  #crumbs{right:var(--gut-r);font-size:11.5px}
-  #panel{top:auto;bottom:62px;left:var(--gut-l);right:var(--gut-r);width:auto;max-height:46%;padding:12px 14px}
-  #panel.min{max-height:64px;overflow:hidden}
+  #crumbs{right:var(--gut-r);font-size:11.5px;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;pointer-events:auto;scrollbar-width:none}
+  #crumbs::-webkit-scrollbar{display:none}
+  #panel.min h1{cursor:pointer}
+  #panel.min .x{transform:rotate(90deg)}
+  #panel{top:auto;bottom:60px;left:var(--gut-l);right:var(--gut-r);width:auto;max-height:46%;padding:12px 14px}
+  #panel.min{max-height:74px;overflow:hidden}
   #panel h1{font-size:20px}
   #readout{bottom:auto;top:44px}
   #readout .hint,#readout .span{display:none}
-  #ctl{left:var(--gut-l);justify-content:flex-start}
+  #ctl{left:var(--gut-l);right:var(--gut-r);justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;bottom:12px}
+  #ctl::-webkit-scrollbar{display:none}
+  #ctl .btn{flex:none;min-height:34px;padding:0 11px;font-size:13px}
   #tour{bottom:auto;top:76px}
 }
 </style>

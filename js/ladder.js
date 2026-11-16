@@ -129,7 +129,7 @@
     if (first && first !== earth) setTimeout(() => flyTo(first), 600);
     else if (target && !first) showMissing(target);
     $('#boot').classList.add('off');
-    if (/[?&]debug\b/.test(location.search)) window.__ladder = { S, L, F, B, R, camera, post, flyTo };   /* for the test suite */
+    if (/[?&]debug\b/.test(location.search)) window.__ladder = { S, L, F, B, R, camera, post, flyTo, cands: () => cands, shown: () => [...shown.keys()] };   /* for the test suite */
     requestAnimationFrame(frame);
   }
 
@@ -221,9 +221,9 @@
     helio.quaternion.setFromUnitVectors(new T.Vector3(1, 0, 0), new T.Vector3().fromArray(nose));
     helio.scale.set(150 * AU, 122 * AU, 122 * AU); helio.userData.offset = mul(nose, -28 * AU); helio.renderOrder = -5; L.solar.add(helio);
     /* where the probes are, and the straight run behind each one */
-    for (const id in A.PROBES) {
-      const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(new Float32Array(6), 3));
-      const ln = new T.Line(g, new T.LineBasicMaterial({ color: '#FFB13B', transparent: true, opacity: 0, depthWrite: false, blending: T.AdditiveBlending }));
+    for (const id in A.PROBES) {                     /* fading in from nothing toward the craft, so it reads as a path, not a stray line */
+      const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(new Float32Array(6), 3)); g.setAttribute('color', new T.BufferAttribute(new Float32Array([0, 0, 0, 1, 0.69, 0.23]), 3));
+      const ln = new T.Line(g, new T.LineBasicMaterial({ vertexColors: true, transparent: true, opacity: 0, depthWrite: false, blending: T.AdditiveBlending }));
       ln.userData.probe = id; L.orbits.add(ln);
     }
   }
@@ -686,7 +686,7 @@
       const k = e.key;
       if (k === '+' || k === '=') zoomBy(-0.25); else if (k === '-' || k === '_') zoomBy(0.25);
       else if (k === 'ArrowLeft') S.vYaw += 0.06; else if (k === 'ArrowRight') S.vYaw -= 0.06; else if (k === 'ArrowUp') S.vPitch += 0.05; else if (k === 'ArrowDown') S.vPitch -= 0.05;
-      else if (k === 'Escape') { if (S.tour) endTour(); else panel.classList.toggle('min'); }
+      else if (k === 'Escape') { if (S.tour) endTour(); else foldCard(); }
       else if (k === 'Home') flyTo(R.find('earth'));
       else return;
       e.preventDefault(); S.idle = 0;
@@ -721,11 +721,17 @@
 
   /* ── the frame ── */
   let last = performance.now(), hudT = 0, slow = 0, quality = Math.min(devicePixelRatio || 1, 1.75);
+  /* keep the focus in the open part of the screen: left of the card on wide screens, above it on phones */
+  function viewOffset() {
+    const narrow = W <= 900, ph = panel.hidden ? 0 : narrow ? panel.offsetHeight + 60 : panel.offsetWidth + 16;
+    if (ph > 0) camera.setViewOffset(W, H, narrow ? 0 : ph * 0.5, narrow ? ph * 0.5 : 0, W, H); else camera.clearViewOffset();
+    camera.updateProjectionMatrix();
+  }
   function resize() {
     const r = stage.getBoundingClientRect(); W = Math.max(1, r.width); H = Math.max(1, r.height); pr = quality;
     renderer.setPixelRatio(pr); renderer.setSize(W, H, false);
     camera.aspect = W / H; camera.fov = 2 * Math.atan(VIEW / 2 / CAM_D / Math.min(1, W / H)) / D2R; camera.updateProjectionMatrix();
-    post.resize(Math.floor(W * pr), Math.floor(H * pr)); pxPerUnit = H / (2 * Math.tan(camera.fov * D2R / 2));
+    post.resize(Math.floor(W * pr), Math.floor(H * pr)); pxPerUnit = H / (2 * Math.tan(camera.fov * D2R / 2)); viewOffset();
     const k = S.k = Math.min(2, Math.max(1, H / 700)) * pr;
     if (F.pts) { const u = F.pts.material.uniforms; if (u.uSize) u.uSize.value = k * 1.1; if (u.uPx) u.uPx.value = pxPerUnit * pr; }
     L.sky.material.uniforms.uSize.value = k * 0.95; L.local.material.uniforms.uSize.value = k * 0.95; exoMat.uniforms.uSize.value = k;
@@ -938,13 +944,15 @@
     for (const c of cands) {
       if (n >= (W < 700 ? 22 : 46)) break;
       if (next.has(c.key)) continue;
-      const w = c.text.length * 6.6 + 14, h = 16, x = c.sx, y = c.sy - h / 2;
-      if (y < 2 || y + h > H - 2 || x < 2 || x + w > W - 2) continue;
-      if (placed.some(p => x < p[0] + p[2] && x + w > p[0] && y < p[1] + p[3] && y + h > p[1])) continue;
+      const w = c.text.length * 6.6 + 14, h = 16, y = c.sy - h / 2, hit = x => placed.some(p => x < p[0] + p[2] && x + w > p[0] && y < p[1] + p[3] && y + h > p[1]);
+      if (y < 2 || y + h > H - 2) continue;
+      let x = c.sx, flip = false;                                         /* to the right of the point, or to its left when that is where the room is */
+      if (x + w > W - 2 || hit(x)) { x = c.sx - w; flip = true; }
+      if (x < 2 || x + w > W - 2 || hit(x)) continue;
       placed.push([x, y, w, h]); let b = pool[n];
       if (!b) { b = el('button', { class: 'lb', type: 'button', tabindex: '-1' }); b.addEventListener('click', ev => { ev.stopPropagation(); const s = b.dataset.slug; if (s) { const e = R.find(s); if (e && e !== S.focus) flyTo(e); } }); labelsEl.append(b); pool[n] = b; }
       if (b.textContent !== c.text) b.textContent = c.text;
-      b.className = 'lb ' + c.cls; b.dataset.slug = c.e ? c.e.slug : ''; b.hidden = false; b.style.transform = `translate(${Math.round(x)}px,${Math.round(y)}px)`;
+      b.className = 'lb ' + c.cls + (flip ? ' l' : ''); b.dataset.slug = c.e ? c.e.slug : ''; b.hidden = false; b.style.transform = `translate(${Math.round(x)}px,${Math.round(y)}px)`; if (flip) b.style.width = Math.round(w) + 'px'; else b.style.width = '';
       next.set(c.key, 1); n++;
     }
     for (let i = n; i < pool.length; i++) pool[i].hidden = true;
@@ -991,6 +999,7 @@
     if (ch[ch.length - 1][1] !== e.name) { host.append(el('span', { class: 'sep', text: '›' })); host.append(el('span', { class: 'now', text: e.name })); }
   }
   let panelLive = null;
+  function foldCard() { const min = panel.classList.toggle('min'); if (W <= 900) S.cardOpen = !min; requestAnimationFrame(viewOffset); }
   function showMissing(s) { panel.hidden = false; O.clear(panel).append(el('div', { class: 'kind', text: 'Not found' }), el('h1', { text: decodeURIComponent(s) }), el('p', { class: 'note', text: 'Nothing on the Ladder goes by that name. Press / and search, or open the Atlas.' })); }
   /* what each rung shows, and which parts of it are measured */
   const RUNG_NOTES = {
@@ -1027,8 +1036,9 @@
     return null;
   }
   function renderPanel(e, rung) {
-    panel.hidden = false; panel.classList.remove('min'); O.clear(panel); panelLive = null;
-    panel.append(el('button', { class: 'x', type: 'button', 'aria-label': 'Fold the card', onclick: () => panel.classList.toggle('min'), text: '–' }));
+    panel.hidden = false; panel.classList.toggle('min', W <= 900 && !S.cardOpen); O.clear(panel); panelLive = null;
+    panel.append(el('button', { class: 'x', type: 'button', 'aria-label': 'Fold or open the card', onclick: foldCard, text: '–' }));
+    requestAnimationFrame(viewOffset);
     if (rung) {                                         /* a scale: what you are looking at, and what is measured */
       const span = rung.span;
       const L_ = rungLight(rung.slug) || [span / C, 'across this view'];
@@ -1041,7 +1051,7 @@
       panel.append(el('div', { class: 'acts' }, step(i - 1, '↓'), step(i + 1, '↑')));
       return;
     }
-    panel.append(el('div', { class: 'kind', text: e.kind === 'cluster' && e.ly > 1e6 ? 'Galaxy cluster' : KIND[e.kind] || e.kind }), el('h1', { text: e.name }));
+    panel.append(el('div', { class: 'kind', text: e.kind === 'cluster' && e.ly > 1e6 ? 'Galaxy cluster' : KIND[e.kind] || e.kind }), el('h1', { text: e.name, onclick: () => { if (panel.classList.contains('min')) foldCard(); } }));
     const al = (e.alias || []).filter(a => a && a !== e.name).slice(0, 4); if (e.des && !al.includes(e.des)) al.unshift(e.des);
     if (al.length) panel.append(el('div', { class: 'alias', text: al.join(' · ') }));
     const lt = el('div', { class: 'lt' }), big = el('div', { class: 'big' }), lab = el('div', { class: 'lab' }); lt.append(big, lab); panel.append(lt);

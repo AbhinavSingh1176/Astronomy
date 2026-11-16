@@ -192,8 +192,9 @@
         O.el('span', { class: 'n', text: it[0] }), it[3] ? O.el('span', { class: 'd', text: it[3] }) : null, O.el('span', { class: 'k', text: KIND[it[1]] || it[1] }))));
     }
     function mark() { const all = O.$$('.it', list); all.forEach((n, i) => n.classList.toggle('sel', i === sel)); if (all[sel]) all[sel].scrollIntoView({ block: 'nearest' }); }
-    function open() { root.classList.add('on'); input.value = ''; run(''); input.focus(); ensure().then(() => { if (root.classList.contains('on')) run(input.value); }); }
-    function close() { root.classList.remove('on'); }
+    let back = null;
+    function open() { back = document.activeElement; root.classList.add('on'); input.value = ''; run(''); input.focus(); ensure().then(() => { if (root.classList.contains('on')) run(input.value); }); }
+    function close() { root.classList.remove('on'); input.blur(); if (back && back !== input && document.contains(back) && back.focus) back.focus({ preventScroll: true }); back = null; }
     function go() { const it = items[sel]; if (!it) return; close(); location.href = it[2]; }
     function init() {
       if (root) return;
