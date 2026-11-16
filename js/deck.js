@@ -101,7 +101,7 @@
         out.data[i] = 30 * L + 120 * cst; out.data[i + 1] = 70 * L + 255 * cst; out.data[i + 2] = 45 * L + 170 * cst; out.data[i + 3] = 255; }
       x.putImageData(out, 0, 0); land = t; draw();
     };
-    img.src = 'data/catalog/earth.png';
+    img.src = 'data/catalog/earth.webp';
   }
   const X = lon => ((lon + 180) / 360 * CW + CW) % CW, Y = lat => (90 - lat) / 180 * CH;
   function draw() {

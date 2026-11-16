@@ -336,9 +336,10 @@ core = np.asarray(big.filter(ImageFilter.GaussianBlur(0.45)), np.float32)
 halo = np.asarray(big.filter(ImageFilter.GaussianBlur(3.2)), np.float32)
 lm = np.asarray(mask.filter(ImageFilter.GaussianBlur(1.2)), np.float32)/255.0
 lights = (np.clip(core + halo*0.42, 0, 255)*np.clip(lm*1.25, 0, 1)).astype(np.uint8)
-p = os.path.join(OUT, 'earth.png')
-Image.merge('RGB', (mask, coast, Image.fromarray(lights))).save(p, 'PNG', optimize=True, compress_level=9)
-print(f"  {'earth.png':<24}{os.path.getsize(p)/1024:8.1f} KB   (R land · G coastline · B city lights)")
+# lossless WebP: the three channels are data, so nothing may blur or mix them; a third smaller than the same pixels as PNG
+p = os.path.join(OUT, 'earth.webp')
+Image.merge('RGB', (mask, coast, Image.fromarray(lights))).save(p, 'WEBP', lossless=True, quality=100, method=6)
+print(f"  {'earth.webp':<24}{os.path.getsize(p)/1024:8.1f} KB   (R land · G coastline · B city lights)")
 dump('cities.json', [[round(c[0], 2), round(c[1], 2), c[2], c[3], c[4]] for c in cities[:600]])
 print(f"  cities lit {len(cities)}")
 

@@ -99,16 +99,22 @@ function hourly(rows, tk, vk, agg) {
   const by = {}; for (const r of rows) { const t = swTime(r[tk]), v = num(r[vk]); if (!t || v == null) continue; const h = t.slice(0, 13); (by[h] = by[h] || []).push(v); }
   return Object.keys(by).sort().slice(-24).map(h => [h + ':00:00Z', +(agg === 'max' ? Math.max(...by[h]) : by[h].reduce((a, b) => a + b, 0) / by[h].length).toPrecision(4)]);
 }
+/* the solar wind upstream at L1. NOAA retired products/solar-wind/plasma-1-day and mag-1-day in 2026; the real-time files carry a day of
+   one-minute readings from every spacecraft out there (SOLAR-1, ACE, IMAP), with the one NOAA is relying on marked active.
+   If those fail, the one-line summaries still give the latest value. */
+const activeRows = j => (Array.isArray(j) ? j : []).filter(r => r && r.active !== false && r.time_tag).sort((a, b) => String(a.time_tag).localeCompare(String(b.time_tag)));
 async function spaceweather() {
   const B = 'https://services.swpc.noaa.gov/';
-  const [kp, plasma, mag, xr, sc] = await Promise.allSettled([get(B + 'products/noaa-planetary-k-index.json'), get(B + 'products/solar-wind/plasma-1-day.json'),
-    get(B + 'products/solar-wind/mag-1-day.json'), get(B + 'json/goes/primary/xrays-1-day.json'), get(B + 'products/noaa-scales.json')]);
+  const [kp, plasma, mag, xr, sc] = await Promise.allSettled([get(B + 'products/noaa-planetary-k-index.json'), get(B + 'json/rtsw/rtsw_wind_1m.json'),
+    get(B + 'json/rtsw/rtsw_mag_1m.json'), get(B + 'json/goes/primary/xrays-1-day.json'), get(B + 'products/noaa-scales.json')]);
   const out = { fetched: now(), source: 'NOAA Space Weather Prediction Center' }; let ok = 0;
   if (kp.status === 'fulfilled') { const rows = table(kp.value).map(r => [swTime(r.time_tag), num(r.Kp ?? r.kp ?? r.kp_index)]).filter(r => r[0] && r[1] != null).slice(-24); if (rows.length) { out.kp = { now: rows[rows.length - 1][1], at: rows[rows.length - 1][0], series: rows }; ok++; } }
-  if (plasma.status === 'fulfilled') { const rows = table(plasma.value); const last = [...rows].reverse().find(r => num(r.speed) != null);
-    if (last) { out.wind = { speed: num(last.speed), density: num(last.density), temp: num(last.temperature), at: swTime(last.time_tag), series: hourly(rows, 'time_tag', 'speed') }; ok++; } }
-  if (mag.status === 'fulfilled') { const rows = table(mag.value); const last = [...rows].reverse().find(r => num(r.bz_gsm) != null);
+  if (plasma.status === 'fulfilled') { const rows = activeRows(plasma.value); const last = [...rows].reverse().find(r => num(r.proton_speed) != null);
+    if (last) { out.wind = { speed: num(last.proton_speed), density: num(last.proton_density), temp: num(last.proton_temperature), at: swTime(last.time_tag), by: clean(last.source, 20) || null, series: hourly(rows, 'time_tag', 'proton_speed') }; ok++; } }
+  if (!out.wind) try { const s = table(await get(B + 'products/summary/solar-wind-speed.json')).pop(); if (s && num(s.proton_speed) != null) { out.wind = { speed: num(s.proton_speed), density: null, temp: null, at: swTime(s.time_tag), series: [] }; ok++; } } catch (e) {}
+  if (mag.status === 'fulfilled') { const rows = activeRows(mag.value); const last = [...rows].reverse().find(r => num(r.bz_gsm) != null);
     if (last) { out.mag = { bz: num(last.bz_gsm), bt: num(last.bt), at: swTime(last.time_tag), series: hourly(rows, 'time_tag', 'bz_gsm') }; ok++; } }
+  if (!out.mag) try { const s = table(await get(B + 'products/summary/solar-wind-mag-field.json')).pop(); if (s && num(s.bz_gsm) != null) { out.mag = { bz: num(s.bz_gsm), bt: num(s.bt), at: swTime(s.time_tag), series: [] }; ok++; } } catch (e) {}
   if (xr.status === 'fulfilled') { const rows = (Array.isArray(xr.value) ? xr.value : []).filter(r => r.energy === '0.1-0.8nm' && num(r.flux) != null);
     if (rows.length) { const last = rows[rows.length - 1], mx = rows.reduce((a, b) => num(b.flux) > num(a.flux) ? b : a);
       out.xray = { flux: num(last.flux), cls: xclass(num(last.flux)), at: swTime(last.time_tag), max24: { flux: num(mx.flux), cls: xclass(num(mx.flux)), at: swTime(mx.time_tag) }, series: hourly(rows, 'time_tag', 'flux', 'max') }; ok++; } }
@@ -126,10 +132,18 @@ function tles(txt) {
   return out;
 }
 async function tle() {
-  const [st, hst] = await Promise.allSettled([get('https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=tle', { type: 'text' }), get('https://celestrak.org/NORAD/elements/gp.php?CATNR=20580&FORMAT=tle', { type: 'text' })]);
-  const sats = (st.status === 'fulfilled' ? tles(st.value) : []).concat(hst.status === 'fulfilled' ? tles(hst.value) : []);
-  if (!sats.some(s => s.norad === 25544)) throw new Error('no ISS elements in the response');
-  return { fetched: now(), source: 'CelesTrak', sats: sats.slice(0, 40) };
+  const CT = 'https://celestrak.org/NORAD/elements/gp.php?', why = [];
+  const read = (u, name) => get(u, { type: 'text' }).then(t => { const s = tles(t); if (!s.length) why.push(name + ': ' + String(t).trim().slice(0, 80)); return s; }).catch(e => { why.push(name + ': ' + e.message); return []; });
+  const [stations, hubble] = await Promise.all([read(CT + 'GROUP=stations&FORMAT=tle', 'stations'), read(CT + 'CATNR=20580&FORMAT=tle', 'Hubble')]);
+  let sats = stations.concat(hubble), source = 'CelesTrak';
+  /* CelesTrak sometimes turns a busy shared runner away: ask for the ISS on its own, then ARISS, the amateur-radio service that publishes its elements */
+  if (!sats.some(s => s.norad === 25544)) {
+    const iss = await read(CT + 'CATNR=25544&FORMAT=tle', 'ISS');
+    if (iss.some(s => s.norad === 25544)) sats = iss.concat(sats);
+    else { const ar = await read('https://live.ariss.org/iss.txt', 'ARISS'); if (ar.some(s => s.norad === 25544)) { sats = ar.concat(sats); source = sats.length > ar.length ? 'CelesTrak and ARISS' : 'ARISS'; } }
+  }
+  if (!sats.some(s => s.norad === 25544)) throw new Error('no ISS elements (' + why.join('; ') + ')');
+  return { fetched: now(), source, sats: sats.slice(0, 40) };
 }
 
 /* ── close approaches: NASA/JPL Center for Near-Earth Object Studies ── */

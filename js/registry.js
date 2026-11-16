@@ -65,6 +65,13 @@
         detail: fmtLy(s.ly) + (s.sp ? ' · ' + s.sp : '') });
     }
 
+    const reg = { list, by, alias, find, scales: SCALES, extend: D2 => { more(D2 || {}); return reg; } };
+    more(D);
+    return reg;
+
+    /* the rest, in the same order: planetary systems, Messier objects, galaxies. The Ladder adds these after its first frame
+       (reg.extend), everything else passes them to build at once; either way an entry is added, merged or skipped exactly the same */
+    function more(D) {
     /* planetary systems */
     const sys = {};
     for (const p of rows(D.exo)) {
@@ -100,7 +107,7 @@
       add({ slug: g.slug, name: g.name || g.m || g.des, kind: 'galaxy', group: 'far', alias: al, ra: g.ra, dec: g.dec, ly: g.mly * 1e6, gi: g.i, hubble: g.hubble, mag: g.mag, sizeLy, cluster: g.cluster, dflag: g.dflag, zcat: g.z,
         detail: fmtLy(g.mly * 1e6) + (g.hubble ? ' · ' + g.hubble : '') });
     }
-    return { list, by, alias, find, scales: SCALES };
+    }
   }
 
   /* how wide a view (metres) frames an entry well */

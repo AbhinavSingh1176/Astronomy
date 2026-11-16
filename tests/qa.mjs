@@ -16,7 +16,7 @@ const SHOTS = args.includes('--shots') ? args[args.indexOf('--shots') + 1] : nul
 const PAGES = ['index.html', 'papers.html', 'papers.html#canon-penzias-wilson-1965', 'papers.html#term-redshift', 'dispatch.html', 'deck.html', 'sky.html', 'sky.html#con-Ori', 'sky.html#vega', 'atlas.html', 'atlas.html#europa', 'lost.html', 'lost.html#apollo-1', 'log.html',
   'ladder.html', 'ladder.html#scale-planets', 'ladder.html#proxima-centauri', 'ladder.html#scale-galaxy', 'ladder.html#andromeda-galaxy', 'ladder.html#scale-universe', 'ladder.html#sgr-a-star'];
 const SIZES = [[1440, 900], [390, 844]];
-let fails = 0; const fail = (where, msg) => { fails++; console.log('  FAIL ' + where + ': ' + msg); };
+let fails = 0; const fail = (where, msg) => { fails++; console.log('  FAIL ' + where + ': ' + msg); }, noted = new Set();
 
 const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 for (const [w, h] of SIZES) {
@@ -24,12 +24,20 @@ for (const [w, h] of SIZES) {
   for (const pg of PAGES) {
     const page = await ctx.newPage(), where = pg + ' @' + w, errs = [];
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    page.on('console', m => { if (m.type() === 'error') errs.push('console: ' + m.text()); });
+    await page.addInitScript(() => addEventListener('owlt:ladder-complete', () => { window.__done = true; }));
+    /* an outside host this machine cannot reach (a sandbox, no network) is noted, not failed; anything from the site itself always fails */
+    const OFFLINE = /ERR_TUNNEL_CONNECTION_FAILED|ERR_NAME_NOT_RESOLVED|ERR_INTERNET_DISCONNECTED|ERR_PROXY_CONNECTION_FAILED|ERR_CONNECTION_REFUSED/;
+    page.on('console', m => { if (m.type() === 'error' && !OFFLINE.test(m.text())) errs.push('console: ' + m.text()); });
     page.on('pageerror', e => errs.push('exception: ' + e.message));
-    page.on('requestfailed', r => { if (!/fonts\.gstatic|favicon/.test(r.url())) errs.push('request failed: ' + r.url()); });
+    page.on('requestfailed', r => { const u = r.url(), why = (r.failure() || {}).errorText || '';
+      if (/fonts\.gstatic|favicon/.test(u)) return;
+      if (!u.startsWith(BASE) && OFFLINE.test(why)) { if (!noted.has(u)) { noted.add(u); console.log('  note ' + where + ': cannot reach ' + new URL(u).host + ' from here (' + why + ')'); } return; }
+      errs.push('request failed: ' + u + (why ? ' (' + why + ')' : '')); });
     page.on('response', r => { if (r.status() >= 400 && r.url().startsWith(BASE)) errs.push('HTTP ' + r.status() + ': ' + r.url()); });
     try { await page.goto(BASE + '/' + pg, { waitUntil: 'load', timeout: 60000 }); } catch (e) { fail(where, 'did not load: ' + e.message); await page.close(); continue; }
-    if (pg.startsWith('ladder')) { await page.waitForSelector('#boot.off', { timeout: 60000 }).catch(() => fail(where, 'the Ladder never finished booting')); await page.waitForTimeout(3500); }
+    if (pg.startsWith('ladder')) { await page.waitForSelector('#boot.off', { timeout: 60000 }).catch(() => fail(where, 'the Ladder never finished booting'));
+      /* the rest of the catalogue arrives after the first frame; a place in the address flies once it is in */
+      await page.waitForFunction(() => window.__done, null, { timeout: 90000 }).catch(() => fail(where, 'the rest of the catalogue never arrived')); await page.waitForTimeout(pg.includes('#') ? 6000 : 2500); }
     else await page.waitForTimeout(1500);
     for (const e of errs) fail(where, e);
     const over = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);

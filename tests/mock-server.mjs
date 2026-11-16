@@ -39,8 +39,10 @@ const ll = up => ({ count: 6, results: Array.from({ length: 6 }, (_, i) => ({ id
   mission: { name: ['Starlink Group 12-3', 'HTV-X2', 'EOS-N1', 'Chang\'e 7', 'Mission', 'Galileo L14'][i], type: 'Communications', description: 'A mission description.', orbit: { name: 'Low Earth Orbit', abbrev: 'LEO' } },
   pad: { name: 'Pad ' + i, location: { name: 'Somewhere, Earth', country_code: ['USA', 'JPN', 'IND', 'CHN', 'NZL', 'GUF'][i] } } })) });
 const kp = () => [['time_tag', 'Kp', 'a_running', 'station_count']].concat(Array.from({ length: 24 }, (_, i) => [new Date(Date.now() - (23 - i) * 3 * 3600e3).toISOString().replace('T', ' ').slice(0, 19) + '.000', String((i % 7) * 0.67), '9', '8']));
-const plasma = () => [['time_tag', 'density', 'speed', 'temperature']].concat(Array.from({ length: 300 }, (_, i) => [new Date(Date.now() - (299 - i) * 288e3).toISOString().replace('T', ' ').slice(0, 19) + '.000', '4.1', i === 299 ? null : String(420 + i % 30), '90000']));
-const mag = () => [['time_tag', 'bx_gsm', 'by_gsm', 'bz_gsm', 'lon_gsm', 'lat_gsm', 'bt']].concat(Array.from({ length: 300 }, (_, i) => [new Date(Date.now() - (299 - i) * 288e3).toISOString().replace('T', ' ').slice(0, 19) + '.000', '1.2', '-2.0', String(-3 + i % 6), '120', '-10', '5.5']));
+/* NOAA's real-time solar-wind files (November 2026): a day of one-minute rows from three spacecraft, newest first, the one in use marked active */
+const rtswT = i => new Date(Date.now() - i * 60e3).toISOString().slice(0, 16) + ':00';
+const plasma = () => Array.from({ length: 1440 }, (_, i) => ['SOLAR1', 'ACE', 'IMAP'].map(s => ({ time_tag: rtswT(i), active: s === 'SOLAR1', source: s, proton_speed: i === 0 ? null : 420 + (i % 30) + (s === 'ACE' ? 900 : 0), proton_temperature: 90000, proton_density: 4.1, overall_quality: 0 }))).flat();
+const mag = () => Array.from({ length: 1440 }, (_, i) => ['SOLAR1', 'IMAP'].map(s => ({ time_tag: rtswT(i), active: s === 'SOLAR1', source: s, bt: 5.5, bx_gsm: 1.2, by_gsm: -2.0, bz_gsm: -3 + i % 6 + (s === 'IMAP' ? 50 : 0), overall_quality: 0 }))).flat();
 const xr = () => Array.from({ length: 200 }, (_, i) => [{ time_tag: new Date(Date.now() - (199 - i) * 432e3).toISOString().slice(0, 19) + 'Z', satellite: 19, flux: 2e-6 * (1 + (i % 9) / 3), energy: '0.1-0.8nm' }, { time_tag: new Date(Date.now() - (199 - i) * 432e3).toISOString().slice(0, 19) + 'Z', satellite: 19, flux: 1e-8, energy: '0.05-0.4nm' }]).flat();
 const scales = () => ({ 0: { DateStamp: ymd(), TimeStamp: '04:30:00', R: { Scale: '1', Text: 'minor' }, S: { Scale: '0', Text: 'none' }, G: { Scale: null, Text: null } }, 1: { DateStamp: ymd(1) } });
 const ck = l => { let s = 0; for (const ch of l) s += ch === '-' ? 1 : /\d/.test(ch) ? +ch : 0; return l + (s % 10); };
@@ -87,7 +89,7 @@ const ROUTES = [
   [/^(www\.esa\.int|www\.eso\.org|noirlab\.edu|www\.universetoday\.com|skyandtelescope\.org)\//, u => ['application/rss+xml', rss(u.split('/')[0])]],
   [/^ll\.thespacedevs\.com\/2\.3\.0\/launches\/upcoming/, () => ['application/json', ll(true)]],
   [/^ll\.thespacedevs\.com\/2\.3\.0\/launches\/previous/, () => ['application/json', ll(false)]],
-  [/noaa-planetary-k-index\.json/, () => ['application/json', kp()]], [/plasma-1-day\.json/, () => ['application/json', plasma()]], [/mag-1-day\.json/, () => ['application/json', mag()]],
+  [/noaa-planetary-k-index\.json/, () => ['application/json', kp()]], [/rtsw_wind_1m\.json/, () => ['application/json', plasma()]], [/rtsw_mag_1m\.json/, () => ['application/json', mag()]],
   [/xrays-1-day\.json/, () => ['application/json', xr()]], [/noaa-scales\.json/, () => ['application/json', scales()]],
   [/^celestrak\.org\/.*GROUP=stations/, () => ['text/plain', tle('ISS (ZARYA)', 25544) + '\n' + tle('CSS (TIANHE)', 48274) + '\n']],
   [/^celestrak\.org\/.*CATNR=20580/, () => ['text/plain', tle('HST', 20580) + '\n']],

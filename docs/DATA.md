@@ -23,7 +23,7 @@ What the build keeps:
 - **galaxies.bin** — 10,177 galaxies from OpenNGC with a distance: position, distance, type, magnitude, physical size, axis ratio, position angle. Distances are redshift-independent where OpenNGC has one, else the group's, else Hubble's law with H0 = 67.4.
 - **stars.json** — every star with a proper name or Bayer letter (1,686), for labels, search and the Atlas.
 - **exoplanets.json** — 5,370 planets with host, orbit, size, equilibrium temperature and a habitable-zone flag (Kopparapu et al. 2014 edges for the host's temperature and luminosity).
-- **constellations.json**, **cities.json**, **earth.png** (land, coastlines and city lights packed into three channels).
+- **constellations.json**, **cities.json**, **earth.webp** (land, coastlines and city lights packed into three channels, lossless).
 
 `solar.json`, `structures.json` (75 landmarks out to the edge of the observable universe), `data/papers/canon.json` (the landmark papers), `data/glossary.json` and `data/lost.json` are written by hand, each from the sources named inside them.
 

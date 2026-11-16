@@ -6,6 +6,14 @@
 <title>The Ladder · OWLT</title>
 <meta name="description" content="One continuous place from the ground under you to the edge of the observable universe, with every object placed where it really is.">
 <link rel="stylesheet" href="css/core.css">
+<!-- what the first view needs, fetched while the scripts load (the rest of the catalogue follows the first frame) -->
+<link rel="preload" href="vendor/three.min.js" as="script">
+<link rel="preload" href="data/catalog/solar.json" as="fetch" crossorigin>
+<link rel="preload" href="data/catalog/structures.json" as="fetch" crossorigin>
+<link rel="preload" href="data/catalog/stars.json" as="fetch" crossorigin>
+<link rel="preload" href="data/catalog/constellations.json" as="fetch" crossorigin>
+<link rel="preload" href="data/catalog/sky.bin" as="fetch" crossorigin>
+<link rel="preload" href="data/catalog/earth.webp" as="image" crossorigin><!-- three.js asks for textures with crossOrigin="anonymous" -->
 <style>
 /* Layout: the sky fills the window under the bar. Scale rail on the left, the focused object's card on the right,
    readout and controls along the bottom. Every panel is solid ground, never glass. */
@@ -61,6 +69,10 @@ body{background:#000}
 #readout .span b{color:var(--starlight);font-weight:500}
 #readout .illus{margin-top:7px;font-family:var(--f-display);font-size:11.5px;color:var(--sodium);max-width:52ch}
 #readout .hint{margin-top:7px;font-family:var(--f-display);font-size:11.5px;color:var(--faint)}
+#readout .later{margin-top:7px;font-family:var(--f-data);font-size:11px;color:var(--sodium)}
+#readout .later::before{content:"";display:inline-block;width:6px;height:6px;margin-right:7px;border-radius:50%;background:var(--sodium);vertical-align:1px;animation:owlt-blink 1s steps(2) infinite}
+@keyframes owlt-blink{50%{opacity:.15}}
+@media (prefers-reduced-motion:reduce){#readout .later::before{animation:none}}
 
 /* controls */
 #ctl{position:absolute;right:var(--gut-r);bottom:16px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:6;max-width:calc(100% - 32px)}
@@ -132,7 +144,8 @@ body{background:#000}
   <div id="rail" aria-label="Scales"><div class="axis"></div><div class="knob" id="knob"></div><ol id="rungs"></ol></div>
   <aside id="panel" aria-live="polite" hidden></aside>
   <div id="readout"><div class="rung" id="rung">Earth</div><div class="span" id="span"></div><div class="illus" id="illus" hidden></div>
-    <div class="hint" id="hint">Scroll or pinch to zoom out. Drag to look around. Click a name to go there. Press / to search.</div></div>
+    <div class="hint" id="hint">Scroll or pinch to zoom out. Drag to look around. Click a name to go there. Press / to search.</div>
+    <div class="later" id="later" hidden>Bringing in 100,000 stars, 6,000 planets and 10,000 galaxies…</div></div>
   <div id="ctl">
     <button class="btn" id="bTour" type="button">Take the tour</button>
     <button class="btn" id="bLabels" type="button" aria-pressed="true">Names</button>

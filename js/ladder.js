@@ -44,15 +44,17 @@
   const B = {};                      // live body positions, metres from the Sun, scene frame
   const lerp = (a, b, t) => a + (b - a) * t;
 
-  /* ── loading ── */
-  const FILES = [['data/catalog/solar.json'], ['data/catalog/structures.json'], ['data/catalog/stars.json'], ['data/catalog/exoplanets.json'],
-    ['data/catalog/messier.json'], ['data/catalog/galaxies.json'], ['data/catalog/sky.bin', 'bin'], ['data/catalog/local.bin', 'bin'],
-    ['data/catalog/galaxies.bin', 'bin'], ['data/catalog/constellations.json']];
+  /* ── loading: only what the first view needs (the Solar System, the naked-eye sky, the named stars), then the rest after the first frame.
+     The rest is 100,000 stars, 6,000 planets and 10,000 galaxies that nobody sees until they leave the Solar System. ── */
+  const CORE = [['data/catalog/solar.json'], ['data/catalog/structures.json'], ['data/catalog/stars.json'], ['data/catalog/constellations.json'], ['data/catalog/sky.bin', 'bin']];
+  const LATER = [['data/catalog/local.bin', 'bin'], ['data/catalog/exoplanets.json'], ['data/catalog/messier.json'], ['data/catalog/galaxies.json'], ['data/catalog/galaxies.bin', 'bin']];
   let got = 0;
-  Promise.all(FILES.map(f => O.load(f[0], f[1]).then(x => { got++; $('#bootBar').style.width = (got / FILES.length * 100) + '%'; $('#bootS').textContent = f[0].split('/').pop(); return x; })))
+  Promise.all(CORE.map(f => O.load(f[0], f[1]).then(x => { got++; $('#bootBar').style.width = (got / CORE.length * 100) + '%'; $('#bootS').textContent = f[0].split('/').pop(); return x; })))
     .then(d => {
       if (d.some(x => !x)) { $('#bootS').textContent = 'Some catalogue files did not load. Reload the page, or open the Atlas instead.'; return; }
-      try { start(d); } catch (e) { console.error(e); $('#bootS').textContent = 'The view could not start: ' + e.message; }
+      const later = Promise.all(LATER.map(f => O.load(f[0], f[1])));      /* downloading while the first view is built */
+      try { start(d); } catch (e) { console.error(e); $('#bootS').textContent = 'The view could not start: ' + e.message; return; }
+      fillLater(later);
     });
 
   /* ── materials written for this page ── */
@@ -108,26 +110,20 @@
   const sphere = new T.SphereGeometry(1, 64, 40);
 
   function start(d) {
-    const [solar, structures, stars, exo, messier, galaxies, skyBin, localBin, galBin, cons] = d;
-    R = REG.build({ solar, structures, stars, exo, messier, galaxies }, A);
+    const [solar, structures, stars, cons, skyBin] = d;
+    R = REG.build({ solar, structures, stars }, A);
     for (const c of cons) CONS[c[0]] = c[1];
-    buildSky(skyBin); buildLocal(localBin, stars, cons); buildSolar(solar); buildEarth(); buildBelts(); buildMilkyWay(); buildGalaxies(galBin); buildCosmos(); updateBodies(); buildRail();
-    S.galBin = new DataView(galBin);
-    /* the lists the labeller walks every frame, filtered once */
-    R.starsL = R.list.filter(e => (e.kind === 'star' || e.kind === 'system') && e.group === 'star' && e.ly != null);
-    R.bright = R.starsL.filter(e => e.mag != null && e.mag <= 1.3);
-    R.far = R.list.filter(e => e.ra != null && e.ly != null && e.group === 'far');
+    buildSky(skyBin); buildCons(stars, cons); buildSolar(solar); buildEarth(); buildCosmos(); buildDeferred(); updateBodies(); buildRail();
+    listsForLabels();
     resize(); addEventListener('resize', resize);
     bindInput(); loadTle();
     updateBodies();
-    const target = (location.hash || '').slice(1);
-    const first = target && findEntry(target);
-    const earth = R.find('earth');
+    const target = (location.hash || '').slice(1), earth = R.find('earth');
     setFocus(earth, { instant: true });
     const sd = A.radec2v(A.sun(S.jd).ra, A.sun(S.jd).dec);          /* open on the terminator, so you see day, night and city lights */
     S.yaw = S.tYaw = Math.atan2(sd[0], sd[2]) + 1.75; S.pitch = S.tPitch = 0.22;
-    if (first && first !== earth) setTimeout(() => flyTo(first), 600);
-    else if (target && !first) showMissing(target);
+    /* a place in the address waits for the whole catalogue (its planets, its neighbours), then the flight starts from Earth */
+    if (target && target !== 'earth') S.pending = target;
     $('#boot').classList.add('off');
     if (/[?&]debug\b/.test(location.search)) window.__ladder = { S, L, F, B, R, camera, post, flyTo, cands: () => cands, shown: () => [...shown.keys()] };   /* for the test suite */
     requestAnimationFrame(frame);
@@ -146,8 +142,58 @@
     L.band = new T.Mesh(new T.SphereGeometry(SKY * 0.97, 64, 32), bandMat); L.band.renderOrder = -30; scene.add(L.band);
   }
 
+  /* layers that only matter once you leave the Solar System: made now, empty, with their real materials, so every frame can treat
+     them the same; fillLater puts the stars, planets and galaxies into them after the first frame */
+  const pts = (mat, order) => { const p = new T.Points(new T.BufferGeometry(), mat); p.frustumCulled = false; p.renderOrder = order; scene.add(p); return p; };
+  const setGeo = (p, attrs) => { const g = new T.BufferGeometry(); for (const k in attrs) g.setAttribute(k, new T.BufferAttribute(attrs[k][0], attrs[k][1])); p.geometry.dispose(); p.geometry = g; };
+  function buildDeferred() {
+    L.belt = pts(G.dust(), -10); L.kuiper = pts(G.dust(), -10); L.oort = pts(G.dust(), -10);
+    L.local = pts(G.spaceStars(), -19); L.localCount = 0;
+    L.exo = pts(exoMat, -8); L.dso = pts(G.dust(), -7);
+    L.mw = pts(G.dust(), -18); L.mw.material.uniforms.uAtt.value = 1.0; L.mwGlow = pts(glowPts(), -19);
+    /* the Local Bubble: hot, thin gas around the Sun, open toward the galactic poles like a chimney */
+    L.bubble = new T.Mesh(new T.SphereGeometry(1, 64, 40), shellMat('#F29A86')); L.bubble.quaternion.setFromUnitVectors(new T.Vector3(0, 1, 0), new T.Vector3().fromArray(A.GAL.z)); L.bubble.renderOrder = -14; scene.add(L.bubble);
+    L.gal = pts(G.galaxies(), -17); L.gal.material.uniforms.uMin.value = 3.6;
+    /* the Milky Way itself, as one galaxy among the rest */
+    const mg = new T.BufferGeometry(); mg.setAttribute('position', new T.BufferAttribute(new Float32Array(A.radec2v(266.405, -28.936, 0.02667)), 3));
+    mg.setAttribute('aN', new T.BufferAttribute(new Float32Array(A.GAL.z), 3)); mg.setAttribute('aColor', new T.BufferAttribute(new Float32Array([0.95, 0.9, 0.85]), 3));
+    mg.setAttribute('aSize', new T.BufferAttribute(new Float32Array([0.0528]), 1)); mg.setAttribute('aLum', new T.BufferAttribute(new Float32Array([1.6]), 1));
+    L.mwDot = new T.Points(mg, G.galaxies()); L.mwDot.frustumCulled = false; L.mwDot.renderOrder = -17; scene.add(L.mwDot);
+  }
+  /* the rest of the catalogue, one step per task so the view keeps moving while it fills in */
+  function fillLater(later) {
+    const note = $('#later'); note.hidden = false;
+    const step = () => new Promise(r => setTimeout(r, 0));
+    later.then(async ([localBin, exo, messier, galaxies, galBin]) => {
+      try {
+        await step(); fillBelts();
+        if (localBin) { await step(); fillLocal(localBin); }
+        await step();
+        const hadSys = S.focus && !!S.focus.system;
+        R.extend({ exo, messier, galaxies }); listsForLabels();
+        if (S.focus && !hadSys && S.focus.system && !S.pending) { buildFocusLayer(S.focus); renderPanel(S.focus, S.rung); }   /* its planets just arrived */
+        await step(); fillSystems();
+        await step(); fillMilkyWay();
+        if (galBin) { await step(); fillGalaxies(galBin); S.galBin = new DataView(galBin); }
+        startWeb();
+        const missing = [localBin, exo, messier, galaxies, galBin].some(x => !x);
+        if (missing) note.textContent = 'Part of the catalogue did not load (stars beyond the Sun or galaxies). Reload the page to try again.';
+        else note.hidden = true;
+      } catch (e) { console.error(e); note.textContent = 'Part of the catalogue could not be shown: ' + e.message; }
+      S.complete = true;
+      if (S.pending) { const s = S.pending, e = findEntry(s); S.pending = null; if (e) flyTo(e); else showMissing(s); }
+      dispatchEvent(new Event('owlt:ladder-complete'));
+    });
+  }
+  /* the lists the labeller walks every frame, filtered once (again when the rest of the catalogue arrives) */
+  function listsForLabels() {
+    R.starsL = R.list.filter(e => (e.kind === 'star' || e.kind === 'system') && e.group === 'star' && e.ly != null);
+    R.bright = R.starsL.filter(e => e.mag != null && e.mag <= 1.3);
+    R.far = R.list.filter(e => e.ra != null && e.ly != null && e.group === 'far');
+  }
+
   /* stars with measured distances, in light-years from the Sun; the Sun is added so other stars can see it */
-  function buildLocal(buf, stars, cons) {
+  function fillLocal(buf) {
     const dv = new DataView(buf), n = dv.byteLength / 8, LN = Math.log(2100);
     const pos = new Float32Array((n + 1) * 3), abs = new Float32Array(n + 1), col = new Float32Array((n + 1) * 3);
     for (let i = 0; i < n; i++) {
@@ -157,9 +203,10 @@
       const c = A.bv2rgb(dv.getInt8(o + 7) / 60), l = (c[0] + c[1] + c[2]) / 3; for (let k = 0; k < 3; k++) col[i * 3 + k] = l + (c[k] - l) * 1.45;
     }
     abs[n] = 4.83; const cs = A.bv2rgb(0.65); col.set(cs.slice(0, 3), n * 3);
-    const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(pos, 3)); g.setAttribute('aAbs', new T.BufferAttribute(abs, 1)); g.setAttribute('aColor', new T.BufferAttribute(col, 3));
-    L.local = new T.Points(g, G.spaceStars()); L.local.frustumCulled = false; L.local.renderOrder = -19; scene.add(L.local);
+    setGeo(L.local, { position: [pos, 3], aAbs: [abs, 1], aColor: [col, 3] });
     L.localCount = n;
+  }
+  function buildCons(stars, cons) {
     /* constellation figures, each vertex matched to a star with a distance: from the Sun they are the familiar shapes, from anywhere else they come apart */
     const grid = {}, rows = REG.rows(stars).filter(s => s.ly != null);
     for (const s of rows) { const k = Math.floor(s.ra) + ':' + Math.floor(s.dec + 90); (grid[k] = grid[k] || []).push(s); }
@@ -173,17 +220,18 @@
     }
     const lg = new T.BufferGeometry(); lg.setAttribute('position', new T.BufferAttribute(new Float32Array(seg), 3));
     L.cons = new T.LineSegments(lg, lineMat('#8FA5D9')); L.cons.frustumCulled = false; L.cons.renderOrder = -9; scene.add(L.cons);
+  }
+  function fillSystems() {
     /* planetary systems: a ring for every star known to have planets; teal when one may be rocky and temperate */
     const sys = R.list.filter(e => e.system && e.ly != null), sp = new Float32Array(sys.length * 3), hz = new Float32Array(sys.length);
     sys.forEach((e, i) => { sp.set(A.radec2v(e.ra, e.dec, e.ly), i * 3); const pl = e.system.planets; hz[i] = pl.some(p => p.hz && p.rocky) ? 2 : pl.some(p => p.hz) ? 1 : 0; });
-    const eg = new T.BufferGeometry(); eg.setAttribute('position', new T.BufferAttribute(sp, 3)); eg.setAttribute('aHz', new T.BufferAttribute(hz, 1));
-    L.exo = new T.Points(eg, exoMat); L.exo.frustumCulled = false; L.exo.renderOrder = -8; scene.add(L.exo);
+    setGeo(L.exo, { position: [sp, 3], aHz: [hz, 1] });
     /* deep-sky objects inside the Milky Way, as coloured glows at their true places */
     const dso = R.list.filter(e => e.ly != null && e.ra != null && /nebula|remnant|cluster|globular|pulsar|blackhole/.test(e.kind) && e.ly < 2e5);
     const dp = new Float32Array(dso.length * 3), dc = new Float32Array(dso.length * 3), ds = new Float32Array(dso.length);
     const DC = { nebula: [1.0, 0.42, 0.34], remnant: [0.5, 0.9, 0.85], cluster: [0.7, 0.8, 1.0], globular: [1.0, 0.85, 0.6], pulsar: [0.6, 0.75, 1.0], blackhole: [1.0, 0.7, 0.45] };
     dso.forEach((e, i) => { dp.set(A.radec2v(e.ra, e.dec, e.ly), i * 3); const c = e.sub === 'planetary' ? [0.45, 0.95, 0.85] : e.sub === 'reflection' ? [0.5, 0.65, 1] : DC[e.kind]; dc.set(c, i * 3); ds[i] = e.kind === 'globular' ? 4 : 5; });
-    L.dso = placedPoints(dp, dc, ds, G.dust(), -7);
+    setGeo(L.dso, { position: [dp, 3], aColor: [dc, 3], aS: [ds, 1] });
   }
 
   /* ── the Solar System, live ── */
@@ -238,7 +286,7 @@
   let earthMesh, moonMesh, moonPath, moonPathJd = 0;
   function buildEarth() {
     L.earth = new T.Group(); scene.add(L.earth);
-    const tex = new T.TextureLoader().load('data/catalog/earth.png'); tex.minFilter = T.LinearMipmapLinearFilter; tex.anisotropy = 4;
+    const tex = new T.TextureLoader().load('data/catalog/earth.webp'); tex.minFilter = T.LinearMipmapLinearFilter; tex.anisotropy = 4;
     const sb = R.find('earth'), mb = R.find('moon');
     earthMesh = new T.Mesh(sphere, G.body(sb.look, tex)); L.earth.add(earthMesh);
     moonMesh = new T.Mesh(sphere, G.body(mb.look)); moonMesh.scale.setScalar(1737.4 / 6371); moonMesh.material.uniforms.uSeed.value = 3.7; L.earth.add(moonMesh);
@@ -262,16 +310,16 @@
       pos.set(A.ecl2scene([r * Math.cos(a), r * Math.sin(a), z]), i * 3); const w = 0.75 + G.rnd() * 0.25; col.set([color[0] * w, color[1] * w, color[2] * w], i * 3); size[i] = 1 + G.rnd() * sizeMax; }
     return [pos, col, size];
   }
-  function buildBelts() {
-    let [p, c, s] = ring(7000, 2.15, 3.3, 0.08, [0.55, 0.48, 0.40], 1.2); L.belt = placedPoints(p, c, s, G.dust(), -10);
-    [p, c, s] = ring(9000, 30, 50, 0.12, [0.45, 0.55, 0.75], 1.4); L.kuiper = placedPoints(p, c, s, G.dust(), -10);
+  function fillBelts() {
+    let [p, c, s] = ring(7000, 2.15, 3.3, 0.08, [0.55, 0.48, 0.40], 1.2); setGeo(L.belt, { position: [p, 3], aColor: [c, 3], aS: [s, 1] });
+    [p, c, s] = ring(9000, 30, 50, 0.12, [0.45, 0.55, 0.75], 1.4); setGeo(L.kuiper, { position: [p, 3], aColor: [c, 3], aS: [s, 1] });
     const n = 9000, pos = new Float32Array(n * 3), col = new Float32Array(n * 3), size = new Float32Array(n);
     for (let i = 0; i < n; i++) {
       const inner = i < 2500, r = inner ? 2000 + G.rnd() * 18000 : 20000 + Math.pow(G.rnd(), 0.7) * 80000, a = G.rnd() * Math.PI * 2;
       const u = inner ? G.gauss() * 0.35 : G.rnd() * 2 - 1, sq = Math.sqrt(Math.max(0, 1 - u * u));
       pos.set(A.ecl2scene([r * sq * Math.cos(a), r * sq * Math.sin(a), r * u]), i * 3); col.set([0.6, 0.68, 0.85], i * 3); size[i] = 1 + G.rnd();
     }
-    L.oort = placedPoints(pos, col, size, G.dust(), -10);
+    setGeo(L.oort, { position: [pos, 3], aColor: [col, 3], aS: [size, 1] });
   }
 
   /* soft glows with a true size: the light of the arms, seen from inside or out */
@@ -289,7 +337,7 @@
   const armXY = (a, beta) => { const r = a[1] * Math.exp(-(beta - a[2]) * D2R * Math.tan(a[3] * D2R)) * KPC, phi = Math.PI - beta * D2R; return [r * Math.cos(phi), r * Math.sin(phi)]; };
   const galToScene = (x, y, z) => A.gal2scene(x + R0, y, z - Z0);    /* galactocentric kly → kly from the Sun */
   let armLabels = [];
-  function buildMilkyWay() {
+  function fillMilkyWay() {
     const N = 120000, pos = new Float32Array(N * 3), col = new Float32Array(N * 3), size = new Float32Array(N), wsum = ARMS.reduce((s, a) => s + a[6], 0);
     const bar = 153 * D2R, cb = Math.cos(bar), sb = Math.sin(bar);
     for (let i = 0; i < N; i++) {
@@ -318,7 +366,7 @@
     const all = new Float32Array(pos.length + extra.length); all.set(pos); all.set(extra, pos.length);
     const ac = new Float32Array(col.length + ec.length); ac.set(col); ac.set(ec, col.length);
     const as = new Float32Array(size.length + es.length); as.set(size); as.set(es, size.length);
-    L.mw = placedPoints(all, ac, as, G.dust(), -18); L.mw.material.uniforms.uAtt.value = 1.0;
+    setGeo(L.mw, { position: [all, 3], aColor: [ac, 3], aS: [as, 1] });
     armLabels = [[ARMS[0], -60], [ARMS[1], -40], [ARMS[2], -20], [ARMS[3], -250], [ARMS[4], 14]].map(([a, b]) => { const p = armXY(a, b); return { name: a[0], P: mul(galToScene(p[0], p[1], 0), KLY) }; });
     armLabels.push({ name: 'Galactic bar', P: mul(galToScene(-7 * cb, -7 * sb, 0), KLY) });
     /* the glow of the disc: a few thousand soft lights of true size laid along the same arms, so the galaxy reads as light, not dots */
@@ -333,10 +381,7 @@
         c = hii ? [0.17, 0.05, 0.045] : [0.075, 0.095, 0.15]; sz = hii ? 0.35 + G.rnd() * 0.5 : 0.6 + G.rnd() * 0.9; }
       gp.set(galToScene(x, y, z), i * 3); gc.set(c, i * 3); gs[i] = sz;
     }
-    const gg = new T.BufferGeometry(); gg.setAttribute('position', new T.BufferAttribute(gp, 3)); gg.setAttribute('aColor', new T.BufferAttribute(gc, 3)); gg.setAttribute('aSize', new T.BufferAttribute(gs, 1));
-    L.mwGlow = new T.Points(gg, glowPts()); L.mwGlow.frustumCulled = false; L.mwGlow.renderOrder = -19; scene.add(L.mwGlow);
-    /* the Local Bubble: hot, thin gas around the Sun, open toward the galactic poles like a chimney */
-    L.bubble = new T.Mesh(new T.SphereGeometry(1, 64, 40), shellMat('#F29A86')); L.bubble.quaternion.setFromUnitVectors(new T.Vector3(0, 1, 0), new T.Vector3().fromArray(A.GAL.z)); L.bubble.renderOrder = -14; scene.add(L.bubble);
+    setGeo(L.mwGlow, { position: [gp, 3], aColor: [gc, 3], aSize: [gs, 1] });
   }
 
   /* ── 10,177 catalogued galaxies in three dimensions, each disc tilted the way we see it ── */
@@ -347,7 +392,7 @@
     return norm(add(mul(n, Math.cos(inc)), mul(s, Math.sin(inc))));
   }
   const TYPE_COL = [[1.0, 0.82, 0.62], [1.0, 0.86, 0.7], [0.86, 0.88, 1.0], [0.9, 0.9, 1.0], [0.68, 0.8, 1.0], [0.9, 0.86, 0.85]];
-  function buildGalaxies(buf) {
+  function fillGalaxies(buf) {
     const dv = new DataView(buf), n = dv.byteLength / 14;
     const pos = new Float32Array(n * 3), nrm = new Float32Array(n * 3), col = new Float32Array(n * 3), sz = new Float32Array(n), lum = new Float32Array(n);
     for (let i = 0; i < n; i++) {
@@ -357,14 +402,7 @@
       sz[i] = (ls ? Math.pow(10, ls / 40) : 30) / 2000;               /* radius in million light-years */
       const Mabs = mag < 25 ? mag - 5 * Math.log10(Math.max(d, 0.01) * 1e6 / 32.6156) : -20; lum[i] = clamp(1.5 * Math.pow(10, -0.4 * (Mabs + 20.3)), 0.4, 3.2);
     }
-    const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(pos, 3)); g.setAttribute('aN', new T.BufferAttribute(nrm, 3));
-    g.setAttribute('aColor', new T.BufferAttribute(col, 3)); g.setAttribute('aSize', new T.BufferAttribute(sz, 1)); g.setAttribute('aLum', new T.BufferAttribute(lum, 1));
-    L.gal = new T.Points(g, G.galaxies()); L.gal.frustumCulled = false; L.gal.renderOrder = -17; L.gal.material.uniforms.uMin.value = 3.6; scene.add(L.gal);
-    /* the Milky Way itself, as one galaxy among the rest */
-    const mg = new T.BufferGeometry(); mg.setAttribute('position', new T.BufferAttribute(new Float32Array(A.radec2v(266.405, -28.936, 0.02667)), 3));
-    mg.setAttribute('aN', new T.BufferAttribute(new Float32Array(A.GAL.z), 3)); mg.setAttribute('aColor', new T.BufferAttribute(new Float32Array([0.95, 0.9, 0.85]), 3));
-    mg.setAttribute('aSize', new T.BufferAttribute(new Float32Array([0.0528]), 1)); mg.setAttribute('aLum', new T.BufferAttribute(new Float32Array([1.6]), 1));
-    L.mwDot = new T.Points(mg, G.galaxies()); L.mwDot.frustumCulled = false; L.mwDot.renderOrder = -17; scene.add(L.mwDot);
+    setGeo(L.gal, { position: [pos, 3], aN: [nrm, 3], aColor: [col, 3], aSize: [sz, 1], aLum: [lum, 1] });
   }
 
   /* ── the cosmic web, the horizons and the oldest light ── */
@@ -420,10 +458,11 @@
     } catch (e) { inline(); }
     function inline() { setTimeout(() => { let out = null; const me = {}; new Function('self', 'postMessage', WEB_SRC)(me, d => { out = d; }); me.onmessage({ data: o }); if (out) finish(out); }, 0); }
   }
+  /* started once the rest of the catalogue is in, so the two workers do not compete with it */
+  function startWeb() { webJob(L.webA, { n: 38000, r0: 180, r1: 1900, cell: 105, seed: 3, wedge: 42, thick: 0.035, fall: 1300 }, 1e-3, SG); webJob(L.webB, { n: 45000, r0: 1.6, r1: CMB_GLY * 0.995, cell: 2.4, seed: 7 }, 1, null); }
   function buildCosmos() {
     const empty = () => placedPoints(new Float32Array(0), new Float32Array(0), new Float32Array(0), G.dust(), -16);
     L.webA = empty(); L.webB = empty();
-    setTimeout(() => { webJob(L.webA, { n: 38000, r0: 180, r1: 1900, cell: 105, seed: 3, wedge: 42, thick: 0.035, fall: 1300 }, 1e-3, SG); webJob(L.webB, { n: 45000, r0: 1.6, r1: CMB_GLY * 0.995, cell: 2.4, seed: 7 }, 1, null); }, 1200);
     L.cos = new T.Group(); scene.add(L.cos);
     const shell = (r, color, mode, op) => { const m = new T.Mesh(new T.SphereGeometry(1, 96, 64), shellMat(color, mode)); m.scale.setScalar(r * GLY); m.userData.op = op; m.renderOrder = -15; L.cos.add(m); return m; };
     L.cmb = shell(CMB_GLY, '#ffffff', 1, 1); L.cmb.material.side = T.BackSide; L.edge = shell(EDGE_GLY, '#E8442C', 0, 0.9); L.hubble = shell(HUBBLE_GLY, '#8FA5D9', 0, 0.45); L.event = shell(EVENT_GLY, '#4FD8C4', 0, 0.4);
@@ -464,8 +503,9 @@
     const ol = $('#rungs'), h = ol.clientHeight; if (!h) return;
     const lis = O.$$('li', ol), gap = 27, ys = REG.SCALES.map(s => (1 - (Math.log10(s[2]) - S.railLo) / (S.railHi - S.railLo)) * h);
     const n = ys.length;                                   /* SCALES runs from Earth (lowest on the rail) to the universe (highest) */
+    const top = (lis[n - 1] ? lis[n - 1].offsetHeight / 2 : 15) + 2;   /* the top rung is centred on its point: keep all of it below the caption */
     for (let i = 1; i < n; i++) ys[i] = Math.min(ys[i], ys[i - 1] - gap);
-    if (ys[n - 1] < 0) { ys[n - 1] = 0; for (let i = n - 2; i >= 0; i--) ys[i] = Math.max(ys[i], ys[i + 1] + gap); }
+    if (ys[n - 1] < top) { ys[n - 1] = top; for (let i = n - 2; i >= 0; i--) ys[i] = Math.max(ys[i], ys[i + 1] + gap); }
     lis.forEach((li, i) => { li.style.top = ys[i].toFixed(1) + 'px'; });
   }
 
@@ -855,11 +895,20 @@
   function obstacles() {
     const now = performance.now(); if (now - obsT < 250) return obs; obsT = now;
     const sr = stage.getBoundingClientRect(); obs = [];
-    for (const n of [panel, $('#rail'), $('#crumbs'), $('#readout'), $('#ctl'), $('#tour')]) {
+    for (const n of [panel, $('#rail'), $('#rail .cap'), $('#crumbs'), $('#readout'), $('#ctl'), $('#tour')]) {
       if (!n || n.hidden || !n.offsetParent) continue; const r = n.getBoundingClientRect(); if (!r.width) continue;
       obs.push([r.left - sr.left - 4, r.top - sr.top - 4, r.width + 8, r.height + 8]);
     }
     return obs;
+  }
+  /* the true size of a label as it will be drawn (each style has its own size, case and width), measured once per text */
+  const boxes = new Map(); let meter = null;
+  function labelBox(text, cls) {
+    const k = cls + '|' + text; let b = boxes.get(k); if (b) return b;
+    if (!meter) { meter = el('button', { class: 'lb', type: 'button', tabindex: '-1', 'aria-hidden': 'true', style: { visibility: 'hidden', transform: 'translate(-9999px,-9999px)' } }); labelsEl.append(meter); }
+    meter.className = 'lb ' + cls; meter.textContent = text; const r = meter.getBoundingClientRect();
+    b = [Math.ceil(r.width), Math.ceil(r.height)]; if (!b[0]) return [text.length * 7.4 + 14, 18];   /* not laid out yet: a generous guess, not kept */
+    if (boxes.size > 4000) boxes.clear(); boxes.set(k, b); return b;
   }
   /* which names to show: what is near the focus at this scale, brightest first, never overlapping */
   function gatherLabels(ls, kv, view, uT, inSolar) {
@@ -944,7 +993,7 @@
     for (const c of cands) {
       if (n >= (W < 700 ? 22 : 46)) break;
       if (next.has(c.key)) continue;
-      const w = c.text.length * 6.6 + 14, h = 16, y = c.sy - h / 2, hit = x => placed.some(p => x < p[0] + p[2] && x + w > p[0] && y < p[1] + p[3] && y + h > p[1]);
+      const box = labelBox(c.text, c.cls), w = box[0] + 2, h = box[1], y = c.sy - h / 2, hit = x => placed.some(p => x < p[0] + p[2] && x + w > p[0] && y < p[1] + p[3] && y + h > p[1]);
       if (y < 2 || y + h > H - 2) continue;
       let x = c.sx, flip = false;                                         /* to the right of the point, or to its left when that is where the room is */
       if (x + w > W - 2 || hit(x)) { x = c.sx - w; flip = true; }

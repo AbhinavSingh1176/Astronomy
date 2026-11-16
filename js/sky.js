@@ -82,41 +82,64 @@
       cx.fillStyle = SKYS.col[i]; cx.globalAlpha = Math.min(1, 0.35 + (limit - mm) / 4); cx.beginPath(); cx.arc(x, y, r, 0, Math.PI * 2); cx.fill();
     }
     cx.globalAlpha = 1;
+    /* names are collected, then placed together so none sits on another or on a planet or bright star.
+       Sizes are in screen pixels: the chart is drawn at 1520 px and shown at a third to a half of that */
+    const k = SZ / Math.max(120, cv.getBoundingClientRect().width || SZ), FONT = (w, px) => w + ' ' + (px * k).toFixed(1) + 'px Archivo, sans-serif';
+    const labs = [], dots = [];
     /* named bright stars */
-    cx.font = '500 21px Archivo, sans-serif'; cx.textBaseline = 'middle';
     for (const s of NAMED) {
       const [al, az] = altaz(s.ra, s.dec, lst, sl, cl); if (al < 2) continue; const [x, y] = proj(al, az);
       drawn.push({ x, y, n: s.name, sub: 'mag ' + s.mag + ' · ' + O.fmt.ly(s.ly) + ' · alt ' + al.toFixed(0) + '°', slug: s.slug });
       const on = focus && focus.slug === s.slug;
       if (on) { cx.strokeStyle = '#4FD8C4'; cx.lineWidth = 3; cx.beginPath(); cx.arc(x, y, 16, 0, Math.PI * 2); cx.stroke(); }
-      if (names && (s.mag < 1.6 || on) && dark > 0.3) { cx.fillStyle = on ? '#4FD8C4' : 'rgba(255,235,196,.72)'; cx.fillText(s.name, x + 10, y); }
+      if (s.mag < 1.6) dots.push([x, y, 7]);
+      if (names && (s.mag < 1.6 || on) && dark > 0.3) labs.push({ t: s.name, x, y, r: 9, font: FONT(500, 11), col: on ? '#4FD8C4' : 'rgba(255,235,196,.78)', pri: on ? 100 : 40 - s.mag * 4 });
     }
     /* constellation names */
-    if (names && lines) { cx.font = '600 18px Archivo, sans-serif'; cx.fillStyle = 'rgba(143,165,217,.55)'; cx.textAlign = 'center';
-      for (const c of CONS) { if (!c.cen) continue; const [al, az] = altaz(c.cen[0], c.cen[1], lst, sl, cl); if (al < 8) continue; const [x, y] = proj(al, az);
-        cx.fillStyle = focus && focus.con === c[0] ? '#4FD8C4' : 'rgba(143,165,217,.55)'; cx.fillText(c[1].toUpperCase(), x, y); }
-      cx.textAlign = 'left'; }
+    if (names && lines) for (const c of CONS) { if (!c.cen) continue; const [al, az] = altaz(c.cen[0], c.cen[1], lst, sl, cl); if (al < 8) continue; const [x, y] = proj(al, az);
+      const on = focus && focus.con === c[0]; labs.push({ t: c[1].toUpperCase(), x, y, ctr: true, font: FONT(600, 9.5), col: on ? '#4FD8C4' : 'rgba(143,165,217,.62)', pri: on ? 99 : 10 + al / 30 }); }
     /* Sun, Moon, planets */
     for (const b of bodies(jd)) {
       let [al, az] = altaz(b.ra, b.dec, lst, sl, cl); if (b.par) al -= 0.95 * Math.cos(al * D2R);       /* the Moon is near enough for parallax */
       if (al < -0.5) continue; const [x, y] = proj(Math.max(al, 0), az);
       drawn.push({ x, y, n: b.n, sub: (b.kind === 'planet' ? 'mag ' + b.mag.toFixed(1) + ' · ' : '') + 'alt ' + al.toFixed(0) + '° · az ' + az.toFixed(0) + '°', slug: b.slug || b.n.toLowerCase() });
-      if (b.kind === 'sun') { const gg = cx.createRadialGradient(x, y, 0, x, y, 60); gg.addColorStop(0, 'rgba(255,230,170,1)'); gg.addColorStop(0.2, 'rgba(255,210,120,.6)'); gg.addColorStop(1, 'rgba(255,200,100,0)'); cx.fillStyle = gg; cx.beginPath(); cx.arc(x, y, 60, 0, Math.PI * 2); cx.fill(); }
+      let r = 15;
+      if (b.kind === 'sun') { const gg = cx.createRadialGradient(x, y, 0, x, y, 60); gg.addColorStop(0, 'rgba(255,230,170,1)'); gg.addColorStop(0.2, 'rgba(255,210,120,.6)'); gg.addColorStop(1, 'rgba(255,200,100,0)'); cx.fillStyle = gg; cx.beginPath(); cx.arc(x, y, 60, 0, Math.PI * 2); cx.fill(); r = 12; }
       else if (b.kind === 'moon') moonDisc(x, y, 15, A.moonPhase(jd));
       else { cx.fillStyle = { Mars: '#FF9C7A', Jupiter: '#F3DDB6', Saturn: '#E9D29A', Venus: '#FFF6DE', Mercury: '#D9CDB8', Uranus: '#B8E3EA', Neptune: '#8FB2FF' }[b.n] || '#fff';
-        const r = Math.max(3.5, (2 - b.mag) * 1.6 + 5); cx.shadowColor = cx.fillStyle; cx.shadowBlur = 14; cx.beginPath(); cx.arc(x, y, r, 0, Math.PI * 2); cx.fill(); cx.shadowBlur = 0; }
-      if (names) { cx.font = '600 23px Archivo, sans-serif'; cx.fillStyle = b.kind === 'planet' ? '#FFB13B' : '#FFEBC4'; cx.fillText(b.n, x + 16, y - 2); }
+        r = Math.max(3.5, (2 - b.mag) * 1.6 + 5); cx.shadowColor = cx.fillStyle; cx.shadowBlur = 14; cx.beginPath(); cx.arc(x, y, r, 0, Math.PI * 2); cx.fill(); cx.shadowBlur = 0; }
+      dots.push([x, y, r + 2]);
+      if (names) labs.push({ t: b.n, x, y, r: r + 6, font: FONT(600, 12.5), col: b.kind === 'planet' ? '#FFB13B' : '#FFEBC4', pri: b.kind === 'planet' ? 80 - b.mag : 90 });
     }
+    placeLabels(labs, dots);
     cx.restore();
     /* horizon and cardinal points */
     cx.strokeStyle = 'rgba(176,141,87,.8)'; cx.lineWidth = 3; cx.beginPath(); cx.arc(CX, CY, R, 0, Math.PI * 2); cx.stroke();
-    cx.font = '700 30px Archivo, sans-serif'; cx.fillStyle = '#E8DCC0'; cx.textAlign = 'center'; cx.textBaseline = 'middle';
+    cx.font = FONT(700, 13); cx.fillStyle = '#E8DCC0'; cx.textAlign = 'center'; cx.textBaseline = 'middle';
     for (const [lab, az] of [['N', 0], ['E', 90], ['S', 180], ['W', 270]]) { const r = R + 46, a = az * D2R; cx.fillText(lab, CX - r * Math.sin(a), CY - r * Math.cos(a)); }
     cx.font = '500 15px "IBM Plex Mono", monospace'; cx.fillStyle = 'rgba(232,220,192,.7)';
     for (let az = 0; az < 360; az += 10) { if (az % 90 === 0) continue; const a = az * D2R, r1 = R + 6, r2 = R + (az % 30 === 0 ? 22 : 13); cx.strokeStyle = 'rgba(232,220,192,.6)'; cx.lineWidth = 2;
       cx.beginPath(); cx.moveTo(CX - r1 * Math.sin(a), CY - r1 * Math.cos(a)); cx.lineTo(CX - r2 * Math.sin(a), CY - r2 * Math.cos(a)); cx.stroke(); }
     cx.textAlign = 'left'; cx.textBaseline = 'alphabetic';
     $('#scrubT').textContent = offset ? fmtDT(d) : 'now · ' + fmtT(d);
+  }
+  /* most important first; each name tries right, left, above and below its point (constellations: centred, then just above or below),
+     and is left off where none of those is clear of names already placed, planets and bright stars */
+  function placeLabels(labs, dots) {
+    const taken = dots.map(([x, y, r]) => [x - r, y - r, 2 * r, 2 * r]), hit = b => taken.some(o => b[0] < o[0] + o[2] && b[0] + b[2] > o[0] && b[1] < o[1] + o[3] && b[1] + b[3] > o[1]);
+    const inside = b => [[b[0], b[1]], [b[0] + b[2], b[1]], [b[0], b[1] + b[3]], [b[0] + b[2], b[1] + b[3]]].every(([x, y]) => (x - CX) ** 2 + (y - CY) ** 2 < R * R);
+    labs.sort((a, b) => b.pri - a.pri); cx.textAlign = 'left'; cx.textBaseline = 'top';
+    for (const l of labs) {
+      cx.font = l.font; const w = cx.measureText(l.t).width, h = parseFloat(/([\d.]+)px/.exec(l.font)[1]) * 1.2;
+      const tries = l.ctr ? [[l.x - w / 2, l.y - h / 2], [l.x - w / 2, l.y - h * 1.5], [l.x - w / 2, l.y + h * 0.5]]
+        : [[l.x + l.r, l.y - h / 2], [l.x - l.r - w, l.y - h / 2], [l.x - w / 2, l.y - l.r - h], [l.x - w / 2, l.y + l.r]];
+      for (const [x, y] of tries) {
+        const b = [x - 3, y - 1, w + 6, h + 2];
+        if (hit(b) || !inside(b)) continue;
+        taken.push(b); cx.fillStyle = l.col; cx.fillText(l.t, x, y + h * 0.1); break;
+      }
+    }
+    cx.textBaseline = 'alphabetic';
   }
   function moonDisc(x, y, r, ph) {
     const a = ph.angle * D2R; cx.save(); cx.fillStyle = '#26221c'; cx.beginPath(); cx.arc(x, y, r, 0, Math.PI * 2); cx.fill();

@@ -45,19 +45,32 @@
       for (const n of N) { n.vx += (W / 2 - n.x) * 0.004; n.vy += (H / 2 - n.y) * 0.006; n.x += Math.max(-20, Math.min(20, n.vx)) * t; n.y += Math.max(-20, Math.min(20, n.vy)) * t; n.vx *= 0.5; n.vy *= 0.5;
         n.x = Math.max(40, Math.min(W - 40, n.x)); n.y = Math.max(30, Math.min(H - 30, n.y)); }
     }
-    /* fit the drawing to the frame */
+    /* fit the drawing to the frame, drawn at the screen's own size so names stay readable on a phone (taller there) */
+    const PW = Math.max(300, Math.round(host.clientWidth || 1200)), PH = Math.round(PW < 700 ? PW * 1.3 : Math.min(620, PW * 0.52)), pad = PW < 700 ? 16 : 30;
     const xs = N.map(n => n.x), ys = N.map(n => n.y), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
-    const sc = Math.min((W - 260) / Math.max(1, x1 - x0), (H - 90) / Math.max(1, y1 - y0), 3);
-    for (const n of N) { n.x = W / 2 + (n.x - (x0 + x1) / 2) * sc - 60; n.y = H / 2 + (n.y - (y0 + y1) / 2) * sc; }
+    const sc = Math.min((PW - 2 * pad - (PW < 700 ? 60 : 200)) / Math.max(1, x1 - x0), (PH - 2 * pad - 20) / Math.max(1, y1 - y0), 3);
+    for (const n of N) { n.x = PW / 2 + (n.x - (x0 + x1) / 2) * sc - (PW < 700 ? 20 : 60); n.y = PH / 2 + (n.y - (y0 + y1) / 2) * sc; }
     const NS = 'http://www.w3.org/2000/svg', mk = (t, a) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); return e; };
-    const svg = mk('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Map of what you have found and the rumours it points to' });
+    const svg = mk('svg', { viewBox: `0 0 ${PW} ${PH}`, width: PW, height: PH, role: 'img', 'aria-label': 'Map of what you have found and the rumours it points to' });
     for (const [i, j] of E) svg.append(mk('line', { x1: N[i].x, y1: N[i].y, x2: N[j].x, y2: N[j].y, stroke: N[i].seen && N[j].seen ? 'rgba(255,235,196,.28)' : 'rgba(143,165,217,.18)', 'stroke-width': 1, 'stroke-dasharray': N[i].seen && N[j].seen ? '' : '3 4' }));
-    for (const n of N) {
-      const g = G.nodes[n.id], k = n.id.split(':')[0], a = mk('a', { href: g[2] }), lab = mk('text', { x: n.x + 9, y: n.y + 4 });
-      a.append(mk('circle', n.seen ? { cx: n.x, cy: n.y, r: 5.5, fill: COL[k] || '#ccc', stroke: '#000', 'stroke-width': 1 } : { cx: n.x, cy: n.y, r: 5, fill: 'none', stroke: COL[k] || '#ccc', 'stroke-width': 1.3, 'stroke-dasharray': '2 2' }));
-      lab.textContent = g[0].length > 34 ? g[0].slice(0, 32) + '…' : g[0]; if (n.seen || N.length < 70) a.append(lab);
-      const tt = mk('title', {}); tt.textContent = g[0] + (n.seen ? ' · found' : ' · rumour'); a.append(tt); svg.append(a);
+    /* names: found first, then the strongest rumours; each tries right, left, above and below its point and is left off (its dot keeps a tooltip) where none fit */
+    const ctx = document.createElement('canvas').getContext('2d'); ctx.font = '11px ' + (getComputedStyle(document.documentElement).getPropertyValue('--f-display').trim() || 'sans-serif');
+    const taken = N.map(n => [n.x - 7, n.y - 7, 14, 14]), clash = r => taken.some(t => r[0] < t[0] + t[2] && r[0] + r[2] > t[0] && r[1] < t[1] + t[3] && r[1] + r[3] > t[1]);
+    const order = N.map((n, i) => i).sort((a, b) => (N[b].seen - N[a].seen) || a - b);   /* rumours arrive already ranked by how many finds point at them */
+    const labels = new Map();
+    for (const i of order) {
+      const n = N[i], name = G.nodes[n.id][0], text = name.length > 34 ? name.slice(0, 32) + '…' : name, w = ctx.measureText(text).width + 2, h = 13;
+      for (const [x, y, anchor, rx] of [[n.x + 9, n.y + 4, 'start', n.x + 8], [n.x - 9, n.y + 4, 'end', n.x - 9 - w], [n.x, n.y - 9, 'middle', n.x - w / 2], [n.x, n.y + 17, 'middle', n.x - w / 2]]) {
+        const r = [rx - 1, y - h + 3, w + 2, h]; if (r[0] < 2 || r[0] + r[2] > PW - 2 || r[1] < 2 || r[1] + r[3] > PH - 2 || clash(r)) continue;
+        taken.push(r); labels.set(i, { x, y, anchor, text }); break;
+      }
     }
+    N.forEach((n, i) => {
+      const g = G.nodes[n.id], k = n.id.split(':')[0], a = mk('a', { href: g[2] });
+      a.append(mk('circle', n.seen ? { cx: n.x, cy: n.y, r: 5.5, fill: COL[k] || '#ccc', stroke: '#000', 'stroke-width': 1 } : { cx: n.x, cy: n.y, r: 5, fill: 'none', stroke: COL[k] || '#ccc', 'stroke-width': 1.3, 'stroke-dasharray': '2 2' }));
+      const L_ = labels.get(i); if (L_) { const lab = mk('text', { x: L_.x, y: L_.y, 'text-anchor': L_.anchor }); lab.textContent = L_.text; a.append(lab); }
+      const tt = mk('title', {}); tt.textContent = g[0] + (n.seen ? ' · found' : ' · rumour'); a.append(tt); svg.append(a);
+    });
     host.append(svg, el('div', { class: 'legend', text: 'Solid: found · dashed: rumour · colour: kind (places blue, papers amber, landmark papers cream, terms teal, missions red)' }));
   }
   O.footer(document.body);
