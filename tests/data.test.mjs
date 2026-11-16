@@ -13,7 +13,7 @@ const isISO = s => typeof s === 'string' && !isNaN(new Date(s)) && /^\d{4}-\d\d-
 const isURL = s => { try { return /^https?:$/.test(new URL(s).protocol); } catch (e) { return false; } };
 const str = (s, max = 1e5) => typeof s === 'string' && s.length > 0 && s.length <= max && !/<script|javascript:/i.test(s);
 function section(name, fn) { const before = fails; try { fn(); } catch (e) { fails++; console.log('  FAIL ' + name + ': ' + e.message); } console.log((fails === before ? 'ok   ' : 'FAIL ') + name); }
-const opt = (p, fn) => { if (existsSync(path.join(ROOT, p))) section(p, () => fn(read(p))); else console.log('skip ' + p + ' (not fetched yet)'); };
+const opt = (p, fn) => { if (!existsSync(path.join(ROOT, p))) return console.log('skip ' + p + ' (not fetched yet)'); const d = read(p); if (d && d.fetched === null) return console.log('skip ' + p + ' (placeholder until the first refresh)'); section(p, () => fn(d)); };
 
 /* ── catalogues, built once by tools/build_catalog.py ── */
 section('catalogue binaries', () => {

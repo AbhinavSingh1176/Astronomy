@@ -1,0 +1,172 @@
+{
+ "fetched": "2026-11-16T05:00:00.000Z",
+ "source": "Seed from Spaceflight Now, NASA and ESO pages, read 16 Nov 2026",
+ "feeds": {
+  "seed": 14
+ },
+ "items": [
+  {
+   "id": "0054e860a0a0",
+   "t": "ULA suffers first outright failure with loss of Vulcan rocket carrying 40 Amazon Leo satellites",
+   "url": "https://spaceflightnow.com/2026/11/15/ula-suffers-first-total-mission-failure-with-loss-of-vulcan-rocket-carrying-40-amazon-leo-satellites/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-15T22:00:00.000Z",
+   "sum": "United Launch Alliance’s Vulcan rocket was lost with the 40 Amazon Leo satellites it carried: the company’s first outright mission failure.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "7eafd996c8cb",
+   "t": "Starship returns to Starbase and a successful tower catch",
+   "url": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-13T21:30:00.000Z",
+   "sum": "Starship Flight 15: the catch came at 3:20 p.m. CST (21:20 UTC) after Ship 42 re-entered the atmosphere.",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "e8dad5c8e21c",
+   "t": "NASA’s Hubble offers cosmic sampler of targets for Roman",
+   "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-offers-cosmic-sampler-of-targets-for-roman/",
+   "site": "NASA",
+   "date": "2026-11-10T15:00:00.000Z",
+   "sum": "",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "0c075ce89994",
+   "t": "NASA invites media, public to join Voyager 1 one-light-day activities",
+   "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/",
+   "site": "NASA",
+   "date": "2026-11-08T15:00:00.000Z",
+   "sum": "Voyager 1 becomes the first spacecraft one light-day from Earth on 18 November 2026.",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "f1e81eb74762",
+   "t": "NASA scientists show how gravitational waves can reveal new worlds",
+   "url": "https://science.nasa.gov/missions/lisa/gravitational-waves-can-reveal-new-worlds/",
+   "site": "NASA",
+   "date": "2026-11-08T14:00:00.000Z",
+   "sum": "",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "2c61c88f281a",
+   "t": "AST SpaceMobile unveils $1.3 billion engine deal with Firefly Aerospace to power new heavy-lift rocket",
+   "url": "https://spaceflightnow.com/2026/11/07/ast-spacemobile-unveils-1-3-billion-engine-deal-with-firefly-aerospace-to-power-new-heavy-lift-rocket/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-07T18:00:00.000Z",
+   "sum": "The company behind the BlueBird direct-to-cell satellites is adding a heavy-lift rocket of its own.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "98a2827a46e8",
+   "t": "NASA’s ESCAPADE completes powered Earth flybys, now en route to Mars",
+   "url": "https://science.nasa.gov/science-research/heliophysics/nasas-escapade-completes-powered-earth-flybys-now-en-route-to-mars/",
+   "site": "NASA",
+   "date": "2026-11-07T15:00:00.000Z",
+   "sum": "",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "d544226bf8e6",
+   "t": "NASA’s Chandra finds source of star’s mysterious outbursts",
+   "url": "https://science.nasa.gov/missions/chandra/nasas-chandra-finds-source-of-stars-mysterious-outbursts/",
+   "site": "NASA",
+   "date": "2026-11-07T14:00:00.000Z",
+   "sum": "",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "c52fa2a5bd4d",
+   "t": "Falcon 9 launches from California on classified mission for U.S. Space Force",
+   "url": "https://spaceflightnow.com/2026/11/06/falcon-9-to-launch-from-california-on-classified-mission-for-u-s-space-force/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-07T01:30:00.000Z",
+   "sum": "Liftoff from pad 4E at Vandenberg Space Force Base came at 4:48 p.m. PST.",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "616c0e514806",
+   "t": "NASA announces $1 million to students for Moon Base Challenge",
+   "url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+   "site": "NASA",
+   "date": "2026-11-06T15:00:00.000Z",
+   "sum": "",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "c05ddc05266d",
+   "t": "Blue Origin reveals new kick stage, engines for its New Glenn rockets",
+   "url": "https://spaceflightnow.com/2026/11/05/blue-origin-reveals-new-kick-stage-engines-for-its-new-glenn-rockets/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-05T20:00:00.000Z",
+   "sum": "The announcement came at an invitation-only event ahead of the NASA-backed Max Power airshow.",
+   "desk": "launch",
+   "who": [
+    "NASA",
+    "Blue Origin"
+   ]
+  },
+  {
+   "id": "7dea4332fd67",
+   "t": "Spacewalkers complete five-year effort to upgrade space station power supply",
+   "url": "https://spaceflightnow.com/2026/11/05/spacewalkers-complete-five-year-effort-to-upgrade-space-station-power-supply/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-05T19:00:00.000Z",
+   "sum": "",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "2d388f71e487",
+   "t": "What’s Up: November 2026 skywatching tips from NASA",
+   "url": "https://science.nasa.gov/solar-system/skywatching/whats-up-november-2026-skywatching-tips-from-nasa/",
+   "site": "NASA",
+   "date": "2026-10-30T15:00:00.000Z",
+   "sum": "",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "0cb7f0557a0d",
+   "t": "Dead star and planetary bodies: astronomers spot unique disc of debris that foretells Solar System’s future",
+   "url": "https://www.eso.org/public/news/eso2613/",
+   "site": "ESO",
+   "date": "2026-10-27T11:00:00.000Z",
+   "sum": "Very Large Telescope observations show a rare double debris disc around a dead star, shaped by two surviving planetary bodies.",
+   "desk": "astronomy",
+   "who": [
+    "ESO"
+   ]
+  }
+ ]
+}

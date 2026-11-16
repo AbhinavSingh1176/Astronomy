@@ -35,8 +35,8 @@ const FEEDS = [
   ['Sky & Telescope', 'https://skyandtelescope.org/astronomy-news/feed/']
 ];
 const DESKS = [['launch', /\b(launch(es|ed)?|rocket|liftoff|booster|starship|falcon|ariane|vega|h3|pslv|gslv|lvm3|long march|soyuz|electron|neutron|new glenn|vulcan|kuiper|starlink|static fire)\b/i],
-  ['missions', /\b(mission|spacecraft|probe|orbiter|lander|rover|flyby|astronaut|crew|iss|space station|tiangong|artemis|gateway|perseverance|curiosity|juice|clipper|psyche|lucy|bepicolombo|hayabusa|chang.?e|chandrayaan|aditya|voyager|new horizons|osiris|dart|hera)\b/i],
-  ['astronomy', /\b(galax|star|nebula|black hole|exoplanet|planet|telescope|webb|jwst|hubble|euclid|rubin|alma|supernova|quasar|pulsar|universe|cosmic|dark (matter|energy)|gravitational|asteroid|comet|meteor|eclipse|aurora)\b/i],
+  ['missions', /\b(missions?|spacecraft|probes?|orbiters?|landers?|rovers?|flybys?|astronauts?|crew|iss|space station|spacewalk\w*|tiangong|shenzhou|artemis|gateway|perseverance|curiosity|juice|clipper|psyche|lucy|bepicolombo|hayabusa|chang.?e|chandrayaan|aditya|voyager|new horizons|osiris|dart|hera|escapade|cygnus|progress ms|dragon|starliner|mars)\b/i],
+  ['astronomy', /\b(galax\w*|stars?|nebulae?|black holes?|exoplanets?|planets?|telescopes?|webb|jwst|hubble|euclid|rubin|alma|supernovae?|quasars?|pulsars?|universe|cosmic|dark (matter|energy)|gravitational|asteroids?|comets?|meteors?|eclipses?|auroras?|skywatching)\b/i],
   ['policy', /\b(budget|congress|contract|funding|policy|agency|administrator|director|company|startup|ipo|acquire|regulat|faa|fcc|treaty)\b/i]];
 const WHO = [['NASA', /\bnasa\b/i], ['ESA', /\besa\b|european space agency/i], ['JAXA', /\bjaxa\b|japan/i], ['ISRO', /\bisro\b|india/i], ['CNSA', /\bcnsa\b|china|chinese/i],
   ['Roscosmos', /roscosmos|russia/i], ['Israel', /israel|\bisa\b|spaceil|beresheet/i], ['UAE', /\buae\b|emirates|mbrsc/i], ['KASA', /\bkasa\b|\bkari\b|korea/i],
@@ -180,7 +180,7 @@ const SOURCES = [
   { name: 'apod', label: 'NASA APOD', file: 'data/apod.json', run: apod, count: d => d.days.length, min: 1 },
   { name: 'dsn', label: 'NASA DSN Now', file: 'data/dsn.json', run: dsn, count: d => d.stations.reduce((n, s) => n + s.dishes.length, 0), min: 1 }
 ];
-export { SOURCES, tles, table, xclass, launch };
+export { SOURCES, tles, table, xclass, launch, deskOf, WHO };
 
 if (import.meta.url === 'file://' + process.argv[1] || process.argv[1].endsWith('refresh.mjs')) {
   const only = process.argv.slice(2), pick = only.length ? SOURCES.filter(s => only.includes(s.name)) : SOURCES;

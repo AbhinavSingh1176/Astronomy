@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Dispatch · OWLT</title>
+<meta name="description" content="Space news from NASA, ESA, ESO, JAXA, ISRO and the space press, a departures board of upcoming launches, and the week's close approaches.">
+<link rel="stylesheet" href="css/core.css">
+<style>
+/* The Dispatch is a broadsheet printed by a machine that has been to orbit: a condensed nameplate, column rules,
+   a teletype that never stops, and a split-flap departures board for launches. */
+.paper{max-width:1240px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.plate{text-align:center;padding-top:26px;border-bottom:3px double var(--hair)}
+.plate .ed{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--f-data);font-size:11px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid var(--hair)}
+.plate h1{font-size:clamp(46px,10vw,120px);font-stretch:62%;font-weight:900;letter-spacing:.02em;text-transform:uppercase;line-height:.95;padding-block:14px 8px;color:var(--starlight)}
+.plate h1 span{color:var(--ha)}
+.plate .motto{font-family:var(--f-text);font-style:italic;color:var(--mute);font-size:15px;padding-bottom:12px}
+.ticker{overflow:hidden;border-bottom:1px solid var(--hair);background:#000;white-space:nowrap;position:relative}
+.ticker .run{display:inline-flex;gap:46px;padding:9px 0;animation:tick var(--dur,120s) linear infinite;font-family:var(--f-data);font-size:12.5px;color:var(--sodium)}
+.ticker .run a{color:var(--sodium);text-decoration:none} .ticker .run a:hover{color:var(--o3)}
+.ticker .run b{color:var(--ha);font-weight:500;margin-right:8px}
+.ticker:hover .run{animation-play-state:paused}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .run{animation:none;flex-wrap:wrap;white-space:normal;gap:8px 30px;padding:9px 16px}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding-block:14px;border-bottom:1px solid var(--hair)}
+.chips button{background:none;border:1px solid var(--hair);color:var(--mute);font-family:var(--f-display);font-size:12px;padding:3px 10px;border-radius:999px;cursor:pointer}
+.chips button[aria-pressed=true]{border-color:var(--o3);color:var(--o3)}
+.chips .lab{font-family:var(--f-display);font-size:12px;color:var(--faint);align-self:center;margin-right:4px}
+
+.front{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:0;border-bottom:1px solid var(--hair)}
+.front > *{padding:20px 22px 22px;border-right:1px solid var(--hair);min-width:0}
+.front > *:last-child{border-right:0}
+.lead h2{font-size:clamp(30px,3.6vw,46px);font-stretch:70%;font-weight:800;line-height:1;text-transform:none}
+.story h3{font-size:20px;font-stretch:80%;font-weight:700;line-height:1.08}
+.lead h2 a,.story h3 a{color:var(--starlight);text-decoration:none} .lead h2 a:hover,.story h3 a:hover{color:var(--o3)}
+.kick{font-family:var(--f-display);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ha);margin-bottom:8px}
+.lead p,.story p{margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--text)}
+.lead p::first-letter{float:left;font-family:var(--f-display);font-stretch:70%;font-weight:800;font-size:54px;line-height:.85;padding:4px 8px 0 0;color:var(--ha)}
+.by{margin-top:10px;font-family:var(--f-data);font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.04em}
+.story + .story{margin-top:20px;padding-top:18px;border-top:1px solid var(--hair2)}
+
+.desks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--hair)}
+.desk{padding:18px 20px 22px;border-right:1px solid var(--hair);min-width:0}
+.desk:last-child{border-right:0}
+.desk h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-stretch:115%;color:var(--mute);border-bottom:2px solid var(--starlight);padding-bottom:6px;margin-bottom:6px}
+.desk ul{list-style:none;margin:0;padding:0}
+.desk li{padding:9px 0;border-bottom:1px solid var(--hair2)}
+.desk li a{font-family:var(--f-display);font-stretch:92%;font-size:15px;line-height:1.28;color:var(--starlight);text-decoration:none}
+.desk li a:hover{color:var(--o3)}
+.desk li .by{margin-top:4px}
+.desk .none{color:var(--faint);font-family:var(--f-display);font-size:13px;padding-top:8px}
+
+/* the departures board */
+.board-wrap{padding-block:30px 10px;scroll-margin-top:calc(var(--nav-h) + 8px)}
+.board-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.board-head h2{font-size:clamp(24px,3vw,34px);font-stretch:70%;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.board{margin-top:12px;background:#050505;border:1px solid #222;padding:10px;overflow-x:auto}
+.board table{width:100%;border-collapse:separate;border-spacing:0 4px;min-width:820px}
+.board th{font-family:var(--f-data);font-size:10px;font-weight:400;color:#8a8a7a;text-align:left;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px}
+.board td{padding:0 8px;vertical-align:middle}
+.flap{display:inline-flex;gap:2px}
+.flap i{display:inline-block;width:.78em;height:1.5em;line-height:1.5em;text-align:center;font-style:normal;background:linear-gradient(#1c1c1a 0 49%,#0d0d0c 50% 100%);color:#F2E6C9;font-family:var(--f-data);font-size:15px;border-radius:2px;position:relative;box-shadow:inset 0 -1px 0 rgba(0,0,0,.6)}
+.flap i::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.75)}
+.flap i.go{animation:flip .5s steps(6) var(--d,0s) both}
+@keyframes flip{0%{transform:rotateX(0);color:#555}50%{transform:rotateX(80deg);color:#999}100%{transform:rotateX(0)}}
+@media (prefers-reduced-motion:reduce){.flap i.go{animation:none}}
+.board .st-go i{color:#7CE3B5} .board .st-tbd i{color:#E8C27A} .board .st-hold i,.board .st-fail i{color:#FF7A5C}
+.board .sub{display:block;font-family:var(--f-display);font-size:11.5px;color:#9a917f;margin-top:3px;max-width:44ch;white-space:normal}
+.board .tm{font-family:var(--f-data);font-size:15px;color:#F2E6C9;white-space:nowrap;font-variant-numeric:tabular-nums}
+.board-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:8px;font-family:var(--f-display);font-size:12px;color:var(--faint)}
+.empty-board{padding:22px;color:#9a917f;font-family:var(--f-data);font-size:13px;text-align:center}
+
+.lower{display:grid;grid-template-columns:1.2fr 1fr;gap:0;border-top:1px solid var(--hair);margin-top:24px;margin-bottom:50px}
+.lower > section{padding:20px 22px 24px;border-right:1px solid var(--hair);min-width:0}
+.lower > section:last-child{border-right:0}
+.lower h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-stretch:115%;color:var(--mute);border-bottom:2px solid var(--starlight);padding-bottom:6px}
+.recent li,.neo li{display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--hair2)}
+.recent ul,.neo ul{list-style:none;margin:0;padding:0}
+.recent .d,.neo .d{font-family:var(--f-data);font-size:11.5px;color:var(--mute);white-space:nowrap}
+.recent .n,.neo .n{font-family:var(--f-display);font-size:14px;color:var(--starlight);min-width:0}
+.recent .o{font-family:var(--f-display);font-size:12px;white-space:nowrap}
+.recent .o.ok{color:var(--o3)} .recent .o.bad{color:var(--ha)}
+.neo .x{font-family:var(--f-data);font-size:11.5px;color:var(--text);text-align:right;white-space:nowrap}
+.neo .note,.recent .note{margin-top:10px;font-size:13.5px;color:var(--faint)}
+
+@media (max-width:980px){.front{grid-template-columns:1fr 1fr}.front .lead{grid-column:1 / -1;border-right:0;border-bottom:1px solid var(--hair)}.desks{grid-template-columns:1fr 1fr}.desk:nth-child(2n){border-right:0}.desk{border-bottom:1px solid var(--hair)}}
+@media (max-width:640px){.front{grid-template-columns:1fr}.front > *{border-right:0;border-bottom:1px solid var(--hair)}.desks{grid-template-columns:1fr}.desk{border-right:0}.lower{grid-template-columns:1fr}.lower > section{border-right:0}}
+</style>
+</head>
+<body>
+<main class="paper">
+  <header class="plate">
+    <div class="ed" id="ed"></div>
+    <h1>The <span>Dispatch</span></h1>
+    <div class="motto">All the news that light could carry, collected every six hours</div>
+  </header>
+  <div class="ticker" id="ticker" aria-label="Latest headlines"></div>
+  <div class="chips" id="chips" role="group" aria-label="Filter by who"></div>
+  <section class="front" id="front"></section>
+  <section class="desks" id="desks"></section>
+  <section class="board-wrap" id="launches">
+    <div class="board-head"><h2>Departures</h2><span class="stamp" id="lstamp"></span></div>
+    <div class="board" id="board"></div>
+    <div class="board-foot"><span>Times are shown in your time zone. T-minus counts to the planned moment; launches slip, and the board follows the latest fetch.</span><span id="lcount"></span></div>
+  </section>
+  <section class="lower">
+    <section class="recent"><h2>Arrivals: the last launches</h2><div id="recent"></div></section>
+    <section class="neo"><h2>Near misses: the next close approaches</h2><div id="neo"></div></section>
+  </section>
+</main>
+<script src="js/core.js"></script>
+<script src="js/dispatch.js"></script>
+</body>
+</html>
