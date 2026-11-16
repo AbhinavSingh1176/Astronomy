@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T06:23:16.970Z",
+ "fetched": "2026-11-16T15:57:04.328Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -15,47 +15,69 @@
      "targets": []
     },
     {
+     "name": "DSS23",
+     "az": 80,
+     "el": 6,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "JNO",
+       "name": "Juno",
+       "km": 786000000,
+       "rtlt": 5250
+      }
+     ]
+    },
+    {
      "name": "DSS24",
-     "az": 109,
-     "el": 47,
+     "az": 126,
+     "el": 21,
      "up": [
       {
-       "sc": "James Webb Space Telescope",
+       "sc": "SOHO",
        "rate": 0,
        "band": "S",
-       "power": 4.8
+       "power": 1.7
       }
      ],
      "down": [
       {
-       "sc": "James Webb Space Telescope",
-       "rate": 40000,
+       "sc": "SOHO",
+       "rate": 54610,
        "band": "S",
-       "power": -120
+       "power": -130
       },
       {
-       "sc": "James Webb Space Telescope",
-       "rate": 28000000,
-       "band": "K",
-       "power": -91
+       "sc": "SOHO",
+       "rate": 245800,
+       "band": "S",
+       "power": -140
       }
      ],
      "targets": [
       {
-       "code": "JWST",
-       "name": "James Webb Space Telescope",
-       "km": 1660000,
-       "rtlt": 11.1
+       "code": "SOHO",
+       "name": "SOHO",
+       "km": 1240000,
+       "rtlt": 8.3
       }
      ]
     },
     {
      "name": "DSS26",
-     "az": 180,
-     "el": 90,
+     "az": 117,
+     "el": 10,
      "up": [],
      "down": [],
-     "targets": []
+     "targets": [
+      {
+       "code": "ACE",
+       "name": "Advanced Composition Explorer",
+       "km": 1490000,
+       "rtlt": 9.92
+      }
+     ]
     }
    ]
   },
@@ -72,14 +94,151 @@
      "targets": []
     },
     {
+     "name": "DSS54",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS63",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "EURC",
+       "name": "Europa Clipper",
+       "km": 17600000,
+       "rtlt": 117
+      }
+     ]
+    },
+    {
+     "name": "DSS56",
+     "az": 206,
+     "el": 20,
+     "up": [
+      {
+       "sc": "Parker Solar Probe",
+       "rate": 0,
+       "band": "X",
+       "power": 18
+      }
+     ],
+     "down": [
+      {
+       "sc": "Parker Solar Probe",
+       "rate": 178600,
+       "band": "Ka",
+       "power": -120
+      }
+     ],
+     "targets": [
+      {
+       "code": "SPP",
+       "name": "Parker Solar Probe",
+       "km": 140000000,
+       "rtlt": 934
+      }
+     ]
+    },
+    {
+     "name": "DSS53",
+     "az": 151,
+     "el": 27,
+     "up": [
+      {
+       "sc": "Lunar Reconnaissance Orbiter",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "Lunar Reconnaissance Orbiter",
+       "rate": 28590000,
+       "band": "K",
+       "power": -87
+      },
+      {
+       "sc": "Lunar Reconnaissance Orbiter",
+       "rate": 146400,
+       "band": "S",
+       "power": -110
+      }
+     ],
+     "targets": [
+      {
+       "code": "LRO",
+       "name": "Lunar Reconnaissance Orbiter",
+       "km": 397000,
+       "rtlt": 2.65
+      }
+     ]
+    },
+    {
      "name": "DSS65",
-     "az": 177,
-     "el": 63,
+     "az": 80,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "RST",
+       "name": "Roman Space Telescope",
+       "km": 1310000,
+       "rtlt": 8.73
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cdscc",
+   "name": "Canberra, Australia",
+   "dishes": [
+    {
+     "name": "DSS35",
+     "az": 300,
+     "el": 15,
+     "up": [
+      {
+       "sc": "Roman Space Telescope",
+       "rate": 0,
+       "band": "X",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "Roman Space Telescope",
+       "rate": 354500,
+       "band": "S",
+       "power": -110
+      }
+     ],
+     "targets": [
+      {
+       "code": "RST",
+       "name": "Roman Space Telescope",
+       "km": 1310000,
+       "rtlt": 8.73
+      }
+     ]
+    },
+    {
+     "name": "DSS43",
+     "az": 64,
+     "el": 12,
      "up": [
       {
        "sc": "Juno",
        "rate": 0,
-       "band": "X",
+       "band": "S",
        "power": 19
       }
      ],
@@ -95,28 +254,27 @@
       {
        "code": "JNO",
        "name": "Juno",
-       "km": 787000000,
+       "km": 786000000,
        "rtlt": 5250
       }
      ]
     },
     {
-     "name": "DSS53",
-     "az": 176,
-     "el": 64,
+     "name": "DSS36",
+     "az": 63,
+     "el": 11,
      "up": [],
-     "down": [
-      {
-       "sc": "Mars Odyssey",
-       "rate": 14220,
-       "band": "X",
-       "power": -120
-      }
-     ],
+     "down": [],
      "targets": [
       {
        "code": "M01O",
        "name": "Mars Odyssey",
+       "km": 195000000,
+       "rtlt": 1300
+      },
+      {
+       "code": "M20",
+       "name": "Mars 2020 (Perseverance)",
        "km": 195000000,
        "rtlt": 1300
       },
@@ -125,172 +283,6 @@
        "name": "Mars Reconnaissance Orbiter",
        "km": 195000000,
        "rtlt": 1300
-      }
-     ]
-    },
-    {
-     "name": "DSS56",
-     "az": 176,
-     "el": 64,
-     "up": [],
-     "down": [
-      {
-       "sc": "Mars Odyssey",
-       "rate": 14220,
-       "band": "X",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "M01O",
-       "name": "Mars Odyssey",
-       "km": 195000000,
-       "rtlt": 1300
-      }
-     ]
-    },
-    {
-     "name": "DSS63",
-     "az": 134,
-     "el": 39,
-     "up": [
-      {
-       "sc": "STEREO A",
-       "rate": 0,
-       "band": "X",
-       "power": 9.9
-      }
-     ],
-     "down": [
-      {
-       "sc": "STEREO A",
-       "rate": 720000,
-       "band": "X",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
-       "code": "STA",
-       "name": "STEREO A",
-       "km": 172000000,
-       "rtlt": 1150
-      }
-     ]
-    },
-    {
-     "name": "DSS54",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    }
-   ]
-  },
-  {
-   "id": "cdscc",
-   "name": "Canberra, Australia",
-   "dishes": [
-    {
-     "name": "DSS35",
-     "az": 278,
-     "el": 57,
-     "up": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 454600,
-       "band": "Ka",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
-       "code": "SPP",
-       "name": "Parker Solar Probe",
-       "km": 140000000,
-       "rtlt": 935
-      }
-     ]
-    },
-    {
-     "name": "DSS43",
-     "az": 313,
-     "el": 29,
-     "up": [],
-     "down": [
-      {
-       "sc": "Voyager 1",
-       "rate": 40,
-       "band": "X",
-       "power": -160
-      }
-     ],
-     "targets": [
-      {
-       "code": "VGR1",
-       "name": "Voyager 1",
-       "km": 25900000000,
-       "rtlt": 173000
-      }
-     ]
-    },
-    {
-     "name": "DSS34",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [
-      {
-       "sc": "Voyager 2",
-       "rate": 0,
-       "band": "X",
-       "power": -170
-      },
-      {
-       "sc": "Voyager 2",
-       "rate": 160,
-       "band": "X",
-       "power": -160
-      }
-     ],
-     "targets": [
-      {
-       "code": "VGR2",
-       "name": "Voyager 2",
-       "km": 21700000000,
-       "rtlt": 145000
-      }
-     ]
-    },
-    {
-     "name": "DSS36",
-     "az": 176,
-     "el": 66,
-     "up": [],
-     "down": [
-      {
-       "sc": "Voyager 2",
-       "rate": 0,
-       "band": "X",
-       "power": -170
-      }
-     ],
-     "targets": [
-      {
-       "code": "VGR2",
-       "name": "Voyager 2",
-       "km": 21700000000,
-       "rtlt": 145000
       }
      ]
     }

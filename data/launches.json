@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T06:14:26.813Z",
+ "fetched": "2026-11-16T15:57:05.309Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
@@ -603,6 +603,30 @@
    "url": null
   },
   {
+   "id": "912a8aee-8fc2-47b4-81a5-040fa0e0a36f",
+   "name": "Vega-C | IRIDE 1",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Month",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "Avio S.p.A",
+   "ptype": "Commercial",
+   "country": "GF",
+   "rocket": "Vega-C",
+   "mission": "IRIDE 1",
+   "mtype": "Earth Science",
+   "orbit": "Sun-Synchronous Orbit",
+   "desc": "First dedicated launch for the European Space Agency's IRIDE Earth observation constellation, with six satellites onboard.",
+   "pad": "Ariane Launch Area 1 (ELV)",
+   "loc": "Guiana Space Centre, French Guiana",
+   "fail": null,
+   "url": null
+  },
+  {
    "id": "548df42c-ae26-4cc9-921a-f0042941911a",
    "name": "Electron | BlackSky Gen-3 6",
    "net": "2026-12-31T00:00:00.000Z",
@@ -930,30 +954,6 @@
    "country": "US",
    "rocket": "Falcon 9 Block 5",
    "mission": "Rivada 1",
-   "mtype": "Communications",
-   "orbit": "Polar Orbit",
-   "desc": "24 satellites for Rivada's internet constellation.",
-   "pad": "Space Launch Complex 4E",
-   "loc": "Vandenberg SFB, CA, USA",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "511a3ef8-799e-4723-9293-b954d9d2eb83",
-   "name": "Falcon 9 Block 5 | Rivada 10",
-   "net": "2026-12-31T00:00:00.000Z",
-   "win": [
-    "2026-12-31T00:00:00.000Z",
-    "2026-12-31T00:00:00.000Z"
-   ],
-   "prec": "Year",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "SpaceX",
-   "ptype": "Commercial",
-   "country": "US",
-   "rocket": "Falcon 9 Block 5",
-   "mission": "Rivada 10",
    "mtype": "Communications",
    "orbit": "Polar Orbit",
    "desc": "24 satellites for Rivada's internet constellation.",
