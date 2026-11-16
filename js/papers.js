@@ -11,26 +11,34 @@
   const paperEl = $('#paper'), tocEl = $('#toc');
   let ALL = [], DIG = [], CAN = [], GL = [], G = {}, byTerm = {}, cur = null, filter = 'all', query = '', order = [];
 
-  Promise.all([O.load('data/papers/digests.json'), O.load('data/papers/canon.json'), O.load('data/glossary.json'), O.cloud('digests', 200)]).then(([d, c, g, cloud]) => {
+  Promise.all([O.load('data/papers/digests.json'), O.load('data/papers/canon.json'), O.load('data/glossary.json')]).then(([d, c, g]) => {
     GL = ((g && g.terms) || []).slice().sort((a, b) => a.t.localeCompare(b.t)); for (const t of GL) G[t.id] = t;
-    const seen = new Set();
-    for (const p of ((d && d.papers) || []).concat(cloud || [])) {
-      if (!p || !p.id || !p.t || seen.has(p.id)) continue; seen.add(p.id);
-      DIG.push({ kind: 'paper', id: String(p.id), key: 'paper:' + p.id, title: O.str(p.t, 400), by: O.str(p.by, 600), date: O.str(p.date, 10), cat: CAT[p.cat] || O.str(p.cat, 40) || 'Astrophysics', code: O.str(p.cat, 40),
-        status: O.str(p.status, 300), one: O.str(p.one), q: O.str(p.q), how: O.str(p.how), found: Array.isArray(p.found) ? p.found : [], why: O.str(p.why), careful: O.str(p.careful),
-        terms: Array.isArray(p.terms) ? p.terms : [], links: Array.isArray(p.links) ? p.links : [], url: p.url, arxiv: O.str(p.arxiv, 30), auto: !!p.auto });
-    }
-    DIG.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
+    addDigests((d && d.papers) || []);
     CAN = ((c && c.papers) || []).map(p => ({ kind: 'canon', id: 'canon-' + p.id, raw: p.id, key: 'canon:' + p.id, title: p.t, by: p.by, yr: p.yr, ref: p.ref, url: p.url, arxiv: p.arxiv, cat: p.field,
       one: p.one, q: p.q, how: p.how, found: p.found || [], why: p.why, since: p.since, terms: p.terms || [], links: p.links || [] })).sort((a, b) => a.yr - b.yr);
-    ALL = DIG.concat(CAN);
-    for (const it of ALL) for (const t of it.terms) (byTerm[t] = byTerm[t] || []).push(it);
+    index();
     masthead(); filters(); glossary(); route();
+    /* digests added after publishing, when the page runs where a shared store exists; never holds up the page */
+    O.cloud('digests', 200).then(rows => { if (addDigests(rows)) { index(); masthead(); toc(); } });
     addEventListener('hashchange', route);
     $('#q').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); toc(); });
     $('#tocToggle').addEventListener('click', () => { const ix = $('#index'), open = ix.classList.toggle('closed') === false; $('#tocToggle').setAttribute('aria-expanded', open); });
     document.addEventListener('owlt:log', () => toc());
   });
+
+  const seenDig = new Set();
+  function addDigests(list) {
+    let n = 0;
+    for (const p of list || []) {
+      if (!p || !p.id || !p.t || seenDig.has(String(p.id))) continue; seenDig.add(String(p.id)); n++;
+      DIG.push({ kind: 'paper', id: String(p.id), key: 'paper:' + p.id, title: O.str(p.t, 400), by: O.str(p.by, 600), date: O.str(p.date, 10), cat: CAT[p.cat] || O.str(p.cat, 40) || 'Astrophysics', code: O.str(p.cat, 40),
+        status: O.str(p.status, 300), one: O.str(p.one), q: O.str(p.q), how: O.str(p.how), found: Array.isArray(p.found) ? p.found : [], why: O.str(p.why), careful: O.str(p.careful),
+        terms: Array.isArray(p.terms) ? p.terms.filter(t => typeof t === 'string') : [], links: Array.isArray(p.links) ? p.links.filter(t => typeof t === 'string') : [], url: O.safeUrl(p.url), arxiv: O.str(p.arxiv, 30), auto: !!p.auto });
+    }
+    DIG.sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
+    return n;
+  }
+  function index() { ALL = DIG.concat(CAN); byTerm = {}; for (const it of ALL) for (const t of it.terms) (byTerm[t] = byTerm[t] || []).push(it); }
 
   /* ── helpers ── */
   const DAY = 864e5;
