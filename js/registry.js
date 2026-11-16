@@ -13,6 +13,7 @@
     ['scale-neighbours', 'Nearest stars', 4e17], ['scale-bubble', 'Local Bubble', 1.2e19], ['scale-arm', 'Orion Arm', 1.4e20],
     ['scale-galaxy', 'Milky Way', 2.4e21], ['scale-local-group', 'Local Group', 9e22], ['scale-laniakea', 'Laniakea', 6e24],
     ['scale-web', 'Cosmic web', 6e25], ['scale-universe', 'Observable universe', 1.05e27]];
+  const STAR_ALIAS = { 'rigil-kentaurus': ['Alpha Centauri', 'Alpha Centauri A'], toliman: ['Alpha Centauri B'], polaris: ['North Star', 'Pole Star'], sirius: ['Dog Star'] };
   const SIZE_LY = { nebula: 20, cluster: 20, globular: 120, remnant: 30, satellite: 5000, galaxy: 60000, region: 1000 };
   /* habitable-zone edges in AU for a star of temperature teff (K) and luminosity L (Suns): Kopparapu et al. 2014, 1 Earth mass */
   function hz(teff, L) {
@@ -50,7 +51,7 @@
     for (const s of (D.structures && D.structures.items) || []) {
       const e = { slug: s.id, name: s.n, kind: s.k, group: 'far', alias: s.alias, sub: s.sub, note: s.note, links: s.links, approx: s.approx, disputed: s.disputed, sig: s.sig, mass: s.mass, shell: s.shell };
       if (s.shell) { e.detail = 'a horizon'; }
-      else if (s.ly != null) { e.ra = s.ra; e.dec = s.dec; e.ly = s.ly; e.sizeLy = s.size || SIZE_LY[s.k]; e.detail = s.ly ? fmtLy(s.ly) : 'around us'; }
+      else if (s.ly != null) { e.ra = s.ra; e.dec = s.dec; e.ly = s.ly; e.sizeLy = s.size || SIZE_LY[s.k]; e.home = s.home; e.detail = s.ly ? fmtLy(s.ly) : 'around us'; }
       else if (s.mly != null) { e.ra = s.ra; e.dec = s.dec; e.ly = s.mly * 1e6; e.sizeLy = s.size ? s.size * 1e6 : undefined; e.detail = fmtLy(e.ly); }
       else { e.ra = s.ra; e.dec = s.dec; e.z = s.z; e.sizeLy = s.size ? s.size * 1e6 : undefined; e.ltYears = A.cosmo.lookbackGyr(s.z) * 1e9; e.ly = A.cosmo.comovingGly(s.z) * 1e9;
         e.detail = s.z >= 0.1 ? 'z ' + s.z + ' · light left ' + (+(e.ltYears / 1e9).toPrecision(3)) + ' billion yr ago' : fmtLy(e.ly); }
@@ -60,7 +61,7 @@
     /* named stars with a measured distance */
     for (const s of rows(D.stars)) {
       if (s.ly == null) continue;
-      add({ slug: s.slug, name: s.name, kind: 'star', group: 'star', alias: (s.full ? s.full.split(' / ') : []).concat(s.id ? [s.id] : []), des: s.des, ra: s.ra, dec: s.dec, ly: s.ly, mag: s.mag, absmag: s.absmag, bv: s.bv, sp: s.sp, lum: s.lum, con: s.con,
+      add({ slug: s.slug, name: s.name, kind: 'star', group: 'star', alias: (s.full ? s.full.split(' / ') : []).concat(s.id ? [s.id] : [], STAR_ALIAS[s.slug] || []), des: s.des, ra: s.ra, dec: s.dec, ly: s.ly, mag: s.mag, absmag: s.absmag, bv: s.bv, sp: s.sp, lum: s.lum, con: s.con,
         detail: fmtLy(s.ly) + (s.sp ? ' · ' + s.sp : '') });
     }
 
@@ -111,7 +112,7 @@
       const R = e.absmag != null ? A.starRadius(e.absmag, e.bv == null ? 0.65 : e.bv) : 1; return R * M.RSUN * 9;
     }
     if (e.kind === 'pulsar') return 4e5;
-    if (e.kind === 'blackhole' && e.mass) return 2953 * e.mass * 16;
+    if (e.mass) return 2953 * e.mass * 16;
     if (e.sizeLy) return e.sizeLy * M.LY * (e.kind === 'void' || e.kind === 'wall' || e.kind === 'supercluster' ? 1.5 : 2.4);
     if (e.kind === 'quasar' || e.kind === 'transient' || e.kind === 'galaxy') return 2e5 * M.LY;
     if (e.kind === 'structure') return 4e8 * M.LY;
