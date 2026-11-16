@@ -106,7 +106,7 @@
     const box = card('', 'The sky tonight', ['sky.html', 'Observatory →']), jd = jdNow(), ph = A.moonPhase(jd);
     const nexts = [[0, 'New Moon'], [90, 'First quarter'], [180, 'Full Moon'], [270, 'Last quarter']].map(([t, n]) => [A.nextPhase(jd, t), n]).filter(x => x[0]).sort((a, b) => a[0] - b[0]);
     box.append(el('div', { class: 'moonrow' }, moonCanvas(ph), el('div', null, el('div', { style: { fontFamily: 'var(--f-display)', fontWeight: 600, color: 'var(--starlight)', fontSize: '17px' }, text: ph.name }),
-      el('div', { style: { fontFamily: 'var(--f-data)', fontSize: '12px', color: 'var(--mute)' }, text: Math.round(ph.illum * 100) + '% lit · ' + ph.age.toFixed(1) + ' days old' }),
+      el('div', { style: { fontFamily: 'var(--f-data)', fontSize: '12px', color: 'var(--mute)' }, text: Math.round(ph.illum * 100) + '% lit · ' + A.moonAge(jd).toFixed(1) + ' days since new' }),
       nexts[0] ? el('div', { style: { fontFamily: 'var(--f-data)', fontSize: '12px', color: 'var(--faint)' }, text: nexts[0][1] + ' ' + O.fmt.shortDay(A.dateOf(nexts[0][0])) }) : null)));
     const sun = A.sun(jd), ul = el('ul', { class: 'planets' });
     for (const p of ['mercury', 'venus', 'mars', 'jupiter', 'saturn']) {

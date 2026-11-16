@@ -154,7 +154,7 @@
       row('Astronomical dark', fmtT(first(ast, false)), 'no trace of sunlight left'), row('Astronomical dawn', fmtT(first(ast, true))), row('Sunrise', fmtT(first(sEv, true))))));
     if (!sEv.length) host.append(el('p', { class: 'note', text: A.sun(jd0).dec * LOC.lat > 0 && Math.abs(LOC.lat) > 60 ? 'The Sun does not set here today.' : 'The Sun does not rise here today.' }));
     const ph = A.moonPhase(jd0), mEv = events(moonF, 0.125, jd0);
-    host.append(el('h2', { text: 'The Moon' }), el('table', null, el('tbody', null, row('Phase', ph.name, Math.round(ph.illum * 100) + '% lit, ' + ph.age.toFixed(1) + ' days since new'),
+    host.append(el('h2', { text: 'The Moon' }), el('table', null, el('tbody', null, row('Phase', ph.name, Math.round(ph.illum * 100) + '% lit, ' + A.moonAge(jd0).toFixed(1) + ' days since new'),
       row('Moonrise', fmtDT(first(mEv, true))), row('Moonset', fmtDT(first(mEv, false))), row('Distance', O.fmt.num(A.moon(jd0).distKm) + ' km', (A.moon(jd0).distKm / A.C_KMS).toFixed(2) + ' light-seconds'))));
     /* planets: when each is up while the sky is dark */
     /* tonight: the dark spell under way now, or the next one */

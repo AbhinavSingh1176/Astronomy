@@ -72,6 +72,8 @@
     return { illum: (1 + Math.cos(pa)) / 2, angle: d, age: d / 360 * 29.530588, name: PHASES[Math.floor(rev(d + 22.5) / 45)], waxing: d < 180 };
   }
   /* next time the Moon's elongation from the Sun reaches `target` degrees (0 new, 90 first quarter, 180 full, 270 last) */
+  /* days since the last new Moon. Not elongation/12.19: near apogee the two differ by most of a day */
+  function moonAge(jd) { let n = nextPhase(jd - 29.6, 0); if (n == null || n > jd) n = nextPhase(jd - 59.1, 0); return n == null ? moonPhase(jd).age : jd - n; }
   function nextPhase(jd, target) {
     const f = j => { let d = rev(moonPhase(j).angle - target); return d > 180 ? d - 360 : d; };
     let a = jd, fa = f(a);
@@ -266,7 +268,7 @@
     const y = [z[1] * x[2] - z[2] * x[1], z[2] * x[0] - z[0] * x[2], z[0] * x[1] - z[1] * x[0]]; return { x, y, z }; })();
   const gal2scene = (gx, gy, gz) => [GAL.x[0] * gx + GAL.y[0] * gy + GAL.z[0] * gz, GAL.x[1] * gx + GAL.y[1] * gy + GAL.z[1] * gz, GAL.x[2] * gx + GAL.y[2] * gy + GAL.z[2] * gz];
 
-  const ASTRO = { D2R, R2D, AU_KM, C_KMS, LY_KM, LY_AU, LD_AU, rev, clamp, jdOf, dateOf, sun, moon, moonPhase, nextPhase, PLANETS, POLES, helio, elementsXYZ, orbitPath, planet,
+  const ASTRO = { D2R, R2D, AU_KM, C_KMS, LY_KM, LY_AU, LD_AU, rev, clamp, jdOf, dateOf, sun, moon, moonPhase, moonAge, nextPhase, PLANETS, POLES, helio, elementsXYZ, orbitPath, planet,
     ecl2eq, eq2scene, ecl2scene, lonlat2ecl, radec2v, v2radec, gmst, altaz, crossings, subsolar, galilean, PROBES, probe, V1_ANCHOR_JD,
     cosmo, tempFromBV, starRadius, lightTime, hms, fmtRA, fmtDec, bv2rgb, GAL, gal2scene, len, sub };
   if (typeof module !== 'undefined' && module.exports) module.exports = ASTRO; else root.ASTRO = ASTRO;

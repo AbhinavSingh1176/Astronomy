@@ -56,4 +56,11 @@ near('subsolar latitude at Dec solstice 2026', A.subsolar(jd(2026, 12, 21, 20, 5
 near('B−V 0.656 (Sun) colour temperature', A.bv2rgb(0.656)[3], 5770, 120, 'K');
 near('light-time formatter: 499 s', parseFloat(A.lightTime(499.004)), 8, 0.01, 'min');
 
+console.log('Things the pages print');
+near('Moon age the day before first quarter, Nov 2026 (true time since the 9 Nov new Moon)', A.moonAge(jd(2026, 11, 16, 5, 41)), 6.94, 0.02, 'd');
+near('first quarter, 17 Nov 2026 11:48 UTC', (A.nextPhase(jd(2026, 11, 16), 90) - jd(2026, 11, 17, 11, 48)) * 24, 0, 0.2, 'h');
+near('Galilean u is continuous: Io advances ~203.4°/day', A.rev(A.galilean(2448973.50068)[0].u - A.galilean(2448972.50068)[0].u), A.rev(203.4058646), 1.5, '°');
+near('emission distance at z=1 (comoving / 2)', A.cosmo.emitGly(1), 11.09 / 2, 0.03, 'Gly'); near('recession speed of the CMB matter today', A.cosmo.recession(1089.9), 3.12, 0.03, 'c');
+near('GN-z11 recedes now at', A.cosmo.recession(10.603), 2.19, 0.03, 'c');
+
 console.log(fail ? `\n${fail} FAILED` : '\nall checks passed'); process.exit(fail ? 1 : 0);
