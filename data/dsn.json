@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T17:41:59.440Z",
+ "fetched": "2026-11-16T17:47:40.278Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -16,8 +16,8 @@
     },
     {
      "name": "DSS24",
-     "az": 150,
-     "el": 35,
+     "az": 151,
+     "el": 36,
      "up": [
       {
        "sc": "SOHO",
@@ -31,7 +31,7 @@
        "sc": "SOHO",
        "rate": 54610,
        "band": "S",
-       "power": -120
+       "power": -130
       },
       {
        "sc": "SOHO",
@@ -51,13 +51,13 @@
     },
     {
      "name": "DSS26",
-     "az": 137,
-     "el": 27,
+     "az": 138,
+     "el": 28,
      "up": [
       {
        "sc": "Advanced Composition Explorer",
        "rate": 0,
-       "band": "X",
+       "band": "S",
        "power": 0.2
       }
      ],
@@ -124,24 +124,9 @@
      "targets": []
     },
     {
-     "name": "DSS53",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "LRO",
-       "name": "Lunar Reconnaissance Orbiter",
-       "km": 397000,
-       "rtlt": 2.65
-      }
-     ]
-    },
-    {
      "name": "DSS65",
-     "az": 94,
-     "el": 26,
+     "az": 95,
+     "el": 27,
      "up": [
       {
        "sc": "Roman Space Telescope",
@@ -169,14 +154,14 @@
     },
     {
      "name": "DSS63",
-     "az": 208,
+     "az": 210,
      "el": 24,
      "up": [
       {
        "sc": "New Horizons",
        "rate": 0,
        "band": "X",
-       "power": 19
+       "power": 18
       }
      ],
      "down": [
@@ -204,30 +189,51 @@
     },
     {
      "name": "DSS56",
-     "az": 178,
+     "az": 180,
      "el": 32,
      "up": [
       {
        "sc": "Korea Pathfinder Lunar Orbiter",
        "rate": 0,
-       "band": "S",
+       "band": "X",
        "power": 0.2
       }
      ],
      "down": [
       {
        "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 8500000,
+       "band": "X",
+       "power": -94
+      },
+      {
+       "sc": "Korea Pathfinder Lunar Orbiter",
        "rate": 8192,
        "band": "S",
-       "power": -100
+       "power": -110
       }
      ],
      "targets": [
       {
        "code": "KPLO",
        "name": "Korea Pathfinder Lunar Orbiter",
-       "km": 397000,
-       "rtlt": 2.65
+       "km": 396000,
+       "rtlt": 2.64
+      }
+     ]
+    },
+    {
+     "name": "DSS53",
+     "az": 90,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "CHDR",
+       "name": "Chandra",
+       "km": 111000,
+       "rtlt": 0.74
       }
      ]
     }
@@ -239,8 +245,8 @@
    "dishes": [
     {
      "name": "DSS43",
-     "az": 44,
-     "el": 29,
+     "az": 42,
+     "el": 30,
      "up": [
       {
        "sc": "Juno",
@@ -268,8 +274,8 @@
     },
     {
      "name": "DSS36",
-     "az": 43,
-     "el": 28,
+     "az": 42,
+     "el": 29,
      "up": [],
      "down": [
       {
@@ -310,8 +316,22 @@
      "name": "DSS34",
      "az": 0,
      "el": 90,
-     "up": [],
-     "down": [],
+     "up": [
+      {
+       "sc": "Psyche",
+       "rate": 0,
+       "band": "X",
+       "power": 18
+      }
+     ],
+     "down": [
+      {
+       "sc": "Psyche",
+       "rate": 0,
+       "band": "X",
+       "power": -120
+      }
+     ],
      "targets": [
       {
        "code": "PSYC",
@@ -323,7 +343,7 @@
     },
     {
      "name": "DSS35",
-     "az": 15,
+     "az": 14,
      "el": 15,
      "up": [
       {
@@ -352,7 +372,7 @@
        "code": "ESCG",
        "name": "ESCAPADE Gold",
        "km": 2150000,
-       "rtlt": 14.3
+       "rtlt": 14.4
       }
      ]
     }
