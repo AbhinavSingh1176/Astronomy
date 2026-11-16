@@ -2,6 +2,8 @@
 
 A personal astronomy site organised by how long light takes to reach you. Everything you can see already happened; OWLT puts each thing at the moment its light set out, from the ground under your feet (nanoseconds) to the cosmic microwave background (13.8 billion years).
 
+**Live at https://abhinavsingh1176.github.io/Astronomy/**
+
 It is a static site: plain HTML, CSS and JavaScript, no build step and no server. A GitHub Actions job refreshes the outside data every six hours and republishes the site to GitHub Pages.
 
 ## The pages
