@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T16:37:00.559Z",
+ "fetched": "2026-11-16T17:41:59.440Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -16,8 +16,8 @@
     },
     {
      "name": "DSS24",
-     "az": 134,
-     "el": 27,
+     "az": 150,
+     "el": 35,
      "up": [
       {
        "sc": "SOHO",
@@ -31,7 +31,7 @@
        "sc": "SOHO",
        "rate": 54610,
        "band": "S",
-       "power": -130
+       "power": -120
       },
       {
        "sc": "SOHO",
@@ -45,19 +45,19 @@
        "code": "SOHO",
        "name": "SOHO",
        "km": 1240000,
-       "rtlt": 8.3
+       "rtlt": 8.29
       }
      ]
     },
     {
      "name": "DSS26",
-     "az": 124,
-     "el": 17,
+     "az": 137,
+     "el": 27,
      "up": [
       {
        "sc": "Advanced Composition Explorer",
        "rate": 0,
-       "band": "S",
+       "band": "X",
        "power": 0.2
       }
      ],
@@ -74,7 +74,7 @@
        "code": "ACE",
        "name": "Advanced Composition Explorer",
        "km": 1490000,
-       "rtlt": 9.92
+       "rtlt": 9.91
       }
      ]
     },
@@ -124,46 +124,11 @@
      "targets": []
     },
     {
-     "name": "DSS56",
-     "az": 90,
+     "name": "DSS53",
+     "az": 0,
      "el": 90,
      "up": [],
      "down": [],
-     "targets": [
-      {
-       "code": "SPP",
-       "name": "Parker Solar Probe",
-       "km": 140000000,
-       "rtlt": 933
-      }
-     ]
-    },
-    {
-     "name": "DSS53",
-     "az": 161,
-     "el": 30,
-     "up": [
-      {
-       "sc": "Lunar Reconnaissance Orbiter",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Lunar Reconnaissance Orbiter",
-       "rate": 28590000,
-       "band": "K",
-       "power": -86
-      },
-      {
-       "sc": "Lunar Reconnaissance Orbiter",
-       "rate": 146400,
-       "band": "S",
-       "power": -110
-      }
-     ],
      "targets": [
       {
        "code": "LRO",
@@ -175,8 +140,8 @@
     },
     {
      "name": "DSS65",
-     "az": 83,
-     "el": 13,
+     "az": 94,
+     "el": 26,
      "up": [
       {
        "sc": "Roman Space Telescope",
@@ -198,25 +163,32 @@
        "code": "RST",
        "name": "Roman Space Telescope",
        "km": 1310000,
-       "rtlt": 8.72
+       "rtlt": 8.71
       }
      ]
     },
     {
      "name": "DSS63",
-     "az": 192,
-     "el": 29,
-     "up": [],
+     "az": 208,
+     "el": 24,
+     "up": [
+      {
+       "sc": "New Horizons",
+       "rate": 0,
+       "band": "X",
+       "power": 19
+      }
+     ],
      "down": [
       {
        "sc": "New Horizons",
        "rate": 0,
        "band": "X",
-       "power": -160
+       "power": -170
       },
       {
        "sc": "New Horizons",
-       "rate": 631.2,
+       "rate": 501.3,
        "band": "X",
        "power": -150
       }
@@ -229,6 +201,35 @@
        "rtlt": 66500
       }
      ]
+    },
+    {
+     "name": "DSS56",
+     "az": 178,
+     "el": 32,
+     "up": [
+      {
+       "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 8192,
+       "band": "S",
+       "power": -100
+      }
+     ],
+     "targets": [
+      {
+       "code": "KPLO",
+       "name": "Korea Pathfinder Lunar Orbiter",
+       "km": 397000,
+       "rtlt": 2.65
+      }
+     ]
     }
    ]
   },
@@ -238,14 +239,14 @@
    "dishes": [
     {
      "name": "DSS43",
-     "az": 57,
-     "el": 19,
+     "az": 44,
+     "el": 29,
      "up": [
       {
        "sc": "Juno",
        "rate": 0,
-       "band": "X",
-       "power": 19
+       "band": "S",
+       "power": 18
       }
      ],
      "down": [
@@ -267,10 +268,23 @@
     },
     {
      "name": "DSS36",
-     "az": 56,
-     "el": 18,
+     "az": 43,
+     "el": 28,
      "up": [],
-     "down": [],
+     "down": [
+      {
+       "sc": "Mars Odyssey",
+       "rate": 14220,
+       "band": "X",
+       "power": -130
+      },
+      {
+       "sc": "Mars 2020 (Perseverance)",
+       "rate": 3125,
+       "band": "X",
+       "power": -140
+      }
+     ],
      "targets": [
       {
        "code": "M01O",
@@ -309,20 +323,26 @@
     },
     {
      "name": "DSS35",
-     "az": 0,
-     "el": 90,
+     "az": 15,
+     "el": 15,
      "up": [
       {
        "sc": "ESCAPADE Gold",
        "rate": 0,
-       "band": "S",
+       "band": "X",
        "power": 0.2
       }
      ],
      "down": [
       {
        "sc": "ESCAPADE Gold",
-       "rate": 0,
+       "rate": 8000,
+       "band": "X",
+       "power": -120
+      },
+      {
+       "sc": "ESCAPADE Gold",
+       "rate": 8000,
        "band": "X",
        "power": -120
       }
@@ -331,7 +351,7 @@
       {
        "code": "ESCG",
        "name": "ESCAPADE Gold",
-       "km": 2140000,
+       "km": 2150000,
        "rtlt": 14.3
       }
      ]

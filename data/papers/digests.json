@@ -37,7 +37,7 @@
   {
    "id": "2611-16783",
    "arxiv": "2611.16783",
-   "t": "The Same But Different: SiO$_2$ Clouds in Two L-Dwarfs with JWST",
+   "t": "The Same But Different: SiO₂ Clouds in Two L-Dwarfs with JWST",
    "by": "Joshua D. Lothringer, Jeff A. Valenti, Sarah E. Moran and 9 others",
    "date": "2026-11-12",
    "added": "2026-11-16",
@@ -45,12 +45,12 @@
    "status": "36 pages, 13 figures, 12 tables. Accepted for publication in ApJ",
    "url": "https://arxiv.org/abs/2611.16783",
    "one": "These results show both the complexity and diversity of brown dwarf cloud properties, while also highlighting the constraining power of broad-wavelength JWST observations of cloudy L-dwarfs.",
-   "q": "The precision of brown dwarf spectra from JWST enables unprecedented insight into the atmospheric and cloud properties of sub-stellar atmospheres. Here, we compare both self-consistent radiative-convective equilibrium (RCE) and retrieval atmosphere models to high-SNR 1--18~$μ$m spectra of two field L-dwarfs from JWST, J0624 (L5) and J2148 (L6--L6.5).",
-   "how": "Next, we use petitRADTRANS to retrieve atmosphere and cloud properties, finding strong evidence for the presence of SiO$_2$ clouds in both objects.",
+   "q": "The precision of brown dwarf spectra from JWST enables unprecedented insight into the atmospheric and cloud properties of sub-stellar atmospheres. Here, we compare both self-consistent radiative-convective equilibrium (RCE) and retrieval atmosphere models to high-SNR 1--18~μm spectra of two field L-dwarfs from JWST, J0624 (L5) and J2148 (L6--L6.5).",
+   "how": "Next, we use petitRADTRANS to retrieve atmosphere and cloud properties, finding strong evidence for the presence of SiO₂ clouds in both objects.",
    "found": [
     [
      "From the abstract (1)",
-     "Our observations include spectral features from H$_2$O, CO, CO$_2$, CH$_4$, Na, and K and cover approximately 98\\% of the outgoing thermal emission from the two objects."
+     "Our observations include spectral features from H₂O, CO, CO₂, CH₄, Na, and K and cover approximately 98% of the outgoing thermal emission from the two objects."
     ],
     [
      "From the abstract (2)",

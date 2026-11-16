@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T15:57:04.570Z",
+ "fetched": "2026-11-16T17:41:59.092Z",
  "source": "arXiv API (export.arxiv.org)",
  "papers": [
   {
@@ -18,7 +18,7 @@
   },
   {
    "id": "2611.18557",
-   "t": "Does Dark Energy Evolve $\\textit{and}$ Cluster?",
+   "t": "Does Dark Energy Evolve and Cluster?",
    "by": [
     "Maria Luisa Gallavotti",
     "Alessandra Silvestri"
@@ -441,7 +441,7 @@
   },
   {
    "id": "2611.18271",
-   "t": "JCMT--Venus: Daily Monitoring of HDO and SO$_2$ Absorption in Venus' Mesosphere",
+   "t": "JCMT--Venus: Daily Monitoring of HDO and SO₂ Absorption in Venus' Mesosphere",
    "by": [
     "Wei Tang",
     "David L. Clements",
@@ -556,7 +556,7 @@
   },
   {
    "id": "2611.18211",
-   "t": "Cubic Galileon Gravity on Nonlinear Scales with \\texttt{Hi-COLA} for LSST Year 1",
+   "t": "Cubic Galileon Gravity on Nonlinear Scales with Hi-COLA for LSST Year 1",
    "by": [
     "C. M. A. Zanoletti",
     "A. Sen Gupta",
@@ -735,7 +735,7 @@
   },
   {
    "id": "2611.17995",
-   "t": "Asteroseismology of blue straggler stars in $ω$ Centauri. Stellar collisions as a possible formation scenario",
+   "t": "Asteroseismology of blue straggler stars in ω Centauri. Stellar collisions as a possible formation scenario",
    "by": [
     "Jadwiga Daszynska-Daszkiewicz",
     "P. Gora",
@@ -754,7 +754,7 @@
   },
   {
    "id": "2611.17978",
-   "t": "General $δN$ formalism in Single Field Inflation and Graph Theory",
+   "t": "General δN formalism in Single Field Inflation and Graph Theory",
    "by": [
     "Amin Nassiri-Rad",
     "Hassan Firouzjahi"
@@ -995,7 +995,7 @@
   },
   {
    "id": "2611.17835",
-   "t": "Beyond the Inner Slope $γ$: A Schwarzschild-based Probe of the Core-Cusp Problem in the Milky Way Dwarf Spheroidal Galaxies",
+   "t": "Beyond the Inner Slope γ: A Schwarzschild-based Probe of the Core-Cusp Problem in the Milky Way Dwarf Spheroidal Galaxies",
    "by": [
     "Rin Miyazaki",
     "Masashi Chiba",
@@ -1226,7 +1226,7 @@
   },
   {
    "id": "2611.17651",
-   "t": "$^8$B Solar Neutrino Measurements of Solar Core Size and Temperature from 5805 Days of Super-Kamiokande",
+   "t": "⁸B Solar Neutrino Measurements of Solar Core Size and Temperature from 5805 Days of Super-Kamiokande",
    "by": [
     "The Super-Kamiokande Collaboration",
     ":",
@@ -1335,7 +1335,7 @@
   },
   {
    "id": "2611.17628",
-   "t": "Calibrated Period-Luminosity Relations for Mira variables in the Large Magellanic Cloud in the Vera C. Rubin Observatory $zy$-band Photometric Systems",
+   "t": "Calibrated Period-Luminosity Relations for Mira variables in the Large Magellanic Cloud in the Vera C. Rubin Observatory zy-band Photometric Systems",
    "by": [
     "Chow-Choong Ngeow",
     "Anupam Bhardwaj"
@@ -1400,7 +1400,7 @@
   },
   {
    "id": "2611.17590",
-   "t": "The Eclipsing $δ$ Scuti Binary HIP 7666: Absolute Dimensions and Pulsation Properties",
+   "t": "The Eclipsing δ Scuti Binary HIP 7666: Absolute Dimensions and Pulsation Properties",
    "by": [
     "Jae Woo Lee",
     "Kyeongsoo Hong",
@@ -2035,7 +2035,7 @@
   },
   {
    "id": "2611.17299",
-   "t": "Simulation-Based Priors and BAO Shifts from the Lyman-$α$ Forest at the Field Level",
+   "t": "Simulation-Based Priors and BAO Shifts from the Lyman-α Forest at the Field Level",
    "by": [
     "Divij Sharma",
     "Roger de Belsunce",
@@ -2172,7 +2172,7 @@
   },
   {
    "id": "2611.17208",
-   "t": "The ultraviolet continuum slopes of galaxies at $\\mathbf{z \\gtrsim 12}$ selected from ${\\mathbf{0.6 \\, deg}^2}$ of JWST imaging",
+   "t": "The ultraviolet continuum slopes of galaxies at z ≳ 12 selected from 0.6 deg² of JWST imaging",
    "by": [
     "C. Bondestam",
     "D. J. McLeod",
@@ -2256,7 +2256,7 @@
   },
   {
    "id": "2611.17177",
-   "t": "The 21 cm-Lyman-$α$ forest cross-power spectrum with a minimal effective field theory",
+   "t": "The 21 cm-Lyman-α forest cross-power spectrum with a minimal effective field theory",
    "by": [
     "G. Autieri",
     "V. Iršič",
@@ -2335,7 +2335,7 @@
   },
   {
    "id": "2611.17085",
-   "t": "On-the-Fly Gaussian Process Reconstruction of the Galaxy Redshift Distribution for 3$\\times$2pt Cosmology",
+   "t": "On-the-Fly Gaussian Process Reconstruction of the Galaxy Redshift Distribution for 3×2pt Cosmology",
    "by": [
     "Jip de Buck",
     "Guadalupe Cañas-Herrera",
@@ -2665,7 +2665,7 @@
   },
   {
    "id": "2611.16836",
-   "t": "The $w$-mode instability of strangeon ergostars and its impact on energy extraction",
+   "t": "The w-mode instability of strangeon ergostars and its impact on energy extraction",
    "by": [
     "Haojia Xia",
     "Hong-Bo Li",
@@ -2803,7 +2803,7 @@
   },
   {
    "id": "2611.16783",
-   "t": "The Same But Different: SiO$_2$ Clouds in Two L-Dwarfs with JWST",
+   "t": "The Same But Different: SiO₂ Clouds in Two L-Dwarfs with JWST",
    "by": [
     "Joshua D. Lothringer",
     "Jeff A. Valenti",
@@ -3009,7 +3009,7 @@
   },
   {
    "id": "2611.16687",
-   "t": "Satellite pairs in the Local Group: from spatial clustering to dynamical associations in observations and $Λ$CDM simulations",
+   "t": "Satellite pairs in the Local Group: from spatial clustering to dynamical associations in observations and ΛCDM simulations",
    "by": [
     "Mariana P. Júlio",
     "Marcel S. Pawlowski",
@@ -4000,7 +4000,7 @@
   },
   {
    "id": "2611.16407",
-   "t": "Minimal vacuum histories beyond $Λ$CDM: model comparison within VCDM",
+   "t": "Minimal vacuum histories beyond ΛCDM: model comparison within VCDM",
    "by": [
     "Antonio De Felice",
     "Eleonora Di Valentino",
@@ -4100,7 +4100,7 @@
   },
   {
    "id": "2611.16291",
-   "t": "C$_2$ Swan, CH and CN emission, surface temperature and luminous efficiency of the Hayabusa2 sample-return capsule from ground-based spectroscopy",
+   "t": "C₂ Swan, CH and CN emission, surface temperature and luminous efficiency of the Hayabusa2 sample-return capsule from ground-based spectroscopy",
    "by": [
     "Shinsuke Abe",
     "Hadrien A. R. Devillepoix",
@@ -4133,7 +4133,7 @@
   },
   {
    "id": "2611.16286",
-   "t": "Machine-Learning Reconstruction of Intergalactic Medium Column-Density Maps from Observed Ly$α$ Emission Cubes",
+   "t": "Machine-Learning Reconstruction of Intergalactic Medium Column-Density Maps from Observed Lyα Emission Cubes",
    "by": [
     "Xihan Deng",
     "Christopher Martin",
@@ -4604,7 +4604,7 @@
   },
   {
    "id": "2611.16026",
-   "t": "Shear, vorticity, and $f(R)$ theories",
+   "t": "Shear, vorticity, and f(R) theories",
    "by": [
     "Antonino Del Popolo"
    ],
@@ -5040,7 +5040,7 @@
   },
   {
    "id": "2611.15907",
-   "t": "$uvby-β$ photoelectric photometry of FGK-type pulsating star candidates in the Kepler field: observations, stellar parameters and asteroseismic analysis",
+   "t": "uvby-β photoelectric photometry of FGK-type pulsating star candidates in the Kepler field: observations, stellar parameters and asteroseismic analysis",
    "by": [
     "L. Fox-Machado"
    ],
@@ -5541,7 +5541,7 @@
   },
   {
    "id": "2611.15881",
-   "t": "Measuring the growth index in the $w_0w_a$CDM background",
+   "t": "Measuring the growth index in the w₀wₐCDM background",
    "by": [
     "Ícaro. B. S. Cortês",
     "Léo G. Medeiros",
@@ -5918,7 +5918,7 @@
   },
   {
    "id": "2611.15828",
-   "t": "Improved delensing of CMB $B$-modes with upcoming SO and LSST Year-1 mock dataset: Impact of photometric redshift errors",
+   "t": "Improved delensing of CMB B-modes with upcoming SO and LSST Year-1 mock dataset: Impact of photometric redshift errors",
    "by": [
     "Kishan Deka",
     "Chandra Shekhar Saraf",

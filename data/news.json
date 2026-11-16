@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T15:57:05.996Z",
+ "fetched": "2026-11-16T17:42:00.735Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -40,16 +40,6 @@
    "site": "Sky & Telescope",
    "date": "2026-11-16T13:00:00.000Z",
    "sum": "For $200 or less, you can buy a complete telescope for first-person contact with the Moon, planets, and deep-sky showpieces. The post Four Telescopes for New Observers appeared first on Sky & Telescope.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "36bf02a2da24",
-   "t": "APOD: 2026 November 16 – NGC 7129: Star Formation with Jets from Webb",
-   "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb/",
-   "site": "NASA",
-   "date": "2026-11-16T05:05:00.000Z",
-   "sum": "APOD Science APOD APOD: 2026 November 16 – NGC… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. NGC 7129: […]",
    "desk": "astronomy",
    "who": []
   },
@@ -116,16 +106,6 @@
    "who": [
     "NASA"
    ]
-  },
-  {
-   "id": "9766fc5bbc7e",
-   "t": "APOD: 2026 November 15 – Leonid Meteors Through Orion",
-   "url": "https://science.nasa.gov/image-article/apod-2026-november-15-leonid-meteors-through-orion/",
-   "site": "NASA",
-   "date": "2026-11-15T05:05:00.000Z",
-   "sum": "APOD Science APOD APOD: 2026 November 15 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. OriginalAnnotated Leonid Meteors […]",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "ce3d0293b235",
@@ -382,16 +362,6 @@
    "who": [
     "ESA"
    ]
-  },
-  {
-   "id": "03c2d7073afe",
-   "t": "APOD: 2026 November 13 – NGC 206 and the Star Clouds of Andromeda",
-   "url": "https://science.nasa.gov/image-article/apod-2026-november-13-ngc-206-and-the-star-clouds-of-andromeda/",
-   "site": "NASA",
-   "date": "2026-11-13T05:05:00.000Z",
-   "sum": "APOD Science APOD APOD: 2026 November 13 – NGC… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. NGC 206 […]",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "17b6995f9ce6",
@@ -661,16 +631,6 @@
    ]
   },
   {
-   "id": "25b9c6c58b62",
-   "t": "APOD: 2026 November 12 – Moon, Venus and Spica Meet",
-   "url": "https://science.nasa.gov/image-article/apod-2026-november-12-moon-venus-and-spica-meet/",
-   "site": "NASA",
-   "date": "2026-11-12T05:05:00.000Z",
-   "sum": "APOD Science APOD APOD: 2026 November 12 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Moon, Venus and […]",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "2d81832da3e7",
    "t": "Scotland’s Flow Country",
    "url": "https://science.nasa.gov/earth/earth-observatory/scotlands-flow-country/",
@@ -784,16 +744,6 @@
    "date": "2026-11-11T07:00:36.000Z",
    "sum": "A fire at an external contractor’s facility has delayed the installation of a containerised greenhouse designed to simulate growing crops on the Moon. According to a response to a parliamentary inquiry published by the German Bundestag on 20 October, a fire occurred while the EDEN-LUNA greenhouse container was being refurbished. The incident has pushed back […] The post Fire Damage Delays Installation of Simulated…",
    "desk": "other",
-   "who": []
-  },
-  {
-   "id": "a5765ef75d55",
-   "t": "APOD: 2026 November 11 – NGC 4449: Small Galaxy, Big Impact",
-   "url": "https://science.nasa.gov/image-article/apod-2026-november-11-ngc-4449-small-galaxy-big-impact/",
-   "site": "NASA",
-   "date": "2026-11-11T05:05:00.000Z",
-   "sum": "APOD Science APOD APOD: 2026 November 11 – NGC… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. NGC 4449: […]",
-   "desk": "astronomy",
    "who": []
   },
   {
@@ -951,16 +901,6 @@
    "who": []
   },
   {
-   "id": "da1bc8f6f8f3",
-   "t": "APOD: 2026 November 10 – Saturn Behind the Moon",
-   "url": "https://science.nasa.gov/image-article/apod-2026-november-10-saturn-behind-the-moon/",
-   "site": "NASA",
-   "date": "2026-11-10T05:05:00.000Z",
-   "sum": "APOD Science APOD APOD: 2026 November 10 –… Today’s APOD Archive Submissions Index Search Calendar RSS Education About Discuss APOD Astronomy Picture of the Day Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer. Saturn Behind the […]",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "1abc1302dc16",
    "t": "Noxious Smoke Hints at Active Volcanoes on Mars",
    "url": "https://skyandtelescope.org/astronomy-news/noxious-smoke-hints-at-active-volcanoes-on-mars/",
@@ -991,6 +931,38 @@
    "sum": "Hamilton’s code sent humans to the Moon with a “defensive programming” mindset. The post Margaret Hamilton, Apollo Software Engineer (1936 – 2026) appeared first on Sky & Telescope.",
    "desk": "astronomy",
    "who": []
+  },
+  {
+   "id": "51fe6de1a17a",
+   "t": "Sunlight Pulverizes Asteroids That Come Too Close",
+   "url": "https://skyandtelescope.org/astronomy-news/sunlight-pulverizes-asteroids-that-come-too-close/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-04T15:26:24.000Z",
+   "sum": "Asteroids that come too close to the Sun don't last long. Now astronomers think they might know why. The post Sunlight Pulverizes Asteroids That Come Too Close appeared first on Sky & Telescope.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "44551d522bfa",
+   "t": "Science Release: NSF–DOE Vera C. Rubin Observatory Reveals Its First Dwarf Planet Candidate in Our Solar System",
+   "url": "http://noirlab.edu/public/news/noirlab2626/",
+   "site": "NOIRLab",
+   "date": "2026-10-27T18:45:00.000Z",
+   "sum": "In the outer reaches of our Solar System, beyond the orbit of Pluto, NSF–DOE Vera C. Rubin Observatory has spotted 2026 ED138 — a large, bright trans-Neptunian object that scientists have identified as a dwarf planet candidate. The observations were announced today by the International Astronomical Union Minor Planet Center (MPC). If confirmed, ED138 would be among the largest dwarf planets ever discovered in this…",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "0cb7f0557a0d",
+   "t": "Dead star and planetary bodies: astronomers spot unique disc of debris that foretells Solar System’s future",
+   "url": "https://www.eso.org/public/news/eso2613/",
+   "site": "ESO",
+   "date": "2026-10-27T13:00:00.000Z",
+   "sum": "Astronomers using the European Southern Observatory’s Very Large Telescope (ESO’s VLT) have found a rare disc of debris around a dead star that provides a glimpse of what may happen to our Solar System. Unlike in similar systems previously found, the debris — the leftovers of planets that once orbited the star — is organised in a double disc, the two parts separated by a clear gap. The disc appears to be shaped by…",
+   "desk": "astronomy",
+   "who": [
+    "ESO"
+   ]
   }
  ]
 }
