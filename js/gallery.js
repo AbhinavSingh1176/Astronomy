@@ -73,17 +73,17 @@
   }
   function record(t, s, si) {
     const text = s.text && s.text.length > 460 ? s.text.slice(0, s.text.lastIndexOf('. ', 460) + 1 || 460) + (s.text.lastIndexOf('. ', 460) > 0 ? '' : '…') : s.text;
-    O.clear($('#rec')).append(
+    O.clear($('#rec')).append(...[                    /* the DOM's own append writes a null as the word "null": leave the gaps out */
       el('div', null, el('span', { class: 'tape', text: s.id }), ' ', s.date ? el('span', { class: 'tape red', text: when(s.date) }) : null),
       el('h2', { text: s.title }),
       el('div', { class: 'meta' }, s.date ? [el('b', { text: when(s.date) }), ' · '] : null, 'Credit: ', el('b', { text: s.credit })),
-      text ? el('p', { class: 't', text }) : null);
+      text ? el('p', { class: 't', text }) : null].filter(Boolean));
     const light = s.obj ? lightLine(s.obj) : null;
-    O.clear($('#side')).append(
+    O.clear($('#side')).append(...[
       el('span', { class: 'plate', text: 'Tray ' + (S.ti + 1) + ' · ' + t.name }),
       el('p', { class: 'blurb', text: t.blurb }),
       light ? el('p', { class: 'light', text: light }) : null,
-      el('div', { class: 'links' }, s.obj ? el('a', { class: 'push', href: 'ladder.html#' + s.obj, text: 'On the Ladder' }) : null, O.ext(s.page, 'NASA’s record')));
+      el('div', { class: 'links' }, s.obj ? el('a', { class: 'push', href: 'ladder.html#' + s.obj, text: 'On the Ladder' }) : null, O.ext(s.page, 'NASA’s record'))].filter(Boolean));
   }
 
   /* the projector's clock */

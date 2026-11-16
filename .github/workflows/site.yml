@@ -1,6 +1,7 @@
 # OWLT · refresh the outside data every six hours, then publish the site to GitHub Pages.
 # Settings → Pages → Source: "GitHub Actions". Optional secrets: ANTHROPIC_API_KEY (paper digests written by Claude),
-# NASA_API_KEY (Astronomy Picture of the Day; DEMO_KEY is used otherwise). Optional variables: DIGEST_MODEL, DIGESTS_PER_DAY.
+# NASA_API_KEY (fallback for the Astronomy Picture of the Day). Optional variables: DIGEST_MODEL, DIGESTS_PER_DAY, and ANTHROPIC_WORKSPACE_ID
+# for an API key that was not made inside a workspace.
 # Commits made here with GITHUB_TOKEN do not start another run, so the deploy job follows the refresh in the same run.
 name: Refresh and publish
 

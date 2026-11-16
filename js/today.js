@@ -234,10 +234,10 @@
         const tol = Math.max(0.3, 0.02 * age), score = r => Math.abs(r[C.ly] - age) / tol + 0.3 * Math.max(0, r[C.mag] - 1.5);
         const best = stars.slice().sort((x, y) => score(x) - score(y)).slice(0, 3), s0 = best[0], d = s0[C.ly] - age;
         const rel = Math.abs(d) < 1 / 12 ? 'the month you were born' : span(Math.abs(d)) + (d > 0 ? ' before you were born' : ' after you were born');
-        body.append(el('h2', null, el('a', { href: 'ladder.html#' + s0[C.slug], text: s0[C.name] })),
+        body.append(...[el('h2', null, el('a', { href: 'ladder.html#' + s0[C.slug], text: s0[C.name] })),
           el('p', { text: 'The light reaching you tonight from ' + s0[C.name] + ' set out in ' + monthYear(Date.now() - s0[C.ly] * YR) + ', ' + rel + '. It is ' + s0[C.ly] + ' light-years away' + (s0[C.mag] < 3 ? ', and easy to see' : s0[C.mag] < 4.5 ? ', and visible from most places' : ', and needs a dark sky') + '.' }),
           best.length > 1 ? el('p', { class: 'more' }, 'Also about your age: ', best.slice(1).flatMap((r, i) => [i ? ' and ' : '', el('a', { href: 'ladder.html#' + r[C.slug], text: r[C.name] }), ' (' + r[C.ly] + ' light-years)']), '.') : null,
-          el('div', { class: 'row' }, again, el('span', { class: 'meta', text: 'Star distances carry errors of a few per cent.' })));
+          el('div', { class: 'row' }, again, el('span', { class: 'meta', text: 'Star distances carry errors of a few per cent.' }))].filter(Boolean));
       });
     }
     show();

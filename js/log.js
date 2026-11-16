@@ -71,8 +71,8 @@
       const L_ = labels.get(i); if (L_) { const lab = mk('text', { x: L_.x, y: L_.y, 'text-anchor': L_.anchor }); lab.textContent = L_.text; a.append(lab); }
       const tt = mk('title', {}); tt.textContent = g[0] + (n.seen ? ' · found' : ' · rumour'); a.append(tt); svg.append(a);
     });
-    host.append(svg, few ? el('div', { class: 'legend', text: 'The map grows as you go: every place you open, paper you read and mission you remember lands here, joined to what it mentions.' }) : null,
-      el('div', { class: 'legend', text: 'Solid: found · dashed: rumour · colour: kind (places blue, papers amber, landmark papers cream, terms teal, missions red)' }));
+    host.append(...[svg, few ? el('div', { class: 'legend', text: 'The map grows as you go: every place you open, paper you read and mission you remember lands here, joined to what it mentions.' }) : null,
+      el('div', { class: 'legend', text: 'Solid: found · dashed: rumour · colour: kind (places blue, papers amber, landmark papers cream, terms teal, missions red)' })].filter(Boolean));
   }
   O.footer(document.body);
 })();
