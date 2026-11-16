@@ -1,0 +1,70 @@
+# OWLT · refresh the outside data every six hours, then publish the site to GitHub Pages.
+# Settings → Pages → Source: "GitHub Actions". Optional secrets: ANTHROPIC_API_KEY (paper digests written by Claude),
+# NASA_API_KEY (Astronomy Picture of the Day; DEMO_KEY is used otherwise). Optional variables: DIGEST_MODEL, DIGESTS_PER_DAY.
+# Commits made here with GITHUB_TOKEN do not start another run, so the deploy job follows the refresh in the same run.
+name: Refresh and publish
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: owlt-site
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pull the day's data (news, launches, space weather, orbits, papers, DSN)
+        run: node scripts/refresh.mjs
+        env:
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
+      - name: Write today's paper digests
+        run: node scripts/digest.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DIGEST_MODEL: ${{ vars.DIGEST_MODEL }}
+          DIGESTS_PER_DAY: ${{ vars.DIGESTS_PER_DAY }}
+      - name: Rebuild the search index and link graph
+        run: node tools/build_index.mjs --strict
+      - name: Check every data file and the ephemeris
+        run: node tests/data.test.mjs && node tests/astro.test.cjs
+      - name: Commit what changed
+        run: |
+          git config user.name "owlt-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "Nothing new."; else git commit -m "Refresh $(date -u +'%Y-%m-%d %H:%M') UTC" && git push; fi
+
+  deploy:
+    needs: refresh
+    if: always() && (needs.refresh.result == 'success' || needs.refresh.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Reading Room · OWLT</title>
+<meta name="description" content="New research in astronomy and astrophysics, broken down into plain language: the question, what was done, what was found, and what to be careful about. Plus the papers that made the field.">
+<link rel="stylesheet" href="css/core.css">
+<style>
+/* The Reading Room is a journal: a masthead with an issue number, a table of contents, numbered sections,
+   findings set as a table, marginal notes for terms. Serif for reading, mono for numbers. */
+.rr-mast{border-bottom:1px solid var(--hair);padding-block:26px 22px}
+.rr-mast .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.rr-mast h1{font-size:clamp(30px,5vw,52px);font-stretch:125%;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.rr-mast .issue{font-family:var(--f-data);font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.rr-mast .issue b{color:var(--ha);font-weight:500}
+.rr-mast .sub{margin-top:8px;color:var(--mute);font-size:16px;max-width:62ch}
+.today{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;margin-top:22px}
+.today a{display:block;text-decoration:none;color:inherit;border:1px solid var(--hair);background:var(--dust);padding:14px 16px 16px;min-width:0;transition:border-color .2s var(--ease)}
+.today a:hover{border-color:var(--o3)}
+.today .k{font-family:var(--f-display);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ha)}
+.today .t{display:block;margin-top:6px;font-family:var(--f-display);font-stretch:108%;font-weight:600;font-size:17px;line-height:1.25;color:var(--starlight)}
+.today .o{display:block;margin-top:6px;font-size:15px;line-height:1.45;color:var(--text)}
+.today .m{display:block;margin-top:8px;font-family:var(--f-data);font-size:11px;color:var(--faint)}
+.today .term .t{font-family:var(--f-text);font-style:italic;font-weight:500;font-size:20px}
+@media (max-width:860px){.today{grid-template-columns:1fr}}
+
+.rr{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0 40px;padding-block:26px 60px}
+.rr-index{position:sticky;top:calc(var(--nav-h) + 12px);align-self:start;max-height:calc(100vh - var(--nav-h) - 24px);display:flex;flex-direction:column;min-width:0}
+.rr-index .q{width:100%;min-height:36px;padding:0 11px;background:var(--dust);border:1px solid var(--hair);color:var(--starlight);font-family:var(--f-display);font-size:14px}
+.rr-index .q::placeholder{color:var(--faint)}
+.rr-index .q:focus{outline:none;border-color:var(--o3)}
+.filters{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.filters button{background:none;border:1px solid var(--hair);color:var(--mute);font-family:var(--f-display);font-size:12px;padding:3px 9px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed=true]{border-color:var(--o3);color:var(--o3)}
+.toc{margin-top:12px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent;padding-right:4px}
+.toc h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);font-stretch:112%;margin:16px 0 4px}
+.toc a{display:block;padding:8px 0 9px;border-bottom:1px solid var(--hair2);text-decoration:none;color:var(--text)}
+.toc a:hover .tt{color:var(--o3)}
+.toc a[aria-current=true]{border-left:2px solid var(--ha);padding-left:10px;margin-left:-12px}
+.toc .tt{display:block;font-family:var(--f-display);font-size:13.5px;line-height:1.3;color:var(--starlight)}
+.toc .mm{display:flex;gap:8px;margin-top:3px;font-family:var(--f-data);font-size:10.5px;color:var(--faint)}
+.toc .mm .rd{color:var(--o3)}
+.toc .none{padding:14px 0;color:var(--faint);font-family:var(--f-display);font-size:13px}
+.toc-toggle{display:none}
+
+.paper{min-width:0;display:grid;grid-template-columns:minmax(0,68ch) minmax(0,1fr);gap:0 36px}
+.paper > *{grid-column:1}
+.paper .marg{grid-column:2;grid-row:1 / span 40;align-self:start;position:sticky;top:calc(var(--nav-h) + 16px)}
+.paper .top{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.paper .cat{font-family:var(--f-display);font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ha)}
+.paper .date{font-family:var(--f-data);font-size:12px;color:var(--mute)}
+.badge{font-family:var(--f-display);font-size:11.5px;padding:1px 8px;border:1px solid var(--hair);color:var(--mute);border-radius:2px}
+.badge.ok{border-color:rgba(79,216,196,.45);color:var(--o3)}
+.badge.pre{border-color:rgba(255,177,59,.45);color:var(--sodium)}
+.paper h1{margin-top:12px;font-size:clamp(26px,3.4vw,40px);line-height:1.08;font-stretch:108%}
+.paper .by{margin-top:10px;font-family:var(--f-display);font-size:14px;color:var(--mute)}
+.paper .one{margin-top:22px;padding-left:16px;border-left:2px solid var(--ha);font-size:22px;line-height:1.42;color:var(--starlight)}
+.paper .rt{margin-top:14px;font-family:var(--f-data);font-size:11.5px;color:var(--faint)}
+.paper section{margin-top:30px}
+.paper h2{display:flex;align-items:baseline;gap:12px;font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-stretch:115%;color:var(--mute);border-bottom:1px solid var(--hair);padding-bottom:7px}
+.paper h2 .n{font-family:var(--f-data);font-size:12px;font-weight:500;color:var(--ha);letter-spacing:0}
+.paper section p{margin-top:12px;font-size:18px;line-height:1.66}
+.paper .term{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:help;text-decoration:underline dotted var(--bstar);text-underline-offset:.22em;text-decoration-thickness:1px}
+.paper .term:hover,.paper .term.on{color:var(--o3)}
+.found{width:100%;margin-top:14px;border-collapse:collapse}
+.found td{padding:9px 0;border-bottom:1px solid var(--hair2);vertical-align:top}
+.found td:first-child{width:38%;padding-right:18px;font-family:var(--f-display);font-size:13.5px;color:var(--mute)}
+.found td:last-child{font-family:var(--f-data);font-size:14px;color:var(--starlight);font-variant-numeric:tabular-nums}
+.careful{border:1px solid rgba(255,177,59,.35);background:rgba(255,177,59,.04);padding:4px 18px 16px}
+.careful h2{color:var(--sodium);border-bottom-color:rgba(255,177,59,.25)}
+.auto{margin-top:18px}
+.marg .note{padding:10px 0 12px;border-bottom:1px solid var(--hair2);transition:background .3s}
+.marg .note.on{background:rgba(79,216,196,.06);box-shadow:-10px 0 0 rgba(79,216,196,.06),10px 0 0 rgba(79,216,196,.06)}
+.marg .note b{display:block;font-family:var(--f-text);font-style:italic;font-weight:600;font-size:16px;color:var(--starlight)}
+.marg .note p{margin-top:4px;font-size:14.5px;line-height:1.5;color:var(--text)}
+.marg .note a{font-family:var(--f-display);font-size:12px}
+.marg h3{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);font-stretch:112%}
+.cite{margin-top:34px;padding:14px 16px;background:var(--dust);border:1px solid var(--hair)}
+.cite .ref{font-size:15px;line-height:1.5;color:var(--text);overflow-wrap:anywhere}
+.cite .ref i{color:var(--starlight)}
+.cite .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.paper .threads{margin-top:20px}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:34px;padding-top:16px;border-top:1px solid var(--hair)}
+.pn a{max-width:48%;text-decoration:none;font-family:var(--f-display);font-size:13px;color:var(--mute)}
+.pn a b{display:block;color:var(--starlight);font-weight:600;font-size:14px;margin-top:2px}
+.pn a:hover b{color:var(--o3)}
+.pn a.next{text-align:right;margin-left:auto}
+
+.gloss{border-top:1px solid var(--hair);padding-block:34px 70px}
+.gloss h2{font-size:clamp(22px,3vw,30px);font-stretch:118%}
+.gloss .lede{margin-top:8px;color:var(--mute);max-width:62ch}
+.gloss .az{display:flex;flex-wrap:wrap;gap:4px;margin-top:16px;font-family:var(--f-data);font-size:12px}
+.gloss .az a{padding:2px 6px;text-decoration:none;border:1px solid var(--hair2);color:var(--mute)}
+.gloss .az a:hover{color:var(--o3);border-color:var(--o3)}
+.gloss dl{columns:2 360px;column-gap:44px;margin:22px 0 0}
+.gloss .g{break-inside:avoid;padding:12px 0 14px;border-bottom:1px solid var(--hair2);scroll-margin-top:calc(var(--nav-h) + 20px)}
+.gloss .g.on{background:rgba(79,216,196,.06)}
+.gloss dt{font-family:var(--f-text);font-style:italic;font-weight:600;font-size:18px;color:var(--starlight)}
+.gloss dt small{font-style:normal;font-family:var(--f-display);font-size:12px;font-weight:400;color:var(--faint);margin-left:8px}
+.gloss dd{margin:4px 0 0;font-size:15.5px;line-height:1.55}
+.gloss dd .in{display:block;margin-top:6px;font-family:var(--f-display);font-size:12px;color:var(--faint)}
+.gloss dd .in a{margin-right:8px}
+
+@media (max-width:1240px){ .paper{grid-template-columns:minmax(0,1fr)} .paper .marg{grid-column:1;grid-row:auto;position:static;margin-top:30px;order:50} .paper .cite,.paper .threads,.paper .pn{order:60} }
+@media (max-width:900px){
+  .rr{grid-template-columns:minmax(0,1fr);padding-top:14px}
+  .rr-index{position:static;max-height:none}
+  .toc-toggle{display:inline-flex;margin-top:10px}
+  .rr-index.closed .toc,.rr-index.closed .filters{display:none}
+  .rr-index .toc{max-height:60vh}
+  .paper{margin-top:22px}
+  .paper .one{font-size:19px}
+  .paper section p{font-size:17px}
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="rr-mast"><div class="wrap">
+    <div class="row"><h1>Reading Room</h1><div class="issue" id="issue"></div></div>
+    <p class="sub">Research in astronomy and astrophysics, broken down: the question, what was done, what was found, and what to be careful about. A new paper most days, and the papers that made the field.</p>
+    <div class="today" id="today"></div>
+  </div></header>
+  <div class="wrap rr">
+    <nav class="rr-index closed" id="index" aria-label="Papers">
+      <input class="q" id="q" type="search" placeholder="Filter papers: dark matter, JWST, 1965…" aria-label="Filter papers" autocomplete="off">
+      <button class="btn toc-toggle" id="tocToggle" type="button" aria-expanded="false">All papers</button>
+      <div class="filters" id="filters" role="group" aria-label="Field"></div>
+      <div class="toc" id="toc"></div>
+    </nav>
+    <article class="paper" id="paper" aria-live="polite"></article>
+  </div>
+  <section class="gloss" id="glossary"><div class="wrap">
+    <h2>Glossary</h2>
+    <p class="lede">Every term the digests lean on, in plain words. Terms underlined in a paper open here.</p>
+    <nav class="az" id="az" aria-label="Glossary letters"></nav>
+    <dl id="gl"></dl>
+  </div></section>
+</main>
+<script src="js/core.js"></script>
+<script src="js/papers.js"></script>
+</body>
+</html>
