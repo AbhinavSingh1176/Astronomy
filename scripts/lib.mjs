@@ -127,6 +127,8 @@ export function apodCheck(day) {
    description is the title. Descriptions lose their HTML, the "art002e021278 (April 6, 2026) –" lead and the trailing credit line. */
 const NASA_GENERIC = /^(saturn apollo program|space science|space shuttle projects|mercury project|around marshall|n\/a|untitled|image)$/i;
 const NASA_CENTERS = { JPL: 'NASA/JPL-Caltech', GSFC: 'NASA Goddard', JSC: 'NASA Johnson', KSC: 'NASA Kennedy', ARC: 'NASA Ames', MSFC: 'NASA Marshall', HQ: 'NASA', GRC: 'NASA Glenn', LaRC: 'NASA Langley', AFRC: 'NASA Armstrong', SSC: 'NASA Stennis' };
+/* the version of the caption rules below: bump it when they change, and the next refresh fetches the Gallery's records again */
+export const CAPTIONS = 'captions-2';
 export function firstSentence(t, max = 110) {
   const s = String(t || '').split(/(?<=[a-z0-9)”"'])\.\s+(?=[A-Z])/)[0].replace(/\.$/, '');
   if (s.length <= max) return s; const cut = s.slice(0, max); return cut.slice(0, cut.lastIndexOf(' ')) + '…';
@@ -136,7 +138,8 @@ export function nasaSlide(want, d, img, thumb) {
   /* the photo lab's lead-ins: "S84-27017 (7 Feb. 1984) ---", "KENNEDY SPACE CENTER, Fla. --", "P-21742 C Range: 6 million kilometers (3.72 million miles)" */
   for (let i = 0; i < 4; i++) text = text.replace(/^[\w.-]+\s*\([^)]{4,40}\)\s*(?:-{1,3}|[–—])\s*/, '').replace(/^[A-Z][A-Z .,'’-]{2,40},\s*(?:Fla|Calif|Texas|Tex|Ala|Md|Va|D\.C|Ohio|Colo|Ariz)\.?\s*(?:-{1,3}|[–—])\s*/, '')
     .replace(/^(?:P-\d+\s*[A-Z]{0,2}\s+|(?:Range|Resolution):\s*[\d.,]+\s*(?:million\s+)?(?:kilometers|km|miles|mi)\.?(?:\s*\([^)]*\))?\s*)/i, '');
-  text = text.replace(/\s*(Image\s+)?Credits?:\s*[^.]*\.?\s*$/i, '').trim();
+  text = text.replace(/\s*(?:(?:Image|Photo|Picture|Video)\s+)?Credits?\s*:\s*[^.]*\.?\s*$/i, '').replace(/\s*(?:Image|Photo|Picture)s?\s+courtesy(?:\s+of)?\s*:?\s*[^.]*\.?\s*$/i, '')
+    .replace(/\s+(?:Photo|Image)\s*$/i, '').trim();
   let title = want.title || clean(d.title, 160).replace(/^Apollo \d+ Mission image\s*[-,]\s*/i, '').replace(/,(?=[A-Za-z])/g, ', ');
   const letters = title.replace(/[^A-Za-z]/g, ''), shouting = letters.length > 8 && letters.replace(/[^A-Z]/g, '').length / letters.length > 0.8;
   if (!want.title && (!title || shouting || NASA_GENERIC.test(title) || title.toLowerCase() === String(d.nasa_id).toLowerCase() || /^[A-Z]{2,6}[-_]?\d|^\d{5,}|^[a-z0-9]+(_[a-z0-9]+)+$/i.test(title))) title = firstSentence(text, 110) || title;

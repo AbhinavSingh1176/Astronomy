@@ -13,7 +13,7 @@
 .ahead{display:flex;justify-content:space-between;align-items:flex-end;gap:14px 30px;flex-wrap:wrap}
 .ahead h1{margin-top:10px;font-size:clamp(38px,6.5vw,72px);font-stretch:125%;font-weight:800}
 .ahead .lede{color:var(--mute);font-size:16.5px;max-width:52ch;margin-top:8px}
-.ahead .day{text-align:right;font-family:var(--f-data);font-size:12px;color:var(--mute)}
+.ahead .day{margin-left:auto;text-align:right;font-family:var(--f-data);font-size:12px;color:var(--mute)}
 .ahead .day b{display:block;font-family:var(--f-display);font-stretch:125%;font-size:22px;font-weight:800;color:var(--starlight);letter-spacing:.04em}
 .cabs{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
 .cabs .push{min-height:44px;font-size:12.5px}
@@ -21,7 +21,7 @@
 @media (max-width:560px){
   .cabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
   .cabs .push{flex-direction:column;gap:7px;min-height:60px;padding:8px 4px;font-size:10px;letter-spacing:.05em}
-  .ahead .day{text-align:left}
+  .ahead .day{text-align:left;margin-left:0}
 }
 .game{margin-top:16px}
 .game h2{font-family:var(--f-display);font-stretch:118%;font-size:22px;margin-top:10px}

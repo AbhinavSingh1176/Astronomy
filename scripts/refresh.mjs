@@ -3,7 +3,7 @@
    Every source is independent: one that fails keeps yesterday's file and is marked in data/status.json.
    Optional secret: NASA_API_KEY (APOD; DEMO_KEY works at low volume).   node scripts/refresh.mjs [source …] */
 import { createHash } from 'node:crypto';
-import { get, readJSON, clean, decode, safeUrl, iso, blocks, attrs, first, runAll, APOD_PAGE, apodFromPage, apodCheck, nasaSlide, detex } from './lib.mjs';
+import { get, readJSON, clean, decode, safeUrl, iso, blocks, attrs, first, runAll, APOD_PAGE, apodFromPage, apodCheck, nasaSlide, detex, CAPTIONS } from './lib.mjs';
 
 const now = () => new Date().toISOString();
 const hash = s => createHash('sha1').update(String(s)).digest('hex').slice(0, 12);
@@ -210,7 +210,8 @@ async function dsn() {
    Rebuilt when the trays change, and checked again once a week; otherwise last week's file is kept as it is. ── */
 async function gallery() {
   const want = readJSON('data/gallery-trays.json', null); if (!want || !Array.isArray(want.trays)) throw new Error('data/gallery-trays.json is missing');
-  const key = hash(JSON.stringify(want.trays)), prev = readJSON('data/gallery.json', null);
+  /* the key changes with the trays, and with the caption rules in lib.mjs (bump CAPTIONS there), so either brings a fresh fetch */
+  const key = hash(JSON.stringify(want.trays) + CAPTIONS), prev = readJSON('data/gallery.json', null);
   if (prev && prev.key === key && prev.fetched && Date.now() - new Date(prev.fetched).getTime() < 7 * 864e5) return prev;
   const API = 'https://images-api.nasa.gov/', old = new Map(prev && prev.trays ? prev.trays.flatMap(t => t.slides).map(s => [s.id.toLowerCase(), s]) : []), missing = [];
   const one = async s => {
