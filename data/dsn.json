@@ -1,5 +1,307 @@
 {
- "fetched": null,
- "note": "Placeholder until the first daily refresh.",
- "stations": []
+ "fetched": "2026-11-16T06:08:45.630Z",
+ "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
+ "stations": [
+  {
+   "id": "gdscc",
+   "name": "Goldstone, California",
+   "dishes": [
+    {
+     "name": "DSS14",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS24",
+     "az": 106,
+     "el": 44,
+     "up": [
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 0,
+       "band": "S",
+       "power": 4.8
+      }
+     ],
+     "down": [
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 40000,
+       "band": "S",
+       "power": -120
+      },
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 28000000,
+       "band": "K",
+       "power": -91
+      }
+     ],
+     "targets": [
+      {
+       "code": "JWST",
+       "name": "James Webb Space Telescope",
+       "km": 1660000,
+       "rtlt": 11.1
+      }
+     ]
+    },
+    {
+     "name": "DSS26",
+     "az": 180,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    }
+   ]
+  },
+  {
+   "id": "mdscc",
+   "name": "Madrid, Spain",
+   "dishes": [
+    {
+     "name": "DSS55",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS65",
+     "az": 169,
+     "el": 63,
+     "up": [
+      {
+       "sc": "Juno",
+       "rate": 0,
+       "band": "S",
+       "power": 19
+      }
+     ],
+     "down": [
+      {
+       "sc": "Juno",
+       "rate": 22000,
+       "band": "X",
+       "power": -130
+      }
+     ],
+     "targets": [
+      {
+       "code": "JNO",
+       "name": "Juno",
+       "km": 787000000,
+       "rtlt": 5250
+      }
+     ]
+    },
+    {
+     "name": "DSS53",
+     "az": 168,
+     "el": 64,
+     "up": [],
+     "down": [
+      {
+       "sc": "Mars Odyssey",
+       "rate": 14220,
+       "band": "X",
+       "power": -120
+      }
+     ],
+     "targets": [
+      {
+       "code": "M01O",
+       "name": "Mars Odyssey",
+       "km": 195000000,
+       "rtlt": 1300
+      },
+      {
+       "code": "MRO",
+       "name": "Mars Reconnaissance Orbiter",
+       "km": 195000000,
+       "rtlt": 1300
+      }
+     ]
+    },
+    {
+     "name": "DSS56",
+     "az": 168,
+     "el": 64,
+     "up": [
+      {
+       "sc": "Mars Odyssey",
+       "rate": 0,
+       "band": "S",
+       "power": 18
+      }
+     ],
+     "down": [
+      {
+       "sc": "Mars Odyssey",
+       "rate": 14220,
+       "band": "X",
+       "power": -130
+      }
+     ],
+     "targets": [
+      {
+       "code": "M01O",
+       "name": "Mars Odyssey",
+       "km": 195000000,
+       "rtlt": 1300
+      }
+     ]
+    },
+    {
+     "name": "DSS63",
+     "az": 131,
+     "el": 37,
+     "up": [
+      {
+       "sc": "STEREO A",
+       "rate": 0,
+       "band": "X",
+       "power": 9.9
+      }
+     ],
+     "down": [
+      {
+       "sc": "STEREO A",
+       "rate": 720000,
+       "band": "X",
+       "power": -120
+      }
+     ],
+     "targets": [
+      {
+       "code": "STA",
+       "name": "STEREO A",
+       "km": 172000000,
+       "rtlt": 1150
+      }
+     ]
+    },
+    {
+     "name": "DSS54",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    }
+   ]
+  },
+  {
+   "id": "cdscc",
+   "name": "Canberra, Australia",
+   "dishes": [
+    {
+     "name": "DSS35",
+     "az": 281,
+     "el": 60,
+     "up": [
+      {
+       "sc": "Parker Solar Probe",
+       "rate": 0,
+       "band": "X",
+       "power": 18
+      }
+     ],
+     "down": [
+      {
+       "sc": "Parker Solar Probe",
+       "rate": 454600,
+       "band": "Ka",
+       "power": -120
+      }
+     ],
+     "targets": [
+      {
+       "code": "SPP",
+       "name": "Parker Solar Probe",
+       "km": 140000000,
+       "rtlt": 935
+      }
+     ]
+    },
+    {
+     "name": "DSS43",
+     "az": 316,
+     "el": 31,
+     "up": [],
+     "down": [
+      {
+       "sc": "Voyager 1",
+       "rate": 40,
+       "band": "X",
+       "power": -160
+      }
+     ],
+     "targets": [
+      {
+       "code": "VGR1",
+       "name": "Voyager 1",
+       "km": 25900000000,
+       "rtlt": 173000
+      }
+     ]
+    },
+    {
+     "name": "DSS34",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [
+      {
+       "sc": "Voyager 2",
+       "rate": 0,
+       "band": "X",
+       "power": -170
+      },
+      {
+       "sc": "Voyager 2",
+       "rate": 160,
+       "band": "X",
+       "power": -160
+      }
+     ],
+     "targets": [
+      {
+       "code": "VGR2",
+       "name": "Voyager 2",
+       "km": 21700000000,
+       "rtlt": 145000
+      }
+     ]
+    },
+    {
+     "name": "DSS36",
+     "az": 172,
+     "el": 66,
+     "up": [],
+     "down": [
+      {
+       "sc": "Voyager 2",
+       "rate": 0,
+       "band": "X",
+       "power": -170
+      }
+     ],
+     "targets": [
+      {
+       "code": "VGR2",
+       "name": "Voyager 2",
+       "km": 21700000000,
+       "rtlt": 145000
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }
