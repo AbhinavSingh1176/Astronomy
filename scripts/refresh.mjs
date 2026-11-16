@@ -66,12 +66,21 @@ async function news() {
 }
 
 /* ── launches: Launch Library 2 ── */
+/* Launch Library's placeholders read like errors when printed as a headline: "Unknown Payload", "SatNet LEO Group TBD?".
+   The launch's status (To Be Confirmed, To Be Determined) already says what is not yet settled. */
+function missionName(s) {
+  const t = clean(s || '', 160);
+  if (/^unknown payload$/i.test(t)) return 'Undisclosed payload';
+  const u = t.replace(/\s*\(?\bTB[DA]\b\??\)?$/i, '').trim();
+  return u || (t ? 'Payload to be announced' : '');
+}
 function launch(l) {
   const st = l.status || {}, lsp = l.launch_service_provider || {}, m = l.mission || {}, pad = l.pad || {}, conf = (l.rocket && l.rocket.configuration) || {};
-  return { id: String(l.id || l.slug || hash(l.name)), name: clean(l.name, 160), net: iso(l.net), win: [iso(l.window_start), iso(l.window_end)], prec: l.net_precision ? clean(l.net_precision.name, 40) : null,
+  const rocket = clean(conf.full_name || conf.name || '', 100), mission = missionName(m.name);
+  return { id: String(l.id || l.slug || hash(l.name)), name: rocket && mission ? rocket + ' | ' + mission : clean(l.name, 160), net: iso(l.net), win: [iso(l.window_start), iso(l.window_end)], prec: l.net_precision ? clean(l.net_precision.name, 40) : null,
     status: clean(st.abbrev || st.name, 30), statusName: clean(st.name, 60), provider: clean(lsp.name || l.lsp_name, 100), ptype: clean(lsp.type && (lsp.type.name || lsp.type), 40),
     country: clean((pad.country && (pad.country.alpha_2_code || pad.country.name)) || (pad.location && (pad.location.country_code || (pad.location.country && pad.location.country.alpha_2_code))) || '', 20),
-    rocket: clean(conf.full_name || conf.name || '', 100), mission: clean(m.name || '', 160), mtype: clean(m.type || l.mission_type || '', 60), orbit: clean((m.orbit && (m.orbit.name || m.orbit.abbrev)) || l.orbit || '', 60),
+    rocket, mission, mtype: clean(m.type || l.mission_type || '', 60), orbit: clean((m.orbit && (m.orbit.name || m.orbit.abbrev)) || l.orbit || '', 60),
     desc: clean(m.description || '', 420), pad: clean(pad.name || '', 120), loc: clean((pad.location && pad.location.name) || l.location || '', 120),
     fail: clean(l.failreason || '', 300) || null, url: safeUrl((l.info_urls && l.info_urls[0] && l.info_urls[0].url) || (l.vid_urls && l.vid_urls[0] && l.vid_urls[0].url) || '') };
 }
