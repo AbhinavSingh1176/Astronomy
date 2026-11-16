@@ -66,7 +66,9 @@
     if (!first && !O.reduced) { screen.classList.remove('clunk'); void screen.offsetWidth; screen.classList.add('clunk'); clunk(); setTimeout(put, 120); } else put();
     record(t, s, si);
     O.$$('#film button').forEach((b, i) => b.setAttribute('aria-current', String(i === si)));
-    const cur = $('#film').children[si]; if (cur) cur.scrollIntoView({ block: 'nearest', inline: 'center', behavior: O.reduced ? 'auto' : 'smooth' });
+    /* centre the slide in the filmstrip by scrolling the strip alone: the page itself stays where the reader left it */
+    const film = $('#film'), cur = film.children[si];
+    if (cur) film.scrollBy({ left: cur.getBoundingClientRect().left - film.getBoundingClientRect().left - (film.clientWidth - cur.offsetWidth) / 2, behavior: O.reduced ? 'auto' : 'smooth' });
     const next = t.slides[(si + 1) % n]; if (next) { const p = new Image(); p.src = next.img; }      /* the next one, ready in the gate */
     history.replaceState(null, '', '#' + t.id + '/' + (si + 1));
     restartTimer();
