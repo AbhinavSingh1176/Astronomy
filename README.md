@@ -36,7 +36,7 @@ then open http://localhost:8000. (Opening the files directly from disk does not 
    git remote add origin https://github.com/<you>/owlt.git
    git push -u origin main
    ```
-3. On GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. On GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**. (The run started by the push in step 2 finishes with a warning until this is set; nothing is published until then.)
 4. **Actions → Refresh and publish → Run workflow** to fetch the first day's data and publish. After that it runs by itself every six hours (and on every push).
 
 Optional, under **Settings → Secrets and variables → Actions**:
