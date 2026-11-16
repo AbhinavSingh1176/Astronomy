@@ -77,7 +77,8 @@ function launch(l) {
 }
 async function launches() {
   const [up, prev] = await Promise.all([get('https://ll.thespacedevs.com/2.3.0/launches/upcoming/?limit=40&hide_recent_previous=true'), get('https://ll.thespacedevs.com/2.3.0/launches/previous/?limit=20')]);
-  return { fetched: now(), source: 'Launch Library 2 (The Space Devs)', upcoming: (up.results || []).map(launch).filter(l => l.net), recent: (prev.results || []).map(launch).filter(l => l.net) };
+  return { fetched: now(), source: 'Launch Library 2 (The Space Devs)', upcoming: (up.results || []).map(launch).filter(l => l.net).sort((a, b) => a.net.localeCompare(b.net)),
+    recent: (prev.results || []).map(launch).filter(l => l.net).sort((a, b) => b.net.localeCompare(a.net)) };
 }
 
 /* ── space weather: NOAA Space Weather Prediction Center ── */

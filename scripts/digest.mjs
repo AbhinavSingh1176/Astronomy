@@ -118,7 +118,8 @@ function plain(p) {
   const how = S.filter(s => s !== res && /\b(we (use|used|analy[sz]e|model|perform|combine|obtain|observe|develop|present|carry out|conduct|compile|introduce)|using|based on|with data from)\b/i.test(s)).slice(0, 2);
   const q = S.filter(s => s !== res && !how.includes(s)).slice(0, 2);
   const nums = S.filter(s => s !== res && !how.includes(s) && !q.includes(s) && /\d/.test(s)).slice(0, 2);
-  return { one: trim(res, 40), q: q.join(' ') || p.t + '.', how: how.join(' ') || 'The abstract does not describe the method in detail.', found: nums.map((s, i) => ['From the abstract' + (nums.length > 1 ? ' (' + (i + 1) + ')' : ''), trim(s, 60)]),
+  const cap = (s, n) => s.length > n ? s.slice(0, s.lastIndexOf(' ', n - 1)) + '…' : s;
+  return { one: cap(trim(res, 40), 380), q: cap(q.join(' ') || p.t + '.', 1900), how: cap(how.join(' ') || 'The abstract does not describe the method in detail.', 1900), found: nums.map((s, i) => ['From the abstract' + (nums.length > 1 ? ' (' + (i + 1) + ')' : ''), trim(s, 60)]),
     why: '', careful: '', auto: true };
 }
 
