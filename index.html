@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OWLT · Today</title>
+<meta name="description" content="OWLT is organised by one-way light time: how long light takes to reach you. Today’s light, today’s paper, the sky tonight, launches, space weather and news.">
+<link rel="stylesheet" href="css/core.css">
+<style>
+/* Today is an almanac page: one strip of the light arriving now, then the day in cards.
+   The strip is the site's idea in one picture: everything you see already happened, and the axis is how long ago. */
+.mast{padding-block:30px 8px}
+.mast .row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px 24px;flex-wrap:wrap}
+.mast h1{font-size:clamp(34px,6vw,64px);font-stretch:125%;font-weight:800;letter-spacing:.01em}
+.mast .date{font-family:var(--f-display);font-size:15px;color:var(--mute);text-align:right}
+.mast .date b{display:block;font-family:var(--f-data);font-weight:400;font-size:13px;color:var(--faint);font-variant-numeric:tabular-nums}
+.mast .lede{margin-top:10px;max-width:66ch;color:var(--mute);font-size:17px}
+
+.strip-wrap{margin-top:22px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:linear-gradient(90deg,rgba(255,235,196,.025),rgba(232,68,44,.03) 70%,rgba(143,165,217,.03))}
+.strip-scroll{overflow-x:auto;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent}
+.strip{position:relative;height:270px;min-width:1100px;margin:0 auto;max-width:1400px}
+.strip .axis{position:absolute;left:3%;right:3%;top:50%;height:1px;background:var(--hair)}
+.strip .tick{position:absolute;top:10px;bottom:22px;width:1px;background:var(--hair2)}
+.strip .tick span{position:absolute;bottom:-18px;left:0;transform:translateX(-50%);font-family:var(--f-data);font-size:10px;color:var(--faint);white-space:nowrap}
+.strip .m{position:absolute;transform:translateX(-50%);text-decoration:none;color:var(--text);text-align:center;white-space:nowrap;font-family:var(--f-display)}
+.strip .m::before{content:"";position:absolute;left:50%;width:1px;background:var(--hair);transform:translateX(-50%)}
+.strip .m.up::before{top:100%;height:var(--h,9px)}
+.strip .m.dn::before{bottom:100%;height:var(--h,9px)}
+.strip .m .dot{position:absolute;left:50%;width:7px;height:7px;border-radius:50%;transform:translate(-50%,-50%);background:var(--starlight);box-shadow:0 0 8px rgba(255,235,196,.6)}
+.strip .m.up .dot{top:calc(100% + var(--h,9px))} .strip .m.dn .dot{bottom:calc(100% + var(--h,9px));transform:translate(-50%,50%)}
+.strip .m.live .dot{background:var(--sodium);box-shadow:0 0 8px rgba(255,177,59,.7)}
+.strip .m .n{display:block;font-size:13px;font-weight:600;color:var(--starlight)}
+.strip .m .v{display:block;font-family:var(--f-data);font-size:11px;color:var(--mute);font-variant-numeric:tabular-nums}
+.strip .m:hover .n{color:var(--o3)}
+.strip .m.live .v{color:var(--sodium)}
+.strip .now{position:absolute;left:.4%;top:50%;transform:translateY(-50%);font-family:var(--f-display);font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ha)}
+.strip-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:8px 10px;font-family:var(--f-display);font-size:12.5px;color:var(--faint)}
+
+.event{margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:6px 28px;align-items:center;padding:18px 20px;border:1px solid rgba(255,177,59,.35);background:rgba(255,177,59,.035)}
+.event .k{grid-column:1 / -1;font-family:var(--f-display);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sodium)}
+.event .clock{font-family:var(--f-data);font-size:clamp(26px,4vw,40px);color:var(--starlight);font-variant-numeric:tabular-nums;white-space:nowrap}
+.event p{font-size:16px;line-height:1.5;max-width:70ch}
+@media (max-width:700px){.event{grid-template-columns:1fr}}
+
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;margin-top:26px;padding-bottom:40px}
+.card{grid-column:span 4;border:1px solid var(--hair);background:var(--dust);padding:16px 18px 18px;min-width:0;display:flex;flex-direction:column}
+.card.w8{grid-column:span 8} .card.w6{grid-column:span 6} .card.w12{grid-column:span 12}
+.card > .eyebrow{margin-bottom:8px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card > .eyebrow a{font-family:var(--f-display);font-size:11.5px;letter-spacing:.04em;text-transform:none;font-weight:500}
+.card h2{font-size:21px;line-height:1.2;font-stretch:108%}
+.card h2 a{color:inherit;text-decoration:none} .card h2 a:hover{color:var(--o3)}
+.card p{font-size:15.5px;line-height:1.55;margin-top:8px}
+.card .meta{margin-top:auto;padding-top:12px;font-family:var(--f-data);font-size:11px;color:var(--faint)}
+.card .empty{color:var(--faint);font-family:var(--f-display);font-size:13.5px;margin-top:4px}
+@media (max-width:980px){.card,.card.w8,.card.w6{grid-column:span 6}}
+@media (max-width:680px){.card,.card.w8,.card.w6,.card.w12{grid-column:span 12}}
+
+.big{font-family:var(--f-data);font-size:30px;color:var(--starlight);font-variant-numeric:tabular-nums;line-height:1.15}
+.moonrow{display:flex;gap:16px;align-items:center}
+.moonrow canvas{flex:none}
+.planets{list-style:none;margin:12px 0 0;padding:0}
+.planets li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--hair2);font-family:var(--f-display);font-size:13.5px}
+.planets li span:last-child{font-family:var(--f-data);font-size:12px;color:var(--mute);text-align:right}
+.heads{list-style:none;margin:6px 0 0;padding:0}
+.heads li{padding:9px 0;border-bottom:1px solid var(--hair2)}
+.heads a{font-family:var(--f-display);font-size:14.5px;color:var(--starlight);text-decoration:none;line-height:1.35}
+.heads a:hover{color:var(--o3)}
+.heads .s{display:block;font-family:var(--f-data);font-size:10.5px;color:var(--faint);margin-top:3px}
+.sw{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:6px}
+.sw div{border-left:1px solid var(--hair);padding-left:10px}
+.sw b{display:block;font-family:var(--f-data);font-weight:400;font-size:22px;color:var(--starlight)}
+.sw span{font-family:var(--f-display);font-size:11.5px;color:var(--faint)}
+.sw .hot b{color:var(--sodium)}
+.apod img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover;margin-top:6px;border:1px solid var(--hair2)}
+.log-bar{height:3px;background:var(--hair2);margin-top:10px}
+.log-bar i{display:block;height:100%;background:var(--o3)}
+
+.sources{border-top:1px solid var(--hair);padding-block:34px 60px;scroll-margin-top:calc(var(--nav-h) + 10px)}
+.sources h2{font-size:24px;font-stretch:118%}
+.sources .lede{margin-top:8px;color:var(--mute);max-width:70ch}
+.sources dl{columns:2 420px;column-gap:40px;margin:20px 0 0}
+.sources .s{break-inside:avoid;padding:9px 0;border-bottom:1px solid var(--hair2)}
+.sources dt{font-family:var(--f-display);font-size:14px;font-weight:600;color:var(--starlight)}
+.sources dd{margin:3px 0 0;font-size:14.5px;line-height:1.5;color:var(--text)}
+.sources dd small{font-family:var(--f-data);font-size:11px;color:var(--faint)}
+</style>
+</head>
+<body>
+<main>
+  <header class="wrap mast">
+    <div class="row"><h1>Today</h1><div class="date" id="date"></div></div>
+    <p class="lede">OWLT is organised by one-way light time: how long light takes to reach you. Nothing you see is happening now. The strip below is how long ago each thing you could look at tonight sent the light that is arriving this second.</p>
+  </header>
+  <section class="strip-wrap" aria-label="The light arriving now">
+    <div class="strip-scroll"><div class="strip" id="strip"><div class="axis"></div><div class="now">NOW</div></div></div>
+    <div class="wrap strip-cap"><span>Light-travel time, logarithmic. Solar System distances are computed for this second.</span><span>Each name opens on the Ladder.</span></div>
+  </section>
+  <div class="wrap">
+    <section class="event" id="event" hidden></section>
+    <div class="grid" id="grid"></div>
+  </div>
+  <section class="sources" id="sources"><div class="wrap">
+    <h2>Sources and licences</h2>
+    <p class="lede">Where every number on OWLT comes from. Catalogues were built once from the sources below; the daily data is fetched every six hours and each page says how old it is.</p>
+    <dl id="srcs"></dl>
+  </div></section>
+</main>
+<script src="js/core.js"></script>
+<script src="js/astro.js"></script>
+<script src="js/registry.js"></script>
+<script src="js/today.js"></script>
+</body>
+</html>
