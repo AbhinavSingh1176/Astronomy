@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T06:08:45.630Z",
+ "fetched": "2026-11-16T06:14:23.984Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -16,8 +16,8 @@
     },
     {
      "name": "DSS24",
-     "az": 106,
-     "el": 44,
+     "az": 107,
+     "el": 45,
      "up": [
       {
        "sc": "James Webb Space Telescope",
@@ -73,7 +73,7 @@
     },
     {
      "name": "DSS65",
-     "az": 169,
+     "az": 172,
      "el": 63,
      "up": [
       {
@@ -102,7 +102,7 @@
     },
     {
      "name": "DSS53",
-     "az": 168,
+     "az": 171,
      "el": 64,
      "up": [],
      "down": [
@@ -130,16 +130,9 @@
     },
     {
      "name": "DSS56",
-     "az": 168,
+     "az": 171,
      "el": 64,
-     "up": [
-      {
-       "sc": "Mars Odyssey",
-       "rate": 0,
-       "band": "S",
-       "power": 18
-      }
-     ],
+     "up": [],
      "down": [
       {
        "sc": "Mars Odyssey",
@@ -159,14 +152,14 @@
     },
     {
      "name": "DSS63",
-     "az": 131,
-     "el": 37,
+     "az": 132,
+     "el": 38,
      "up": [
       {
        "sc": "STEREO A",
        "rate": 0,
        "band": "X",
-       "power": 9.9
+       "power": 10
       }
      ],
      "down": [
@@ -202,13 +195,13 @@
    "dishes": [
     {
      "name": "DSS35",
-     "az": 281,
-     "el": 60,
+     "az": 280,
+     "el": 59,
      "up": [
       {
        "sc": "Parker Solar Probe",
        "rate": 0,
-       "band": "X",
+       "band": "S",
        "power": 18
       }
      ],
@@ -231,8 +224,8 @@
     },
     {
      "name": "DSS43",
-     "az": 316,
-     "el": 31,
+     "az": 315,
+     "el": 30,
      "up": [],
      "down": [
       {
@@ -281,7 +274,7 @@
     },
     {
      "name": "DSS36",
-     "az": 172,
+     "az": 174,
      "el": 66,
      "up": [],
      "down": [
