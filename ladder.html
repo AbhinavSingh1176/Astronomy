@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Ladder · OWLT</title>
+<meta name="description" content="One continuous place from the ground under you to the edge of the observable universe, with every object placed where it really is.">
+<link rel="stylesheet" href="css/core.css">
+<style>
+/* Layout: the sky fills the window under the bar. Scale rail on the left, the focused object's card on the right,
+   readout and controls along the bottom. Every panel is solid ground, never glass. */
+html,body{height:100%;overflow:hidden}
+body{background:#000}
+#stage{position:fixed;inset:var(--nav-h) 0 0 0;overflow:hidden;touch-action:none;cursor:grab}
+#stage.drag{cursor:grabbing}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+#labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.lb{position:absolute;left:0;top:0;pointer-events:auto;cursor:pointer;background:none;border:0;padding:2px 4px 2px 9px;white-space:nowrap;
+  font-family:var(--f-display);font-size:11.5px;font-weight:500;letter-spacing:.02em;color:var(--starlight);text-shadow:0 0 2px #000,0 0 5px #000,0 0 11px #000,0 0 18px rgba(0,0,0,.85);
+  will-change:transform;opacity:.9}
+.lb::before{content:"";position:absolute;left:0;top:50%;width:5px;height:1px;background:currentColor;opacity:.6}
+.lb:hover,.lb:focus-visible{color:var(--o3);opacity:1}
+.lb.k-galaxy,.lb.k-satellite,.lb.k-cluster,.lb.k-supercluster,.lb.k-wall,.lb.k-void,.lb.k-structure{color:var(--bstar)}
+.lb.k-nebula,.lb.k-remnant{color:#F29A86}
+.lb.k-probe{color:var(--sodium)}
+.lb.k-hz{color:var(--o3)}
+.lb.k-planet{color:var(--text)}
+.lb.k-horizon{color:var(--ha);font-stretch:118%;letter-spacing:.08em;text-transform:uppercase;font-size:10.5px}
+.lb.k-sky{color:var(--mute);font-size:10.5px}
+.lb.k-arm{color:var(--mute);font-style:italic;pointer-events:none}
+.lb.focus{color:var(--o3);font-weight:700;font-size:12.5px}
+.lb.home{color:var(--ha);font-weight:700}
+
+/* breadcrumb: where the focus sits inside everything else */
+#crumbs{position:absolute;top:12px;left:var(--gut-l);right:380px;display:flex;flex-wrap:wrap;align-items:center;gap:2px 0;
+  font-family:var(--f-display);font-size:12.5px;z-index:5;pointer-events:none}
+#crumbs a{pointer-events:auto;color:var(--mute);text-decoration:none;padding:3px 2px}
+#crumbs a:hover{color:var(--o3)}
+#crumbs .sep{color:var(--faint);padding:0 6px}
+#crumbs .now{color:var(--starlight);font-weight:600;padding:3px 2px}
+
+/* scale rail: fourteen real rungs on a log axis */
+#rail{position:absolute;left:var(--gut-l);top:74px;bottom:172px;width:178px;z-index:5;display:flex}
+#rail ol{list-style:none;margin:0;padding:0;position:relative;flex:1}
+#rail li{position:absolute;left:14px;right:0;transform:translateY(-50%)}
+#rail button{display:block;width:100%;text-align:left;background:none;border:0;padding:2px 4px;cursor:pointer;color:var(--faint);
+  font-family:var(--f-display);font-size:12px;line-height:1.25}
+#rail button span{display:block;font-family:var(--f-data);font-size:10px;color:var(--faint);opacity:.85}
+#rail button:hover,#rail button.on{color:var(--starlight)}
+#rail button.on span{color:var(--ha)}
+#rail .axis{position:absolute;left:4px;top:0;bottom:0;width:1px;background:var(--hair)}
+#rail .knob{position:absolute;left:0;width:9px;height:9px;margin-top:-4.5px;border:1px solid var(--ha);background:#000;transform:rotate(45deg)}
+#rail .cap{position:absolute;left:14px;top:-24px;font-family:var(--f-data);font-size:10px;letter-spacing:.04em;color:var(--faint);pointer-events:none}
+
+/* readout */
+#readout{position:absolute;left:var(--gut-l);bottom:16px;max-width:min(560px,calc(100% - 32px));z-index:5;pointer-events:none}
+#readout .rung{font-family:var(--f-display);font-stretch:118%;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--starlight)}
+#readout .span{font-family:var(--f-data);font-size:12px;color:var(--mute);margin-top:4px;font-variant-numeric:tabular-nums}
+#readout .span b{color:var(--starlight);font-weight:500}
+#readout .illus{margin-top:7px;font-family:var(--f-display);font-size:11.5px;color:var(--sodium);max-width:52ch}
+#readout .hint{margin-top:7px;font-family:var(--f-display);font-size:11.5px;color:var(--faint)}
+
+/* controls */
+#ctl{position:absolute;right:var(--gut-r);bottom:16px;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;z-index:6;max-width:calc(100% - 32px)}
+#ctl .btn{background:#000}
+
+/* the focused object's card */
+#panel{position:absolute;top:12px;right:var(--gut-r);width:344px;max-height:calc(100% - 80px);overflow-y:auto;z-index:6;
+  background:var(--dust);border:1px solid var(--hair);padding:16px 18px 18px;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent}
+#panel .kind{font-family:var(--f-display);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ha)}
+#panel h1{font-size:26px;margin-top:4px;line-height:1.05}
+#panel .alias{font-family:var(--f-display);font-size:12px;color:var(--faint);margin-top:4px}
+#panel .lt{margin-top:14px;padding:10px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+#panel .lt .big{font-family:var(--f-data);font-size:21px;color:var(--starlight);font-variant-numeric:tabular-nums;line-height:1.2}
+#panel .lt .lab{font-family:var(--f-display);font-size:12px;color:var(--mute);margin-top:2px}
+#panel .left{margin-top:12px;font-size:14.5px;line-height:1.5;color:var(--text)}
+#panel .left em{color:var(--starlight);font-style:normal}
+#panel .note{margin-top:12px;font-size:15px;line-height:1.55}
+#panel .kv{margin-top:14px}
+#panel .sys{margin-top:14px;font-family:var(--f-display);font-size:12.5px}
+#panel .sys h2{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-stretch:112%;margin-bottom:6px}
+#panel .sys li{display:flex;justify-content:space-between;gap:10px;padding:3px 0;border-bottom:1px solid var(--hair2)}
+#panel .sys li .hz{color:var(--o3)}
+#panel .sys ul{list-style:none;margin:0;padding:0}
+#panel .caveat{margin-top:12px;font-family:var(--f-display);font-size:11.5px;color:var(--sodium)}
+#panel .threads{margin-top:14px}
+#panel .acts{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}
+#panel .x{position:absolute;top:10px;right:10px;width:28px;height:28px;background:none;border:0;color:var(--faint);cursor:pointer;font-size:18px;line-height:1}
+#panel .x:hover{color:var(--o3)}
+
+/* tour */
+#tour{position:absolute;left:50%;bottom:74px;transform:translateX(-50%);width:min(620px,calc(100% - 32px));z-index:7;background:#000;border:1px solid var(--hair);
+  padding:14px 18px;display:flex;gap:14px;align-items:flex-start}
+#tour p{flex:1;font-size:16.5px;line-height:1.5;color:var(--starlight)}
+#tour .n{font-family:var(--f-data);font-size:11px;color:var(--ha);margin-bottom:6px}
+#tour .b{display:flex;gap:6px;flex:none}
+
+#boot{position:absolute;inset:0;z-index:20;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  font-family:var(--f-display);color:var(--mute);transition:opacity .8s ease;text-align:center;padding:0 24px}
+#boot .t{font-stretch:125%;font-weight:800;letter-spacing:.3em;color:var(--starlight);font-size:14px}
+#boot .bar{width:min(260px,70vw);height:1px;background:var(--hair)}
+#boot .bar i{display:block;height:100%;width:0;background:var(--ha);transition:width .3s}
+#boot .s{font-family:var(--f-data);font-size:11px}
+#boot.off{opacity:0;pointer-events:none}
+#nogl{position:absolute;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--void)}
+
+@media (max-width:900px){
+  #rail{display:none}
+  #crumbs{right:var(--gut-r);font-size:11.5px}
+  #panel{top:auto;bottom:62px;left:var(--gut-l);right:var(--gut-r);width:auto;max-height:46%;padding:12px 14px}
+  #panel.min{max-height:64px;overflow:hidden}
+  #panel h1{font-size:20px}
+  #readout{bottom:auto;top:44px}
+  #readout .hint,#readout .span{display:none}
+  #ctl{left:var(--gut-l);justify-content:flex-start}
+  #tour{bottom:auto;top:76px}
+}
+</style>
+</head>
+<body>
+<main id="stage" aria-label="The Ladder: a zoomable map of the universe">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div id="labels"></div>
+  <nav id="crumbs" aria-label="Where you are"></nav>
+  <div id="rail" aria-label="Scales"><div class="axis"></div><div class="knob" id="knob"></div><ol id="rungs"></ol></div>
+  <aside id="panel" aria-live="polite" hidden></aside>
+  <div id="readout"><div class="rung" id="rung">Earth</div><div class="span" id="span"></div><div class="illus" id="illus" hidden></div>
+    <div class="hint" id="hint">Scroll or pinch to zoom out. Drag to look around. Click a name to go there. Press / to search.</div></div>
+  <div id="ctl">
+    <button class="btn" id="bTour" type="button">Take the tour</button>
+    <button class="btn" id="bLabels" type="button" aria-pressed="true">Names</button>
+    <button class="btn" id="bLines" type="button" aria-pressed="false">Constellations</button>
+    <button class="btn" id="bSound" type="button" aria-pressed="false">Sound</button>
+    <button class="btn" id="bHome" type="button">Back to Earth</button>
+  </div>
+  <div id="tour" hidden><div style="flex:1"><div class="n" id="tourN"></div><p id="tourP"></p></div>
+    <div class="b"><button class="btn" id="tPrev" type="button" aria-label="Previous stop">‹</button><button class="btn" id="tNext" type="button" aria-label="Next stop">›</button><button class="btn" id="tEnd" type="button">End</button></div></div>
+  <div id="boot"><div class="t">THE LADDER</div><div class="bar"><i id="bootBar"></i></div><div class="s" id="bootS">loading catalogues</div></div>
+</main>
+<script src="vendor/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/astro.js"></script>
+<script src="js/registry.js"></script>
+<script src="js/gl.js"></script>
+<script src="js/ladder.js"></script>
+</body>
+</html>

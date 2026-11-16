@@ -179,7 +179,7 @@
     const c1 = 0.473 * s(2 * (u1 - u2)), c2 = 1.065 * s(2 * (u2 - u3)), c3 = 0.165 * s(G), c4 = 0.843 * s(H);
     const rr = [5.9057 - 0.0244 * c(2 * (u1 - u2)), 9.3966 - 0.0882 * c(2 * (u2 - u3)), 14.9883 - 0.0216 * c(G), 26.3627 - 0.1939 * c(H)];
     const uu = [u1 + c1, u2 + c2, u3 + c3, u4 + c4];
-    return ['Io', 'Europa', 'Ganymede', 'Callisto'].map((n, i) => ({ name: n, x: rr[i] * s(uu[i]), y: -rr[i] * c(uu[i]) * s(DE), z: rr[i] * c(uu[i]) * c(DE), behind: c(uu[i]) < 0 }));
+    return ['Io', 'Europa', 'Ganymede', 'Callisto'].map((n, i) => ({ name: n, u: rev(uu[i]), r: rr[i], x: rr[i] * s(uu[i]), y: -rr[i] * c(uu[i]) * s(DE), z: rr[i] * c(uu[i]) * c(DE), behind: c(uu[i]) < 0 }));
   }
 
   /* ── probes leaving the Solar System: straight-line escape, heliocentric ecliptic ──
@@ -214,6 +214,8 @@
     comovingGly: z => HUB_GLY * integ(z, zz => (1 + zz) / Ez(zz)),      // where it is now
     lookbackGyr: z => HUB_GYR * integ(z, zz => 1 / Ez(zz)),             // how long the light took
     /* redshift whose light-travel time is t Gyr (bisection) */
+    emitGly: z => HUB_GLY * integ(z, zz => (1 + zz) / Ez(zz)) / (1 + z),  // where it was when the light left
+    recession: z => integ(z, zz => (1 + zz) / Ez(zz)),                    // how fast it recedes now, in units of c (= comoving distance / Hubble distance)
     zAtLookback: t => { let lo = 0, hi = 1e4; for (let i = 0; i < 60; i++) { const m = Math.sqrt((lo + 1) * (hi + 1)) - 1; if (cosmo.lookbackGyr(m) < t) lo = m; else hi = m; } return (lo + hi) / 2; }
   };
   cosmo.age = HUB_GYR * integ(1e7, zz => 1 / Ez(zz));

@@ -11,7 +11,7 @@
     ['scale-earth', 'Earth', 3.2e7], ['scale-moon', 'Earth and Moon', 1.1e9], ['scale-inner', 'Inner planets', 6.5e11],
     ['scale-planets', 'Solar System', 1.3e13], ['scale-heliosphere', 'Kuiper belt and heliosphere', 9e13], ['scale-oort', 'Oort cloud', 3.5e16],
     ['scale-neighbours', 'Nearest stars', 4e17], ['scale-bubble', 'Local Bubble', 1.2e19], ['scale-arm', 'Orion Arm', 1.4e20],
-    ['scale-galaxy', 'Milky Way', 2.4e21], ['scale-local-group', 'Local Group', 9e22], ['scale-laniakea', 'Laniakea', 6e24],
+    ['scale-galaxy', 'Milky Way', 1.9e21], ['scale-local-group', 'Local Group', 9e22], ['scale-laniakea', 'Laniakea', 6e24],
     ['scale-web', 'Cosmic web', 6e25], ['scale-universe', 'Observable universe', 1.05e27]];
   const STAR_ALIAS = { 'rigil-kentaurus': ['Alpha Centauri', 'Alpha Centauri A'], toliman: ['Alpha Centauri B'], polaris: ['North Star', 'Pole Star'], sirius: ['Dog Star'] };
   const SIZE_LY = { nebula: 20, cluster: 20, globular: 120, remnant: 30, satellite: 5000, galaxy: 60000, region: 1000 };

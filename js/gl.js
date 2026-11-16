@@ -13,7 +13,8 @@
   /* points live in their own unit around the Sun; near the viewer they become a sky (direction only), farther out a map (true places) */
   G.PLACE = `
     uniform vec3 uFocus; uniform float uK, uT, uSky;
-    vec3 place(vec3 p, out float d){ vec3 rel = p - uFocus; d = max(length(rel), 1e-7); return rel/d * mix(uSky, min(d*uK, 9000.0), uT); }`;
+    vec3 place(vec3 p, out float d){ vec3 rel = p - uFocus; d = max(length(rel), 1e-7);
+      return uT >= 1.0 ? rel*min(uK, 9000.0/d) : rel/d*mix(uSky, min(d*uK, 9000.0), uT); }`;   /* the map branch avoids mix(), which loses everything when d is tiny */
   const col = h => new T.Color(h);
 
   /* ── post: bloom at three scales, gravitational lens, lens fringe, vignette, sensor grain, ACES ── */
@@ -82,26 +83,28 @@
         gl_FragColor = vec4(vC*a*vI*uOp*1.6, 1.0); }` });
   /* stars with real distances: position in light-years from the Sun, absolute magnitude, colour */
   G.spaceStars = () => new T.ShaderMaterial({
-    uniforms: { uFocus: { value: new T.Vector3() }, uK: { value: 1 }, uT: { value: 0 }, uSky: { value: 60 }, uSize: { value: 1 }, uOp: { value: 1 } },
+    uniforms: { uFocus: { value: new T.Vector3() }, uK: { value: 1 }, uT: { value: 0 }, uSky: { value: 60 }, uSize: { value: 1 }, uOp: { value: 1 }, uMlim: { value: 9 } },
     transparent: true, blending: T.AdditiveBlending, depthWrite: false, depthTest: false,
-    vertexShader: `attribute float aAbs; attribute vec3 aColor; varying vec3 vC; varying float vI; uniform float uSize; ${G.PLACE}
-      void main(){ float d; vec3 q = place(position, d); gl_Position = projectionMatrix*modelViewMatrix*vec4(q, 1.0);
+    vertexShader: `attribute float aAbs; attribute vec3 aColor; varying vec3 vC; varying float vI; uniform float uSize, uMlim; ${G.PLACE}
+      void main(){ float d; vec3 q = place(position, d); vec4 mv = modelViewMatrix*vec4(q, 1.0); gl_Position = projectionMatrix*mv;
         float m = aAbs + 5.0*log(d/32.6156)*0.4342945;                                   /* apparent magnitude seen from the focus */
         float bs = pow(pow(10.0, -0.4*(m - 6.6)), 0.30)*smoothstep(9.5, 7.0, m);          /* as a sky */
-        float bm = pow(pow(10.0, -0.4*(aAbs - 9.0)), 0.22);                               /* as a map: by true luminosity */
+        float bm = pow(pow(10.0, -0.4*(aAbs - 9.0)), 0.19)*smoothstep(uMlim + 1.2, uMlim - 0.6, aAbs);   /* as a map: by true luminosity, the faint ones dropping out as the view widens */
+        float att = mix(1.0, clamp(3.2/max(-mv.z, 0.05), 0.05, 1.6), uT);               /* depth: in a map, what is far behind is dimmer */
         float b = mix(bs, bm, uT);
-        gl_PointSize = clamp(uSize*(0.3 + b*0.6), 0.0, 36.0)*step(0.002, d); vI = clamp(mix(0.10, 0.16, uT) + b*0.17, 0.0, 1.3)*step(0.02, b); vC = aColor; }`,
+        gl_PointSize = clamp(uSize*(0.3 + b*0.6)*sqrt(att), 0.0, 36.0)*step(0.002, d); vI = clamp(mix(0.10, 0.06, uT) + b*mix(0.17, 0.10, uT), 0.0, 1.3)*att*step(0.02, b); vC = aColor; }`,
     fragmentShader: `varying vec3 vC; varying float vI; uniform float uOp;
       void main(){ vec2 p = gl_PointCoord*2.0 - 1.0; float r = length(p); if (r > 1.0) discard;
         gl_FragColor = vec4(vC*(exp(-r*r*9.0) + exp(-r*2.8)*0.26)*vI*uOp*1.6, 1.0); }` });
   /* soft dots for models and statistical fills: position in the layer's unit, colour, relative size */
   G.dust = () => new T.ShaderMaterial({
-    uniforms: { uFocus: { value: new T.Vector3() }, uK: { value: 1 }, uT: { value: 1 }, uSky: { value: 60 }, uSize: { value: 1 }, uOp: { value: 1 }, uNear: { value: 1 } },
+    uniforms: { uFocus: { value: new T.Vector3() }, uK: { value: 1 }, uT: { value: 1 }, uSky: { value: 60 }, uSize: { value: 1 }, uOp: { value: 1 }, uNear: { value: 1 }, uAtt: { value: 0.5 } },
     transparent: true, blending: T.AdditiveBlending, depthWrite: false, depthTest: false,
-    vertexShader: `attribute vec3 aColor; attribute float aS; varying vec3 vC; varying float vI; uniform float uSize, uNear; ${G.PLACE}
-      void main(){ float d; vec3 q = place(position, d); gl_Position = projectionMatrix*modelViewMatrix*vec4(q, 1.0);
+    vertexShader: `attribute vec3 aColor; attribute float aS; varying vec3 vC; varying float vI; uniform float uSize, uNear, uAtt; ${G.PLACE}
+      void main(){ float d; vec3 q = place(position, d); vec4 mv = modelViewMatrix*vec4(q, 1.0); gl_Position = projectionMatrix*mv;
         float near = mix(clamp(pow(uNear/d, 0.9), 0.25, 3.0), 1.0, uT);                  /* as a sky, nearer points are brighter */
-        gl_PointSize = clamp(uSize*aS*near, 1.0, 24.0); vI = near; vC = aColor; }`,
+        float att = mix(1.0, clamp(pow(3.2/max(-mv.z, 0.05), uAtt), 0.1, 1.6), uT);
+        gl_PointSize = clamp(uSize*aS*near, 1.0, 24.0); vI = near*att; vC = aColor; }`,
     fragmentShader: `varying vec3 vC; varying float vI; uniform float uOp;
       void main(){ vec2 p = gl_PointCoord*2.0 - 1.0; float r = length(p); if (r > 1.0) discard; gl_FragColor = vec4(vC*exp(-r*r*4.0)*0.5*vI*uOp, 1.0); }` });
   /* catalogue galaxies: each a tilted disc, so its outline on screen is the ellipse you would really see from that side */
@@ -111,9 +114,10 @@
     vertexShader: `attribute vec3 aN, aColor; attribute float aSize, aLum; varying vec3 vC; varying vec2 vAx; varying float vSq, vI, vCore; uniform float uPx, uMin; ${G.PLACE}
       void main(){ float d; vec3 q = place(position, d); vec4 mv = modelViewMatrix*vec4(q, 1.0); gl_Position = projectionMatrix*mv;
         vec3 n = normalize(mat3(modelViewMatrix)*aN); vSq = max(0.2, abs(n.z)); float l = length(n.xy); vAx = l > 1e-4 ? n.xy/l : vec2(1.0, 0.0);
-        float px = aSize/d*length(q)*uPx/max(0.01, -mv.z);                                /* true size on screen */
-        gl_PointSize = clamp(max(px, uMin), 1.0, 64.0); vCore = smoothstep(6.0, 30.0, px);
-        vI = aLum*mix(clamp(uMin*1.5/max(px, 0.2), 0.35, 1.0), 1.0, 0.35); vC = aColor; }`,
+        float px = 2.0*aSize*(uT >= 1.0 ? min(uK, 9000.0/d) : mix(uSky, min(d*uK, 9000.0), uT)/d)*uPx/max(0.01, -mv.z);     /* true diameter on screen */
+        gl_PointSize = clamp(max(px, uMin), 1.0, 96.0); vCore = smoothstep(6.0, 30.0, px);
+        float att = clamp(pow(3.2/max(-mv.z, 0.05), 0.7), 0.12, 1.5);                    /* depth: far galaxies dimmer */
+        vI = aLum*mix(clamp(uMin*1.5/max(px, 0.2), 0.35, 1.0), 1.0, 0.35)*att; vC = aColor; }`,
     fragmentShader: `varying vec3 vC; varying vec2 vAx; varying float vSq, vI, vCore; uniform float uOp;
       void main(){ vec2 p = gl_PointCoord*2.0 - 1.0; p.y = -p.y;
         vec2 e = vec2(dot(p, vAx)/vSq, dot(p, vec2(-vAx.y, vAx.x))); float r = length(e); if (r > 1.0) discard;
@@ -162,7 +166,7 @@
             vec3 H = normalize(L + V); glow += vec3(1.0, 0.93, 0.8)*pow(max(0.0, dot(n, H)), 90.0)*(1.0 - land)*(1.0 - cl)*max(0.0, ndl)*0.8;
             float dark = 1.0 - smoothstep(-0.12, 0.1, ndl);
             glow += (vec3(1.0, 0.68, 0.32)*t.b*2.2*(1.0 - cl*0.6) + vec3(0.5, 0.62, 0.9)*t.g*0.3)*dark;   /* sodium city light, coastlines */
-            glow += vec3(1.0, 0.4, 0.15)*exp(-pow(ndl*5.5, 2.0))*0.22; air = vec3(0.3, 0.55, 1.0); haze = 0.8;
+            glow += vec3(1.0, 0.45, 0.2)*exp(-pow(ndl*14.0, 2.0))*0.05*(0.3 + pow(1.0 - mu, 2.0)); air = vec3(0.3, 0.55, 1.0); haze = 0.8;
           }
           float lam = max(0.0, ndl);
           vec3 c = alb*(lam*1.15*uLit + 0.006) + glow;
@@ -210,14 +214,14 @@
   G.disc = function () {
     return new T.ShaderMaterial({ transparent: true, blending: T.AdditiveBlending, depthWrite: false, depthTest: false, side: T.DoubleSide,
       uniforms: { uTime: { value: 0 }, uSide: { value: 0 }, uOut: { value: 0 } },
-      vertexShader: 'varying vec3 vP; varying float vF; void main(){ vP = position; vec4 w = modelMatrix*vec4(position, 1.0); vec3 c = modelMatrix[3].xyz; vF = dot(w.xyz - c, normalize(cameraPosition - c)); gl_Position = projectionMatrix*viewMatrix*w; }',
+      vertexShader: 'varying vec3 vP; varying float vF; void main(){ vP = position; vec4 w = modelMatrix*vec4(position, 1.0); vec3 c = modelMatrix[3].xyz; vF = dot(normalize(w.xyz - c), normalize(cameraPosition - c)); gl_Position = projectionMatrix*viewMatrix*w; }',
       fragmentShader: `varying vec3 vP; varying float vF; uniform float uTime, uSide, uOut; ${G.NOISE}
-        void main(){ if (vF*uSide < 0.0) discard; float r = length(vP.xy), t = clamp((r - 3.0)/9.0, 0.0, 1.0); float ang = atan(vP.y, vP.x);
+        void main(){ float side = smoothstep(-0.12, 0.12, vF*uSide); if (side <= 0.0) discard; float r = length(vP.xy), t = clamp((r - 3.0)/9.0, 0.0, 1.0); float ang = atan(vP.y, vP.x);
           float sw = fbm(vec3(cos(ang - uTime*1.6/pow(r, 1.5))*r*0.9, sin(ang - uTime*1.6/pow(r, 1.5))*r*0.9, r*0.6));
           vec3 c = mix(vec3(1.0, 0.95, 0.85), vec3(1.0, 0.36, 0.12), smoothstep(0.0, 0.8, t));
           float a = smoothstep(0.0, 0.05, t)*pow(1.0 - t, 1.6)*(0.45 + sw*1.1);
           a *= 1.0 + 0.75*sin(ang);                                                                 /* Doppler beaming */
-          vec3 o = c*a*2.2; if (uOut > 0.5) { o = o/(1.0 + o); o = pow(o, vec3(1.0/2.2)); }           /* drawn straight to screen */
+          vec3 o = c*a*2.2*side; if (uOut > 0.5) { o = o/(1.0 + o); o = pow(o, vec3(1.0/2.2)); }      /* drawn straight to screen */
           gl_FragColor = vec4(o, 1.0); }` });
   };
 

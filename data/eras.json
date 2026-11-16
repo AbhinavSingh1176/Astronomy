@@ -1,86 +1,389 @@
-{"note":"What was happening on Earth when light left a source N years ago: [years before 2026, sentence]. Dates are the conventional ones; deep-time figures are rounded.",
-"eras":[
-[2,"a total solar eclipse had just crossed North America (April 2024)"],
-[5,"the James Webb Space Telescope was being folded into its rocket (launched December 2021)"],
-[7,"the first image of a black hole's shadow had just been published (2019)"],
-[11,"gravitational waves were detected for the first time, and New Horizons flew past Pluto (2015)"],
-[14,"Curiosity landed on Mars and Voyager 1 crossed into interstellar space (2012)"],
-[17,"the Kepler space telescope was launched to count planets (2009)"],
-[22,"the rovers Spirit and Opportunity landed on Mars (2004)"],
-[28,"the first module of the International Space Station reached orbit (1998)"],
-[31,"the first planet around a Sun-like star, 51 Pegasi b, was announced (1995)"],
-[36,"the Hubble Space Telescope was launched (1990)"],
-[40,"Halley's Comet was passing through the inner Solar System (1986)"],
-[49,"the two Voyager probes were launched (1977)"],
-[57,"people walked on the Moon for the first time (1969)"],
-[65,"Yuri Gagarin became the first person in space (1961)"],
-[69,"Sputnik 1 became the first artificial satellite (1957)"],
-[81,"the Second World War ended (1945)"],
-[97,"Edwin Hubble showed that distant galaxies are receding (1929)"],
-[111,"Einstein completed general relativity (1915)"],
-[123,"the Wright brothers made the first powered flight (1903)"],
-[147,"Edison demonstrated a practical electric lamp (1879)"],
-[167,"Darwin published On the Origin of Species, and the Carrington solar storm struck (1859)"],
-[180,"Neptune was discovered from a prediction on paper (1846)"],
-[211,"Napoleon was defeated at Waterloo (1815)"],
-[245,"William Herschel discovered Uranus (1781)"],
-[250,"the American Declaration of Independence was signed (1776)"],
-[339,"Newton published the Principia (1687)"],
-[416,"Galileo published the first telescopic observations of the sky (1610)"],
-[483,"Copernicus published De revolutionibus, putting the Sun at the centre (1543)"],
-[534,"Columbus first crossed the Atlantic (1492)"],
-[571,"Gutenberg was printing his Bible with movable type (c. 1455)"],
-[679,"the Black Death reached Europe (1347)"],
-[811,"Magna Carta was sealed (1215)"],
-[972,"a supernova was seen in Taurus; its remains are the Crab Nebula (1054)"],
-[1020,"the brightest supernova in recorded history was seen in Lupus (1006)"],
-[1226,"Charlemagne was crowned emperor in Rome (800)"],
-[1404,"the first year of the Islamic calendar began (622)"],
-[1550,"the Western Roman Empire fell (476)"],
-[1876,"Ptolemy was compiling the Almagest in Alexandria (c. 150)"],
-[2070,"Julius Caesar was assassinated (44 BCE)"],
-[2266,"Eratosthenes measured the circumference of the Earth (c. 240 BCE)"],
-[2358,"Alexander founded Alexandria (331 BCE)"],
-[2526,"Pythagoras, Confucius and the Buddha were alive (c. 500 BCE)"],
-[2802,"the first recorded Olympic Games were held (776 BCE)"],
-[3226,"the Bronze Age palace civilisations of the eastern Mediterranean were collapsing (c. 1200 BCE)"],
-[3776,"Hammurabi's law code was carved in Babylon (c. 1750 BCE)"],
-[4586,"the Great Pyramid of Giza was being built (c. 2560 BCE)"],
-[5226,"writing was being invented in Sumer (c. 3200 BCE)"],
-[7000,"farming villages were spreading across Europe and Asia"],
-[11500,"the pillars of Göbekli Tepe were being raised and the last ice age had just ended"],
-[17000,"people were painting the cave walls at Lascaux"],
-[40000,"the last Neanderthals were disappearing from Europe"],
-[74000,"the Toba supervolcano erupted in Sumatra"],
-[130000,"an earlier warm period, the Eemian, had hippos swimming in the Thames"],
-[300000,"the earliest known Homo sapiens were living in what is now Morocco"],
-[800000,"early humans were learning to control fire"],
-[2600000,"the first stone tools were being made and the ice ages were beginning"],
-[3200000,"the australopithecine known as Lucy was alive in Ethiopia"],
-[7000000,"the human and chimpanzee lineages were separating"],
-[23000000,"grasslands were spreading and the first apes were appearing"],
-[34000000,"Antarctica was freezing over for the first time"],
-[50000000,"India was colliding with Asia and beginning to raise the Himalaya"],
-[66000000,"an asteroid struck Chicxulub and ended the age of the dinosaurs"],
-[100000000,"flowering plants were spreading and the Atlantic was a narrow sea"],
-[150000000,"Archaeopteryx was alive and the dinosaurs were at their height"],
-[230000000,"the first dinosaurs were appearing"],
-[252000000,"the Great Dying wiped out most species on Earth"],
-[335000000,"the continents were assembled into Pangaea"],
-[375000000,"fish with limbs, like Tiktaalik, were crawling into the shallows"],
-[470000000,"the first plants were colonising the land"],
-[540000000,"the Cambrian explosion was filling the seas with animals"],
-[700000000,"Earth was frozen almost to the equator, a snowball"],
-[1600000000,"the first complex cells with nuclei had appeared"],
-[2400000000,"cyanobacteria were filling the atmosphere with oxygen for the first time"],
-[3500000000,"the earliest life we have fossils of was growing in microbial mats"],
-[4000000000,"the oldest rocks that survive today were forming"],
-[4510000000,"a Mars-sized body had just struck the Earth and the Moon was forming from the debris"],
-[4567000000,"the Solar System was condensing out of a collapsing cloud"],
-[8000000000,"the Sun did not exist yet and the Milky Way's disc was still assembling"],
-[10000000000,"the universe was at its peak rate of star formation, cosmic noon"],
-[12500000000,"quasars were at their brightest and most numerous"],
-[13200000000,"the first galaxies were assembling and their light was clearing the fog of neutral hydrogen"],
-[13600000000,"the first stars had just ignited"],
-[13787000000,"the universe had just become transparent; this is the oldest light there is"]
-]}
+{
+"note": "What was happening on Earth when light left a source N years ago: [years before 2026, sentence]. Dates are the conventional ones; deep-time figures are rounded.",
+"eras": [
+[
+2,
+"a total solar eclipse had just crossed North America (April 2024)",
+2024
+],
+[
+5,
+"the James Webb Space Telescope had just been launched and was unfolding on its way out (December 2021)",
+2021.98
+],
+[
+4,
+"the first full-colour images from the James Webb Space Telescope were released (July 2022)",
+2022.53
+],
+[
+7,
+"the first image of a black hole's shadow had just been published (2019)",
+2019
+],
+[
+11,
+"gravitational waves were detected for the first time, and New Horizons flew past Pluto (2015)",
+2015
+],
+[
+14,
+"Curiosity landed on Mars and Voyager 1 crossed into interstellar space (2012)",
+2012
+],
+[
+17,
+"the Kepler space telescope was launched to count planets (2009)",
+2009
+],
+[
+22,
+"the rovers Spirit and Opportunity landed on Mars (2004)",
+2004
+],
+[
+28,
+"the first module of the International Space Station reached orbit (1998)",
+1998
+],
+[
+31,
+"the first planet around a Sun-like star, 51 Pegasi b, was announced (1995)",
+1995
+],
+[
+36,
+"the Hubble Space Telescope was launched (1990)",
+1990
+],
+[
+40,
+"Halley's Comet was passing through the inner Solar System (1986)",
+1986
+],
+[
+49,
+"the two Voyager probes were launched (1977)",
+1977
+],
+[
+57,
+"people walked on the Moon for the first time (1969)",
+1969
+],
+[
+65,
+"Yuri Gagarin became the first person in space (1961)",
+1961
+],
+[
+69,
+"Sputnik 1 became the first artificial satellite (1957)",
+1957
+],
+[
+81,
+"the Second World War ended (1945)",
+1945
+],
+[
+97,
+"Edwin Hubble showed that distant galaxies are receding (1929)",
+1929
+],
+[
+111,
+"Einstein completed general relativity (1915)",
+1915
+],
+[
+123,
+"the Wright brothers made the first powered flight (1903)",
+1903
+],
+[
+147,
+"Edison demonstrated a practical electric lamp (1879)",
+1879
+],
+[
+167,
+"Darwin published On the Origin of Species, and the Carrington solar storm struck (1859)",
+1859
+],
+[
+180,
+"Neptune was discovered from a prediction on paper (1846)",
+1846
+],
+[
+211,
+"Napoleon was defeated at Waterloo (1815)",
+1815
+],
+[
+245,
+"William Herschel discovered Uranus (1781)",
+1781
+],
+[
+250,
+"the American Declaration of Independence was signed (1776)",
+1776
+],
+[
+339,
+"Newton published the Principia (1687)",
+1687
+],
+[
+416,
+"Galileo published the first telescopic observations of the sky (1610)",
+1610
+],
+[
+483,
+"Copernicus published De revolutionibus, putting the Sun at the centre (1543)",
+1543
+],
+[
+534,
+"Columbus first crossed the Atlantic (1492)",
+1492
+],
+[
+571,
+"Gutenberg was printing his Bible with movable type (c. 1455)",
+1455
+],
+[
+679,
+"the Black Death reached Europe (1347)",
+1347
+],
+[
+811,
+"Magna Carta was sealed (1215)",
+1215
+],
+[
+972,
+"a supernova was seen in Taurus; its remains are the Crab Nebula (1054)",
+1054
+],
+[
+1020,
+"the brightest supernova in recorded history was seen in Lupus (1006)",
+1006
+],
+[
+1226,
+"Charlemagne was crowned emperor in Rome (800)",
+800
+],
+[
+1404,
+"the first year of the Islamic calendar began (622)",
+622
+],
+[
+1550,
+"the Western Roman Empire fell (476)",
+476
+],
+[
+1876,
+"Ptolemy was compiling the Almagest in Alexandria (c. 150)",
+150
+],
+[
+2070,
+"Julius Caesar was assassinated (44 BCE)",
+-44
+],
+[
+2266,
+"Eratosthenes measured the circumference of the Earth (c. 240 BCE)",
+-240
+],
+[
+2358,
+"Alexander founded Alexandria (331 BCE)",
+-332
+],
+[
+2526,
+"Pythagoras, Confucius and the Buddha were alive (c. 500 BCE)",
+-500
+],
+[
+2802,
+"the first recorded Olympic Games were held (776 BCE)",
+-776
+],
+[
+3226,
+"the Bronze Age palace civilisations of the eastern Mediterranean were collapsing (c. 1200 BCE)",
+-1200
+],
+[
+3776,
+"Hammurabi's law code was carved in Babylon (c. 1750 BCE)",
+-1750
+],
+[
+4586,
+"the Great Pyramid of Giza was being built (c. 2560 BCE)",
+-2560
+],
+[
+5226,
+"writing was being invented in Sumer (c. 3200 BCE)",
+-3200
+],
+[
+7000,
+"farming villages were spreading across Europe and Asia"
+],
+[
+11500,
+"the pillars of Göbekli Tepe were being raised and the last ice age had just ended"
+],
+[
+17000,
+"people were painting the cave walls at Lascaux"
+],
+[
+40000,
+"the last Neanderthals were disappearing from Europe"
+],
+[
+74000,
+"the Toba supervolcano erupted in Sumatra"
+],
+[
+130000,
+"an earlier warm period, the Eemian, had hippos swimming in the Thames"
+],
+[
+300000,
+"the earliest known Homo sapiens were living in what is now Morocco"
+],
+[
+800000,
+"early humans were learning to control fire"
+],
+[
+2600000,
+"the first stone tools were being made and the ice ages were beginning"
+],
+[
+3200000,
+"the australopithecine known as Lucy was alive in Ethiopia"
+],
+[
+7000000,
+"the human and chimpanzee lineages were separating"
+],
+[
+23000000,
+"grasslands were spreading and the first apes were appearing"
+],
+[
+34000000,
+"Antarctica was freezing over for the first time"
+],
+[
+50000000,
+"India was colliding with Asia and beginning to raise the Himalaya"
+],
+[
+66000000,
+"an asteroid struck Chicxulub and ended the age of the dinosaurs"
+],
+[
+100000000,
+"flowering plants were spreading and the Atlantic was a narrow sea"
+],
+[
+150000000,
+"Archaeopteryx was alive and the dinosaurs were at their height"
+],
+[
+230000000,
+"the first dinosaurs were appearing"
+],
+[
+252000000,
+"the Great Dying wiped out most species on Earth"
+],
+[
+335000000,
+"the continents were assembled into Pangaea"
+],
+[
+375000000,
+"fish with limbs, like Tiktaalik, were crawling into the shallows"
+],
+[
+470000000,
+"the first plants were colonising the land"
+],
+[
+540000000,
+"the Cambrian explosion was filling the seas with animals"
+],
+[
+700000000,
+"Earth was frozen almost to the equator, a snowball"
+],
+[
+1600000000,
+"the first complex cells with nuclei had appeared"
+],
+[
+2400000000,
+"cyanobacteria were filling the atmosphere with oxygen for the first time"
+],
+[
+3500000000,
+"the earliest life we have fossils of was growing in microbial mats"
+],
+[
+4000000000,
+"the oldest rocks that survive today were forming"
+],
+[
+4510000000,
+"a Mars-sized body had just struck the Earth and the Moon was forming from the debris"
+],
+[
+4567000000,
+"the Solar System was condensing out of a collapsing cloud"
+],
+[
+8000000000,
+"the Sun did not exist yet and the Milky Way's disc was still assembling"
+],
+[
+10000000000,
+"the universe was at its peak rate of star formation, cosmic noon"
+],
+[
+12500000000,
+"quasars were at their brightest and most numerous"
+],
+[
+13200000000,
+"the first galaxies were assembling and their light was clearing the fog of neutral hydrogen"
+],
+[
+13600000000,
+"the first stars had just ignited"
+],
+[
+13787000000,
+"the universe had just become transparent; this is the oldest light there is"
+]
+]
+}

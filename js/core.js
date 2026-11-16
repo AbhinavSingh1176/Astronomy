@@ -221,7 +221,7 @@
   /* "when this light left": the departure date of light from something `years` light-years away, and what Earth was doing */
   O.lightLeft = function (years) {
     return O.load('data/eras.json').then(E => {
-      const now = new Date().getUTCFullYear(), list = (E && E.eras) || [];
+      const d = new Date(), now = d.getUTCFullYear(), nowF = now + (d.getUTCMonth() + d.getUTCDate() / 31) / 12, list = (E && E.eras) || [];
       let when;
       if (years < 1) when = years * 365.25 < 2 ? 'within the last two days' : Math.round(years * 365.25) + ' days ago';
       else if (years < now - 1) when = 'in ' + Math.round(now - years);
@@ -230,7 +230,7 @@
       else if (years < 1e9) when = O.fmt.sig(years / 1e6, 3) + ' million years ago';
       else when = O.fmt.sig(years / 1e9, 4) + ' billion years ago';
       let best = null, bd = 1e9;
-      for (const e of list) { const d = Math.abs(Math.log(Math.max(e[0], 0.5) / Math.max(years, 0.5))); if (d < bd) { bd = d; best = e; } }
+      for (const e of list) { const ago = e[2] != null ? nowF - e[2] : e[0], dd = Math.abs(Math.log(Math.max(ago, 0.5) / Math.max(years, 0.5))); if (dd < bd) { bd = dd; best = e; } }
       return { when, context: best && bd < 0.45 ? best[1] : null };
     });
   };
