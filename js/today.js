@@ -151,14 +151,14 @@
   }
 
   function apodCard(P) {
-    const box = card('w6 apod', 'Astronomy Picture of the Day', ['https://apod.nasa.gov/apod/', 'apod.nasa.gov →']);
+    const box = card('w6 apod', 'Astronomy Picture of the Day', ['https://science.nasa.gov/apod/', 'NASA APOD →']);
     const d = P && P.days && P.days[0];
     if (!d) { empty(box, 'Today’s picture has not been fetched yet.'); return; }
     box.append(el('h2', null, O.ext(d.page, d.title)));
     /* the image itself only when NASA lists no copyright holder; otherwise a link, so nobody's photograph is copied here */
     if (!d.credit && d.media === 'image' && O.safeUrl(d.url) && O.canLive) box.append(el('img', { src: d.url, alt: d.title, loading: 'lazy' }));
     else box.append(el('p', { class: 'empty', text: d.credit ? 'Image © ' + d.credit + '. See it on the APOD page.' : d.media === 'video' ? 'Today’s entry is a video. Watch it on the APOD page.' : 'See it on the APOD page.' }));
-    box.append(el('p', { text: d.text.length > 320 ? d.text.slice(0, d.text.lastIndexOf(' ', 320)) + '…' : d.text }), el('div', { class: 'meta', text: fmtDay(d.date) }));
+    box.append(el('p', { text: d.text.length > 320 ? d.text.slice(0, d.text.lastIndexOf(' ', 320)) + '…' : d.text }), el('div', { class: 'meta', text: fmtDay(d.date) + (d.by && !d.credit ? ' · Credit: ' + d.by : '') }));
   }
 
   function placeCard(S) {

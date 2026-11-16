@@ -3,7 +3,7 @@
    Every source is independent: one that fails keeps yesterday's file and is marked in data/status.json.
    Optional secret: NASA_API_KEY (APOD; DEMO_KEY works at low volume).   node scripts/refresh.mjs [source …] */
 import { createHash } from 'node:crypto';
-import { get, readJSON, clean, decode, safeUrl, iso, blocks, attrs, first, runAll } from './lib.mjs';
+import { get, readJSON, clean, decode, safeUrl, iso, blocks, attrs, first, runAll, APOD_PAGE, apodFromPage, apodCheck } from './lib.mjs';
 
 const now = () => new Date().toISOString();
 const hash = s => createHash('sha1').update(String(s)).digest('hex').slice(0, 12);
@@ -145,15 +145,22 @@ async function neo() {
   return { fetched: now(), source: 'NASA/JPL CNEOS close-approach data', note: 'Sizes are a range from brightness alone (albedo 0.25 to 0.05).', items: items.slice(0, 60) };
 }
 
-/* ── astronomy picture of the day ── */
+/* ── astronomy picture of the day: the page on science.nasa.gov first, the api.nasa.gov feed only if its answer checks out (see apodFromPage in lib.mjs) ── */
+async function apodFromApi() {
+  const j = await get('https://api.nasa.gov/planetary/apod?api_key=' + (process.env.NASA_API_KEY || 'DEMO_KEY'));
+  const by = j.copyright ? clean(j.copyright, 200) : null;
+  return { date: j.date, title: clean(j.title, 200), text: clean(j.explanation, 3000), media: clean(j.media_type, 20), url: safeUrl(j.url), hd: safeUrl(j.hdurl), thumb: safeUrl(j.thumbnail_url),
+    credit: by, by, page: /^\d{4}-\d\d-\d\d$/.test(j.date || '') ? 'https://apod.nasa.gov/apod/ap' + j.date.slice(2).replace(/-/g, '') + '.html' : APOD_PAGE };
+}
 async function apod() {
-  const j = await get('https://api.nasa.gov/planetary/apod?thumbs=true&api_key=' + (process.env.NASA_API_KEY || 'DEMO_KEY'));
-  if (!j || !j.date || !j.title) throw new Error('no APOD entry');
-  const prev = readJSON('data/apod.json', { days: [] }) || { days: [] };
-  const day = { date: j.date, title: clean(j.title, 200), text: clean(j.explanation, 3000), media: clean(j.media_type, 20), url: safeUrl(j.url), hd: safeUrl(j.hdurl), thumb: safeUrl(j.thumbnail_url),
-    credit: j.copyright ? clean(j.copyright, 200) : null, page: 'https://apod.nasa.gov/apod/ap' + j.date.slice(2).replace(/-/g, '') + '.html' };
+  const prev = readJSON('data/apod.json', { days: [] }) || { days: [] }, why = [];
+  let day = null;
+  for (const [name, read] of [['page', async () => apodFromPage(await get(APOD_PAGE, { type: 'text' }))], ['API', apodFromApi]]) {
+    try { day = apodCheck(await read()); break; } catch (e) { why.push(name + ': ' + e.message); }
+  }
+  if (!day) throw new Error(why.join('; '));
   const days = [day].concat((prev.days || []).filter(d => d.date !== day.date)).slice(0, 14);
-  return { fetched: now(), source: 'NASA Astronomy Picture of the Day', days };
+  return { fetched: now(), source: 'NASA Astronomy Picture of the Day (science.nasa.gov/apod)', days };
 }
 
 /* ── the Deep Space Network, right now ── */

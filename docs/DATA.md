@@ -53,7 +53,7 @@ What the build keeps:
 | `data/spaceweather.json` | NOAA Space Weather Prediction Center — https://services.swpc.noaa.gov/ | US government work |
 | `data/tle.json` | CelesTrak — https://celestrak.org/ | Public |
 | `data/neo.json` | NASA/JPL SBDB close-approach API — https://ssd-api.jpl.nasa.gov/doc/cad.html | US government work |
-| `data/apod.json` | NASA APOD API — https://api.nasa.gov/ | Many APOD images are copyrighted; the site shows an image only when NASA lists no copyright holder, and links otherwise |
+| `data/apod.json` | NASA Astronomy Picture of the Day — https://science.nasa.gov/apod/ (read from the page, since NASA moved APOD there in 2026; the api.nasa.gov feed is used only when its answer passes the same checks) | Many APOD images are copyrighted; the site shows an image only when NASA lists no copyright holder, and links otherwise |
 | `data/dsn.json` | NASA Deep Space Network Now — https://eyes.nasa.gov/dsn/ | US government work |
 | `data/status.json` | The job itself | Which sources worked on the last run |
 

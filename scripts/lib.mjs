@@ -84,3 +84,40 @@ export async function runAll(sources) {
   writeFileSync(file('data/status.json'), JSON.stringify(status, null, 1) + '\n');
   return results;
 }
+
+/* ── Astronomy Picture of the Day ──
+   In 2026 NASA moved APOD to science.nasa.gov/apod. The api.nasa.gov feed still reads the old pages: it fails when asked for
+   video thumbnails and otherwise returns the site's logo, titled "NASA Science", for every date. So the page itself is read,
+   and every answer, from the page or from the feed, has to pass apodCheck before it is kept. */
+export const APOD_PAGE = 'https://science.nasa.gov/apod/';
+const APOD_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+const APOD_HOSTS = /^(apod\.nasa\.gov|science\.nasa\.gov|assets\.science\.nasa\.gov|(www\.)?youtube(-nocookie)?\.com|youtu\.be|(player\.)?vimeo\.com)$/;
+export function apodFromPage(html) {
+  const pick = (re, s = html) => (String(s).match(re) || [])[1] || '';
+  const row = label => {
+    const m = html.match(new RegExp('<th[^>]*>\\s*(' + label + ')\\s*:\\s*</th>\\s*<td[^>]*>([\\s\\S]*?)</td>', 'i'));
+    return m ? { label: decode(m[1]), value: clean(m[2].replace(/<br\s*\/?>/gi, ' '), 300) } : null;
+  };
+  const when = row('Date'), credit = row('Credit(?:\\s*(?:&amp;|&)\\s*Copyright)?');
+  const dm = when && when.value.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/), mi = dm ? APOD_MONTHS.indexOf(dm[1].toLowerCase()) : -1;
+  const fig = pick(/(<figure class="hds-media-inner[\s\S]*?<\/figure>)/);
+  const video = decode(pick(/<iframe[^>]*?\ssrc="([^"]+)"/, fig)), img = decode(pick(/<img[^>]*?\ssrc="([^"]+)"/, fig));
+  return {
+    date: mi < 0 ? null : dm[3] + '-' + String(mi + 1).padStart(2, '0') + '-' + dm[2].padStart(2, '0'),
+    title: clean(pick(/<h2 class="display-48[^"]*">([\s\S]*?)<\/h2>/), 200),
+    text: clean(pick(/<strong>\s*Explanation:\s*<\/strong>([\s\S]*?)<\/p>/i), 3000),
+    media: video ? 'video' : img ? 'image' : 'other',
+    url: safeUrl(video || img), hd: !video && img ? safeUrl(img.split('?')[0]) : null, thumb: video && img ? safeUrl(img) : null,
+    /* NASA labels the row "Credit & Copyright" when someone holds the copyright, and just "Credit" when nobody does */
+    credit: credit && /copyright/i.test(credit.label) ? credit.value : null, by: credit ? credit.value : null, hasCredit: !!credit,
+    page: safeUrl(pick(/href="(https:\/\/science\.nasa\.gov\/image-article\/apod-[^"]+)"/, fig)) || APOD_PAGE
+  };
+}
+export function apodCheck(day) {
+  const host = u => { try { return new URL(u).hostname; } catch (e) { return ''; } };
+  const why = !day ? 'nothing read' : !/^\d{4}-\d\d-\d\d$/.test(day.date || '') ? 'no date' : !day.title || /^nasa science$/i.test(day.title) ? 'no real title'
+    : (day.text || '').length < 80 ? 'no explanation' : day.hasCredit === false ? 'no credit line' : !/^(image|video)$/.test(day.media) ? 'neither an image nor a video'
+    : !day.url || !APOD_HOSTS.test(host(day.url)) || /logo/i.test(day.url) ? 'the picture is not from APOD (' + (day.url || 'none') + ')' : '';
+  if (why) throw new Error(why);
+  const { hasCredit, ...kept } = day; return kept;
+}

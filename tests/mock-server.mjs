@@ -47,7 +47,20 @@ const ck = l => { let s = 0; for (const ch of l) s += ch === '-' ? 1 : /\d/.test
 const tle = (name, n) => [name, ck(`1 ${String(n).padStart(5, '0')}U 98067A   26319.51782528  .00016717  00000+0  30106-3 0  999`), ck(`2 ${String(n).padStart(5, '0')}  51.6386 297.5634 0007601 190.4573 241.2633 15.5006698748187`)].join('\n');
 const cad = () => ({ signature: { version: '1.5', source: 'NASA/JPL SBDB Close Approach Data API' }, count: '3', fields: ['des', 'orbit_id', 'jd', 'cd', 'dist', 'dist_min', 'dist_max', 'v_rel', 'v_inf', 't_sigma_f', 'h'],
   data: [['2026 VA1', '4', '2461361.5', day(2).getUTCFullYear() + '-Nov-18 03:12', '0.00412', '0.0041', '0.0042', '8.31', '8.30', '< 00:01', '27.1'], ['433', '659', '2461371.5', '2026-Nov-28 11:40', '0.0412', '0.0412', '0.0412', '5.9', '5.9', '< 00:01', '10.4'], ['2026 UZ', '2', '2461380.5', '2026-Dec-07 00:05', '0.0201', '0.02', '0.0202', '12.0', '12.0', '00:10', '24.9']] });
-const apod = () => ({ date: ymd(), title: 'A Galaxy & Its Halo', explanation: 'An explanation with <i>markup</i>.', media_type: 'image', url: 'https://apod.nasa.gov/apod/image/x.jpg', hdurl: 'https://apod.nasa.gov/apod/image/x_big.jpg', service_version: 'v1', copyright: '\nSomeone Photographer\n' });
+/* what api.nasa.gov answers since APOD moved to science.nasa.gov (November 2026): the site's logo, titled "NASA Science", for any date */
+const apod = () => ({ date: ymd(), title: 'NASA Science', explanation: 'What surrounds a galaxy? A faint halo of stars, gas and dark matter extends far beyond the bright disc seen in most images.', media_type: 'image', url: 'https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png', hdurl: 'https://science.nasa.gov/wp-content/themes/nasa-child/assets/images/nasa-logo@2x.png', service_version: 'v1' });
+/* the APOD page itself, reduced to the parts the refresh reads, in the page's own markup (November 2026) */
+const apodPage = () => {
+  const d = day(), long = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }), slug = ymd().replace(/-(\d\d)-/, (_, m) => '-' + d.toLocaleDateString('en-US', { month: 'long', timeZone: 'UTC' }).toLowerCase() + '-').replace(/-0(\d)$/, '-$1');
+  return `<!doctype html><html><head><title>APOD - NASA Science</title></head><body><main>
+<figure class="hds-media-inner hds-cover-wrapper hds-media-ratio-fit "><a href="https://science.nasa.gov/image-article/apod-${slug}-a-galaxy-its-halo/"><img sizes="auto, (max-width: 85rem) calc(100vw - 3rem), 85rem" srcset="https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/halo.jpg?w=1280&amp;h=1280&amp;fit=crop 1280w" src="https://assets.science.nasa.gov/dynamicimage/assets/science/cds/apod/apod/2026/november/halo.jpg?w=1280&amp;h=1194&amp;fit=clip&amp;crop=faces%2Cfocalpoint" alt="A galaxy and its halo"></a></figure>
+<div class="grid-container grid-container-block padding-x-0"><p class="p-md margin-top-0 margin-bottom-3 media-detail-hero__subtext"><a href="/apod/archive/">Discover the cosmos!</a> Each day a different image or photograph of our fascinating universe is featured.</p>
+<h2 class="display-48 margin-top-0 margin-bottom-3">A Galaxy &amp; Its Halo</h2>
+<p class="p-md margin-0 media-detail-hero__description"> <strong>Explanation:</strong> What surrounds a galaxy? A faint <a href="https://example.org/halo">halo</a> of stars, gas and dark matter extends far beyond the bright disc seen in most images, and this deep exposure shows it.</p>
+<p class="p-md"><strong>Tomorrow's picture:</strong> open space </p></div>
+<table class="media-detail-hero__meta-table width-full"> <tbody> <tr class="media-detail-hero__meta-row"> <th scope="row" class="label padding-y-1">Date:</th> <td class="p-sm padding-y-1"> ${long} </td> </tr> <tr class="media-detail-hero__meta-row"> <th scope="row" class="label padding-y-1">Credit &amp; Copyright:</th> <td class="p-sm padding-y-1"> <a href="mailto:someone at example dot com">Someone Photographer</a> </td> </tr> <tr class="media-detail-hero__meta-row"> <th scope="row" class="label padding-y-1">Authors &amp; editors:</th> <td class="p-sm padding-y-1"> Robert Nemiroff, Jerry Bonnell </td> </tr> </tbody> </table>
+</main></body></html>`;
+};
 const dsn = () => `<?xml version='1.0' encoding='utf-8'?><dsn><station friendlyName="Goldstone" name="gdscc" timeUTC="${Date.now()}" timeZoneOffset="-28800000" />
 <dish name="DSS14" azimuthAngle="140.9" elevationAngle="35.4" windSpeed="5" isMSPA="false" isArray="false" isDDOR="false" created="${isoD()}" updated="${isoD()}"><downSignal active="true" signalType="data" dataRate="160" frequency="8420432110" band="X" power="-155.2" spacecraft="VGR1" spacecraftID="-31"/><upSignal active="true" signalType="data" dataRate="16" frequency="2114" band="S" power="18" spacecraft="VGR1" spacecraftID="-31"/><target name="VGR1" id="31" uplegRange="2.5902E+10" downlegRange="2.5902E+10" rtlt="172800.1"/></dish>
 <dish name="DSS26" azimuthAngle="200" elevationAngle="12" windSpeed="2" isMSPA="false" isArray="false" isDDOR="false" created="${isoD()}" updated="${isoD()}"><downSignal active="false" signalType="none" dataRate="" frequency="" band="X" power="" spacecraft="DSN" spacecraftID="-99"/><target name="DSN" id="99" uplegRange="-1" downlegRange="-1" rtlt="-1"/></dish>
@@ -79,7 +92,7 @@ const ROUTES = [
   [/^celestrak\.org\/.*GROUP=stations/, () => ['text/plain', tle('ISS (ZARYA)', 25544) + '\n' + tle('CSS (TIANHE)', 48274) + '\n']],
   [/^celestrak\.org\/.*CATNR=20580/, () => ['text/plain', tle('HST', 20580) + '\n']],
   [/^ssd-api\.jpl\.nasa\.gov\/cad\.api/, () => ['application/json', cad()]],
-  [/^api\.nasa\.gov\/planetary\/apod/, () => ['application/json', apod()]],
+  [/^api\.nasa\.gov\/planetary\/apod/, () => ['application/json', apod()]], [/^science\.nasa\.gov\/apod\/?$/, () => ['text/html; charset=utf-8', apodPage()]],
   [/^eyes\.nasa\.gov\/dsn\/data\/dsn\.xml/, () => ['text/xml', dsn()]], [/^eyes\.nasa\.gov\/dsn\/config\.xml/, () => ['text/xml', dsncfg()]],
   [/^api\.anthropic\.com\/v1\/messages/, (u, body) => ['application/json', claude(body)]]
 ];
