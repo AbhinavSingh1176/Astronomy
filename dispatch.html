@@ -78,7 +78,9 @@
 .recent .n,.neo .n{font-family:var(--f-display);font-size:14px;color:var(--starlight);min-width:0}
 .recent .o{font-family:var(--f-display);font-size:12px;white-space:nowrap}
 .recent .o.ok{color:var(--o3)} .recent .o.bad{color:var(--ha)}
-.neo .x{font-family:var(--f-data);font-size:11.5px;color:var(--text);text-align:right;white-space:nowrap}
+/* a close approach's distance and speed sit under its name, so a long line never runs into it */
+.neo li{grid-template-columns:auto minmax(0,1fr)}
+.neo .x{grid-column:2;font-family:var(--f-data);font-size:11.5px;color:var(--text)}
 .neo .note,.recent .note{margin-top:10px;font-size:13.5px;color:var(--faint)}
 
 @media (max-width:980px){.front{grid-template-columns:1fr 1fr}.front .lead{grid-column:1 / -1;border-right:0;border-bottom:1px solid var(--hair)}.desks{grid-template-columns:1fr 1fr}.desk:nth-child(2n){border-right:0}.desk{border-bottom:1px solid var(--hair)}}
