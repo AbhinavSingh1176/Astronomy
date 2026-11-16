@@ -10,11 +10,11 @@
 /* The Dispatch is a broadsheet printed by a machine that has been to orbit: a condensed nameplate, column rules,
    a teletype that never stops, and a split-flap departures board for launches. */
 .paper{max-width:1240px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
-.plate{text-align:center;padding-top:26px;border-bottom:3px double var(--hair)}
-.plate .ed{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--f-data);font-size:11px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid var(--hair)}
-.plate h1{font-size:clamp(46px,10vw,120px);font-stretch:62%;font-weight:900;letter-spacing:.02em;text-transform:uppercase;line-height:.95;padding-block:14px 8px;color:var(--starlight)}
-.plate h1 span{color:var(--ha)}
-.plate .motto{font-family:var(--f-text);font-style:italic;color:var(--mute);font-size:15px;padding-bottom:12px}
+.nameplate{text-align:center;padding-top:26px;border-bottom:3px double var(--hair)}
+.nameplate .ed{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--f-data);font-size:11px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid var(--hair)}
+.nameplate h1{font-size:clamp(46px,10vw,120px);font-stretch:62%;font-weight:900;letter-spacing:.02em;text-transform:uppercase;line-height:.95;padding-block:14px 8px;color:var(--starlight)}
+.nameplate h1 span{color:var(--ha)}
+.nameplate .motto{font-family:var(--f-text);font-style:italic;color:var(--mute);font-size:15px;padding-bottom:12px}
 .ticker{overflow:hidden;border-bottom:1px solid var(--hair);background:#000;white-space:nowrap;position:relative}
 .ticker .run{display:inline-flex;gap:46px;padding:9px 0;animation:tick var(--dur,120s) linear infinite;font-family:var(--f-data);font-size:12.5px;color:var(--sodium)}
 .ticker .run a{color:var(--sodium);text-decoration:none} .ticker .run a:hover{color:var(--o3)}
@@ -23,8 +23,6 @@
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.ticker .run{animation:none;flex-wrap:wrap;white-space:normal;gap:8px 30px;padding:9px 16px}}
 .chips{display:flex;flex-wrap:wrap;gap:6px;padding-block:14px;border-bottom:1px solid var(--hair)}
-.chips button{background:none;border:1px solid var(--hair);color:var(--mute);font-family:var(--f-display);font-size:12px;padding:3px 10px;border-radius:999px;cursor:pointer}
-.chips button[aria-pressed=true]{border-color:var(--o3);color:var(--o3)}
 .chips .lab{font-family:var(--f-display);font-size:12px;color:var(--faint);align-self:center;margin-right:4px}
 
 .front{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:0;border-bottom:1px solid var(--hair)}
@@ -89,7 +87,7 @@
 </head>
 <body>
 <main class="paper">
-  <header class="plate">
+  <header class="nameplate">
     <div class="ed" id="ed"></div>
     <h1>The <span>Dispatch</span></h1>
     <div class="motto">All the news that light could carry, collected every six hours</div>

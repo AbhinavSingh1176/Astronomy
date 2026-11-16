@@ -231,7 +231,7 @@
   function route() {
     const h = decodeURIComponent((location.hash || '').slice(1)); focus = null; const host = O.clear($('#focus'));
     if (!h) { draw(); return; }
-    if (h.startsWith('con-')) { const c = CONS.find(x => x[0].toLowerCase() === h.slice(4).toLowerCase()); if (c) { focus = { con: c[0] }; describe(c[1], c.cen[0], c.cen[1], 'constellation'); } }
+    if (h.startsWith('con-')) { const c = CONS.find(x => x[0].toLowerCase() === h.slice(4).toLowerCase()); if (c) { focus = { con: c[0] }; describe(c[0] === 'Ser' ? 'Serpens' : c[1], c.cen[0], c.cen[1], 'constellation'); } }
     else { const s = NAMED.find(x => x.slug === h) || NAMED.find(x => O.slug(x.name) === h); if (s) { focus = { slug: s.slug }; describe(s.name, s.ra, s.dec, 'star', s); }
       else { const b = bodies(jdAt(new Date())).find(x => (x.slug || x.n.toLowerCase()) === h); if (b) describe(b.n, b.ra, b.dec, b.kind); } }
     draw();

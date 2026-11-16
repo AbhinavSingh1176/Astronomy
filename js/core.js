@@ -7,6 +7,7 @@
   O.PAGES = [['index.html', 'Today', 'The day’s light, reading and sky'], ['ladder.html', 'The Ladder', 'Zoom from the ground to the edge of the observable universe'],
     ['papers.html', 'Reading Room', 'Research papers, broken down'], ['dispatch.html', 'Dispatch', 'Space news and launches'],
     ['deck.html', 'Flight Deck', 'Live quantities on an analogue console'], ['sky.html', 'Observatory', 'What is above you tonight'],
+    ['gallery.html', 'Gallery', 'Slides from each phase of exploration'], ['games.html', 'Games', 'Three puzzles a day, the same for everyone'],
     ['atlas.html', 'Atlas', 'Every catalogued object, searchable'], ['lost.html', 'The Lost', 'Missions that failed, ended early or never flew'],
     ['log.html', 'Ship Log', 'What you have found, and what it leads to']];
   O.reduced = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -140,13 +141,24 @@
 
   /* ── navigation bar + footer ── */
   O.nav = function () {
+    const here = O.PAGES.find(x => x[0] === O.page);
+    /* on narrow screens the sections fold into an index behind one button */
+    const index = O.el('div', { id: 'owlt-index', hidden: true }, O.el('ul', null, O.PAGES.map(p => O.el('li', null,
+      O.el('a', { href: p[0], 'aria-current': p[0] === O.page ? 'page' : null }, O.el('i', { class: 'lamp' + (p[0] === O.page ? ' on' : '') }), O.el('div', null, O.el('b', { text: p[1] }), O.el('span', { text: p[2] })))))));
+    const menu = O.el('button', { class: 'push menu', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'owlt-index', text: 'Index' });
+    const setMenu = open => { index.hidden = !open; menu.setAttribute('aria-expanded', String(open)); menu.setAttribute('aria-pressed', String(open)); };
+    menu.addEventListener('click', () => setMenu(index.hidden));
+    addEventListener('keydown', e => { if (e.key === 'Escape' && !index.hidden) { setMenu(false); menu.focus(); } });
+    index.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
     const bar = O.el('header', { id: 'owlt-nav' },
       O.el('a', { class: 'mark', href: 'index.html', 'aria-label': 'OWLT, today’s page' }, 'OWLT'),
       O.el('nav', { 'aria-label': 'Sections' }, O.PAGES.map(p => O.el('a', { href: p[0], 'aria-current': p[0] === O.page ? 'page' : null, title: p[2] }, p[1]))),
+      O.el('span', { class: 'here', 'aria-hidden': 'true', text: here ? here[1] : '' }),
       O.el('div', { class: 'tools' },
         O.el('span', { class: 'clock', id: 'owlt-clock', title: 'Coordinated Universal Time' }),
-        O.el('button', { class: 'owlt-find', type: 'button', id: 'owlt-find', onclick: () => O.palette.open(), 'aria-label': 'Search everything' }, O.el('span', { text: 'Search' }), O.el('kbd', { text: '/' }))));
-    document.body.prepend(bar); document.body.classList.add('has-nav');
+        O.el('button', { class: 'owlt-find', type: 'button', id: 'owlt-find', onclick: () => O.palette.open(), 'aria-label': 'Search everything' }, O.el('span', { text: 'Search' }), O.el('kbd', { text: '/' })),
+        menu));
+    document.body.prepend(index); document.body.prepend(bar); document.body.classList.add('has-nav');
     const cur = bar.querySelector('[aria-current=page]'); if (cur && cur.scrollIntoView) cur.scrollIntoView({ block: 'nearest', inline: 'center' });
     const clk = O.$('#owlt-clock'), tick = () => { const d = new Date(); clk.textContent = `${p2(d.getUTCHours())}:${p2(d.getUTCMinutes())}:${p2(d.getUTCSeconds())} UTC`; };
     tick(); setInterval(tick, 1000);
@@ -219,20 +231,29 @@
     return { init, open, close, get isOpen() { return !!root && root.classList.contains('on'); } };
   })();
 
-  /* "when this light left": the departure date of light from something `years` light-years away, and what Earth was doing */
+  /* "when this light left": the departure date of light from something `years` light-years away, and what Earth was doing then.
+     A dated event counts only if it falls within a few tenths of a percent of that date (link "when"), or a little more for a date that is
+     itself approximate (link "around the time"); "had just" events must be exact. An undated period counts within a factor of 1.25. */
   O.lightLeft = function (years) {
     return O.load('data/eras.json').then(E => {
-      const d = new Date(), now = d.getUTCFullYear(), nowF = now + (d.getUTCMonth() + d.getUTCDate() / 31) / 12, list = (E && E.eras) || [];
+      const d = new Date(), nowF = d.getUTCFullYear() + (d.getUTCMonth() + d.getUTCDate() / 31) / 12, list = (E && E.eras) || [];
       let when;
       if (years < 1) when = years * 365.25 < 2 ? 'within the last two days' : Math.round(years * 365.25) + ' days ago';
-      else if (years < now - 1) when = 'in ' + Math.round(now - years);
-      else if (years < 12000) when = 'around ' + O.fmt.num(Math.round((years - now + 1) / 10) * 10) + ' BCE';
+      else if (years < nowF - 1) when = 'in ' + Math.floor(nowF - years);
+      else if (years < 12000) when = 'around ' + O.fmt.num(Math.round((years - nowF + 1) / 10) * 10) + ' BCE';
       else if (years < 1e6) when = O.fmt.num(Math.round(years / 100) * 100) + ' years ago';
       else if (years < 1e9) when = O.fmt.sig(years / 1e6, 3) + ' million years ago';
       else when = O.fmt.sig(years / 1e9, 4) + ' billion years ago';
-      let best = null, bd = 1e9;
-      for (const e of list) { const ago = e[2] != null ? nowF - e[2] : e[0], dd = Math.abs(Math.log(Math.max(ago, 0.5) / Math.max(years, 0.5))); if (dd < bd) { bd = dd; best = e; } }
-      return { when, context: best && bd < 0.45 ? best[1] : null };
+      let best = null, bd = Infinity, link = 'when';
+      for (const e of list) {
+        const ago = e[2] != null ? nowF - e[2] : e[0], dd = Math.abs(Math.log(Math.max(ago, 0.5) / Math.max(years, 0.5)));
+        let fit = null;
+        if (e[2] == null) fit = dd <= 0.223 ? 'when' : null;
+        else { const gap = Math.abs(ago - years), rough = /\bc\. /.test(e[1]);
+          fit = gap <= Math.max(0.5, 0.004 * years) ? 'when' : !/\bjust\b/.test(e[1]) && gap <= Math.max(1.5, (rough ? 0.02 : 0.012) * years) ? 'around the time' : null; }
+        if (fit && dd < bd) { bd = dd; best = e; link = fit; }
+      }
+      return { when, context: best ? best[1] : null, link };
     });
   };
   /* a deterministic pick that changes once a day (UTC), the same for everyone */

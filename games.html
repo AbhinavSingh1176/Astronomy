@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Games · OWLT</title>
+<meta name="description" content="Three space puzzles a day, the same for everyone: guess the word, name the constellation, and time the light.">
+<link rel="stylesheet" href="css/core.css">
+<style>
+/* The Games are an arcade of three cabinets, each a small instrument: a split-flap board for words, a plotter screen for star figures,
+   and a radio dial, tuned in powers of ten, for how long light has been travelling. A new set every midnight, wherever you are. */
+.arc{max-width:1060px;margin:0 auto;padding:30px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+.ahead{display:flex;justify-content:space-between;align-items:flex-end;gap:14px 30px;flex-wrap:wrap}
+.ahead h1{margin-top:10px;font-size:clamp(38px,6.5vw,72px);font-stretch:125%;font-weight:800}
+.ahead .lede{color:var(--mute);font-size:16.5px;max-width:52ch;margin-top:8px}
+.ahead .day{text-align:right;font-family:var(--f-data);font-size:12px;color:var(--mute)}
+.ahead .day b{display:block;font-family:var(--f-display);font-stretch:125%;font-size:22px;font-weight:800;color:var(--starlight);letter-spacing:.04em}
+.cabs{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.cabs .push{min-height:44px;font-size:12.5px}
+.cabs .push .lamp{margin-right:2px}
+@media (max-width:560px){
+  .cabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .cabs .push{flex-direction:column;gap:7px;min-height:60px;padding:8px 4px;font-size:10px;letter-spacing:.05em}
+  .ahead .day{text-align:left}
+}
+.game{margin-top:16px}
+.game h2{font-family:var(--f-display);font-stretch:118%;font-size:22px;margin-top:10px}
+.game .how{color:var(--mute);font-size:15px;margin-top:6px;max-width:70ch}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 30px;margin-top:18px;align-items:start}
+@media (max-width:820px){.cols{grid-template-columns:1fr}}
+.msg{min-height:26px;margin-top:10px;text-align:center}
+.msg .tape{font-size:12px}
+
+/* Starword: split-flap tiles */
+.board{display:grid;grid-template-rows:repeat(6,1fr);gap:6px;width:min(100%,330px);margin:0 auto}
+.row{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.row.shake{animation:shake .38s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.tile{position:relative;aspect-ratio:1;display:grid;place-items:center;border-radius:4px;background:linear-gradient(#1e1a16 50%,#171310 50%);
+  box-shadow:inset 0 0 0 1px #000,0 2px 0 #0b0907;font-family:var(--f-display);font-stretch:118%;font-weight:800;font-size:clamp(22px,6vw,30px);color:var(--engr);text-transform:uppercase}
+.tile::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.75)}
+.tile.typed{box-shadow:inset 0 0 0 1px #5a4c3f,0 2px 0 #0b0907}
+.tile.hit{background:linear-gradient(#2f8a5c 50%,#287a51 50%);color:#fff}
+.tile.near{background:linear-gradient(#c98a1d 50%,#b67b16 50%);color:#fff}
+.tile.miss{background:linear-gradient(#3a332d 50%,#332d28 50%);color:#a89e8c}
+.tile.flip{animation:flip .4s ease both}
+@keyframes flip{0%{transform:perspective(300px) rotateX(0)}50%{transform:perspective(300px) rotateX(90deg)}100%{transform:perspective(300px) rotateX(0)}}
+.keys{display:grid;gap:6px;margin-top:16px;width:min(100%,520px);margin-inline:auto}
+.keys .kr{display:flex;gap:5px;justify-content:center}
+.key{flex:1 1 0;min-width:0;height:48px;border:1px solid #0b0907;border-radius:4px;cursor:pointer;color:var(--engr);background:linear-gradient(#3a3129,#251f19);
+  box-shadow:inset 0 1px 0 rgba(255,235,196,.12),0 3px 0 #0b0907;font-family:var(--f-display);font-weight:700;font-size:14px;text-transform:uppercase;padding:0}
+.key.wide{flex:1.6 1 0;font-size:11px;letter-spacing:.08em}
+.key:active{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,235,196,.08),0 1px 0 #0b0907}
+.key.hit{background:linear-gradient(#36a06a,#287a51);color:#fff}.key.near{background:linear-gradient(#d99a2a,#b67b16);color:#fff}.key.miss{background:linear-gradient(#2a2420,#1b1714);color:#6f665b}
+
+/* Constellation: a plotter screen */
+.plot{aspect-ratio:1;width:100%;max-width:440px;margin:0 auto;display:block}
+.plot svg{display:block;width:100%;height:100%}
+.guess{display:flex;gap:8px;margin-top:14px}
+.guess input{flex:1;min-width:0;height:40px;padding:0 12px;border:1px solid #3a3129;border-radius:4px;background:#0f0d0b;color:var(--starlight);font-family:var(--f-display);font-size:15px}
+.guess input:focus{outline:1px solid var(--o3)}
+.clues{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.clues li{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;gap:10px;align-items:center;padding:7px 10px;border:1px solid #3a3129;border-radius:4px;background:#14110e;font-family:var(--f-data);font-size:12.5px}
+.clues li b{font-family:var(--f-display);font-size:14px;color:var(--starlight);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clues li.win{border-color:rgba(124,255,178,.6)}
+.clues .pct{color:var(--sodium)}
+.clues svg{width:24px;height:24px;flex:none}
+.hints{margin-top:10px;font-family:var(--f-type);font-size:14.5px;color:var(--mute)}
+
+/* Light Time: a tuning dial */
+.target{font-family:var(--f-display);font-stretch:118%;font-size:clamp(26px,4vw,38px);font-weight:800;color:var(--starlight);margin-top:8px;line-height:1.1}
+.ask{color:var(--mute);font-size:15px;margin-top:4px}
+.dial{position:relative;margin-top:18px;height:132px;border-radius:8px;overflow:hidden;cursor:ew-resize;touch-action:pan-y;user-select:none;-webkit-user-select:none;
+  background:linear-gradient(#efe3c4,#e1d2ad);box-shadow:inset 0 0 0 2px #3a3129,inset 0 6px 18px rgba(0,0,0,.35),0 0 0 6px #1c1915,0 0 0 7px #000}
+.dial.focus{outline:2px solid var(--o3);outline-offset:9px}
+.dial .scale{position:absolute;inset:18px 22px 44px}
+.dial .tk{position:absolute;bottom:0;width:1px;height:9px;background:#5b4a37}
+.dial .tk.big{height:24px;width:2px;margin-left:-1px;background:#2c2218}
+.dial .tk span{position:absolute;top:calc(100% + 4px);left:0;transform:translateX(-50%);font-family:var(--f-display);font-weight:700;font-size:10.5px;color:#2c2218;white-space:nowrap}
+.dial .tk.lo span{top:calc(100% + 19px)}
+.dial .needle{position:absolute;top:-14px;bottom:-4px;width:3px;margin-left:-1.5px;background:var(--ha);box-shadow:0 0 6px rgba(232,68,44,.6);pointer-events:none}
+.dial .mark{position:absolute;top:-6px;width:12px;height:12px;margin-left:-6px;border-radius:50%;border:2px solid #1c1915;pointer-events:none}
+.dial .mark.hit{background:#36a06a}.dial .mark.near{background:#d99a2a}.dial .mark.miss{background:#b0412b}
+.dial .mark.true{top:auto;bottom:30px;width:14px;height:14px;margin-left:-7px;background:#1f7a4c;box-shadow:0 0 0 2px #efe3c4,0 0 10px rgba(31,122,76,.7)}
+.dial input{position:absolute;left:22px;right:22px;top:0;bottom:0;width:calc(100% - 44px);opacity:0;margin:0;pointer-events:none}
+.read{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.read .val{font-family:var(--f-data);font-size:20px;color:var(--sodium);min-width:0}
+.steps{display:flex;gap:6px;flex-wrap:wrap}
+.tries{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
+.tries li{display:flex;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;padding:7px 10px;border:1px solid #3a3129;border-radius:4px;background:#14110e;font-family:var(--f-data);font-size:12.5px}
+.tries li.left{border-style:dashed;color:var(--mute);background:none}
+.tries li .h{color:#7CFFB2}.tries li .n{color:var(--sodium)}.tries li .m{color:#ff8a72}
+
+/* suggestions under the constellation box */
+.sugg{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.sugg:empty{display:none}
+.sugg .opt{display:inline-flex;gap:6px;align-items:baseline;padding:6px 10px;border:1px solid #3a3129;border-radius:4px;background:#1b1713;color:var(--starlight);cursor:pointer;font-family:var(--f-display);font-size:13.5px}
+.sugg .opt span{color:var(--mute);font-size:12px}
+.sugg .opt:hover,.sugg .opt:focus-visible{border-color:var(--sodium)}
+.clues .dir{display:inline-flex;align-items:center;gap:4px;min-width:52px;color:var(--o3)}
+
+/* the result card */
+.done{margin-top:22px;padding-top:16px;border-top:1px dashed #4a3e33}
+.done h3{font-family:var(--f-display);font-stretch:118%;font-size:20px;color:var(--starlight);margin-top:10px}
+.done p{margin-top:8px;font-size:15.5px}
+.done .row2{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.stats{display:flex;gap:16px 26px;flex-wrap:wrap;margin-top:14px}
+.stats div{font-family:var(--f-display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.stats b{display:block;font-family:var(--f-data);font-weight:400;font-size:24px;letter-spacing:0;color:var(--starlight)}
+.dist{display:grid;gap:3px;margin-top:12px;max-width:340px}
+.dist div{display:grid;grid-template-columns:14px 1fr;gap:6px;align-items:center;font-family:var(--f-data);font-size:11px;color:var(--mute)}
+.dist i{display:block;height:14px;min-width:16px;background:#3a332d;color:#fff;font-style:normal;font-size:10px;text-align:right;padding-right:4px;line-height:14px}
+.dist i.me{background:#287a51}
+.copied{font-family:var(--f-data);font-size:11.5px;color:var(--o3)}
+.sharebox{width:100%;margin-top:8px;font-family:var(--f-data);font-size:12px;background:#0f0d0b;color:var(--text);border:1px solid #3a3129;border-radius:4px;padding:8px}
+@media (prefers-reduced-motion:reduce){.tile.flip,.row.shake{animation:none}}
+</style>
+</head>
+<body>
+<main class="arc">
+  <header class="ahead">
+    <div><span class="plate">Arcade</span><h1>Games</h1><p class="lede">Three puzzles a day, the same for everyone. A new set at midnight where you are.</p></div>
+    <div class="day"><b id="dayNo"></b><span id="dayNext"></span></div>
+  </header>
+  <nav class="cabs" id="cabs" aria-label="Games">
+    <button class="push" type="button" data-game="starword" aria-pressed="false"><i class="lamp"></i>Starword</button>
+    <button class="push" type="button" data-game="constellation" aria-pressed="false"><i class="lamp"></i>Constellation</button>
+    <button class="push" type="button" data-game="light" aria-pressed="false"><i class="lamp"></i>Light Time</button>
+  </nav>
+
+  <section class="game panel" id="g-starword" hidden>
+    <span class="plate">Cabinet 1</span><h2>Starword</h2>
+    <p class="how">Find the day’s five-letter space word in six tries. Green: right letter, right place. Amber: in the word, somewhere else. Type, or use the keys.</p>
+    <div class="msg" id="swMsg" aria-live="polite"></div>
+    <div class="board" id="swBoard" role="grid" aria-label="Your guesses"></div>
+    <p class="sr" id="swSr" aria-live="polite"></p>
+    <div class="keys" id="swKeys"></div>
+    <div id="swDone"></div>
+  </section>
+
+  <section class="game panel" id="g-constellation" hidden>
+    <span class="plate">Cabinet 2</span><h2>Constellation</h2>
+    <p class="how">Name the constellation from its figure, north up and east to the left, as it looks in the sky. Each wrong guess tells you how far away the answer is on the sky, and which way.</p>
+    <div class="cols">
+      <div><div class="crt plot" id="coPlot"></div></div>
+      <div>
+        <form class="guess" id="coForm" autocomplete="off"><input id="coIn" placeholder="Type a constellation" aria-label="Your guess: a constellation’s Latin or English name" enterkeyhint="go" autocapitalize="words" spellcheck="false"><button class="push" type="submit">Guess</button></form>
+        <div class="sugg" id="coSugg" aria-label="Suggestions"></div>
+        <div class="msg" id="coMsg" aria-live="polite"></div>
+        <ul class="clues" id="coClues"></ul>
+        <p class="hints" id="coHints"></p>
+      </div>
+    </div>
+    <div id="coDone"></div>
+  </section>
+
+  <section class="game panel" id="g-light" hidden>
+    <span class="plate">Cabinet 3</span><h2>Light Time</h2>
+    <p class="how">How long has the light been on its way? Tune the dial, which runs in powers of ten from a second to the age of the universe, and lock it in. Five tries; within a factor of two wins.</p>
+    <div class="target" id="ltTarget"></div>
+    <p class="ask" id="ltAsk"></p>
+    <div class="dial" id="ltDial"><div class="scale" id="ltScale"></div><input type="range" id="ltIn" min="-0.5" max="18" step="0.05" value="9" aria-label="How long the light has been travelling, from a second to billions of years"></div>
+    <div class="read"><span class="val" id="ltVal" aria-live="polite"></span><span class="steps"><button class="push" type="button" id="ltDown" aria-label="Shorter">◀</button><button class="push" type="button" id="ltUp" aria-label="Longer">▶</button><button class="push" type="button" id="ltGo">Lock it in</button></span></div>
+    <ul class="tries" id="ltTries"></ul>
+    <div id="ltDone"></div>
+  </section>
+</main>
+<script src="js/core.js"></script>
+<script src="js/astro.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>

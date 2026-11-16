@@ -1,0 +1,405 @@
+{
+ "note": "The Gallery's trays: one per phase of exploration, slides in the order they were taken. Pictures, titles, descriptions and credits come from the NASA Image and Video Library (scripts/refresh.mjs builds data/gallery.json from this file). date overrides NASA's catalogue date where that is when the picture was processed or archived rather than taken: a full date, a year and month, a year, or null where the day it was taken is not known here. obj is the place on the Ladder. title and text replace NASA’s where those are a catalogue number, a dateline or misleading.",
+ "trays": [
+  {
+   "id": "space-race",
+   "name": "The Space Race",
+   "years": "1962–1972",
+   "blurb": "From John Glenn's three orbits in 1962 to the last moonwalk in December 1972: in under eleven years Mercury, Gemini and Apollo went from a few hours in orbit to three days on the Moon.",
+   "slides": [
+    {
+     "id": "KSC-62PC-0009",
+     "title": "Friendship 7 lifts off with John Glenn"
+    },
+    {
+     "id": "s65-30433",
+     "date": "1965-06-03",
+     "obj": "earth",
+     "title": "Ed White outside Gemini 4, the first American spacewalk"
+    },
+    {
+     "id": "S65-63171"
+    },
+    {
+     "id": "as08-14-2383",
+     "obj": "earth",
+     "title": "Earthrise, from Apollo 8"
+    },
+    {
+     "id": "as11-40-5903",
+     "obj": "moon"
+    },
+    {
+     "id": "as11-40-5875",
+     "obj": "moon"
+    },
+    {
+     "id": "as11-40-5948",
+     "obj": "moon"
+    },
+    {
+     "id": "AS12-48-7134",
+     "obj": "moon"
+    },
+    {
+     "id": "as13-59-8500"
+    },
+    {
+     "id": "as15-88-11866",
+     "obj": "moon"
+    },
+    {
+     "id": "as16-113-18339",
+     "date": "1972-04-21",
+     "obj": "moon"
+    },
+    {
+     "id": "as17-148-22727",
+     "obj": "earth",
+     "title": "The Blue Marble, from Apollo 17"
+    },
+    {
+     "id": "AS17-134-20384",
+     "obj": "moon"
+    },
+    {
+     "id": "as17-140-21496",
+     "obj": "moon"
+    }
+   ]
+  },
+  {
+   "id": "red-planet",
+   "name": "The Red Planet",
+   "years": "1976–",
+   "blurb": "Viking 1 sent back the first colour picture from the surface of Mars in July 1976. Since then landers and rovers have worked its plains and craters, and in April 2021 a small helicopter, Ingenuity, made the first powered flight on another planet.",
+   "slides": [
+    {
+     "id": "PIA00563",
+     "date": "1976-07-21",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA03250",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA08812",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA11720",
+     "date": "2008",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA18244",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA19400",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA19808",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA23624",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA24428",
+     "date": "2021-02-18",
+     "obj": "mars"
+    },
+    {
+     "id": "PIA24542",
+     "obj": "mars"
+    }
+   ]
+  },
+  {
+   "id": "grand-tour",
+   "name": "The Grand Tour",
+   "years": "1979–1990",
+   "blurb": "Voyager 1 and 2 left Earth in 1977. Between 1979 and 1989 they flew past Jupiter, Saturn, Uranus and Neptune, and Voyager 2 is still the only spacecraft to have visited the last two. In 1990 Voyager 1 turned around and photographed Earth from about six billion kilometres.",
+   "slides": [
+    {
+     "id": "7994970",
+     "obj": "jupiter",
+     "title": "Jupiter, from Voyager 1 on its way in",
+     "text": "Voyager 1 began photographing Jupiter early in 1979 and flew closest on 5 March. By the time it moved on in April it had taken almost 19,000 pictures, among them the first close views of Jupiter’s moons and the discovery of a faint ring."
+    },
+    {
+     "id": "ARC-1979-AC79-7077",
+     "obj": "jupiter",
+     "title": "Jupiter’s Great Red Spot, from Voyager 2"
+    },
+    {
+     "id": "ARC-1979-A79-7094",
+     "obj": "io",
+     "title": "Io’s volcanoes, watched by Voyager 2"
+    },
+    {
+     "id": "8109363",
+     "obj": "saturn",
+     "title": "Saturn and its moons, a Voyager montage"
+    },
+    {
+     "id": "ARC-1981-AC81-7067",
+     "obj": "saturn",
+     "title": "Saturn’s Encke Division, mapped by starlight from Voyager 2"
+    },
+    {
+     "id": "PIA18182",
+     "date": "1986",
+     "obj": "uranus"
+    },
+    {
+     "id": "PIA18185",
+     "obj": "miranda"
+    },
+    {
+     "id": "8910708",
+     "obj": "neptune",
+     "title": "Neptune, from Voyager 2"
+    },
+    {
+     "id": "PIA01492",
+     "date": "1989-08",
+     "obj": "neptune"
+    },
+    {
+     "id": "ARC-1989-A89-7050",
+     "obj": "neptune",
+     "title": "Neptune’s south pole, as Voyager 2 sped away"
+    },
+    {
+     "id": "PIA00452",
+     "date": "1990-02-14",
+     "obj": "voyager-1"
+    }
+   ]
+  },
+  {
+   "id": "shuttle-station",
+   "name": "Shuttle and Station",
+   "years": "1981–2011",
+   "blurb": "135 Space Shuttle missions flew between April 1981 and July 2011. They launched Hubble, serviced it five times and built the International Space Station, where people have lived without a break since November 2000.",
+   "slides": [
+    {
+     "id": "S81-30460",
+     "title": "Columbia’s first launch, STS-1"
+    },
+    {
+     "id": "s84-27017",
+     "obj": "earth",
+     "title": "Bruce McCandless flies free of Challenger",
+     "date": "1984-02-07"
+    },
+    {
+     "id": "s31-10-019"
+    },
+    {
+     "id": "sts061-65-015"
+    },
+    {
+     "id": "KSC-00pp1804",
+     "title": "Endeavour launches at night on STS-97"
+    },
+    {
+     "id": "sts114-332-031",
+     "obj": "earth",
+     "title": "The southern lights from Space Shuttle Discovery"
+    },
+    {
+     "id": "iss016e006871",
+     "obj": "iss"
+    },
+    {
+     "id": "s125e010160"
+    },
+    {
+     "id": "s129e006799",
+     "obj": "iss"
+    },
+    {
+     "id": "iss027e036685",
+     "obj": "iss",
+     "title": "Endeavour docked to the station, photographed from a departing Soyuz"
+    },
+    {
+     "id": "s134e010137",
+     "obj": "iss",
+     "title": "The International Space Station, from Endeavour on its last flight"
+    },
+    {
+     "id": "sts135-s-245"
+    }
+   ]
+  },
+  {
+   "id": "hubble-webb",
+   "name": "Hubble and Webb",
+   "years": "1990–",
+   "blurb": "Hubble has watched from low Earth orbit since 1990. Webb, launched on Christmas Day 2021, looks in infrared from 1.5 million kilometres away. Between them they reach light that left its source more than thirteen billion years ago.",
+   "slides": [
+    {
+     "id": "PIA12110"
+    },
+    {
+     "id": "PIA01269",
+     "obj": "saturn"
+    },
+    {
+     "id": "0203046",
+     "date": "2002",
+     "title": "The Tadpole galaxy, UGC 10214"
+    },
+    {
+     "id": "PIA03606",
+     "obj": "crab-nebula"
+    },
+    {
+     "id": "PIA15985",
+     "obj": "carina-nebula"
+    },
+    {
+     "id": "GSFC_20171208_Archive_e001651",
+     "date": "2012-09-25"
+    },
+    {
+     "id": "GSFC_20171208_Archive_e001518",
+     "date": "2013-04-19",
+     "obj": "horsehead-nebula"
+    },
+    {
+     "id": "GSFC_20171208_Archive_e000842",
+     "date": "2015-01-05",
+     "obj": "eagle-nebula"
+    },
+    {
+     "id": "GSFC_20171208_Archive_e000839",
+     "date": "2015-01-05",
+     "obj": "andromeda-galaxy"
+    },
+    {
+     "id": "GSFC_20171208_Archive_e000637",
+     "date": null
+    },
+    {
+     "id": "GSFC_20171208_Archive_e000794",
+     "date": null
+    },
+    {
+     "id": "GSFC_20171208_Archive_e001327",
+     "date": null
+    },
+    {
+     "id": "webb_first_deep_field",
+     "title": "Webb’s First Deep Field: the galaxy cluster SMACS 0723"
+    },
+    {
+     "id": "carina_nebula",
+     "obj": "carina-nebula"
+    },
+    {
+     "id": "southern_ring_nebula"
+    },
+    {
+     "id": "PIA25432"
+    }
+   ]
+  },
+  {
+   "id": "outer-worlds",
+   "name": "The Outer Worlds",
+   "years": "1997–2017",
+   "blurb": "Galileo orbited Jupiter from 1995, Cassini Saturn from 2004 and Juno Jupiter from 2016; Dawn orbited Ceres, and New Horizons flew past Pluto in July 2015. Their pictures turned points of light into places.",
+   "slides": [
+    {
+     "id": "PIA00723",
+     "date": "1997",
+     "obj": "europa"
+    },
+    {
+     "id": "PIA01063",
+     "obj": "io"
+    },
+    {
+     "id": "PIA11657",
+     "obj": "saturn"
+    },
+    {
+     "id": "PIA14922",
+     "obj": "titan"
+    },
+    {
+     "id": "PIA17172",
+     "date": "2013-07-19",
+     "obj": "saturn"
+    },
+    {
+     "id": "PIA09113",
+     "date": "2015-07",
+     "obj": "pluto"
+    },
+    {
+     "id": "PIA19968",
+     "obj": "charon"
+    },
+    {
+     "id": "PIA21078",
+     "obj": "ceres"
+    },
+    {
+     "id": "PIA21381",
+     "obj": "jupiter"
+    }
+   ]
+  },
+  {
+   "id": "artemis",
+   "name": "Artemis",
+   "years": "2022–",
+   "blurb": "Artemis I sent an uncrewed Orion around the Moon in late 2022. On 1 April 2026 Artemis II carried four astronauts, Reid Wiseman, Victor Glover, Christina Koch and Jeremy Hansen, around the Moon: the first people to go there since Apollo 17.",
+   "slides": [
+    {
+     "id": "KSC-20220915-PH-JNP01_0003"
+    },
+    {
+     "id": "art001e000269",
+     "obj": "moon"
+    },
+    {
+     "id": "art001e001822",
+     "obj": "moon"
+    },
+    {
+     "id": "SLS_MAF_20260401_ArtemisIILaunch_09"
+    },
+    {
+     "id": "art002e009174",
+     "obj": "earth"
+    },
+    {
+     "id": "art002e009166",
+     "obj": "earth"
+    },
+    {
+     "id": "art002e012632",
+     "obj": "moon"
+    },
+    {
+     "id": "art002e015231",
+     "obj": "moon"
+    },
+    {
+     "id": "art002e021278",
+     "obj": "earth"
+    }
+   ]
+  }
+ ]
+}

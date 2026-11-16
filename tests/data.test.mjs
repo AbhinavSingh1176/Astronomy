@@ -44,6 +44,34 @@ opt('data/launches.json', d => { ok(isISO(d.fetched), 'fetched'); for (const l o
 opt('data/spaceweather.json', d => { ok(isISO(d.fetched), 'fetched'); if (d.kp) ok(d.kp.now >= 0 && d.kp.now <= 9, 'Kp range'); if (d.wind) ok(d.wind.speed > 100 && d.wind.speed < 3000, 'wind speed'); if (d.xray) ok(/^[ABCMX]\d/.test(d.xray.cls), 'x-ray class'); });
 opt('data/tle.json', d => { for (const s of d.sats) ok(s.l1.length === 69 && s.l2.length === 69 && s.l1[0] === '1' && s.l2[0] === '2' && s.norad > 0, 'tle ' + s.name); if (d.fetched) ok(d.sats.some(s => s.norad === 25544), 'ISS present'); });
 opt('data/neo.json', d => { for (const n of d.items) ok(str(n.des) && isISO(n.when) && n.au > 0 && n.au < 0.06, 'neo ' + n.des); });
+section('gallery-trays.json', () => { const t = read('data/gallery-trays.json').trays, ids = new Set();
+  for (const tr of t) { ok(/^[a-z0-9-]+$/.test(tr.id) && str(tr.name, 60) && str(tr.blurb, 600) && tr.slides.length >= 5, 'tray ' + tr.id);
+    for (const s of tr.slides) { const k = String(s.id).toLowerCase(); ok(!ids.has(k), 'slide listed twice: ' + s.id); ids.add(k); ok(s.date === undefined || s.date === null || /^\d{4}(-\d\d(-\d\d)?)?$/.test(s.date), 'slide date ' + s.id); } } });
+opt('data/gallery.json', d => { ok(d.trays.length >= 5, 'gallery trays'); for (const tr of d.trays) { ok(tr.slides.length >= 3, 'gallery tray ' + tr.id);
+  for (const s of tr.slides) { ok(str(s.id) && str(s.title, 160) && str(s.credit, 160), 'slide ' + s.id); ok(isURL(s.img) && /^https:/.test(s.img) && isURL(s.page), 'slide links ' + s.id); ok(s.date == null || /^\d{4}(-\d\d(-\d\d)?)?$/.test(s.date), 'slide date ' + s.id); ok(!s.text || str(s.text, 1200), 'slide text ' + s.id); } } });
+/* ── the Games: built once by tools/build_games.mjs and kept by hand (starword.json, words5.txt) ── */
+section('games: word list and Starword answers', () => {
+  const words = readFileSync(path.join(ROOT, 'data/words5.txt'), 'utf8').split('\n').filter(Boolean), set = new Set(words);
+  ok(words.length >= 4000 && words.every(w => /^[a-z]{5}$/.test(w)) && set.size === words.length, 'words5.txt: lower-case five-letter words, each once');
+  const sw = read('data/starword.json').words, seen = new Set(), cons = new Set(read('data/catalog/constellations.json').map(c => c[0].toLowerCase()));
+  ok(sw.length >= 100, 'Starword has only ' + sw.length + ' answers');
+  for (const [w, note, link] of sw) {
+    ok(/^[A-Z]{5}$/.test(w) && !seen.has(w), 'Starword answer ' + w); seen.add(w); ok(set.has(w.toLowerCase()), w + ' is not in words5.txt');
+    ok(str(note, 300) && note.length >= 30, 'note for ' + w);
+    if (link != null) { ok(/^(ladder|sky)\.html#[\w-]+$/.test(link), 'link for ' + w); if (/^sky\.html#con-/.test(link)) ok(cons.has(link.slice(13).toLowerCase()), 'no constellation for ' + link); }
+  }
+});
+section('games.json', () => {
+  const G = read('data/games.json'), LIVE = ['moon', 'sun', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'voyager-1'];
+  ok(G.light.length >= 30, 'Light Time has only ' + G.light.length + ' objects');
+  for (const x of G.light) { ok(/^[a-z0-9-]+$/.test(x.slug) && str(x.name, 60), 'light ' + x.slug); ok(x.live ? LIVE.includes(x.slug) : x.sec > 1 && x.sec < 4.4e17, 'light time for ' + x.slug); }
+  ok(G.cons.length >= 40 && G.guess.length === 88, 'constellations: ' + G.cons.length + ' to find, ' + G.guess.length + ' to guess');
+  const ids = new Set(G.guess.map(g => g.id)); ok(ids.size === G.guess.length, 'a constellation is listed twice');
+  for (const g of G.guess) { ok(str(g.name, 40) && str(g.en, 40), 'names for ' + g.id); ok(g.parts.length >= 1 && g.parts.every(p => p[0] >= 0 && p[0] < 360 && Math.abs(p[1]) <= 90), 'centre of ' + g.id); }
+  for (const c of G.cons) { ok(ids.has(c.id) && c.pts.length >= 4 && [1, 2, 3].includes(c.rank), 'figure ' + c.id);
+    ok(c.lines.every(l => l.length >= 2 && l.every(i => Number.isInteger(i) && i >= 0 && i < c.pts.length)), 'lines of ' + c.id);
+    ok(c.pts.every(p => p[0] >= 0 && p[0] < 360 && Math.abs(p[1]) <= 90 && (p[2] === null || (p[2] > -2 && p[2] < 8))), 'stars of ' + c.id); }
+});
 opt('data/apod.json', d => { for (const a of d.days) { ok(/^\d{4}-\d\d-\d\d$/.test(a.date) && str(a.title), 'apod ' + a.date); ok(!a.url || isURL(a.url), 'apod url'); } });
 opt('data/dsn.json', d => { ok(d.stations.length >= 1, 'stations'); for (const s of d.stations) for (const x of s.dishes) ok(str(x.name) && Array.isArray(x.targets), 'dish ' + x.name); });
 opt('data/status.json', d => { for (const k in d.sources) ok(typeof d.sources[k].ok === 'boolean', 'status ' + k); });

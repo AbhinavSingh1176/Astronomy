@@ -4,13 +4,17 @@
    every number in it must appear in the abstract, nothing may be hyped, every field must be present. A digest that fails twice
    is replaced by a plainer one assembled from the abstract's own sentences and marked automatic, so the page can say so.
    Without a key, every digest is the plain kind. The job runs every six hours but adds papers only until the day's quota is met.
-   Env: ANTHROPIC_API_KEY, DIGEST_MODEL (default claude-sonnet-5-5), DIGESTS_PER_DAY (3), DIGEST_FORCE=1 to ignore the quota. */
+   Env: ANTHROPIC_API_KEY, ANTHROPIC_WORKSPACE_ID (only for a key that is not tied to one workspace), DIGEST_MODEL (default claude-sonnet-5-5),
+   DIGESTS_PER_DAY (3), DIGEST_FORCE=1 to ignore the quota. */
 import { createRequire } from 'node:module';
-import { get, readJSON, writeJSON, ROOT } from './lib.mjs';
+import { get, readJSON, writeJSON, ROOT, detex } from './lib.mjs';
 const require = createRequire(import.meta.url);
 const REG = require(ROOT + '/js/registry.js'), A = require(ROOT + '/js/astro.js');
 
 const KEY = process.env.ANTHROPIC_API_KEY, MODEL = process.env.DIGEST_MODEL || 'claude-sonnet-5-5';
+/* a key made for one workspace needs nothing more; a key that is not must name the workspace on every request */
+const WORKSPACE = /^wrkspc_[A-Za-z0-9]+$/.test(process.env.ANTHROPIC_WORKSPACE_ID || '') ? process.env.ANTHROPIC_WORKSPACE_ID : null;
+if (process.env.ANTHROPIC_WORKSPACE_ID && !WORKSPACE) console.log('ANTHROPIC_WORKSPACE_ID does not look like a workspace ID (wrkspc_…); ignoring it');
 const PER_DAY = Math.max(0, Math.min(10, +(process.env.DIGESTS_PER_DAY || 3))), KEEP = 400, TODAY = new Date().toISOString().slice(0, 10);
 const CAT = { 'astro-ph.EP': 'planets', 'astro-ph.SR': 'stars', 'astro-ph.HE': 'high-energy astrophysics', 'astro-ph.GA': 'galaxies', 'astro-ph.CO': 'cosmology', 'astro-ph.IM': 'instruments and methods' };
 
@@ -64,7 +68,7 @@ function linksFor(p, R) {
 const HYPE = /\b(breakthrough|revolutionar|stunning|game.?changing|groundbreaking|unprecedented|mind.?blowing|shocking|incredible)\w*/i;
 const numbersIn = s => (String(s).replace(/(\d),(\d{3})/g, '$1$2').match(/\d+(\.\d+)?/g) || []).filter(n => !/^(19|20)\d\d$/.test(n));
 function check(d, p) {
-  const src = (p.t + ' ' + p.abs + ' ' + p.comment + ' ' + p.jref).replace(/(\d),(\d{3})/g, '$1$2');
+  const raw = p.t + ' ' + p.abs + ' ' + p.comment + ' ' + p.jref, src = (raw + ' ' + detex(raw)).replace(/(\d),(\d{3})/g, '$1$2');
   for (const k of ['one', 'q', 'how', 'why', 'careful']) if (typeof d[k] !== 'string' || d[k].trim().length < 12) return 'missing or too short: ' + k;
   if (d.one.split(/\s+/).length > 34) return '"one" is too long';
   if (!Array.isArray(d.found) || d.found.length < 1 || d.found.length > 5 || d.found.some(f => !Array.isArray(f) || f.length !== 2 || f.some(x => typeof x !== 'string' || !x.trim()))) return '"found" must be 1 to 5 [label, value] pairs';
@@ -99,7 +103,7 @@ async function viaClaude(p) {
   let why = null;
   for (let attempt = 0; attempt < 2; attempt++) {
     const r = await get('https://api.anthropic.com/v1/messages', { method: 'POST', timeout: 90000, retries: 1,
-      headers: { 'x-api-key': KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+      headers: { 'x-api-key': KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json', ...(WORKSPACE ? { 'anthropic-workspace-id': WORKSPACE } : {}) },
       body: JSON.stringify({ model: MODEL, max_tokens: 1400, messages: [{ role: 'user', content: prompt(p, why) }] }) });
     const text = (r.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
     const a = text.indexOf('{'), b = text.lastIndexOf('}');
@@ -123,22 +127,33 @@ function plain(p) {
     why: '', careful: '', auto: true };
 }
 
+/* the two set-up mistakes worth naming in the log */
+function hint(e) {
+  const b = String(e.body || '');
+  if (/anthropic-workspace-id/.test(b) && /must include/.test(b)) return '\n    This key is not tied to a workspace. Add a repository variable ANTHROPIC_WORKSPACE_ID with the ID from the Console’s Workspaces page, or make a key inside a workspace.';
+  if (e.status === 401) return '\n    The API key was refused. Check the ANTHROPIC_API_KEY secret.';
+  return '';
+}
 const shortBy = by => by.length <= 4 ? by.join(', ').replace(/, ([^,]*)$/, ' and $1') : by.slice(0, 3).join(', ') + ' and ' + (by.length - 3) + ' others';
+/* every digest's text in plain Unicode, however the abstract wrote it (see detex in lib.mjs); safe to run again on old ones */
+const plainText = d => ({ ...d, t: detex(d.t), one: detex(d.one), q: detex(d.q), how: detex(d.how), why: detex(d.why), careful: detex(d.careful),
+  found: Array.isArray(d.found) ? d.found.map(f => Array.isArray(f) ? f.map(detex) : f) : d.found });
 async function main() {
+  store.papers = store.papers.map(plainText);
   const done = store.papers.filter(p => p.added === TODAY).length, quota = process.env.DIGEST_FORCE ? PER_DAY : Math.max(0, PER_DAY - done);
   const picks = choose(quota);
   console.log('OWLT digests · ' + picks.length + ' new' + (done ? ' (' + done + ' already today)' : '') + (KEY ? ' · written with ' + MODEL : ' · no API key, plain digests'));
-  if (!picks.length) return;
+  if (!picks.length) { writeJSON('data/papers/digests.json', { note: store.note || 'Plain-language digests of new papers, written from their arXiv abstracts.', papers: store.papers }); return; }
   const R = REG.build({ solar: readJSON('data/catalog/solar.json'), structures: readJSON('data/catalog/structures.json'), stars: { cols: [], rows: [] }, exo: { cols: [], rows: [] }, messier: [], galaxies: { cols: [], rows: [] } }, A);
   const made = [];
   for (const p of picks) {
     let d = null;
-    if (KEY) { try { d = await viaClaude(p); } catch (e) { console.log('    API error: ' + e.message); } }
+    if (KEY) { try { d = await viaClaude(p); } catch (e) { console.log('    API error: ' + e.message + (e.body ? ' · ' + e.body.replace(/\s+/g, ' ').slice(0, 200) : '') + hint(e)); } }
     if (!d) d = plain(p);
     const text = [d.one, d.q, d.how, d.why, d.careful].join(' ');
     made.push({ id: p.id.replace('.', '-').replace('/', '-'), arxiv: p.id, t: p.t, by: shortBy(p.by), date: p.date, added: TODAY, cat: p.cat,
       status: p.jref ? (p.comment ? p.comment.replace(/\.?$/, '. ') : '') + 'Published in ' + p.jref : p.comment || '', url: 'https://arxiv.org/abs/' + p.id,
-      ...d, terms: termsFor(text + ' ' + p.t), links: linksFor(p, R) });
+      ...plainText({ t: p.t, ...d }), terms: termsFor(text + ' ' + p.t), links: linksFor(p, R) });
     console.log('  + ' + p.id + ' ' + (d.auto ? '[plain] ' : '') + p.t.slice(0, 70));
   }
   const papers = made.concat(store.papers).sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, KEEP);

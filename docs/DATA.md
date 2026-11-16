@@ -25,6 +25,8 @@ What the build keeps:
 - **exoplanets.json** — 5,370 planets with host, orbit, size, equilibrium temperature and a habitable-zone flag (Kopparapu et al. 2014 edges for the host's temperature and luminosity).
 - **constellations.json**, **cities.json**, **earth.webp** (land, coastlines and city lights packed into three channels, lossless).
 
+**The Games** (`tools/build_games.mjs`, from the files above): `data/games.json` holds the constellation figures with each star's magnitude from `stars.json`, every constellation's centre for the distance clues, and the Light Time objects with their light-travel times (for the far galaxies, the lookback time, not the distance). Starword's guesses are checked against `data/words5.txt`, the five-letter words of SCOWL sizes 10 to 60 (Kevin Atkinson, http://wordlist.aspell.net/, licence in `data/words5.LICENSE`); its answers in `data/starword.json` are written by hand.
+
 `solar.json`, `structures.json` (75 landmarks out to the edge of the observable universe), `data/papers/canon.json` (the landmark papers), `data/glossary.json` and `data/lost.json` are written by hand, each from the sources named inside them.
 
 ## Computed in the browser (`js/astro.js`, tested in `tests/astro.test.cjs`)
@@ -55,6 +57,7 @@ What the build keeps:
 | `data/neo.json` | NASA/JPL SBDB close-approach API — https://ssd-api.jpl.nasa.gov/doc/cad.html | US government work |
 | `data/apod.json` | NASA Astronomy Picture of the Day — https://science.nasa.gov/apod/ (read from the page, since NASA moved APOD there in 2026; the api.nasa.gov feed is used only when its answer passes the same checks) | Many APOD images are copyrighted; the site shows an image only when NASA lists no copyright holder, and links otherwise |
 | `data/dsn.json` | NASA Deep Space Network Now — https://eyes.nasa.gov/dsn/ | US government work |
+| `data/gallery.json` | NASA Image and Video Library — https://images.nasa.gov/ (the `search?nasa_id=` and `asset/` endpoints of https://images-api.nasa.gov), for the ids listed in `data/gallery-trays.json`; refetched once a week or when the trays change | NASA material is generally not under copyright in the US; each slide keeps NASA's credit and links to its record. Pictures are linked from NASA's servers, not copied |
 | `data/status.json` | The job itself | Which sources worked on the last run |
 
 A source that fails keeps its last good file and is marked failed in `data/status.json`; the job only fails if every source fails. `tests/data.test.mjs` checks every file's shape before anything is deployed.

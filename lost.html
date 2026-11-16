@@ -13,8 +13,6 @@
 .mem h1{font-size:clamp(30px,4.6vw,50px);font-stretch:100%;font-weight:600;letter-spacing:.01em}
 .mem .lede{margin-top:12px;color:var(--mute);font-size:17px;max-width:62ch}
 .key{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-family:var(--f-display);font-size:12.5px;color:var(--mute)}
-.key button{display:inline-flex;align-items:center;gap:7px;background:none;border:1px solid var(--hair);border-radius:999px;padding:4px 11px;color:var(--mute);font:inherit;cursor:pointer}
-.key button[aria-pressed=true]{border-color:var(--starlight);color:var(--starlight)}
 .mk{display:inline-block;width:11px;height:11px;border-radius:50%;flex:none}
 .mk.crew{background:var(--ha)} .mk.lost{border:1.5px solid var(--starlight)} .mk.ended{background:linear-gradient(90deg,var(--starlight) 50%,transparent 50%);border:1.5px solid var(--starlight)} .mk.cancelled{border:1.5px dashed var(--faint)}
 .line{position:relative;margin-top:30px;padding-left:34px}
@@ -41,6 +39,16 @@
 .m.today .who::after{content:" · on this day";color:var(--ha)}
 .m:target{background:rgba(255,235,196,.035)}
 @media (max-width:600px){.m dl{grid-template-columns:1fr;gap:2px}.m dd{margin-bottom:8px}}
+
+/* ── the retro skin, kept quiet: the keys on the console, and the record typed on an index card from the archive ── */
+.key{gap:8px}
+.m details[open] dl{margin-top:12px;padding:16px 18px 14px;gap:0 18px;color:#2b2119;border-radius:2px;box-shadow:0 1px 0 rgba(0,0,0,.6),0 10px 24px rgba(0,0,0,.45);
+  background-image:repeating-linear-gradient(transparent 0 25px,rgba(120,90,60,.16) 25px 26px),linear-gradient(#efe6cf,#e6dbc0);background-position:0 16px,0 0}
+.m details[open] dt{font-family:var(--f-type);font-weight:700;font-size:12px;line-height:26px;letter-spacing:.06em;text-transform:uppercase;color:#7a2a1c}
+.m details[open] dd{font-family:var(--f-type);font-size:15px;line-height:26px;color:#2b2119}
+.m details[open] dd a{color:#7d1d12}
+.mk.crew{box-shadow:0 0 8px rgba(232,68,44,.45)}
+@media (max-width:600px){.m details[open] dl{grid-template-columns:1fr;gap:0}.m details[open] dd{margin-bottom:0}}
 </style>
 </head>
 <body>

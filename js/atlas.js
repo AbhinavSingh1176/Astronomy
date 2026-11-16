@@ -90,7 +90,7 @@
     if (ly) host.append(el('div', { class: 'lt' }, el('b', { text: e.z != null ? O.fmt.sig(e.ltYears / 1e9, 3) + ' billion years' : A.lightTime(ly * YR) }),
       el('span', { text: e.z != null ? 'since the light left · redshift ' + e.z + ' · now ' + O.fmt.sig(A.cosmo.comovingGly(e.z), 3) + ' billion light-years away' : e.body ? 'of light from here to Earth, now' : 'of light from here to Earth' })));
     const left = el('p'); host.append(left);
-    if (ly != null && ly >= 1) O.lightLeft(ly).then(x => { if (sel === e) left.append('The light arriving from it now left ' + x.when + (x.context ? ', when ' + x.context : '') + '.'); });
+    if (ly != null && ly >= 1) O.lightLeft(ly).then(x => { if (sel === e) left.append('The light arriving from it now left ' + x.when + (x.context ? ', ' + x.link + ' ' + x.context : '') + '.'); });
     if (e.note) host.append(el('p', { text: e.note }));
     const kv = [];
     if (e.radius) kv.push(['Radius', O.fmt.num(e.radius) + ' km']); if (e.facts) for (const k in e.facts) kv.push([k, e.facts[k]]);

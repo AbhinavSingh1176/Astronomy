@@ -3,7 +3,7 @@
    Every source is independent: one that fails keeps yesterday's file and is marked in data/status.json.
    Optional secret: NASA_API_KEY (APOD; DEMO_KEY works at low volume).   node scripts/refresh.mjs [source …] */
 import { createHash } from 'node:crypto';
-import { get, readJSON, clean, decode, safeUrl, iso, blocks, attrs, first, runAll, APOD_PAGE, apodFromPage, apodCheck } from './lib.mjs';
+import { get, readJSON, clean, decode, safeUrl, iso, blocks, attrs, first, runAll, APOD_PAGE, apodFromPage, apodCheck, nasaSlide, detex } from './lib.mjs';
 
 const now = () => new Date().toISOString();
 const hash = s => createHash('sha1').update(String(s)).digest('hex').slice(0, 12);
@@ -18,7 +18,7 @@ async function arxiv() {
     const x = e.inner, id = (first(x, 'id').match(/abs\/([^v\s<]+)(v\d+)?/) || [])[1];
     if (!id) continue;
     const pc = (x.match(/<arxiv:primary_category[^>]*term="([^"]+)"/) || [])[1] || '';
-    papers.push({ id, t: clean(first(x, 'title'), 400), by: blocks(x, 'author').map(a => clean(first(a.inner, 'name'), 120)).filter(Boolean).slice(0, 60),
+    papers.push({ id, t: detex(clean(first(x, 'title'), 400)), by: blocks(x, 'author').map(a => clean(first(a.inner, 'name'), 120)).filter(Boolean).slice(0, 60),
       date: (first(x, 'published') || '').slice(0, 10), cat: pc, abs: clean(first(x, 'summary'), 4000), comment: clean(first(x, 'arxiv:comment'), 400),
       jref: clean(first(x, 'arxiv:journal_ref'), 300), doi: clean(first(x, 'arxiv:doi'), 120) });
   }
@@ -42,6 +42,11 @@ const WHO = [['NASA', /\bnasa\b/i], ['ESA', /\besa\b|european space agency/i], [
   ['Roscosmos', /roscosmos|russia/i], ['Israel', /israel|\bisa\b|spaceil|beresheet/i], ['UAE', /\buae\b|emirates|mbrsc/i], ['KASA', /\bkasa\b|\bkari\b|korea/i],
   ['SpaceX', /spacex|starship|falcon/i], ['Rocket Lab', /rocket lab/i], ['Blue Origin', /blue origin|new glenn|new shepard/i], ['ESO', /\beso\b|european southern observatory|very large telescope/i]];
 const deskOf = t => (DESKS.find(d => d[1].test(t)) || ['other'])[0];
+/* some aggregated items are a page's menu rather than its story: a run of navigation words means the summary is not worth showing.
+   NASA's reposts of the Astronomy Picture of the Day are not news, and Today already shows the picture itself. */
+const NAV = /\b(?:(?:Home|About|Search|Archive|Index|Calendar|RSS|Subscribe|Menu|Submissions|Education|Discuss|Contact|Log ?in|Sign (?:in|up)|Share|Multimedia)\b[\s|·•,]*){4,}/;
+const repost = a => /^APOD:\s/i.test(a.t || '') || /\/apod-\d{4}-/.test(a.url || '');
+const tidy = a => NAV.test(a.sum || '') ? { ...a, sum: '' } : a;
 async function rss(site, url) {
   const xml = await get(url, { type: 'text', timeout: 20000, retries: 1 });
   const items = blocks(xml, 'item').concat(blocks(xml, 'entry'));
@@ -59,7 +64,7 @@ async function news() {
   res.forEach((r, i) => { const name = i === 0 ? 'Spaceflight News API' : FEEDS[i - 1][0]; feeds[name] = r.status === 'fulfilled' ? r.value.length : 'failed'; if (r.status === 'fulfilled') all.push(...r.value); });
   if (!all.length) throw new Error('every news feed failed');
   const key = t => t.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(' ').filter(w => w.length > 3).slice(0, 7).join(' ');
-  const items = all.filter(a => a.t && a.url && a.date && Date.now() - new Date(a.date) < 21 * 864e5).sort((a, b) => b.date.localeCompare(a.date))
+  const items = all.filter(a => a.t && a.url && a.date && !repost(a) && Date.now() - new Date(a.date) < 21 * 864e5).map(tidy).sort((a, b) => b.date.localeCompare(a.date))
     .filter(a => { const k = key(a.t); if (seen.has(a.url) || seen.has(k)) return false; seen.add(a.url); seen.add(k); return true; }).slice(0, 90)
     .map(a => { const txt = a.t + ' ' + a.sum; return { id: hash(a.url), ...a, desk: deskOf(txt), who: WHO.filter(w => w[1].test(txt)).map(w => w[0]).slice(0, 4) }; });
   return { fetched: now(), source: 'Spaceflight News API and agency feeds', feeds, items };
@@ -201,6 +206,36 @@ async function dsn() {
   return { fetched: now(), source: 'NASA Deep Space Network Now (eyes.nasa.gov/dsn)', stations };
 }
 
+/* ── the Gallery: the slides listed in data/gallery-trays.json, from the NASA Image and Video Library.
+   Rebuilt when the trays change, and checked again once a week; otherwise last week's file is kept as it is. ── */
+async function gallery() {
+  const want = readJSON('data/gallery-trays.json', null); if (!want || !Array.isArray(want.trays)) throw new Error('data/gallery-trays.json is missing');
+  const key = hash(JSON.stringify(want.trays)), prev = readJSON('data/gallery.json', null);
+  if (prev && prev.key === key && prev.fetched && Date.now() - new Date(prev.fetched).getTime() < 7 * 864e5) return prev;
+  const API = 'https://images-api.nasa.gov/', old = new Map(prev && prev.trays ? prev.trays.flatMap(t => t.slides).map(s => [s.id.toLowerCase(), s]) : []), missing = [];
+  const one = async s => {
+    const [m, a] = await Promise.all([get(API + 'search?nasa_id=' + encodeURIComponent(s.id)), get(API + 'asset/' + encodeURIComponent(s.id))]);
+    const d = m && m.collection && m.collection.items && m.collection.items[0] && m.collection.items[0].data && m.collection.items[0].data[0];
+    if (!d) throw new Error('not in the library');
+    const hrefs = ((a && a.collection && a.collection.items) || []).map(x => String(x.href || '').replace(/^http:/, 'https:'));
+    const size = (...names) => { for (const n of names) { const h = hrefs.find(u => new RegExp('~' + n + '\\.(jpe?g|png)$', 'i').test(u)); if (h) return h; } return null; };
+    /* NASA makes the large (1920 px) and medium (1280 px) copies only from bigger originals, so without them the original is itself modest */
+    const img = size('large', 'medium', 'orig', 'small'); if (!img) throw new Error('no picture to show');
+    return nasaSlide(s, d, img, size('small', 'thumb', 'medium'));
+  };
+  let total = 0, got = 0; const trays = [];
+  for (const t of want.trays) {
+    const slides = [];
+    for (let i = 0; i < t.slides.length; i += 6) {                       /* six at a time, to be polite */
+      const part = await Promise.all(t.slides.slice(i, i + 6).map(s => one(s).catch(e => { missing.push(s.id + ': ' + e.message); const o = old.get(s.id.toLowerCase()); return o ? { ...o, ...(s.date !== undefined ? { date: s.date } : {}), ...(s.obj ? { obj: s.obj } : {}) } : null; })));
+      for (const x of part) { total++; if (x) { slides.push(x); got++; } }
+    }
+    trays.push({ id: t.id, name: clean(t.name, 60), years: clean(t.years, 20), blurb: clean(t.blurb, 600), slides });
+  }
+  if (got < total * 0.8) throw new Error('only ' + got + ' of ' + total + ' slides (' + missing.slice(0, 3).join('; ') + ')');
+  return { fetched: now(), key, source: 'NASA Image and Video Library', trays, ...(missing.length ? { missing } : {}) };
+}
+
 const SOURCES = [
   { name: 'arxiv', label: 'arXiv', file: 'data/papers/arxiv.json', run: arxiv, count: d => d.papers.length, min: 20 },
   { name: 'news', label: 'Spaceflight News API and agency feeds', file: 'data/news.json', run: news, count: d => d.items.length, min: 5 },
@@ -209,7 +244,8 @@ const SOURCES = [
   { name: 'tle', label: 'CelesTrak', file: 'data/tle.json', run: tle, count: d => d.sats.length, min: 1 },
   { name: 'neo', label: 'NASA/JPL CNEOS', file: 'data/neo.json', run: neo, count: d => d.items.length, min: 0 },
   { name: 'apod', label: 'NASA APOD', file: 'data/apod.json', run: apod, count: d => d.days.length, min: 1 },
-  { name: 'dsn', label: 'NASA DSN Now', file: 'data/dsn.json', run: dsn, count: d => d.stations.reduce((n, s) => n + s.dishes.length, 0), min: 1 }
+  { name: 'dsn', label: 'NASA DSN Now', file: 'data/dsn.json', run: dsn, count: d => d.stations.reduce((n, s) => n + s.dishes.length, 0), min: 1 },
+  { name: 'gallery', label: 'NASA Image and Video Library', file: 'data/gallery.json', run: gallery, count: d => d.trays.reduce((n, t) => n + t.slides.length, 0), min: 20 }
 ];
 export { SOURCES, tles, table, xclass, launch, deskOf, WHO };
 

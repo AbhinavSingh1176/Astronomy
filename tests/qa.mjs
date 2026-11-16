@@ -13,7 +13,7 @@ const { chromium } = require('playwright');
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2), BASE = (args.find(a => /^https?:/.test(a)) || 'http://127.0.0.1:8765').replace(/\/$/, '');
 const SHOTS = args.includes('--shots') ? args[args.indexOf('--shots') + 1] : null; if (SHOTS) mkdirSync(SHOTS, { recursive: true });
-const PAGES = ['index.html', 'papers.html', 'papers.html#canon-penzias-wilson-1965', 'papers.html#term-redshift', 'dispatch.html', 'deck.html', 'sky.html', 'sky.html#con-Ori', 'sky.html#vega', 'atlas.html', 'atlas.html#europa', 'lost.html', 'lost.html#apollo-1', 'log.html',
+const PAGES = ['index.html', 'papers.html', 'papers.html#canon-penzias-wilson-1965', 'papers.html#term-redshift', 'dispatch.html', 'deck.html', 'sky.html', 'sky.html#con-Ori', 'sky.html#vega', 'atlas.html', 'atlas.html#europa', 'lost.html', 'lost.html#apollo-1', 'log.html', 'gallery.html', 'games.html', 'games.html#constellation', 'games.html#light', 'sky.html#con-Ser',
   'ladder.html', 'ladder.html#scale-planets', 'ladder.html#proxima-centauri', 'ladder.html#scale-galaxy', 'ladder.html#andromeda-galaxy', 'ladder.html#scale-universe', 'ladder.html#sgr-a-star'];
 const SIZES = [[1440, 900], [390, 844]];
 let fails = 0; const fail = (where, msg) => { fails++; console.log('  FAIL ' + where + ': ' + msg); }, noted = new Set();

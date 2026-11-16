@@ -46,7 +46,7 @@
         n.x = Math.max(40, Math.min(W - 40, n.x)); n.y = Math.max(30, Math.min(H - 30, n.y)); }
     }
     /* fit the drawing to the frame, drawn at the screen's own size so names stay readable on a phone (taller there) */
-    const PW = Math.max(300, Math.round(host.clientWidth || 1200)), PH = Math.round(PW < 700 ? PW * 1.3 : Math.min(620, PW * 0.52)), pad = PW < 700 ? 16 : 30;
+    const few = N.length < 4, PW = Math.max(300, Math.round(host.clientWidth || 1200)), PH = Math.round(few ? 220 : PW < 700 ? PW * 1.3 : Math.min(620, PW * 0.52)), pad = PW < 700 ? 16 : 30;
     const xs = N.map(n => n.x), ys = N.map(n => n.y), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
     const sc = Math.min((PW - 2 * pad - (PW < 700 ? 60 : 200)) / Math.max(1, x1 - x0), (PH - 2 * pad - 20) / Math.max(1, y1 - y0), 3);
     for (const n of N) { n.x = PW / 2 + (n.x - (x0 + x1) / 2) * sc - (PW < 700 ? 20 : 60); n.y = PH / 2 + (n.y - (y0 + y1) / 2) * sc; }
@@ -71,7 +71,8 @@
       const L_ = labels.get(i); if (L_) { const lab = mk('text', { x: L_.x, y: L_.y, 'text-anchor': L_.anchor }); lab.textContent = L_.text; a.append(lab); }
       const tt = mk('title', {}); tt.textContent = g[0] + (n.seen ? ' · found' : ' · rumour'); a.append(tt); svg.append(a);
     });
-    host.append(svg, el('div', { class: 'legend', text: 'Solid: found · dashed: rumour · colour: kind (places blue, papers amber, landmark papers cream, terms teal, missions red)' }));
+    host.append(svg, few ? el('div', { class: 'legend', text: 'The map grows as you go: every place you open, paper you read and mission you remember lands here, joined to what it mentions.' }) : null,
+      el('div', { class: 'legend', text: 'Solid: found · dashed: rumour · colour: kind (places blue, papers amber, landmark papers cream, terms teal, missions red)' }));
   }
   O.footer(document.body);
 })();

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gallery · OWLT</title>
+<meta name="description" content="A slide projector loaded with trays from each phase of exploration, from Friendship 7 to Artemis II, with NASA's own records of every picture.">
+<link rel="stylesheet" href="css/core.css">
+<style>
+/* The Gallery is a slide room: a projector, a screen, a shelf of trays. Each tray is one phase of exploration.
+   A slide comes up out of focus (its small copy, blurred) and sharpens when the full picture arrives, the way a projector's lens finds it.
+   Pictures are hot-linked from NASA's library at the size NASA made for the web; nothing is copied here. */
+.gal{min-height:calc(100vh - var(--nav-h));padding-block:30px 20px;
+  background:radial-gradient(1100px 620px at 50% 38%,rgba(255,220,160,.055),transparent 70%),radial-gradient(900px 500px at 50% 110%,rgba(255,177,59,.05),transparent 70%),var(--void)}
+.ghead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:10px 40px;align-items:end}
+.ghead h1{margin-top:10px;font-size:clamp(38px,6.5vw,72px);font-stretch:125%;font-weight:800;letter-spacing:.01em}
+.ghead .lede{color:var(--mute);font-size:16.5px;max-width:62ch}
+@media (max-width:800px){.ghead{grid-template-columns:1fr}}
+
+/* the shelf of trays */
+.trays{display:flex;gap:10px;margin-top:24px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent}
+.tray{flex:1 0 150px;min-width:150px;max-width:230px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;cursor:pointer;color:var(--engr);
+  padding:12px 12px 11px;border:1px solid #3a3129;border-radius:6px;background:linear-gradient(#29221c,#1b1713);
+  box-shadow:inset 0 1px 0 rgba(255,235,196,.07),0 3px 0 #0b0907,0 6px 14px rgba(0,0,0,.35);transition:transform .08s,box-shadow .08s,border-color .15s}
+.tray:hover{border-color:#5a4c3f}
+.tray[aria-pressed=true]{transform:translateY(2px);border-color:rgba(255,177,59,.6);box-shadow:inset 0 1px 0 rgba(255,235,196,.07),0 1px 0 #0b0907,0 0 22px rgba(255,177,59,.12)}
+.tray .top{display:flex;justify-content:space-between;align-items:center;width:100%}
+.tray b{font-family:var(--f-display);font-stretch:112%;font-weight:700;font-size:15px;color:var(--starlight);line-height:1.15}
+.tray span.y{font-family:var(--f-data);font-size:11px;color:var(--mute)}
+
+/* the screen */
+.stage{margin-top:22px}
+.screen{position:relative;margin:0;aspect-ratio:16/10;max-height:72vh;width:100%;background:#050404;border-radius:6px;overflow:hidden;display:grid;place-items:center;
+  box-shadow:0 0 0 1px #2b241d,0 0 0 7px #0d0b09,0 0 0 8px #2b241d,0 30px 80px rgba(0,0,0,.7)}
+.screen img{grid-area:1/1;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;
+  filter:contrast(1.04) saturate(1.06) sepia(.06);transition:filter .45s var(--ease),opacity .2s}
+.screen img.soft{filter:blur(9px) contrast(1.02) saturate(1.03) sepia(.06)}
+.screen::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 95% at 50% 50%,transparent 58%,rgba(0,0,0,.55) 100%)}
+.screen .flick{position:absolute;inset:0;pointer-events:none;background:rgba(255,236,200,.025);animation:flick .16s steps(2) infinite}
+@keyframes flick{50%{background:rgba(255,236,200,0)}}
+.screen.clunk img{animation:clunk .34s var(--ease)}
+@keyframes clunk{0%{opacity:1;transform:none}35%{opacity:0;transform:translateY(-2%)}36%{opacity:0;transform:translateY(2.5%)}100%{opacity:1;transform:none}}
+.screen .empty{grid-area:1/1;color:var(--faint);font-family:var(--f-type);font-size:15px;padding:20px;text-align:center}
+.screen .count{position:absolute;left:12px;top:12px;z-index:2}
+.screen .nav{position:absolute;top:0;bottom:0;width:18%;z-index:2;border:0;background:none;cursor:pointer;color:transparent}
+.screen .nav.prev{left:0}.screen .nav.next{right:0}
+.screen .nav:focus-visible{outline:1px solid var(--o3);outline-offset:-6px}
+.timer{height:3px;margin-top:14px;background:#1a1512;border-radius:2px;overflow:hidden}
+.timer i{display:block;height:100%;width:0;background:linear-gradient(90deg,#9a5a10,var(--sodium));box-shadow:0 0 8px rgba(255,177,59,.6)}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.ctl .grow{flex:1}
+.ctl .hint{font-family:var(--f-data);font-size:11px;color:var(--faint)}
+
+/* the slide's card, typed like a library record */
+.rec{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px 30px;margin-top:16px}
+.rec h2{font-family:var(--f-type);font-weight:700;font-size:clamp(20px,2.4vw,26px);line-height:1.25;color:var(--starlight);letter-spacing:0;margin-top:10px}
+.rec .meta{margin-top:8px;font-family:var(--f-data);font-size:12px;color:var(--mute)}
+.rec .meta b{font-weight:500;color:var(--starlight)}
+.rec p.t{margin-top:12px;font-family:var(--f-type);font-size:15.5px;line-height:1.6;color:var(--text)}
+.rec .side{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.rec .light{font-family:var(--f-data);font-size:12.5px;color:var(--sodium);line-height:1.5}
+.rec .blurb{font-family:var(--f-display);font-size:13.5px;color:var(--mute);line-height:1.5}
+.rec .links{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:800px){.rec{grid-template-columns:1fr}}
+
+/* the filmstrip of the tray */
+.film{display:flex;gap:6px;margin-top:16px;overflow-x:auto;padding:8px 6px;background:#0d0b09;border-radius:4px;scrollbar-width:thin;scrollbar-color:var(--dust3) transparent;
+  box-shadow:inset 0 0 0 1px #2b241d}
+.film button{flex:none;width:92px;height:62px;padding:0;border:2px solid #2b241d;border-radius:3px;background:#000 center/cover no-repeat;cursor:pointer;position:relative;opacity:.72;transition:opacity .15s,border-color .15s}
+.film button:hover{opacity:1}
+.film button[aria-current=true]{opacity:1;border-color:var(--sodium);box-shadow:0 0 12px rgba(255,177,59,.35)}
+.film button span{position:absolute;right:3px;bottom:2px;font-family:var(--f-data);font-size:9px;color:#fff;text-shadow:0 0 3px #000}
+.credits{margin-top:30px;font-family:var(--f-display);font-size:12.5px;color:var(--faint);max-width:80ch;line-height:1.6}
+@media (prefers-reduced-motion:reduce){.screen .flick{display:none}.screen.clunk img{animation:none}}
+</style>
+</head>
+<body>
+<main class="gal">
+  <header class="wrap ghead">
+    <div><span class="plate">Slide room</span><h1>Gallery</h1></div>
+    <p class="lede">Seven trays of slides, one for each phase of exploration, from Friendship 7 to Artemis II. The projector moves on by itself every nine seconds; pick a tray, or step through by hand. Every caption is NASA’s own record of the picture.</p>
+  </header>
+  <section class="wrap trays" id="trays" aria-label="Trays of slides"></section>
+  <section class="wrap stage" aria-label="Projector">
+    <figure class="screen" id="screen">
+      <img id="slide" alt="" decoding="async">
+      <div class="empty" id="empty">Loading the trays…</div>
+      <span class="tape count" id="count"></span>
+      <div class="flick" aria-hidden="true"></div>
+      <button class="nav prev" type="button" id="sPrev" aria-label="Previous slide">‹</button>
+      <button class="nav next" type="button" id="sNext" aria-label="Next slide">›</button>
+    </figure>
+    <div class="timer" aria-hidden="true"><i id="timer"></i></div>
+    <div class="ctl">
+      <button class="push" type="button" id="bPrev" aria-label="Previous slide">◀ Back</button>
+      <button class="push" type="button" id="bPlay" aria-pressed="true">Pause</button>
+      <button class="push" type="button" id="bNext" aria-label="Next slide">Forward ▶</button>
+      <button class="push" type="button" id="bSound" aria-pressed="false">Sound</button>
+      <span class="grow"></span><span class="hint">← → to step · space to pause · 1–7 for a tray</span>
+    </div>
+    <div class="rec">
+      <div class="panel" id="rec" aria-live="polite"></div>
+      <div class="side" id="side"></div>
+    </div>
+    <div class="film" id="film" role="group" aria-label="Slides in this tray"></div>
+    <p class="credits">Pictures and records: the <a href="https://images.nasa.gov">NASA Image and Video Library</a>, shown at the size NASA made for the web and credited as NASA credits them. NASA’s pictures are generally not under copyright in the United States; NASA does not endorse this site. Dates are when each picture was taken where that is known, which is not always the date in NASA’s catalogue.</p>
+  </section>
+</main>
+<script src="js/core.js"></script>
+<script src="js/astro.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

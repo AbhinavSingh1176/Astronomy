@@ -299,11 +299,22 @@ print(f"  planets {len(exo)} · in a habitable zone {nhz[0]} (rocky {nhz[1]}) ·
 print("constellations · d3-celestial")
 lines = json.load(open(os.path.join(SRC, 'cel/con.lines.json'), encoding='utf-8'))
 meta = {f['id']: f['properties'] for f in json.load(open(os.path.join(SRC, 'cel/con.json'), encoding='utf-8'))['features']}
+def figure_centre(segs):
+    # the mean direction of a figure's stars, for a label point when the source has none of its own
+    pts = {(s[i], s[i + 1]) for s in segs for i in range(0, len(s), 2)}
+    x = y = z = 0.0
+    for ra, de in pts:
+        a, d = math.radians(ra), math.radians(de); x += math.cos(d) * math.cos(a); y += math.cos(d) * math.sin(a); z += math.sin(d)
+    return [round(math.degrees(math.atan2(y, x)) % 360, 2), round(math.degrees(math.atan2(z, math.hypot(x, y))), 2)]
 cons = []
 for ft in lines['features']:
     segs = [[round(v, 2) for pt in ln for v in ((pt[0] + 360) % 360, pt[1])] for ln in ft['geometry']['coordinates']]
-    m = meta.get(ft['id'], {}); disp = m.get('display') or [None, None]
-    cons.append([ft['id'], m.get('name', ft['id']), segs, None if disp[0] is None else round((disp[0] + 360) % 360, 2), disp[1]])
+    m = meta.get(ft['id'], {}); disp = m.get('display') or [None, None]; name = m.get('name', ft['id'])
+    if ft['id'] == 'Ser':
+        # Serpens comes in two halves; the source names both alike and gives them one label point. The head is the western half.
+        head = max(v for s in segs for v in s[0::2]) < 250
+        name = 'Serpens Caput' if head else 'Serpens Cauda'; disp = figure_centre(segs)
+    cons.append([ft['id'], name, segs, None if disp[0] is None else round((disp[0] + 360) % 360, 2), disp[1], int(m.get('rank') or 3)])
 dump('constellations.json', cons)
 
 # ───────────────────────── 6. Earth raster + cities ─────────────────────────

@@ -82,6 +82,12 @@ function claude(body) {
   return { id: 'msg_mock', type: 'message', role: 'assistant', model: req.model, content: [{ type: 'text', text: JSON.stringify(n === 1 ? bad : good) }], stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 } };
 }
 
+/* the NASA Image and Video Library: any id answers; ids starting PIA00 have only an original and a thumbnail, like NASA's oldest scans */
+const nasaMeta = u => { const id = decodeURIComponent((u.match(/nasa_id=([^&]+)/) || [])[1] || 'x');
+  return { collection: { items: [{ data: [{ nasa_id: id, title: /^S\d/.test(id) ? 'INFLIGHT (CREW ACTIVITY) - ' + id : 'Mock picture ' + id, date_created: '1981-04-12T00:00:00Z', center: 'JSC',
+    description: id + ' (7 Feb. 1984) --- A <b>mock</b> description of the picture, long enough to read as a caption. It has a second sentence. Credit: NASA' }], links: [{ href: 'http://images-assets.nasa.gov/image/' + id + '/' + id + '~thumb.jpg' }] }] } }; };
+const nasaAsset = u => { const id = decodeURIComponent(u.split('/asset/')[1] || 'x'), sizes = /^PIA00/.test(id) ? ['orig', 'thumb'] : ['orig', 'large', 'medium', 'small', 'thumb'];
+  return { collection: { items: sizes.map(z => ({ href: 'http://images-assets.nasa.gov/image/' + id + '/' + id + '~' + z + '.jpg' })).concat([{ href: 'http://images-assets.nasa.gov/image/' + id + '/metadata.json' }]) } }; };
 const ROUTES = [
   [/^export\.arxiv\.org\/api\/query/, () => ['application/atom+xml', arxiv()]],
   [/^api\.spaceflightnewsapi\.net\/v4\/articles/, () => ['application/json', snapi()]],
@@ -96,13 +102,17 @@ const ROUTES = [
   [/^ssd-api\.jpl\.nasa\.gov\/cad\.api/, () => ['application/json', cad()]],
   [/^api\.nasa\.gov\/planetary\/apod/, () => ['application/json', apod()]], [/^science\.nasa\.gov\/apod\/?$/, () => ['text/html; charset=utf-8', apodPage()]],
   [/^eyes\.nasa\.gov\/dsn\/data\/dsn\.xml/, () => ['text/xml', dsn()]], [/^eyes\.nasa\.gov\/dsn\/config\.xml/, () => ['text/xml', dsncfg()]],
-  [/^api\.anthropic\.com\/v1\/messages/, (u, body) => ['application/json', claude(body)]]
+  [/^images-api\.nasa\.gov\/search/, u => ['application/json', nasaMeta(u)]], [/^images-api\.nasa\.gov\/asset\//, u => ['application/json', nasaAsset(u)]],
+  /* like the real API: a key that is not tied to a workspace must name one in a header */
+  [/^api\.anthropic\.com\/v1\/messages/, (u, body, h) => /^unscoped/.test(h['x-api-key'] || '') && !h['anthropic-workspace-id']
+    ? [400, JSON.stringify({ type: 'error', error: { type: 'invalid_request_error', message: 'This request must include the anthropic-workspace-id header.' } })]
+    : ['application/json', claude(body)]]
 ];
 const server = http.createServer((req, res) => {
   let body = ''; req.on('data', c => { body += c; }); req.on('end', () => {
     const u = decodeURIComponent(req.url.slice(1)), r = ROUTES.find(([re]) => re.test(u));
     if (!r) { res.writeHead(404); res.end('no mock for ' + u); return; }
-    const [type, data] = r[1](u, body);
+    const [type, data] = r[1](u, body, req.headers);
     if (typeof type === 'number') { res.writeHead(type); res.end(String(data)); return; }
     res.writeHead(200, { 'content-type': type }); res.end(typeof data === 'string' ? data : JSON.stringify(data));
   });

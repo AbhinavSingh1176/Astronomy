@@ -12,7 +12,7 @@ const args = process.argv.slice(2), BASE = (args.find(a => /^https?:/.test(a)) |
 const SHOTS = args.includes('--shots') ? args[args.indexOf('--shots') + 1] : null; if (SHOTS) mkdirSync(SHOTS, { recursive: true });
 const ONLY = args.includes('--only') ? args[args.indexOf('--only') + 1] : null;
 const PAGES = ['index.html', 'papers.html', 'papers.html#canon-penzias-wilson-1965', 'dispatch.html', 'deck.html', 'sky.html', 'atlas.html', 'atlas.html#europa', 'lost.html', 'log.html',
-  'gallery.html', 'games.html',
+  'gallery.html', 'games.html', 'games.html#constellation', 'games.html#light',
   'ladder.html', 'ladder.html#earth', 'ladder.html#scale-moon', 'ladder.html#scale-inner', 'ladder.html#scale-planets', 'ladder.html#saturn', 'ladder.html#scale-heliosphere', 'ladder.html#scale-neighbours', 'ladder.html#proxima-centauri',
   'ladder.html#scale-arm', 'ladder.html#scale-galaxy', 'ladder.html#scale-local-group', 'ladder.html#andromeda-galaxy', 'ladder.html#scale-laniakea', 'ladder.html#scale-universe']
   .filter(p => (!ONLY || p.startsWith(ONLY)) && existsSync(path.join(path.dirname(new URL(import.meta.url).pathname), '..', p.split('#')[0])));

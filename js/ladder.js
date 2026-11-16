@@ -112,7 +112,7 @@
   function start(d) {
     const [solar, structures, stars, cons, skyBin] = d;
     R = REG.build({ solar, structures, stars }, A);
-    for (const c of cons) CONS[c[0]] = c[1];
+    for (const c of cons) CONS[c[0]] = c[0] === 'Ser' ? 'Serpens' : c[1];      /* its two halves, Caput and Cauda, are one constellation */
     buildSky(skyBin); buildCons(stars, cons); buildSolar(solar); buildEarth(); buildCosmos(); buildDeferred(); updateBodies(); buildRail();
     listsForLabels();
     resize(); addEventListener('resize', resize);
@@ -1129,8 +1129,8 @@
       if (!e.ly) left.append('We are inside it.');
     }
     if (years != null && years >= 1) O.lightLeft(years).then(r => { if (!panel.contains(left)) return;
-      if (deep) { if (r.context) left.append(' When it left, ' + r.context + '.'); }
-      else left.append(left.childNodes.length ? ' ' : '', 'The light now arriving from it left ', el('em', { text: r.when }), r.context ? ', when ' + r.context + '.' : '.'); });
+      if (deep) { if (r.context) left.append(' ' + (r.link === 'when' ? 'When it left, ' : 'Around the time it left, ') + r.context + '.'); }
+      else left.append(left.childNodes.length ? ' ' : '', 'The light now arriving from it left ', el('em', { text: r.when }), r.context ? ', ' + r.link + ' ' + r.context + '.' : '.'); });
     /* the note, then the numbers */
     let note = e.note;
     if (!note && e.kind === 'star') { const sp = e.sp ? e.sp.replace(/\.+$/, '') : ''; note = (sp ? (/^[AEFHILMNORSX]/i.test(sp) ? 'An ' : 'A ') + sp + ' ' : 'A ') + 'star in ' + (CONS[e.con] || e.con || 'the sky') + ', ' + REG.fmtLy(e.ly) + ' away.'; }

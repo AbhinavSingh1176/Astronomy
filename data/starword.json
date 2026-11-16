@@ -1,0 +1,554 @@
+{
+ "note": "Starword answers: five letters, each with what you learn when you finish. Guesses can be any common English word (data/words5.txt, from SCOWL). The order is shuffled once with a fixed seed, so a day's word is the same for everyone.",
+ "words": [
+  [
+   "ORBIT",
+   "The path one body follows around another under gravity. The Moon takes 27.3 days to go once around Earth against the stars."
+  ],
+  [
+   "COMET",
+   "A lump of ice and dust from the outer Solar System. Near the Sun it grows a coma and tails that can stretch for millions of kilometres."
+  ],
+  [
+   "LUNAR",
+   "Of the Moon. From one sunrise to the next, a lunar day lasts about 29.5 Earth days."
+  ],
+  [
+   "SOLAR",
+   "Of the Sun. The solar wind streams away from it at roughly 300 to 800 kilometres a second."
+  ],
+  [
+   "VENUS",
+   "The hottest planet: its thick carbon dioxide air holds the surface near 465 °C, hotter than Mercury.",
+   "ladder.html#venus"
+  ],
+  [
+   "EARTH",
+   "The only world yet known to have life. Sunlight takes about 8 minutes 20 seconds to reach it.",
+   "ladder.html#earth"
+  ],
+  [
+   "PLUTO",
+   "A dwarf planet in the Kuiper belt. New Horizons flew past it on 14 July 2015 and found a heart-shaped plain of nitrogen ice.",
+   "ladder.html#pluto"
+  ],
+  [
+   "TITAN",
+   "Saturn's largest moon, with air thicker than Earth's and lakes of liquid methane and ethane.",
+   "ladder.html#titan"
+  ],
+  [
+   "CERES",
+   "The largest body in the asteroid belt, a dwarf planet that the Dawn spacecraft orbited from 2015 to 2018.",
+   "ladder.html#ceres"
+  ],
+  [
+   "VESTA",
+   "One of the largest asteroids. Dawn orbited it in 2011 and 2012 before moving on to Ceres.",
+   "ladder.html#vesta"
+  ],
+  [
+   "DENEB",
+   "The tail of Cygnus, a white supergiant so luminous it is among the brightest stars in our sky despite lying well over a thousand light-years away.",
+   "ladder.html#deneb"
+  ],
+  [
+   "RIGEL",
+   "The blue supergiant at Orion's foot, about 860 light-years away.",
+   "ladder.html#rigel"
+  ],
+  [
+   "SPICA",
+   "The brightest star in Virgo: two hot stars so close they orbit each other every four days.",
+   "ladder.html#spica"
+  ],
+  [
+   "MIZAR",
+   "The star at the bend of the Big Dipper's handle. With faint Alcor beside it, it was an old test of eyesight.",
+   "ladder.html#mizar"
+  ],
+  [
+   "ALCOR",
+   "Mizar's faint companion in the handle of the Big Dipper.",
+   "ladder.html#alcor"
+  ],
+  [
+   "ALGOL",
+   "The Demon Star in Perseus, which dims for about ten hours every 2.87 days when a fainter companion passes in front of it.",
+   "ladder.html#algol"
+  ],
+  [
+   "ACRUX",
+   "The brightest star of the Southern Cross.",
+   "ladder.html#acrux"
+  ],
+  [
+   "HADAR",
+   "Beta Centauri, one of the two Pointers that lead the eye to the Southern Cross.",
+   "ladder.html#hadar"
+  ],
+  [
+   "DUBHE",
+   "One of the Big Dipper's Pointers: follow it from Merak and you reach Polaris.",
+   "ladder.html#dubhe"
+  ],
+  [
+   "MERAK",
+   "The other Pointer of the Big Dipper. A line from Merak through Dubhe leads to the North Star.",
+   "ladder.html#merak"
+  ],
+  [
+   "SAIPH",
+   "The fainter of Orion's two feet, opposite Rigel.",
+   "ladder.html#saiph"
+  ],
+  [
+   "ARIES",
+   "The ram. The 'first point of Aries', where the Sun crosses the celestial equator in March, has drifted into Pisces as Earth's axis wobbles.",
+   "sky.html#con-Ari"
+  ],
+  [
+   "LIBRA",
+   "The scales: the only constellation of the zodiac that is not a living thing.",
+   "sky.html#con-Lib"
+  ],
+  [
+   "VIRGO",
+   "The second-largest constellation, and home of the Virgo Cluster of galaxies, about 54 million light-years away.",
+   "sky.html#con-Vir"
+  ],
+  [
+   "DRACO",
+   "The dragon that winds around the north celestial pole. Its star Thuban was the pole star when the pyramids were built.",
+   "sky.html#con-Dra"
+  ],
+  [
+   "HYDRA",
+   "The largest of the 88 constellations: a water snake more than 100 degrees long.",
+   "sky.html#con-Hya"
+  ],
+  [
+   "ORION",
+   "The hunter, home of Betelgeuse, Rigel and the Orion Nebula, a nursery of new stars 1,344 light-years away.",
+   "sky.html#con-Ori"
+  ],
+  [
+   "CETUS",
+   "The sea monster, home of Mira, a star that brightens and fades over about eleven months.",
+   "sky.html#con-Cet"
+  ],
+  [
+   "LUPUS",
+   "The wolf. In 1006 the brightest supernova on record appeared in Lupus.",
+   "sky.html#con-Lup"
+  ],
+  [
+   "MENSA",
+   "The table, named for Table Mountain above Cape Town: the faintest constellation, though part of the Large Magellanic Cloud lies in it.",
+   "sky.html#con-Men"
+  ],
+  [
+   "NORMA",
+   "The carpenter's square, a small southern constellation lying across the Milky Way.",
+   "sky.html#con-Nor"
+  ],
+  [
+   "PYXIS",
+   "The mariner's compass, one of the southern constellations Lacaille added in the 1750s.",
+   "sky.html#con-Pyx"
+  ],
+  [
+   "INDUS",
+   "A southern constellation added by Dutch navigators in the 1590s.",
+   "sky.html#con-Ind"
+  ],
+  [
+   "QUARK",
+   "Protons and neutrons are each made of three quarks, held together by gluons."
+  ],
+  [
+   "BOSON",
+   "A particle with whole-number spin, like the photon. The Higgs boson was found at CERN in 2012."
+  ],
+  [
+   "GLUON",
+   "The particle that carries the strong force, binding quarks into protons and neutrons."
+  ],
+  [
+   "LASER",
+   "Lasers fired at reflectors that Apollo crews left on the Moon measure its distance to within millimetres."
+  ],
+  [
+   "RADAR",
+   "Radar echoes bounced off Venus in the 1960s fixed the length of the astronomical unit, the distance from Earth to the Sun."
+  ],
+  [
+   "PROBE",
+   "An uncrewed spacecraft sent to study another world up close."
+  ],
+  [
+   "ROVER",
+   "A vehicle that drives across another world. Opportunity covered more than 45 kilometres of Mars."
+  ],
+  [
+   "FLYBY",
+   "A pass close to a world without stopping. Voyager 2 flew by all four giant planets."
+  ],
+  [
+   "MARIA",
+   "The dark 'seas' of the Moon: plains of old lava, not water. One is a mare."
+  ],
+  [
+   "BASIN",
+   "A huge impact crater. The Moon's South Pole–Aitken basin is about 2,500 kilometres across."
+  ],
+  [
+   "RILLE",
+   "A long, narrow channel on the Moon, often a collapsed lava tube."
+  ],
+  [
+   "RINGS",
+   "All four giant planets have rings; Saturn's are by far the brightest."
+  ],
+  [
+   "MOONS",
+   "Saturn has more known moons than any other planet: over 270."
+  ],
+  [
+   "STARS",
+   "About 9,000 stars are bright enough to see without a telescope, counting both hemispheres."
+  ],
+  [
+   "DWARF",
+   "A small star, like a red or white dwarf, or a small planet, like Pluto or Ceres."
+  ],
+  [
+   "GIANT",
+   "A star that has used up the hydrogen in its core and swollen to many times its old size."
+  ],
+  [
+   "FLARE",
+   "A sudden burst of energy on the Sun, graded A, B, C, M or X by how brightly it shines in X-rays."
+  ],
+  [
+   "STORM",
+   "Jupiter's Great Red Spot is a storm wider than Earth that has been watched since at least the 1830s.",
+   "ladder.html#jupiter"
+  ],
+  [
+   "NADIR",
+   "The point directly beneath you, opposite the zenith."
+  ],
+  [
+   "APSIS",
+   "The nearest or farthest point of an orbit. Perihelion and aphelion are the two apsides of an orbit around the Sun."
+  ],
+  [
+   "NODES",
+   "Where an orbit crosses a reference plane. Eclipses happen only when the Moon is near one of its nodes."
+  ],
+  [
+   "EPOCH",
+   "The moment for which star positions or orbital elements are given, such as J2000.0."
+  ],
+  [
+   "TIDES",
+   "The Moon's pull raises the tides, and their drag is slowly lengthening Earth's day."
+  ],
+  [
+   "SPACE",
+   "The Kármán line, 100 kilometres up, is one common definition of where space begins."
+  ],
+  [
+   "VOIDS",
+   "Vast regions nearly empty of galaxies, tens to hundreds of millions of light-years across."
+  ],
+  [
+   "HALOS",
+   "The faint spheres of old stars and dark matter that surround galaxies."
+  ],
+  [
+   "BULGE",
+   "The crowded centre of a spiral galaxy. The Milky Way's is stretched into a bar."
+  ],
+  [
+   "PULSE",
+   "A pulsar sends out a pulse with every turn, some of them hundreds of times a second."
+  ],
+  [
+   "PHASE",
+   "How much of the Moon's sunlit half faces Earth. It takes 29.5 days to go through every phase."
+  ],
+  [
+   "LIGHT",
+   "It covers about 300,000 kilometres every second. Everything you see, you see as it was when its light set out."
+  ],
+  [
+   "MAGMA",
+   "Io's volcanoes erupt some of the hottest lava in the Solar System.",
+   "ladder.html#io"
+  ],
+  [
+   "CLOUD",
+   "The Oort cloud: a shell of icy bodies that may reach more than a light-year from the Sun."
+  ],
+  [
+   "AXIAL",
+   "Earth's axial tilt of about 23.4 degrees is what gives us seasons."
+  ],
+  [
+   "POLAR",
+   "Mars has polar caps of water ice, topped in winter with frozen carbon dioxide.",
+   "ladder.html#mars"
+  ],
+  [
+   "WINDS",
+   "Neptune has the fastest winds measured on any planet, over 2,000 kilometres an hour.",
+   "ladder.html#neptune"
+  ],
+  [
+   "GAMMA",
+   "Gamma-ray bursts are the brightest explosions in the universe, seen across billions of light-years."
+  ],
+  [
+   "ALPHA",
+   "The brightest star in a constellation is usually given the Greek letter alpha, as in Alpha Centauri."
+  ],
+  [
+   "OMEGA",
+   "Omega Centauri, the largest globular cluster in the Milky Way, holds around ten million stars."
+  ],
+  [
+   "DELTA",
+   "Delta-v is the change in velocity a spacecraft must make to reach its target; budgets of it decide every mission."
+  ],
+  [
+   "SOYUZ",
+   "The Russian spacecraft that has carried crews since 1967, longer than any other design."
+  ],
+  [
+   "ARIEL",
+   "A moon of Uranus, named, like most of its sisters, for a character in Shakespeare.",
+   "ladder.html#ariel"
+  ],
+  [
+   "DIONE",
+   "A moon of Saturn found by the astronomer Giovanni Cassini in 1684.",
+   "ladder.html#dione"
+  ],
+  [
+   "THEBE",
+   "A small inner moon of Jupiter, found in Voyager 1 pictures in 1979."
+  ],
+  [
+   "METIS",
+   "Jupiter's innermost moon, which goes around in about seven hours."
+  ],
+  [
+   "HELIX",
+   "The Helix Nebula: the shed outer layers of a dying star, about 650 light-years away."
+  ],
+  [
+   "SCOPE",
+   "Short for telescope. Galileo first turned one on the sky in 1609."
+  ],
+  [
+   "PRISM",
+   "A prism spreads light into a spectrum, and a star's spectrum shows what it is made of."
+  ],
+  [
+   "MOUNT",
+   "An equatorial mount turns a telescope around an axis parallel to Earth's, so one motion follows the stars."
+  ],
+  [
+   "PIXEL",
+   "Webb's near-infrared camera has about 40 million pixels across its ten detectors."
+  ],
+  [
+   "RADIO",
+   "Radio astronomy began when Karl Jansky heard the Milky Way crackling in his receiver in 1932."
+  ],
+  [
+   "WAVES",
+   "Gravitational waves were first detected on 14 September 2015, from two black holes merging."
+  ],
+  [
+   "ARRAY",
+   "The Very Large Array in New Mexico: 27 dishes working together as one radio telescope."
+  ],
+  [
+   "ATLAS",
+   "A small moon that sweeps the edge of Saturn's A ring, and the name of the rocket that carried John Glenn into orbit."
+  ],
+  [
+   "GLENN",
+   "John Glenn, the first American to orbit Earth, aboard Friendship 7 on 20 February 1962."
+  ],
+  [
+   "SAGAN",
+   "Carl Sagan asked for Voyager 1 to turn around and photograph Earth: the Pale Blue Dot, 1990."
+  ],
+  [
+   "TYCHO",
+   "Tycho Brahe measured the planets so precisely that Kepler could find their laws. A bright crater on the Moon has his name."
+  ],
+  [
+   "RUBIN",
+   "Vera Rubin's measurements of how fast galaxies spin were key evidence for dark matter."
+  ],
+  [
+   "HOYLE",
+   "Fred Hoyle, who doubted the theory, gave it its name, 'Big Bang', on BBC radio in 1949."
+  ],
+  [
+   "DUNES",
+   "Titan has fields of dunes made of organic grains, some hundreds of kilometres long."
+  ],
+  [
+   "UMBRA",
+   "The darkest part of a shadow. During a total solar eclipse you are standing in the Moon's umbra."
+  ],
+  [
+   "METAL",
+   "To an astronomer every element heavier than helium is a 'metal'."
+  ],
+  [
+   "DECAY",
+   "Drag from the thin upper atmosphere slowly lowers satellites; the space station needs regular boosts to stay up."
+  ],
+  [
+   "BLACK",
+   "The black hole at the centre of the Milky Way, Sagittarius A*, has about four million times the Sun's mass.",
+   "ladder.html#sgr-a-star"
+  ],
+  [
+   "SWIFT",
+   "Comet Swift–Tuttle sheds the dust of the Perseid meteors every August."
+  ],
+  [
+   "NOVAE",
+   "Plural of nova: a white dwarf that flares when gas taken from a companion star ignites on its surface."
+  ],
+  [
+   "ROCKY",
+   "The four inner planets are rocky; the four outer ones are giants of gas and ice."
+  ],
+  [
+   "NIGHT",
+   "If space went on forever, unchanged, every line of sight would end on a star and the night would be bright. It is dark because the universe had a beginning."
+  ],
+  [
+   "STAGE",
+   "A section of a rocket that drops away when its fuel is spent. The Saturn V had three."
+  ],
+  [
+   "ABORT",
+   "Apollo 13's landing was called off after an oxygen tank exploded; the crew looped around the Moon and came home safely."
+  ],
+  [
+   "SCALE",
+   "From the ground under you to the edge of the observable universe is about 27 powers of ten."
+  ],
+  [
+   "YEARS",
+   "A light-year is the distance light travels in a year: about 9.46 trillion kilometres."
+  ],
+  [
+   "CYCLE",
+   "The Sun's activity rises and falls over a cycle of about eleven years."
+  ],
+  [
+   "SPOTS",
+   "Sunspots are cooler, darker patches where magnetic fields hold back the heat rising from below."
+  ],
+  [
+   "PLUME",
+   "Enceladus sprays plumes of water out of cracks near its south pole.",
+   "ladder.html#enceladus"
+  ],
+  [
+   "OCEAN",
+   "Europa very likely hides a salty ocean under its ice, holding more water than all of Earth’s oceans.",
+   "ladder.html#europa"
+  ],
+  [
+   "WATER",
+   "Water ice lies in permanently shadowed craters near the Moon's poles."
+  ],
+  [
+   "GROUP",
+   "The Local Group: the Milky Way, Andromeda, Triangulum and dozens of small galaxies.",
+   "ladder.html#scale-local-group"
+  ],
+  [
+   "ATOMS",
+   "The hydrogen and helium made in the first minutes after the Big Bang are still most of the atoms in the universe."
+  ],
+  [
+   "SHIFT",
+   "Redshift: light from distant galaxies is stretched to longer wavelengths as the space it crosses expands."
+  ],
+  [
+   "FIELD",
+   "The Hubble Deep Field, 1995, found thousands of galaxies in a patch of sky the size of a tennis ball seen from 100 metres."
+  ],
+  [
+   "SOLID",
+   "Rocky planets and moons have solid surfaces; Jupiter and Saturn have none to stand on."
+  ],
+  [
+   "CRUST",
+   "The Moon's far side has a thicker crust than its near side, which is one reason it has so few dark maria."
+  ],
+  [
+   "FROST",
+   "Mars's carbon dioxide frost turns to gas each spring, and the escaping gas carves spidery channels near its south pole."
+  ],
+  [
+   "GLARE",
+   "Coronagraphs block a star's glare so that faint planets or the Sun's corona beside it can be seen."
+  ],
+  [
+   "BEAMS",
+   "A pulsar's beams sweep space like a lighthouse's; we see a pulse each time one crosses Earth."
+  ],
+  [
+   "DRIFT",
+   "Precession makes Earth's axis drift in a circle every 26,000 years; in about 12,000 years Vega will be the pole star."
+  ],
+  [
+   "TWINS",
+   "Castor and Pollux, the twins of Gemini; Castor is actually six stars bound together."
+  ],
+  [
+   "EAGLE",
+   "The Eagle was Apollo 11’s lunar module, which landed on 20 July 1969; the Eagle Nebula holds the Pillars of Creation."
+  ],
+  [
+   "SHELL",
+   "Planetary nebulae are shells of gas shed by dying stars, lit by the hot core left behind."
+  ],
+  [
+   "CRASH",
+   "In 2022 NASA's DART spacecraft crashed into the asteroid Dimorphos on purpose and shortened its orbit by 32 minutes."
+  ],
+  [
+   "BELTS",
+   "Jupiter’s dark belts and pale zones are bands of cloud running around the planet, each in its own wind.",
+   "ladder.html#jupiter"
+  ],
+  [
+   "RELIC",
+   "The cosmic microwave background is the relic glow of the young universe, cooled now to 2.7 degrees above absolute zero.",
+   "ladder.html#cmb"
+  ],
+  [
+   "SPEED",
+   "Parker Solar Probe is the fastest object people have made, passing the Sun at about 690,000 kilometres an hour."
+  ],
+  [
+   "DEPTH",
+   "Webb looks so deep into space that it sees galaxies as they were less than 400 million years after the Big Bang."
+  ]
+ ]
+}

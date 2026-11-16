@@ -47,6 +47,8 @@
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;margin-top:26px;padding-bottom:40px}
 .card{grid-column:span 4;border:1px solid var(--hair);background:var(--dust);padding:16px 18px 18px;min-width:0;display:flex;flex-direction:column}
 .card.w8{grid-column:span 8} .card.w6{grid-column:span 6} .card.w12{grid-column:span 12}
+/* the Dispatch runs down beside four short cards */
+.card.tall{grid-row:span 2}
 .card > .eyebrow{margin-bottom:8px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
 .card > .eyebrow a{font-family:var(--f-display);font-size:11.5px;letter-spacing:.04em;text-transform:none;font-weight:500}
 .card h2{font-size:21px;line-height:1.2;font-stretch:108%}
@@ -54,7 +56,7 @@
 .card p{font-size:15.5px;line-height:1.55;margin-top:8px}
 .card .meta{margin-top:auto;padding-top:12px;font-family:var(--f-data);font-size:11px;color:var(--faint)}
 .card .empty{color:var(--faint);font-family:var(--f-display);font-size:13.5px;margin-top:4px}
-@media (max-width:980px){.card,.card.w8,.card.w6{grid-column:span 6}}
+@media (max-width:980px){.card,.card.w8,.card.w6{grid-column:span 6} .card.tall{grid-row:auto}}
 @media (max-width:680px){.card,.card.w8,.card.w6,.card.w12{grid-column:span 12}}
 
 .big{font-family:var(--f-data);font-size:30px;color:var(--starlight);font-variant-numeric:tabular-nums;line-height:1.15}
@@ -85,6 +87,38 @@
 .sources dt{font-family:var(--f-display);font-size:14px;font-weight:600;color:var(--starlight)}
 .sources dd{margin:3px 0 0;font-size:14.5px;line-height:1.5;color:var(--text)}
 .sources dd small{font-family:var(--f-data);font-size:11px;color:var(--faint)}
+
+/* ── the retro skin: the cards as painted-steel panels on one console, each named by an engraved plate; the clocks and counters
+   in the orange glow of nixie tubes; the space-weather readings as small meter windows ── */
+.event{position:relative;border:1px solid #3a3129;border-radius:6px;background:linear-gradient(var(--panel2),var(--panel));padding:24px 22px 20px;
+  box-shadow:inset 0 1px 0 rgba(255,235,196,.06),0 2px 0 var(--rim),0 12px 28px rgba(0,0,0,.45)}
+.event .k{justify-self:start}
+.event .clock,.card .big{display:inline-block;justify-self:start;padding:6px 14px 5px;border-radius:5px;background:radial-gradient(120% 140% at 50% 30%,#1c0d06,#090403);
+  box-shadow:inset 0 0 0 1px #000,inset 0 0 18px rgba(0,0,0,.9),0 0 0 4px #1c1915,0 0 0 5px #000;color:var(--nixie);text-shadow:0 0 6px rgba(255,138,61,.85),0 0 18px rgba(255,90,20,.45)}
+.card .big{align-self:flex-start;margin:4px 0 2px 5px;padding:4px 12px 3px}
+.card{position:relative;border:1px solid #3a3129;border-radius:6px;background:linear-gradient(var(--panel2),var(--panel));padding:26px 18px 18px;
+  box-shadow:inset 0 1px 0 rgba(255,235,196,.06),inset 0 -1px 0 rgba(0,0,0,.35),0 2px 0 var(--rim),0 10px 24px rgba(0,0,0,.4)}
+.card::before,.card::after,.event::before,.event::after{content:"";position:absolute;top:8px;width:6px;height:6px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle at 35% 35%,#7a726a,#2b2622 70%);box-shadow:0 0 0 1px #0b0a09,0 1px 0 rgba(255,235,196,.06)}
+.card::before,.event::before{left:8px}.card::after,.event::after{right:8px}
+.card > .eyebrow{align-items:center}
+.card > .eyebrow > span:first-child,.event .k{display:inline-block;padding:3px 9px 2px;border:1px solid #0b0907;border-radius:2px;background:linear-gradient(#2f2721,#1c1712);
+  box-shadow:inset 0 1px 0 rgba(255,235,196,.08),0 1px 0 rgba(255,235,196,.05);font-stretch:125%;font-weight:700;font-size:10px;letter-spacing:.18em;line-height:1.5;color:var(--engr);text-shadow:0 -1px 0 #000}
+.card > .eyebrow a{color:var(--engr2);text-decoration:none;border-bottom:1px solid rgba(232,220,192,.25)}
+.card > .eyebrow a:hover{color:var(--sodium);border-color:var(--sodium)}
+.sw div{border:0;padding:8px 10px 7px;border-radius:4px;background:#0f0d0b;box-shadow:inset 0 0 0 1px #000,inset 0 2px 8px rgba(0,0,0,.7),0 1px 0 rgba(255,235,196,.05)}
+.sw b{color:var(--phos);text-shadow:0 0 8px rgba(124,255,178,.45)}
+.sw .hot b{color:var(--nixie);text-shadow:0 0 8px rgba(255,138,61,.7)}
+
+/* the slide of the day, and the light-echo star */
+.card.slide .shot{display:block;margin:4px 0 10px;border-radius:3px;overflow:hidden;background:#050404;box-shadow:inset 0 0 0 1px #2b241d}
+.card.slide .shot img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;filter:contrast(1.04) saturate(1.06) sepia(.06)}
+.echo-form{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;margin-top:12px}
+.echo-form label{display:flex;flex-direction:column;gap:4px;font-family:var(--f-display);font-size:12px;color:var(--mute)}
+.echo-form input{min-height:36px;padding:0 10px;border:1px solid #3a3129;border-radius:4px;background:#0f0d0b;color:var(--starlight);font-family:var(--f-data);font-size:14px;color-scheme:dark}
+.echo .more{color:var(--mute);font-size:15px}
+.echo .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:12px}
+.echo .row .meta{margin:0;padding:0}
 </style>
 </head>
 <body>

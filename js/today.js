@@ -143,7 +143,7 @@
   }
 
   function newsCard(N) {
-    const box = card('w8', 'From the Dispatch', ['dispatch.html', 'All stories →']);
+    const box = card('tall', 'From the Dispatch', ['dispatch.html', 'All stories →']);
     const items = ((N && N.items) || []).slice(0, 6);
     if (!items.length) { empty(box, 'The news desk has not been fetched yet. Stories from NASA, ESA, ESO and the space press arrive with the site’s first daily refresh.'); return; }
     box.append(el('ul', { class: 'heads' }, items.map(a => el('li', null, O.ext(a.url, a.t), el('span', { class: 's', text: a.site + ' · ' + O.fmt.ago(new Date(a.date)) })))));
@@ -167,12 +167,12 @@
     const p = O.pick(items, 7); if (!p) { empty(box, 'The catalogue did not load.'); return; }
     box.append(el('h2', null, el('a', { href: 'ladder.html#' + p.id, text: p.n })), el('p', { text: p.note }));
     const left = el('p', { style: { color: 'var(--mute)' } }); box.append(left);
-    O.lightLeft(p.ly).then(r => left.append('The light from it arriving now left ' + r.when + (r.context ? ', when ' + r.context : '') + '.'));
+    O.lightLeft(p.ly).then(r => left.append('The light from it arriving now left ' + r.when + (r.context ? ', ' + r.link + ' ' + r.context : '') + '.'));
     box.append(el('div', { class: 'meta', text: O.fmt.ly(p.ly) + ' away' }));
   }
 
   function lostCard(Lo) {
-    const box = card('w6', 'From The Lost', ['lost.html', 'The Lost →']);
+    const box = card('', 'From The Lost', ['lost.html', 'The Lost →']);
     const ms = (Lo && Lo.missions) || []; if (!ms.length) { empty(box, 'The archive did not load.'); return; }
     const md = new Date().toISOString().slice(5, 10), today = ms.filter(m => String(m.when).slice(5, 10) === md), m = today[0] || O.pick(ms, 11);
     box.append(el('h2', null, el('a', { href: 'lost.html#' + m.id, text: m.n })), el('p', { style: { fontFamily: 'var(--f-display)', fontSize: '13px', color: 'var(--mute)' }, text: (today.length ? 'On this day · ' : '') + m.who + ' · ' + String(m.when).slice(0, 4) }),
@@ -180,7 +180,7 @@
   }
 
   function logCard(G) {
-    const box = card('w6', 'Ship log', ['log.html', 'Your log →']), L = O.log.all(), n = Object.keys(L).length, total = G && G.nodes ? Object.keys(G.nodes).length : 0;
+    const box = card('', 'Ship log', ['log.html', 'Your log →']), L = O.log.all(), n = Object.keys(L).length, total = G && G.nodes ? Object.keys(G.nodes).length : 0;
     box.append(el('div', { class: 'big', text: n + (total ? ' of ' + total : '') }), el('p', { style: { marginTop: '2px', color: 'var(--mute)' }, text: 'places, papers and stories you have found' }));
     if (total) box.append(el('div', { class: 'log-bar' }, el('i', { style: { width: Math.min(100, n / total * 100) + '%' } })));
     /* a rumour, in the manner of a ship's log: something you have not seen, next to something you have */
@@ -190,6 +190,57 @@
       const r = O.pick(pool, 2) || (() => { const ks = Object.keys(G.nodes).filter(k => !L[k] && !k.startsWith('page:')); const k = O.pick(ks, 2); return k ? [null, k] : null; })();
       if (r) box.append(el('p', null, r[0] ? 'Rumour: ' + G.nodes[r[0]][0] + ' leads to ' : 'Unexplored: ', el('a', { href: G.nodes[r[1]][2], text: G.nodes[r[1]][0] }), '.'));
     }
+  }
+
+  /* ── a slide from the Gallery, a different one each day ── */
+  function slideCard(Gal) {
+    const box = card('w6 slide', 'Slide of the day', ['gallery.html', 'The Gallery →']);
+    const all = []; for (const t of (Gal && Gal.trays) || []) (t.slides || []).forEach((s, i) => { if (O.safeUrl(s.img)) all.push([t, s, i]); });
+    if (!all.length) { empty(box, 'The slides arrive with the next data update.'); return; }
+    const [t, s, i] = O.pick(all, 5), href = 'gallery.html#' + encodeURIComponent(t.id) + '/' + (i + 1);
+    box.append(el('a', { class: 'shot', href, 'aria-label': s.title }, O.canLive ? el('img', { src: s.img, alt: '', loading: 'lazy', decoding: 'async' }) : null),
+      el('h2', null, el('a', { href, text: s.title })), el('div', { class: 'meta', text: t.name + (s.date ? ' · ' + String(s.date).slice(0, 4) : '') + ' · Credit: ' + s.credit }));
+  }
+
+  /* ── your light-echo star: as many light-years away as you are years old, so the light arriving from it tonight set out when you were born.
+     The date stays in this browser. Distances carry errors of a few per cent, and the card says so. ── */
+  function echoCard() {
+    const box = card('w6 echo', 'Your light-echo star', null), body = el('div', { class: 'echo' }); box.append(body);
+    const YR = 365.25 * 864e5, MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthYear = t => { const d = new Date(t); return MON[d.getUTCMonth()] + ' ' + d.getUTCFullYear(); };
+    const span = y => y < 1 ? Math.max(1, Math.round(y * 12)) + (Math.round(y * 12) === 1 ? ' month' : ' months') : O.fmt.sig(y, 2) + ' years';
+    const show = () => { O.clear(body); const b = O.store.get('birth', null); if (typeof b === 'string' && /^\d{4}-\d\d-\d\d$/.test(b) && Date.parse(b) < Date.now()) result(b); else form(); };
+    function form() {
+      const inp = el('input', { type: 'date', min: '1900-01-01', max: new Date().toISOString().slice(0, 10), required: true, 'aria-label': 'Your date of birth' });
+      body.append(el('p', { text: 'Some stars are as many light-years away as you are years old: the light arriving from them tonight set out when you were born.' }),
+        el('form', { class: 'echo-form', onsubmit: e => { e.preventDefault(); if (inp.value && Date.parse(inp.value) < Date.now()) { O.store.set('birth', inp.value); show(); } } },
+          el('label', null, el('span', { text: 'Born on' }), inp), el('button', { class: 'push', type: 'submit', text: 'Find my star' })),
+        el('div', { class: 'meta', text: 'The date stays in this browser; nothing is sent anywhere.' }));
+    }
+    function result(b) {
+      const born = Date.parse(b + 'T12:00:00Z'), age = (Date.now() - born) / YR;
+      body.append(el('p', { class: 'empty', text: 'Looking along the sky…' }));
+      O.load('data/catalog/stars.json').then(S => {
+        O.clear(body); if (!S || !S.rows) { empty(body, 'The star catalogue did not load.'); return; }
+        const C = Object.fromEntries(S.cols.map((k, i) => [k, i]));
+        const stars = S.rows.filter(r => r[C.name] && r[C.ly] > 0 && r[C.mag] != null && r[C.mag] <= 6);
+        const near = stars.reduce((a, r) => r[C.ly] < a[C.ly] ? r : a, stars[0]), again = el('button', { class: 'push', type: 'button', onclick: () => { O.store.set('birth', null); show(); }, text: 'Change the date' });
+        if (age < near[C.ly]) {
+          body.append(el('h2', null, el('a', { href: 'ladder.html#' + near[C.slug], text: near[C.name] })),
+            el('p', { text: 'No star is that close yet. The nearest you can see, ' + near[C.name] + ', is ' + near[C.ly] + ' light-years away: the light it sent the day you were born reaches Earth in ' + monthYear(born + near[C.ly] * YR) + '.' }),
+            el('div', { class: 'row' }, again)); return;
+        }
+        /* closest in distance, allowing for the few-per-cent error in it, and brighter stars first among near-equals */
+        const tol = Math.max(0.3, 0.02 * age), score = r => Math.abs(r[C.ly] - age) / tol + 0.3 * Math.max(0, r[C.mag] - 1.5);
+        const best = stars.slice().sort((x, y) => score(x) - score(y)).slice(0, 3), s0 = best[0], d = s0[C.ly] - age;
+        const rel = Math.abs(d) < 1 / 12 ? 'the month you were born' : span(Math.abs(d)) + (d > 0 ? ' before you were born' : ' after you were born');
+        body.append(el('h2', null, el('a', { href: 'ladder.html#' + s0[C.slug], text: s0[C.name] })),
+          el('p', { text: 'The light reaching you tonight from ' + s0[C.name] + ' set out in ' + monthYear(Date.now() - s0[C.ly] * YR) + ', ' + rel + '. It is ' + s0[C.ly] + ' light-years away' + (s0[C.mag] < 3 ? ', and easy to see' : s0[C.mag] < 4.5 ? ', and visible from most places' : ', and needs a dark sky') + '.' }),
+          best.length > 1 ? el('p', { class: 'more' }, 'Also about your age: ', best.slice(1).flatMap((r, i) => [i ? ' and ' : '', el('a', { href: 'ladder.html#' + r[C.slug], text: r[C.name] }), ' (' + r[C.ly] + ' light-years)']), '.') : null,
+          el('div', { class: 'row' }, again, el('span', { class: 'meta', text: 'Star distances carry errors of a few per cent.' })));
+      });
+    }
+    show();
   }
 
   /* ── sources and licences ── */
@@ -211,9 +262,11 @@
     ['Satellite orbits', 'CelesTrak general perturbations elements, propagated with satellite.js (SGP4)', 'public · MIT'],
     ['Close approaches', 'NASA/JPL Center for Near-Earth Object Studies, SBDB close-approach API', 'US government work'],
     ['Picture of the day', 'NASA Astronomy Picture of the Day; images shown only when NASA lists no copyright holder', 'per image'],
+    ['Gallery', 'NASA Image and Video Library, with NASA’s credit for each picture', 'NASA media guidelines'],
+    ['Games', 'Starword’s guesses checked against SCOWL, by Kevin Atkinson; figures and distances from the catalogues above', 'SCOWL licence'],
     ['Deep Space Network', 'NASA DSN Now', 'US government work'],
     ['3-D engine', 'three.js r149', 'MIT'],
-    ['Type', 'Archivo (Omnibus-Type), STIX Two Text (STI Pub), IBM Plex Mono (IBM)', 'SIL Open Font License']
+    ['Type', 'Archivo (Omnibus-Type), STIX Two Text (STI Pub), IBM Plex Mono (IBM), Courier Prime (The Courier Prime Project Authors)', 'SIL Open Font License']
   ];
   function sources() { $('#srcs').append(...SOURCES.map(s => el('div', { class: 's' }, el('dt', { text: s[0] }), el('dd', null, s[1] + ' ', el('small', { text: s[2] }))))); }
 
@@ -221,8 +274,8 @@
   dateLine(); strip(); event(); sources();
   addEventListener('resize', (() => { let t; return () => { clearTimeout(t); t = setTimeout(strip, 150); }; })());
   Promise.all([O.load('data/papers/digests.json'), O.load('data/papers/canon.json'), O.load('data/launches.json'), O.load('data/spaceweather.json'), O.load('data/news.json'),
-    O.load('data/apod.json'), O.load('data/catalog/structures.json'), O.load('data/lost.json'), O.graph()]).then(([dg, cn, ln, sw, nw, ap, st, lo, gr]) => {
-    paperCard(dg, cn); tonightCard(); launchCard(ln); weatherCard(sw); newsCard(nw); apodCard(ap); placeCard(st); lostCard(lo); logCard(gr);
+    O.load('data/apod.json'), O.load('data/catalog/structures.json'), O.load('data/lost.json'), O.graph(), O.load('data/gallery.json')]).then(([dg, cn, ln, sw, nw, ap, st, lo, gr, ga]) => {
+    paperCard(dg, cn); tonightCard(); launchCard(ln); weatherCard(sw); newsCard(nw); lostCard(lo); logCard(gr); apodCard(ap); placeCard(st); slideCard(ga); echoCard();
     if (location.hash === '#sources') $('#sources').scrollIntoView();
   });
   setInterval(() => {

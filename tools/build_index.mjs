@@ -28,7 +28,7 @@ const lost = read('data/lost.json').missions;
 const R = REG.build(D, A);
 
 const PAGES = [['index.html', 'Today'], ['ladder.html', 'The Ladder'], ['papers.html', 'Reading Room'], ['dispatch.html', 'Dispatch'], ['deck.html', 'Flight Deck'],
-  ['sky.html', 'Observatory'], ['atlas.html', 'Atlas'], ['lost.html', 'The Lost'], ['log.html', 'Ship Log']];
+  ['sky.html', 'Observatory'], ['gallery.html', 'Gallery'], ['games.html', 'Games'], ['atlas.html', 'Atlas'], ['lost.html', 'The Lost'], ['log.html', 'Ship Log']];
 
 /* ── nodes ── */
 const nodes = {}, edges = new Set(), missing = [];
@@ -98,7 +98,10 @@ for (const p of digests) push(p.t, 'paper', 'papers.html#' + p.id, 'arXiv ' + p.
 for (const t of glossary) push(t.t, 'term', 'papers.html#term-' + t.id, 'glossary', t.aka || [], 0.25);
 for (const m of lost) push(m.n, 'lost', 'lost.html#' + m.id, m.who + ' · ' + String(m.when).slice(0, 4), [], 0.2);
 const cons = read('data/catalog/constellations.json');
-for (const c of cons) push(c[1], 'con', 'sky.html#con-' + c[0], 'constellation · ' + c[0], [c[0]], 0.5);
+for (const c of cons) {                                        /* Serpens comes in two halves: one entry, found by either name */
+  const halves = cons.filter(x => x[0] === c[0]); if (halves[0] !== c) continue;
+  push(halves.length > 1 ? c[1].split(' ')[0] : c[1], 'con', 'sky.html#con-' + c[0], 'constellation · ' + c[0], [c[0], ...(halves.length > 1 ? halves.map(h => h[1]) : [])], 0.5);
+}
 
 writeFileSync(path.join(ROOT, 'data/search-index.json'), JSON.stringify({ built: new Date().toISOString(), items }));
 const edgeList = [...edges].map(k => k.split('|')).filter(([a, b]) => nodes[a] && nodes[b]);
