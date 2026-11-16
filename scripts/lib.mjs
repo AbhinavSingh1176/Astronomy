@@ -5,7 +5,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-export const UA = 'OWLT/1.0 (personal astronomy site; https://github.com/) node-fetch';
+/* who is asking: GitHub Actions sets GITHUB_REPOSITORY, so the services can see which site the requests come from */
+export const UA = 'OWLT/1.0 (personal astronomy site' + (process.env.GITHUB_REPOSITORY ? '; https://github.com/' + process.env.GITHUB_REPOSITORY : '') + ')';
 
 /* fetch with a time budget and a couple of polite retries */
 export async function get(url, { type = 'json', timeout = 20000, headers = {}, retries = 2, method = 'GET', body } = {}) {

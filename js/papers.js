@@ -210,5 +210,5 @@
   }
   function firstPaper() { const latest = DIG.length ? DIG[0].date : null, fresh = DIG.filter(p => p.date === latest); return O.pick(fresh.length ? fresh : DIG, 1) || CAN[0]; }
 
-  O.footer(document.body, ['Digests are written from each paper’s public arXiv abstract and link to the full paper. Canon accounts are written from the published originals. Neither replaces reading the paper.']);
+  O.footer(document.body, ['Digests are written from each paper’s public arXiv abstract and link to the full paper. Canon accounts are written from the published originals. Neither replaces reading the paper.', 'Thank you to arXiv for use of its open access interoperability.']);
 })();

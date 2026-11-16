@@ -966,7 +966,7 @@
     return O.fmt.ly(m / LY);
   }
   /* the scale in words, whatever the view is centred on */
-  const SCALE_BANDS = [[4e6, 'Up close'], [1.2e8, 'A planet'], [4e9, 'A planet and its moons'], [2.5e12, 'Planetary orbits'], [4e13, 'A planetary system'], [1e15, 'Where a star’s wind ends'],
+  const SCALE_BANDS = [[4e6, 'Up close'], [1.2e8, 'A planet'], [1e10, 'A planet and its moons'], [2.5e12, 'Planetary orbits'], [4e13, 'A planetary system'], [1e15, 'Where a star’s wind ends'],
     [1e17, 'Between the stars'], [3e18, 'Stellar neighbours'], [4e19, 'A stellar neighbourhood'], [6e20, 'A spiral arm'], [1.5e22, 'A galaxy'], [3e23, 'A group of galaxies'], [2e25, 'Superclusters'],
     [2e26, 'The cosmic web'], [Infinity, 'The observable universe']];
   function hud(ls, span) {
