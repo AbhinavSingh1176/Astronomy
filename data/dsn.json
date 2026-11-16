@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T15:57:04.328Z",
+ "fetched": "2026-11-16T16:37:00.559Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -15,24 +15,9 @@
      "targets": []
     },
     {
-     "name": "DSS23",
-     "az": 80,
-     "el": 6,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "JNO",
-       "name": "Juno",
-       "km": 786000000,
-       "rtlt": 5250
-      }
-     ]
-    },
-    {
      "name": "DSS24",
-     "az": 126,
-     "el": 21,
+     "az": 134,
+     "el": 27,
      "up": [
       {
        "sc": "SOHO",
@@ -66,16 +51,53 @@
     },
     {
      "name": "DSS26",
-     "az": 117,
-     "el": 10,
-     "up": [],
-     "down": [],
+     "az": 124,
+     "el": 17,
+     "up": [
+      {
+       "sc": "Advanced Composition Explorer",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "Advanced Composition Explorer",
+       "rate": 87650,
+       "band": "S",
+       "power": -110
+      }
+     ],
      "targets": [
       {
        "code": "ACE",
        "name": "Advanced Composition Explorer",
        "km": 1490000,
        "rtlt": 9.92
+      }
+     ]
+    },
+    {
+     "name": "DSS25",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS23",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "PSYC",
+       "name": "Psyche",
+       "km": null,
+       "rtlt": null
       }
      ]
     }
@@ -102,53 +124,24 @@
      "targets": []
     },
     {
-     "name": "DSS63",
-     "az": 0,
+     "name": "DSS56",
+     "az": 90,
      "el": 90,
      "up": [],
      "down": [],
      "targets": [
       {
-       "code": "EURC",
-       "name": "Europa Clipper",
-       "km": 17600000,
-       "rtlt": 117
-      }
-     ]
-    },
-    {
-     "name": "DSS56",
-     "az": 206,
-     "el": 20,
-     "up": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 178600,
-       "band": "Ka",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
        "code": "SPP",
        "name": "Parker Solar Probe",
        "km": 140000000,
-       "rtlt": 934
+       "rtlt": 933
       }
      ]
     },
     {
      "name": "DSS53",
-     "az": 151,
-     "el": 27,
+     "az": 161,
+     "el": 30,
      "up": [
       {
        "sc": "Lunar Reconnaissance Orbiter",
@@ -162,7 +155,7 @@
        "sc": "Lunar Reconnaissance Orbiter",
        "rate": 28590000,
        "band": "K",
-       "power": -87
+       "power": -86
       },
       {
        "sc": "Lunar Reconnaissance Orbiter",
@@ -182,16 +175,58 @@
     },
     {
      "name": "DSS65",
-     "az": 80,
-     "el": 90,
-     "up": [],
-     "down": [],
+     "az": 83,
+     "el": 13,
+     "up": [
+      {
+       "sc": "Roman Space Telescope",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "Roman Space Telescope",
+       "rate": 780000,
+       "band": "S",
+       "power": -98
+      }
+     ],
      "targets": [
       {
        "code": "RST",
        "name": "Roman Space Telescope",
        "km": 1310000,
-       "rtlt": 8.73
+       "rtlt": 8.72
+      }
+     ]
+    },
+    {
+     "name": "DSS63",
+     "az": 192,
+     "el": 29,
+     "up": [],
+     "down": [
+      {
+       "sc": "New Horizons",
+       "rate": 0,
+       "band": "X",
+       "power": -160
+      },
+      {
+       "sc": "New Horizons",
+       "rate": 631.2,
+       "band": "X",
+       "power": -150
+      }
+     ],
+     "targets": [
+      {
+       "code": "NHPC",
+       "name": "New Horizons",
+       "km": 9970000000,
+       "rtlt": 66500
       }
      ]
     }
@@ -202,43 +237,14 @@
    "name": "Canberra, Australia",
    "dishes": [
     {
-     "name": "DSS35",
-     "az": 300,
-     "el": 15,
-     "up": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 0,
-       "band": "X",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 354500,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "RST",
-       "name": "Roman Space Telescope",
-       "km": 1310000,
-       "rtlt": 8.73
-      }
-     ]
-    },
-    {
      "name": "DSS43",
-     "az": 64,
-     "el": 12,
+     "az": 57,
+     "el": 19,
      "up": [
       {
        "sc": "Juno",
        "rate": 0,
-       "band": "S",
+       "band": "X",
        "power": 19
       }
      ],
@@ -255,14 +261,14 @@
        "code": "JNO",
        "name": "Juno",
        "km": 786000000,
-       "rtlt": 5250
+       "rtlt": 5240
       }
      ]
     },
     {
      "name": "DSS36",
-     "az": 63,
-     "el": 11,
+     "az": 56,
+     "el": 18,
      "up": [],
      "down": [],
      "targets": [
@@ -283,6 +289,50 @@
        "name": "Mars Reconnaissance Orbiter",
        "km": 195000000,
        "rtlt": 1300
+      }
+     ]
+    },
+    {
+     "name": "DSS34",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "PSYC",
+       "name": "Psyche",
+       "km": 242000000,
+       "rtlt": 1610
+      }
+     ]
+    },
+    {
+     "name": "DSS35",
+     "az": 0,
+     "el": 90,
+     "up": [
+      {
+       "sc": "ESCAPADE Gold",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "ESCAPADE Gold",
+       "rate": 0,
+       "band": "X",
+       "power": -120
+      }
+     ],
+     "targets": [
+      {
+       "code": "ESCG",
+       "name": "ESCAPADE Gold",
+       "km": 2140000,
+       "rtlt": 14.3
       }
      ]
     }

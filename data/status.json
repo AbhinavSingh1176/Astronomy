@@ -2,62 +2,60 @@
  "sources": {
   "arxiv": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
+   "at": "2026-11-16T16:37:09.598Z",
    "n": 250,
    "file": "data/papers/arxiv.json",
    "source": "arXiv"
   },
   "news": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
+   "at": "2026-11-16T16:37:09.598Z",
    "n": 90,
    "file": "data/news.json",
    "source": "Spaceflight News API and agency feeds"
   },
   "launches": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
+   "at": "2026-11-16T16:37:09.598Z",
    "n": 60,
    "file": "data/launches.json",
    "source": "Launch Library 2"
   },
   "spaceweather": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
-   "n": 3,
+   "at": "2026-11-16T16:37:09.598Z",
+   "n": 5,
    "file": "data/spaceweather.json",
    "source": "NOAA SWPC"
   },
   "tle": {
-   "ok": false,
-   "at": "2026-11-16T06:23:17.442Z",
+   "ok": true,
+   "at": "2026-11-16T16:37:09.598Z",
    "n": 14,
    "file": "data/tle.json",
-   "source": "CelesTrak",
-   "tried": "2026-11-16T15:57:43.770Z",
-   "error": "no ISS elements in the response"
+   "source": "CelesTrak"
   },
   "neo": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
+   "at": "2026-11-16T16:37:09.598Z",
    "n": 33,
    "file": "data/neo.json",
    "source": "NASA/JPL CNEOS"
   },
   "apod": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
+   "at": "2026-11-16T16:37:09.598Z",
    "n": 2,
    "file": "data/apod.json",
    "source": "NASA APOD"
   },
   "dsn": {
    "ok": true,
-   "at": "2026-11-16T15:57:43.770Z",
-   "n": 13,
+   "at": "2026-11-16T16:37:09.598Z",
+   "n": 15,
    "file": "data/dsn.json",
    "source": "NASA DSN Now"
   }
  },
- "run": "2026-11-16T15:57:43.770Z"
+ "run": "2026-11-16T16:37:09.598Z"
 }
