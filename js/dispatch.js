@@ -39,7 +39,8 @@
     }
     /* the teletype: twice over, so the loop is seamless */
     const run = el('div', { class: 'run' }), heads = all.slice(0, 16).map(a => el('span', null, el('b', { text: a.site.toUpperCase() }), O.ext(a.url, a.t)));
-    run.append(...heads, ...heads.map(n => n.cloneNode(true))); run.style.setProperty('--dur', Math.max(60, heads.length * 9) + 's'); tick.append(run); tick.hidden = false;
+    if (O.reduced) run.append(...heads.slice(0, 5)); else run.append(...heads, ...heads.map(n => n.cloneNode(true)));      /* a still teletype when motion is turned down */
+    run.style.setProperty('--dur', Math.max(60, heads.length * 9) + 's'); tick.append(run); tick.hidden = false;
     const lead = items.find(a => a.sum && a.sum.length > 80) || items[0];
     if (!lead) { front.append(el('div', { class: 'lead' }, el('h2', { text: 'Nothing from ' + who + ' in this edition.' }))); return; }
     const rest = items.filter(a => a !== lead);
