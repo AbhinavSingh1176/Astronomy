@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T17:42:00.735Z",
+ "fetched": "2026-11-17T01:53:09.626Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,128 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "d622b8aed7bb",
+   "t": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
+   "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago/",
+   "site": "NASA",
+   "date": "2026-11-16T23:12:45.000Z",
+   "sum": "Written by Candice Bedford, Research Scientist at Purdue University Date: Nov. 16, 2026 During the Perseverance rover’s investigation of “Idubi” — an area of ancient Martian crust exposed in the “Lac de Charmes” region, outside of Jezero crater — the Perseverance rover team has been captivated by a cluster of eerily bright, light-toned rocks in […]",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "52b415c3a5a5",
+   "t": "A Collage Showing 49 Drill Holes Made by NASA’s Curiosity Mars Rover",
+   "url": "https://science.nasa.gov/photojournal/a-collage-showing-49-drill-holes-made-by-nasas-curiosity-mars-rover/",
+   "site": "NASA",
+   "date": "2026-11-16T22:05:23.000Z",
+   "sum": "Description This collage shows 49 drill holes captured by NASA’s Curiosity Mars rover as of November 2026. Each hole represents a sample collected from rocks on the Martian surface; Curiosity’s drill, located on the end of its robotic arm, drops pulverized rock samples into instruments in its belly that analyze their composition. These images were […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "5aff358b7a20",
+   "t": "Launch Preview: Ariane 6 to launch Amazon satellites, Falcon 9 to launch government missions",
+   "url": "https://www.nasaspaceflight.com/2026/11/launch-preview-111626/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-16T21:57:02.000Z",
+   "sum": "Following a week of busy launch activity, the worldwide launch manifest is set to see… The post Launch Preview: Ariane 6 to launch Amazon satellites, Falcon 9 to launch government missions appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "f667d33b61fb",
+   "t": "This Supernova is 50 Million Light Years Away, But That's Close Enough For Astronomers",
+   "url": "https://www.universetoday.com/articles/this-supernova-is-50-million-light-years-away-but-thats-close-enough-for-astronomers",
+   "site": "Universe Today",
+   "date": "2026-11-16T21:11:30.000Z",
+   "sum": "A new supernova has been detected in a spiral galaxy about 50 million light years away. That's close enough for detatiled follow-up observations, which have already begun. It's a type Ia supernova, meaning it's an exploding white dwarf rather than a massive star ending its life in a core-collapse detonation. Astronomers will watch as its light fades and changes over the next days, months, and years to track the…",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "6e0c614892de",
+   "t": "NASA Receives 16th Consecutive ‘Clean’ Financial Audit Opinion",
+   "url": "https://www.nasa.gov/news-release/nasa-receives-16th-consecutive-clean-financial-audit-opinion/",
+   "site": "NASA",
+   "date": "2026-11-16T20:30:40.000Z",
+   "sum": "For the 16th consecutive year, NASA has received an unmodified, or “clean,” opinion from an external auditor on its fiscal year 2026 financial statements. The rating is the best possible audit opinion, certifying that NASA’s financial statements conform with Generally Accepted Accounting Principles for federal agencies and accurately present the agency’s financial position. “Our responsibility […]",
+   "desk": "policy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "69932f359c93",
+   "t": "SpaceNukes Opens Los Alamos Manufacture and Materials Facility to Build Its Next-Generation Space Reactor",
+   "url": "https://spacenews.com/spacenukes-opens-los-alamos-manufacture-and-materials-facility-to-build-its-next-generation-space-reactor/",
+   "site": "SpaceNews",
+   "date": "2026-11-16T20:00:00.000Z",
+   "sum": "LOS ALAMOS, N.M., Nov. 16, 2026 — Space Nuclear Power Corp. (SpaceNukes) opened its Manufacture and Materials Development Facility at 150 Central Park Square in Los Alamos on Nov. 13. […] The post SpaceNukes Opens Los Alamos Manufacture and Materials Facility to Build Its Next-Generation Space Reactor appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "6fa189556cdd",
+   "t": "When will humans actually fly on Starship?",
+   "url": "https://arstechnica.com/space/2026/11/when-will-humans-actually-fly-on-starship/",
+   "site": "Arstechnica",
+   "date": "2026-11-16T19:46:08.000Z",
+   "sum": "All estimates of human spaceflight on Starship should be taken with a gigantic grain of salt.",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "233999d10f85",
+   "t": "This Rare Binary Star Emits Radio Pulses Every Few Minutes. Will It Eventually Explode?",
+   "url": "https://www.universetoday.com/articles/this-rare-binary-star-emits-radio-pulses-every-few-minutes-will-it-eventually-explode",
+   "site": "Universe Today",
+   "date": "2026-11-16T19:30:47.000Z",
+   "sum": "Astronomers have found a Long Period Radio Transient about 5,000 light years away that's different from other LPTs. Other LPTs have a white dwarf and a red dwarf, but this one has a white dwarf and a main sequence star. The exact cause of the binary pair's radio pulses isn't certain, but this work narrows it down. It also shows that these binaries could be common progenitors for Type Ia supernova explosions.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "149de7498bd8",
+   "t": "Sentinel-6B in Orbit Around Earth",
+   "url": "https://science.nasa.gov/photojournal/sentinel-6b-in-orbit-around-earth/",
+   "site": "NASA",
+   "date": "2026-11-16T18:52:32.000Z",
+   "sum": "Description This artist’s concept shows the Sentinel-6B satellite, which will become the reference satellite for other missions studying sea surface height.",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "c6377ff964f9",
+   "t": "Thunderbirds in Formation",
+   "url": "https://www.nasa.gov/image-article/thunderbirds-in-formation/",
+   "site": "NASA",
+   "date": "2026-11-16T18:34:47.000Z",
+   "sum": "U.S. Air Force Thunderbirds fighter jets pass overhead during the agency’s MAX POWER expo and air show on Saturday, Nov. 7, 2026, at NASA’s Kennedy Space Center in Florida. NASA’s inaugural MAX POWER was an aerospace festival celebrating the past, present, and future of flight and space exploration in honor of America’s 250th anniversary. Image […]",
+   "desk": "policy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "af3371b2a8d1",
+   "t": "UK MOD Defends Satcom Resilience Amid SpaceX Starshield Concerns",
+   "url": "https://europeanspaceflight.com/uk-mod-defends-satcom-resilience-amid-spacex-starshield-concerns/",
+   "site": "European Spaceflight",
+   "date": "2026-11-16T17:50:24.000Z",
+   "sum": "The UK government has defended the resilience of its satellite-based military communications, saying that while it uses SpaceX’s Starshield service, it does not depend on any single commercial provider for critical communications. The assurance comes amid concerns about reliance on SpaceX after it emerged that restrictions had been placed on Ukraine’s access to the company’s […] The post UK MOD Defends Satcom…",
+   "desk": "policy",
+   "who": [
+    "SpaceX"
+   ]
+  },
   {
    "id": "2eb37a9d39b5",
    "t": "Contractor to Civil Servant: NASA Welcomes Jim Mirandy",
@@ -715,16 +837,6 @@
    "who": []
   },
   {
-   "id": "2430184a9437",
-   "t": "Planets Don't Just Disappear, But They Can Wobble Out of Sight if Their Neighbour is Close Enough",
-   "url": "https://www.universetoday.com/articles/planets-dont-just-disappear-but-they-can-wobble-out-of-sight-if-their-neighbour-is-close-enough",
-   "site": "Universe Today",
-   "date": "2026-11-11T13:02:29.000Z",
-   "sum": "TESS watched an exoplanet about 1,000 light years away as it repeatedly transited in front of its star for seven years. But astronomers were surprised to find that the hot Jupiter disappeared. Of course, planets don't just disappear. Something interrupted its transits from our point of view, and astronomers think they've figured out what happened. An unseen, nearby giant planet companion tugged on it until TESS…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "c9ac89790758",
    "t": "Horizon Microtechnologies Targets Constellation-Scale Production As Esa Phi-Lab Selection Strengthens Industrialisation Push",
    "url": "https://spacenews.com/horizon-microtechnologies-targets-constellation-scale-production-as-esa-phi-lab-selection-strengthens-industrialisation-push/",
@@ -769,16 +881,6 @@
    ]
   },
   {
-   "id": "bedaf83d2bd2",
-   "t": "Automated Assembly in Space is the Future and NOM4D is Showing the Way",
-   "url": "https://www.universetoday.com/articles/automated-assembly-in-space-is-the-future-and-nom4d-is-showing-the-way",
-   "site": "Universe Today",
-   "date": "2026-11-10T19:52:32.000Z",
-   "sum": "The ability to build large structures in space is maturing. The ISS, Mir, and Tiangong were built in space from pre-constructed modules, but a new program called NOM4D is taking space construction to the next level. It recently showed that a simple robot can create truss-like structures in space from premade components. Is the sky the limit for NOM4D?",
-   "desk": "missions",
-   "who": []
-  },
-  {
    "id": "0c075ce89994",
    "t": "NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities",
    "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-join-voyager-1-one-light-day-activities/",
@@ -788,20 +890,6 @@
    "desk": "launch",
    "who": [
     "NASA"
-   ]
-  },
-  {
-   "id": "b0a4ee550888",
-   "t": "NASA to Welcome Expedition 74 Astronauts Home at Space Center Houston",
-   "url": "https://www.nasa.gov/news-release/nasa-to-welcome-expedition-74-astronauts-home-at-space-center-houston/",
-   "site": "NASA",
-   "date": "2026-11-10T18:06:33.000Z",
-   "sum": "NASA will welcome home the Expedition 74 crew during a public event at Space Center Houston following their return from a long-duration mission aboard the International Space Station. NASA astronauts Jessica Meir, Jack Hathaway, and Chris Williams; ESA (European Space Agency) astronaut Sophie Adenot; and Roscosmos cosmonauts Sergey Kud‑Sverchkov and Sergei Mikaev will share mission […]",
-   "desk": "missions",
-   "who": [
-    "NASA",
-    "ESA",
-    "Roscosmos"
    ]
   },
   {
@@ -822,82 +910,6 @@
    "date": "2026-11-10T18:00:00.000Z",
    "sum": "The oldest pair of compact quasars ever observed has been found only 900 million years after the Big Bang. Scientists say there is no theoretical explanation for how the pair of actively feeding black holes grew so massive at such an early time in the history of the Universe. The pair of quasars has been given the Hawaiian nickname Nāpōwawāʻenakaulua.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "4c4fe289b24d",
-   "t": "One space station company sues another for copying its work",
-   "url": "https://arstechnica.com/space/2026/11/one-space-station-company-sues-another-for-copying-its-work/",
-   "site": "Arstechnica",
-   "date": "2026-11-10T16:17:51.000Z",
-   "sum": "\"NASA advised that Vast’s submission in some locations substituted 'the PAM Provider' for Axiom\"",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "f1e81eb74762",
-   "t": "NASA Scientists Show How Gravitational Waves Can Reveal New Worlds",
-   "url": "https://science.nasa.gov/missions/lisa/gravitational-waves-can-reveal-new-worlds/",
-   "site": "NASA",
-   "date": "2026-11-10T16:00:26.000Z",
-   "sum": "The LISA (Laser Interferometer Space Antenna) observatory, now in development, will detect gravitational waves, the tiny ripples in space-time caused by orbiting masses. Now two studies led by NASA astrophysicists show in new detail how LISA could reveal a new and unique population of exoplanets — worlds beyond our solar system — throughout our galaxy. […]",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "63c804a16236",
-   "t": "DLR to Purchase 80 Red Kite Sounding Rocket Motors",
-   "url": "https://europeanspaceflight.com/dlr-to-purchase-80-red-kite-sounding-rocket-motors/",
-   "site": "European Spaceflight",
-   "date": "2026-11-10T15:44:40.000Z",
-   "sum": "The German Aerospace Center (DLR) is preparing to purchase 80 Red Kite solid rocket motors from German defence company Bayern-Chemie to support future sounding rocket missions. According to a procurement notice published on 2 November, DLR plans to acquire 80 ITAR-free solid-fuel rocket motors for the agency’s Mobile Rocket Base (MORABA) team, which conducts sounding […] The post DLR to Purchase 80 Red Kite Sounding…",
-   "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "262906979a82",
-   "t": "CHAPEA Crew Leaves a Mark",
-   "url": "https://www.nasa.gov/image-article/chapea-crew-leaves-a-mark/",
-   "site": "NASA",
-   "date": "2026-11-10T14:57:55.000Z",
-   "sum": "The Crew Health and Performance Exploration Analog (CHAPEA) Mission 2 crew arranged photos around a boot print in the simulated Martian sand outside their habitat on Aug. 31, 2026. The crew recently exited their habitat on Saturday, Oct. 31, after 378 days of isolation in a facility at the agency’s Johnson Space Center in Houston. Health […]",
-   "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "e46769eae0b4",
-   "t": "Kratos and Seagate Space Partner to Advance Mobile Offshore Launch Capabilities for National Security Missions",
-   "url": "https://spacenews.com/kratos-and-seagate-space-partner-to-advance-mobile-offshore-launch-capabilities-for-national-security-missions/",
-   "site": "SpaceNews",
-   "date": "2026-11-10T14:00:00.000Z",
-   "sum": "SAN DIEGO, CA, November 10, 2026 – Kratos Defense & Security Solutions, Inc., a technology company in defense, national security, and global markets, today announced a long-term agreement with Seagate […] The post Kratos and Seagate Space Partner to Advance Mobile Offshore Launch Capabilities for National Security Missions appeared first on SpaceNews.",
-   "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "10af5c1a4257",
-   "t": "ESCAPADE on its way to Mars after Earth flybys",
-   "url": "https://spacenews.com/escapade-on-its-way-to-mars-after-earth-flybys/",
-   "site": "SpaceNews",
-   "date": "2026-11-10T08:01:39.000Z",
-   "sum": "Two NASA smallsats are headed toward Mars after completing flybys of Earth nearly a year after their launch. The post ESCAPADE on its way to Mars after Earth flybys appeared first on SpaceNews.",
-   "desk": "launch",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "f02576229447",
-   "t": "Isar Aerospace Could Launch Third Spectrum Rocket as Early as 26 November",
-   "url": "https://europeanspaceflight.com/isar-aerospace-could-launch-third-spectrum-rocket-as-early-as-26-november/",
-   "site": "European Spaceflight",
-   "date": "2026-11-10T07:04:22.000Z",
-   "sum": "German launch company Isar Aerospace could attempt the third flight of its Spectrum rocket from Andøya Spaceport in Norway as early as 26 November, according to an aviation notice published on 28 October. The notice, published by Norwegian air navigation services provider Avinor, outlines a launch window for the flight opening on 26 November 2026 […] The post Isar Aerospace Could Launch Third Spectrum Rocket as…",
-   "desk": "launch",
    "who": []
   },
   {

@@ -35,6 +35,106 @@
    ]
   },
   {
+   "id": "2611-17571",
+   "arxiv": "2611.17571",
+   "t": "Receiving Exoplanet Messages with Gravitational-wave Carriers: The Gravitational-wave Radial Velocity Method",
+   "by": "Casey McGrath",
+   "date": "2026-11-12",
+   "added": "2026-11-17",
+   "cat": "astro-ph.SR",
+   "status": "21 pages, 7 figures. Published by The Astrophysical Journal. Published in Astrophysical Journal 1012 (2026) pp. 21",
+   "url": "https://arxiv.org/abs/2611.17571",
+   "one": "In this work we show that while similar to electromagnetic-based RV, this GW-based method depends on the ''phase modulation index'' (PMI), a parameter that is more sensitive to high-mass, long-period exoplanets.",
+   "q": "Gravitational-wave (GW) radial velocity (RV) may offer a new method for detecting exoplanets, one that would primarily target planets orbiting GW-emitting, ultracompact, post-main-sequence stellar objects such as white dwarfs, neutron stars, and black holes. We investigate the potential of GW RV for GW sources in both the mid-frequency spectrum (where the upcoming LISA mission will operate) and the high-frequency spectrum (where the current LIGO-Virgo-KAGRA (LVK) observatories operate).",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract",
+     "Remarkably, we find that the PMI increases by a factor of ~O(10⁴ - 10⁶) going from the mid-frequency to the high-frequency GW spectrum, which results in a greater redistribution of observed power due to the exoplanet's presence."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "black-hole",
+    "gravitational-wave",
+    "main-sequence",
+    "neutron-star"
+   ],
+   "links": [
+    "canon:mayor-queloz-1995"
+   ]
+  },
+  {
+   "id": "2611-16687",
+   "arxiv": "2611.16687",
+   "t": "Satellite pairs in the Local Group: from spatial clustering to dynamical associations in observations and ΛCDM simulations",
+   "by": "Mariana P. Júlio, Marcel S. Pawlowski and Noam I. Libeskind",
+   "date": "2026-11-12",
+   "added": "2026-11-17",
+   "cat": "astro-ph.GA",
+   "status": "Accepted for publication in ApJ on 17-10-2026. 30 pages, 12 figures, 8 tables",
+   "url": "https://arxiv.org/abs/2611.16687",
+   "one": "We identify close nearest-neighbour associations by comparing the observed satellite distributions with isotropic populations that reproduce the radial distributions of each host, and investigate their physical nature using line-of-sight velocities, proper motions, and gravitational binding estimates.",
+   "q": "Our comparison uses three distinct simulated Local Group analogues drawn from the HESTIA suite, allowing us to assess the observed pair statistics against multiple cosmological realisations of the Local Group environment. We find that the MW exhibits a significant excess of close satellite associations relative to isotropic expectations, with a pairing efficiency of ~53%, nearly twice that found in the simulated analogues (~17-27%).",
+   "how": "We investigate the incidence and physical nature of satellite galaxy pairs in the Local Group using updated observational data for the Milky Way (MW) and Andromeda (M31), together with analogues from the HESTIA constrained cosmological simulations.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "This excess persists after applying a stellar mass cut (M⋆> 10⁴ M☉) to match the resolution limits of the simulations."
+    ],
+    [
+     "From the abstract (2)",
+     "In contrast, the M31 satellite system is broadly consistent with isotropy, with a pairing efficiency of ~28%."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "lambda-cdm"
+   ],
+   "links": [
+    "obj:milky-way"
+   ]
+  },
+  {
+   "id": "2611-16225",
+   "arxiv": "2611.16225",
+   "t": "Jet energetics and remnant magnetism in short gamma-ray bursts from binary neutron-star mergers: A statistical study via broadband afterglow modeling",
+   "by": "Changwen Zeng, Zhiwei Chen, Youjun Lu and 2 others",
+   "date": "2026-11-12",
+   "added": "2026-11-17",
+   "cat": "astro-ph.HE",
+   "status": "24 pages, 14 figures; accepted for publication in A&A",
+   "url": "https://arxiv.org/abs/2611.16225",
+   "one": "For the 15 strictly constrained bursts, we find a median Eₖ ≃ 3.8×10⁴⁹ erg and η_γ ≃ 0.35, with respective 68% intervals of [5.1×10⁴⁸,1.9×10⁵⁰] erg and [0.09, 0.79].",
+   "q": "Short gamma-ray bursts (sGRBs) are believed to originate from compact binary mergers, particularly binary neutron star (BNS) mergers, providing a probe of jet energetics and merger remnants. We derive distributions of beaming-corrected jet kinetic energy Eₖ and radiative efficiency η_γ, and combine these with binary population synthesis and numerical simulations to infer remnant black hole (BH) magnetic fields assuming the Blandford-Znajek (BZ) jet-launching mechanism.",
+   "how": "We compile broadband afterglow observations of 40 sGRBs and perform forward-shock modeling with off-axis Gaussian jets, excluding data potentially affected by additional energy injection.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "The inferred magnetic field supplied by the accretion disk and threading the BH horizon is approximately 7×10¹⁵ G, with a 68% credible interval of [2.3×10¹⁵,2.4×10¹⁶] G, depending slightly on the neutron star equation of state."
+    ],
+    [
+     "From the abstract (2)",
+     "The full sample yields a higher median field of approximately 2×10¹⁶ G, with the high-energy and high-field tails predominantly contributed by less well-constrained bursts."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "black-hole",
+    "neutron-star",
+    "relativistic-jet"
+   ],
+   "links": [
+    "canon:hewish-1968"
+   ]
+  },
+  {
    "id": "2611-16783",
    "arxiv": "2611.16783",
    "t": "The Same But Different: SiO₂ Clouds in Two L-Dwarfs with JWST",
