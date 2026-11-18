@@ -1,16 +1,221 @@
 {
- "fetched": "2026-11-17T16:09:05.484Z",
+ "fetched": "2026-11-18T01:00:25.323Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
   "ESA": "failed",
-  "ESO": 10,
+  "ESO": "failed",
   "NASA": 10,
   "NOIRLab": 10,
   "Universe Today": 20,
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "0d77de9a27ab",
+   "t": "Computer Simulations Provide the Best Explanation for Those \"Little Red Dots\" Yet!",
+   "url": "https://www.universetoday.com/articles/computer-simulations-provide-the-best-explanation-for-those-little-red-dots-yet",
+   "site": "Universe Today",
+   "date": "2026-11-17T22:58:52.000Z",
+   "sum": "Tiny ‘Little Red Dot’ galaxies found by the James Webb Space Telescope are revealed to be the remnants of supermassive primordial stars surrounded by dense gaseous envelopes.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "4ab4597eb49d",
+   "t": "Rocket Lab’s Electron completes 100th mission, Neutron progresses toward debut mission",
+   "url": "https://www.nasaspaceflight.com/2026/11/rocket-lab-update-1126/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-17T22:24:58.000Z",
+   "sum": "Last weekend, Rocket Lab’s workhorse Electron rocket officially completed its 100th mission, becoming the fastest… The post Rocket Lab’s Electron completes 100th mission, Neutron progresses toward debut mission appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": [
+    "Rocket Lab"
+   ]
+  },
+  {
+   "id": "32110fc5e0f5",
+   "t": "NASA Launches Nuclear Power Systems Student Contest",
+   "url": "https://science.nasa.gov/centers-and-facilities/glenn/nasa-launches-nuclear-power-systems-student-contest/",
+   "site": "NASA",
+   "date": "2026-11-17T22:02:48.000Z",
+   "sum": "NASA’s Power to Explore Student Challenge kicked off Tuesday, Nov. 17. The science, engineering, technology, and mathematics (STEM) challenge invites kindergarten through 12th grade students in the United States to learn about space nuclear power systems and illustrate how these nuclear “batteries” could help power their lunar exploration vision. Students are also invited to write […]",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "310b0bf5a829",
+   "t": "NASA Space Apps Challenge Breaks Global Hackathon Records",
+   "url": "https://science.nasa.gov/open-science/nasa-space-apps-challenge-breaks-global-hackathon-records/",
+   "site": "NASA",
+   "date": "2026-11-17T21:50:34.000Z",
+   "sum": "On Nov. 14 and 15, NASA held the annual Space Apps Challenge with a record-breaking 181,835 registered participants taking part in 593 events around the world. The annual hackathon invites participants to use NASA’s open data to address one of 14 challenges focused on space exploration or Earth science. This year, the hackathon drew 59% […]",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "a5ce76106b9d",
+   "t": "Black Holes and Their Mysterious Bright Structures Explained",
+   "url": "https://www.universetoday.com/articles/black-holes-and-their-mysterious-bright-structures-explained",
+   "site": "Universe Today",
+   "date": "2026-11-17T21:23:46.000Z",
+   "sum": "Black hole jets from the SMBH in Centaurus A, and from some other SMBH, are brighter on their edges than in their centers. It's called limb brightening, and it's unexpected, and astrophysicists want to know what causes it. They found their answer in detailed plasma physics simulations, and the results could also help efforts to develop fusion power.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "69fee50cb49a",
+   "t": "BPS Digital AVATAR Challenge",
+   "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/bps-digital-avatar-challenge/",
+   "site": "NASA",
+   "date": "2026-11-17T20:39:38.000Z",
+   "sum": "The NASA Space Biology Program within the Biological and Physical Sciences (BPS) Division investigates how living systems respond across the full spectrum of biological organization to advance understanding of how living systems respond to the unique stressors of space exploration—including microgravity, ionizing radiation, low magnetic fields, and elevated CO₂. As NASA prepares for long-duration deep […]",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "8be607bf9db1",
+   "t": "Senate Appropriators Release $1.072 Trillion Defense Bill",
+   "url": "https://spacepolicyonline.com/news/senate-appropriators-release-1-072-trillion-defense-bill/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-17T20:34:15.000Z",
+   "sum": "The Senate Appropriations Committee released its FY2027 defense spending bill last night. The total includes $1.072 trillion for DOD, essentially the same as the Trump Administration’s appropriations request, but it […]",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "322fa129b2e5",
+   "t": "New Album of Baby Star Sounds Shared by NASA’s Chandra",
+   "url": "https://science.nasa.gov/missions/chandra/new-album-of-baby-star-sounds-shared-by-nasas-chandra/",
+   "site": "NASA",
+   "date": "2026-11-17T20:26:17.000Z",
+   "sum": "A new album from NASA’s Chandra X-ray Observatory collects snapshots of baby stars across the galaxy and beyond and transforms that data into sound. Four new sonifications use data of stars that are actively forming, captured by Chandra and other NASA telescopes By studying places in the universe where stars are currently being born and […]",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "33623c6d773d",
+   "t": "NASA to Cover 35th SpaceX Resupply Mission Space Station Departure",
+   "url": "https://www.nasa.gov/news-release/nasa-to-cover-35th-spacex-resupply-mission-space-station-departure/",
+   "site": "NASA",
+   "date": "2026-11-17T19:16:22.000Z",
+   "sum": "NASA and its international partners are set to receive scientific research samples and hardware as a SpaceX Dragon spacecraft departs the International Space Station no earlier than Wednesday, Nov. 18, for its return to Earth. Pending weather conditions, the Dragon spacecraft will undock from the Harmony module’s space-facing port at 11:05 a.m. EST, following a […]",
+   "desk": "missions",
+   "who": [
+    "NASA",
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "c00a30f7ecef",
+   "t": "NICER Status Updates",
+   "url": "https://www.nasa.gov/missions/station/nicer-status-updates/",
+   "site": "NASA",
+   "date": "2026-11-17T18:18:16.000Z",
+   "sum": "November 17, 2026 NASA’s NICER Telescope Ends Science Operations After studying the universe for six and a half years beyond its initial mission, NASA’s NICER (Neutron star Interior Composition Explorer) telescope on the International Space Station has ended science operations. The mission and space station teams are now focused on plans to finalize NICER’s 8-year […]",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "1cc34e861f35",
+   "t": "The data is very preliminary, but Vulcan failure may not be due to BE-4 engines",
+   "url": "https://arstechnica.com/features/2026/11/sources-vulcan-launch-anomaly-investigation-is-complex/",
+   "site": "Arstechnica",
+   "date": "2026-11-17T18:00:51.000Z",
+   "sum": "Information about the Vulcan failure is being closely held by ULA and Blue Origin.",
+   "desk": "launch",
+   "who": [
+    "Blue Origin"
+   ]
+  },
+  {
+   "id": "f92fb8a98d24",
+   "t": "Sources: Vulcan launch anomaly investigation is complex",
+   "url": "https://arstechnica.com/space/2026/11/sources-vulcan-launch-anomaly-investigation-is-complex/",
+   "site": "Arstechnica",
+   "date": "2026-11-17T18:00:51.000Z",
+   "sum": "Information about the Vulcan failure is being closely held by ULA and Blue Origin.",
+   "desk": "launch",
+   "who": [
+    "Blue Origin"
+   ]
+  },
+  {
+   "id": "67b3eaeb6204",
+   "t": "Searching for Elusive Signals in the Cosmic Microwave Background from the South Pole",
+   "url": "https://www.universetoday.com/articles/searching-for-elusive-signals-in-the-cosmic-microwave-background-from-the-south-pole",
+   "site": "Universe Today",
+   "date": "2026-11-17T17:50:51.000Z",
+   "sum": "As the Universe's very first light, the Cosmic Microwave Background holds clues to the very foundation of the cosmos. But, of course, the cosmos doesn't give up its secrets to a casual observer. Only years of work by dedicated scientists with purpose-built tools can make progress.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "eb8ae8da944a",
+   "t": "NASA to Conduct Low-Altitude Flights Over Texas Farmland",
+   "url": "https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/",
+   "site": "NASA",
+   "date": "2026-11-17T17:12:20.000Z",
+   "sum": "Editor’s Note: This article was originally published on Oct. 15, 2026, and has been updated to correct the location and update the duration of the flight deployment. A NASA Dynamic Aviation A200 aircraft will conduct low-flying research flights over farmland near Amarillo, Texas, from Thursday, Oct. 22, through Monday, Nov. 2. These flights will measure […]",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "6404bbe8c5c3",
+   "t": "Curiosity Blog, Sols 5072-5076: The Return of the Polygons",
+   "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5072-5076-the-return-of-the-polygons/",
+   "site": "NASA",
+   "date": "2026-11-17T17:06:07.000Z",
+   "sum": "Written by Abigail Fraeman, Deputy Project Scientist, Jet Propulsion Laboratory, California Institute of Technology Earth planning date: Friday, Nov. 13, 2026 Curiosity’s past several weeks have been very focused on drilling and analysis of the “Basque Lakes” and “Nazca” samples. We learned a lot from those drilled samples, but it’s time to hit the Martian […]",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "58de49ec1dea",
+   "t": "How AI is pushing satellites to evolve",
+   "url": "https://spacenews.com/how-ai-is-pushing-satellites-to-evolve/",
+   "site": "SpaceNews",
+   "date": "2026-11-17T17:02:33.000Z",
+   "sum": "During the first day of Space Tech Expo Europe, SpaceNews’ Mike Gruss sits down with Pieter van Duijn, the chief technology officer of Loft Orbital. They discuss the growing level […] The post How AI is pushing satellites to evolve appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "bcd64c149894",
+   "t": "NASA Invites Media, Public to View Roman Telescope’s First Images",
+   "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-view-roman-telescopes-first-images/",
+   "site": "NASA",
+   "date": "2026-11-17T17:00:29.000Z",
+   "sum": "NASA will release the first images from its Nancy Grace Roman Space Telescope during a live stream from the American Geophysical Union (AGU) Annual Meeting in San Francisco at 3:30 p.m. EST (12:30 p.m. PST) Monday, Dec. 7. The images will showcase the unique scientific capabilities of Roman, which will soon capture deep, panoramic, never-before-seen […]",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3feff6ed9928",
+   "t": "Space Selfie",
+   "url": "https://www.nasa.gov/image-article/space-selfie-2/",
+   "site": "NASA",
+   "date": "2026-11-17T16:51:14.000Z",
+   "sum": "NASA astronaut Anil Menon took this selfie during a spacewalk on Oct. 29, 2026. He and CSA (Canadian Space Agency) astronaut Joshua Kutryk installed a new roll-out solar array on the International Space Station. Get daily updates from the space station. Image credit: NASA/Anil Menon",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
   {
    "id": "f25ba6ca27f7",
    "t": "Did The First Quarks and Gluons Experience Brownian Motion? Sometimes.",
@@ -35,11 +240,11 @@
   },
   {
    "id": "5499709ba059",
-   "t": "Voyager 1's Linda Spilker on the Light-Day Milestone",
+   "t": "Voyager 1's Linda Spilker on the Mission's Light-Day Milestone",
    "url": "https://skyandtelescope.org/astronomy-news/voyager-1s-linda-spilker-on-the-light-day-milestone/",
    "site": "Sky & Telescope",
    "date": "2026-11-17T13:00:00.000Z",
-   "sum": "Hear from Voyager Project Scientist Linda Spilker as she discusses the latest updates from the Voyager probes — and what it means now that Voyager 1 has reached 1 light-day from Earth. The post Voyager 1's Linda Spilker on the Light-Day Milestone appeared first on Sky & Telescope.",
+   "sum": "Hear from Voyager Project Scientist Linda Spilker as she discusses the latest updates from the Voyager probes — and what it means now that Voyager 1 has reached 1 light-day from Earth. The post Voyager 1's Linda Spilker on the Mission's Light-Day Milestone appeared first on Sky & Telescope.",
    "desk": "missions",
    "who": []
   },
@@ -640,32 +845,12 @@
    ]
   },
   {
-   "id": "84528d6f584c",
-   "t": "A Brief-ish History of METI. Part III: The Legacy of Frank Drake & Carl Sagan",
-   "url": "https://www.universetoday.com/articles/a-brief-ish-history-of-meti-part-iii-the-legacy-of-frank-drake-carl-sagan",
-   "site": "Universe Today",
-   "date": "2026-11-12T22:04:00.000Z",
-   "sum": "Carl Sagan and Frank Drake were pivotal to the development of the Search for Extraterrestrial Intelligence (SETI) and Messaging Extraterrestrial Intelligence (METI), as exemplified by the Pioneer Plaques and Voyager Golden Records.",
-   "desk": "missions",
-   "who": []
-  },
-  {
    "id": "4bb676381451",
    "t": "Photo Release: NSF NOIRLab-operated Facilities Capture Brightening Nearby Supernova",
    "url": "http://noirlab.edu/public/news/noirlab2628/",
    "site": "NOIRLab",
    "date": "2026-11-12T21:23:32.000Z",
    "sum": "Newly discovered supernova SN 2026ahvu in the nearby spiral galaxy NGC 1433 bedazzles new images from the Dark Energy Camera and the International Gemini Observatory. Caught early and still approaching its expected maximum brightness, SN 2026ahvu gives astronomers a valuable opportunity to study a stellar explosion as it unfolds. NSF NOIRLab is coordinating observations across the facilities it operates, working…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "f876a56b424c",
-   "t": "Asteroid Bennu's Sample Delivers Another Surprise",
-   "url": "https://www.universetoday.com/articles/asteroid-bennus-sample-delivers-another-surprise",
-   "site": "Universe Today",
-   "date": "2026-11-12T21:16:30.000Z",
-   "sum": "Researchers compared the samples from asteroid Bennu with the Murchison meteorite and measured the amino acid β-alanine in both. Using new techniques, they were able to measure not only their isotopic compositions, but isotopic differences between individual atoms in the same molecule. The results show that some of the same pre-cursors to life formed in different conditions and positions in the protoplanetary disk.",
    "desk": "astronomy",
    "who": []
   },
@@ -715,18 +900,6 @@
    ]
   },
   {
-   "id": "56008bde168e",
-   "t": "Solving the Space Junk Crisis Isn't Just About Counting Trash—It’s About Control and Economics",
-   "url": "https://www.universetoday.com/articles/solving-the-space-junk-crisis-isnt-just-about-counting-trashits-about-control-and-economics",
-   "site": "Universe Today",
-   "date": "2026-11-12T18:42:31.000Z",
-   "sum": "If people ever think about cleaning up space debris, they typically think of something equivalent to a giant garbage truck in the sky, collecting lost astronaut tools and dead satellites then hauling them back down to Earth to be deposited in a landfill. But dealing with space debris doesn’t work that way, and a new paper, available in pre-print on arXiv from Dr. Slava Turyshev of NASA’s Jet Propulsion Laboratory,…",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
    "id": "d42cc838cfce",
    "t": "Building a rocket is hard. AST SpaceMobile thinks it's \"simple.\"",
    "url": "https://arstechnica.com/space/2026/11/building-a-rocket-is-hard-ast-spacemobile-thinks-its-simple/",
@@ -766,142 +939,6 @@
    "date": "2026-11-12T17:44:44.000Z",
    "sum": "United Launch Alliance’s current flagship launch vehicle, Vulcan, is scheduled to return to flight after… The post ULA’s Vulcan set to return to flight with first Amazon Leo payload appeared first on NASASpaceFlight.com.",
    "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "87ccf12a69aa",
-   "t": "How ESA astronauts return from space",
-   "url": "https://www.esa.int/articles/about-us/directorates/human-and-robotic-exploration/astronauts/how-esa-astronauts-return-from-space",
-   "site": "ESA",
-   "date": "2026-11-12T13:51:57.000Z",
-   "sum": "From the ESA Blogs.",
-   "desk": "missions",
-   "who": [
-    "ESA"
-   ]
-  },
-  {
-   "id": "64c650dea66e",
-   "t": "ESA astronaut reserve celebrates completion of training",
-   "url": "https://www.esa.int/articles/about-us/directorates/human-and-robotic-exploration/astronauts/esa-astronaut-reserve-celebrates-completion-of-training",
-   "site": "ESA",
-   "date": "2026-11-12T13:47:11.000Z",
-   "sum": "From the ESA Blogs.",
-   "desk": "missions",
-   "who": [
-    "ESA"
-   ]
-  },
-  {
-   "id": "e8dad5c8e21c",
-   "t": "NASA’s Hubble Offers Cosmic Sampler of Targets for Roman",
-   "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-offers-cosmic-sampler-of-targets-for-roman/",
-   "site": "NASA",
-   "date": "2026-11-12T13:18:40.000Z",
-   "sum": "A gallery of gravitational lenses captured by NASA’s Hubble Space Telescope showcases the diversity of this cosmic phenomenon and lays the groundwork for follow-up observations by the Nancy Grace Roman Space Telescope.",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "8dfedd22892e",
-   "t": "Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA",
-   "url": "https://www.nasa.gov/centers-and-facilities/armstrong/through-nasas-lens-capturing-space-shuttle-endeavours-move-to-la/",
-   "site": "NASA",
-   "date": "2026-11-12T13:00:00.000Z",
-   "sum": "As a new exhibit opens showcasing NASA’s space shuttle Endeavour, NASA photographers look back at the final mission. These photographers documented the iconic images shared around the world on Sept. 21, 2012, while millions watched space shuttle Endeavour fly on top of the agency’s 747 Shuttle Carrier Aircraft for the last time. Endeavour’s new home […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "5abc0d9d361a",
-   "t": "ESA Explains Delay in Signing MaiaSpace Launcher Challenge Contract",
-   "url": "https://europeanspaceflight.com/esa-explains-delay-in-signing-maiaspace-launcher-challenge-contract/",
-   "site": "European Spaceflight",
-   "date": "2026-11-12T10:36:32.000Z",
-   "sum": "The European Space Agency (ESA) has revealed that MaiaSpace’s decision to pursue a different funding arrangement from its competitors has complicated negotiations over its European Launcher Challenge contract. Speaking during an ESA media briefing on 22 October, ESA Director of Space Transportation Géraldine Naja explained that MaiaSpace was the only one of the four companies […] The post ESA Explains Delay in…",
-   "desk": "policy",
-   "who": [
-    "ESA"
-   ]
-  },
-  {
-   "id": "2d81832da3e7",
-   "t": "Scotland’s Flow Country",
-   "url": "https://science.nasa.gov/earth/earth-observatory/scotlands-flow-country/",
-   "site": "NASA",
-   "date": "2026-11-12T05:01:00.000Z",
-   "sum": "Blanket bogs in the Scottish Highlands store vast amounts of carbon.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "0708a0cf0f92",
-   "t": "Curiosity Blog, Sols 5063-5069 Rocks and Chips",
-   "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5063-5069-rocks-and-chips/",
-   "site": "NASA",
-   "date": "2026-11-12T00:41:35.000Z",
-   "sum": "Written by William Farrand, Senior Research Scientist, Space Science Institute Earth planning date: Friday, Nov. 6, 2026 This week Curiosity has been completing its drill campaign at the “Nazca” drill hole. This is an area characterized by bedrock containing disk-shaped (or in a liberal interpretation, potato chip shaped … see linked image) crystal forms. A […]",
-   "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "9dba6c9e8234",
-   "t": "Senate committee takes up nominees for NASA chief financial officer and inspector general",
-   "url": "https://spacenews.com/senate-committee-takes-up-nominees-for-nasa-chief-financial-officer-and-inspector-general/",
-   "site": "SpaceNews",
-   "date": "2026-11-12T00:00:18.000Z",
-   "sum": "A Senate committee is set to advance nominations for NASA’s chief financial officer and inspector general. The post Senate committee takes up nominees for NASA chief financial officer and inspector general appeared first on SpaceNews.",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "d23951db8106",
-   "t": "NASA takes an all-hands-on-deck approach in its return to the Moon",
-   "url": "https://arstechnica.com/space/2026/11/nasa-takes-an-all-hands-on-deck-approach-in-its-return-to-the-moon/",
-   "site": "Arstechnica",
-   "date": "2026-11-11T19:00:26.000Z",
-   "sum": "\"The pace that's occurring, and the nature of the procurements, is unprecedented.\"",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "157b4e8ee6f7",
-   "t": "Moog Marks 25 Years Since ESPA Design Milestone: Innovating Space Rideshare",
-   "url": "https://spacenews.com/moog-marks-25-years-since-espa-design-milestone-innovating-space-rideshare/",
-   "site": "SpaceNews",
-   "date": "2026-11-11T15:53:57.000Z",
-   "sum": "East Aurora, N.Y. — Moog Inc. (NYSE: MOG.A and MOG.B) marks 25 years since the Evolved Secondary Payload Adapter (ESPA) ring completed its Critical Design Review in 2001. The pioneering […] The post Moog Marks 25 Years Since ESPA Design Milestone: Innovating Space Rideshare appeared first on SpaceNews.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "c9ac89790758",
-   "t": "Horizon Microtechnologies Targets Constellation-Scale Production As Esa Phi-Lab Selection Strengthens Industrialisation Push",
-   "url": "https://spacenews.com/horizon-microtechnologies-targets-constellation-scale-production-as-esa-phi-lab-selection-strengthens-industrialisation-push/",
-   "site": "SpaceNews",
-   "date": "2026-11-11T13:00:00.000Z",
-   "sum": "(Karlsruhe, Germany, September 29th 2026) Horizon Microtechnologies is accelerating industrialisation of its metallised polymer micro-additive manufacturing platform through IP-MASS, a two-year scale-up project supported by €500,000 and reinforced by selection […] The post Horizon Microtechnologies Targets Constellation-Scale Production As Esa Phi-Lab Selection Strengthens Industrialisation Push appeared first on…",
-   "desk": "other",
-   "who": [
-    "ESA"
-   ]
-  },
-  {
-   "id": "d96128d643c9",
-   "t": "Fire Damage Delays Installation of Simulated Lunar Greenhouse in Germany",
-   "url": "https://europeanspaceflight.com/fire-damage-delays-installation-of-simulated-lunar-greenhouse-in-germany/",
-   "site": "European Spaceflight",
-   "date": "2026-11-11T07:00:36.000Z",
-   "sum": "A fire at an external contractor’s facility has delayed the installation of a containerised greenhouse designed to simulate growing crops on the Moon. According to a response to a parliamentary inquiry published by the German Bundestag on 20 October, a fire occurred while the EDEN-LUNA greenhouse container was being refurbished. The incident has pushed back […] The post Fire Damage Delays Installation of Simulated…",
-   "desk": "other",
    "who": []
   },
   {
@@ -953,16 +990,6 @@
    "site": "Sky & Telescope",
    "date": "2026-11-05T13:00:00.000Z",
    "sum": "Hamilton’s code sent humans to the Moon with a “defensive programming” mindset. The post Margaret Hamilton, Apollo Software Engineer (1936 – 2026) appeared first on Sky & Telescope.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "44551d522bfa",
-   "t": "Science Release: NSF–DOE Vera C. Rubin Observatory Reveals Its First Dwarf Planet Candidate in Our Solar System",
-   "url": "http://noirlab.edu/public/news/noirlab2626/",
-   "site": "NOIRLab",
-   "date": "2026-10-27T18:45:00.000Z",
-   "sum": "In the outer reaches of our Solar System, beyond the orbit of Pluto, NSF–DOE Vera C. Rubin Observatory has spotted 2026 ED138 — a large, bright trans-Neptunian object that scientists have identified as a dwarf planet candidate. The observations were announced today by the International Astronomical Union Minor Planet Center (MPC). If confirmed, ED138 would be among the largest dwarf planets ever discovered in this…",
    "desk": "astronomy",
    "who": []
   }

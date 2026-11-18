@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-17T16:09:04.513Z",
+ "fetched": "2026-11-18T01:00:01.802Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -15,119 +15,36 @@
      "targets": []
     },
     {
-     "name": "DSS23",
-     "az": 243,
-     "el": 54,
+     "name": "DSS24",
+     "az": 0,
+     "el": 90,
      "up": [],
-     "down": [
-      {
-       "sc": "Mars Odyssey",
-       "rate": 14220,
-       "band": "X",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "M01O",
-       "name": "Mars Odyssey",
-       "km": 193000000,
-       "rtlt": 1290
-      },
-      {
-       "code": "TGO",
-       "name": "Trace Gas Orbiter",
-       "km": 193000000,
-       "rtlt": 1290
-      }
-     ]
+     "down": [],
+     "targets": []
     },
     {
      "name": "DSS25",
-     "az": 243,
-     "el": 53,
-     "up": [
-      {
-       "sc": "Juno",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Juno",
-       "rate": 22000,
-       "band": "X",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "JNO",
-       "name": "Juno",
-       "km": 784000000,
-       "rtlt": 5230
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS23",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     },
     {
      "name": "DSS26",
-     "az": 127,
-     "el": 22,
-     "up": [
-      {
-       "sc": "SOHO",
-       "rate": 0,
-       "band": "X",
-       "power": 0.1
-      }
-     ],
-     "down": [
-      {
-       "sc": "SOHO",
-       "rate": 54610,
-       "band": "S",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "SOHO",
-       "name": "SOHO",
-       "km": 1240000,
-       "rtlt": 8.28
-      }
-     ]
-    },
-    {
-     "name": "DSS24",
-     "az": 62,
-     "el": 22,
-     "up": [
-      {
-       "sc": "Chandra",
-       "rate": 0,
-       "band": "S",
-       "power": 2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Chandra",
-       "rate": 1188000,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "CHDR",
-       "name": "Chandra",
-       "km": 137000,
-       "rtlt": 0.91
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     }
    ]
   },
@@ -152,125 +69,36 @@
      "targets": []
     },
     {
-     "name": "DSS63",
-     "az": 238,
-     "el": 48,
-     "up": [],
-     "down": [
-      {
-       "sc": "Voyager 1",
-       "rate": 40,
-       "band": "X",
-       "power": -160
-      }
-     ],
-     "targets": [
-      {
-       "code": "VGR1",
-       "name": "Voyager 1",
-       "km": 25900000000,
-       "rtlt": 173000
-      }
-     ]
-    },
-    {
-     "name": "DSS65",
-     "az": 141,
-     "el": 28,
-     "up": [
-      {
-       "sc": "Korea Pathfinder Lunar Orbiter",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Korea Pathfinder Lunar Orbiter",
-       "rate": 8500000,
-       "band": "X",
-       "power": -95
-      },
-      {
-       "sc": "Korea Pathfinder Lunar Orbiter",
-       "rate": 8192,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "KPLO",
-       "name": "Korea Pathfinder Lunar Orbiter",
-       "km": 392000,
-       "rtlt": 2.62
-      }
-     ]
-    },
-    {
      "name": "DSS56",
-     "az": 223,
-     "el": 17,
-     "up": [
-      {
-       "sc": "WIND",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "WIND",
-       "rate": 73510,
-       "band": "S",
-       "power": -120
-      },
-      {
-       "sc": "WIND",
-       "rate": 6400,
-       "band": "S",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "WIND",
-       "name": "WIND",
-       "km": 1630000,
-       "rtlt": 10.9
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS63",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     },
     {
      "name": "DSS53",
-     "az": 141,
-     "el": 27,
-     "up": [
-      {
-       "sc": "Lunar Reconnaissance Orbiter",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Lunar Reconnaissance Orbiter",
-       "rate": 146400,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "LRO",
-       "name": "Lunar Reconnaissance Orbiter",
-       "km": 394000,
-       "rtlt": 2.63
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS65",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     }
    ]
   },
@@ -280,82 +108,35 @@
    "dishes": [
     {
      "name": "DSS34",
-     "az": 299,
-     "el": 13,
-     "up": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 0,
-       "band": "S",
-       "power": 0.4
-      }
-     ],
-     "down": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 354500,
-       "band": "S",
-       "power": -100
-      }
-     ],
-     "targets": [
-      {
-       "code": "RST",
-       "name": "Roman Space Telescope",
-       "km": 1300000,
-       "rtlt": 8.66
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     },
     {
      "name": "DSS36",
-     "az": 346,
-     "el": 39,
-     "up": [
-      {
-       "sc": "James Webb Space Telescope",
-       "rate": 0,
-       "band": "S",
-       "power": 0.1
-      }
-     ],
-     "down": [
-      {
-       "sc": "James Webb Space Telescope",
-       "rate": 28000000,
-       "band": "K",
-       "power": -91
-      },
-      {
-       "sc": "James Webb Space Telescope",
-       "rate": 40000,
-       "band": "S",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
-       "code": "JWST",
-       "name": "James Webb Space Telescope",
-       "km": 1670000,
-       "rtlt": 11.1
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     },
     {
      "name": "DSS43",
-     "az": 17,
-     "el": 88,
+     "az": 0,
+     "el": 90,
      "up": [],
      "down": [],
-     "targets": [
-      {
-       "code": "VGR2",
-       "name": "Voyager 2",
-       "km": 21700000000,
-       "rtlt": 145000
-      }
-     ]
+     "targets": []
+    },
+    {
+     "name": "DSS35",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     }
    ]
   }

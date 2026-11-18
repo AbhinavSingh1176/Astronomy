@@ -2,6 +2,97 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-21468",
+   "arxiv": "2611.21468",
+   "t": "The JWST Sub-Jupiters Survey: Observed Sensitivities to the Wide-Separation, Cold, Sub-Jupiter Exoplanet Population",
+   "by": "Giovanni M. Strampelli, Aarynn L. Carter, Beth Biller and 32 others",
+   "date": "2026-11-16",
+   "added": "2026-11-18",
+   "cat": "astro-ph.EP",
+   "status": "40 pages, 17 figures, 8 tables. Accepted for publication at AJ",
+   "url": "https://arxiv.org/abs/2611.21468",
+   "one": "We find that these programs are sensitive to sub-Saturn to Jupiter mass exoplanets with effective temperature (Tₑff) as low as ≲ 250 K, already at ~2 arcsec.",
+   "q": "A comparison with the SHINE survey confirms that the improvements in mass sensitivity provided by JWST high-contrast imaging surveys outpace current ground observation for masses ≲ 1 M_J and separations between ~20-500 au, opening up a novel parameter space to explore. Overall, this analysis provides a robust framework for interpreting future exoplanet detections.",
+   "how": "We present a sensitivity analysis of three recent JWST direct imaging programs (GO-4050, GO-5835, and SURVEY-6005) designed to build a demographic study of sub-Jupiter mass ($0.1 - 1$ M_J) exoplanets in nearby young associations and moving groups.",
+   "found": [],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "arcsecond"
+   ],
+   "links": [
+    "obj:jupiter",
+    "obj:saturn",
+    "canon:mayor-queloz-1995"
+   ]
+  },
+  {
+   "id": "2611-21350",
+   "arxiv": "2611.21350",
+   "t": "Unexpected Plateau: The Constant logε(Th/Eu) Ratio of Actinide-Boost Stars",
+   "by": "J. Shejeelammal, Asa Skuladottir, Marta Molero and 4 others",
+   "date": "2026-11-16",
+   "added": "2026-11-18",
+   "cat": "astro-ph.SR",
+   "status": "Accepted for publication in A&A",
+   "url": "https://arxiv.org/abs/2611.21350",
+   "one": "Combined with other evidence, our results suggest that mergers with neutron stars are the most promising astrophysical site for actinide-boost stars.",
+   "q": "The astrophysical site of the rapid neutron-capture process (r-process) is still one of the major open questions in astronomy. A key mystery is the origin of the peculiar actinide-to-lanthanide ratio found in the so called actinide-boost stars, with logε(Th/Eu)>-0.35.",
+   "how": "Here we present the largest sample of Th measurements in stars formed in an external galaxy, Gaia Sausage Enceladus. From this sample, we present the three most metal-rich actinide-boost stars discovered to date, -1.6<[Fe/H]<-1.1.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "Unexpectedly, actinide-boost stars lie on a very narrow (σ=0.02) plateau of logε(Th/Eu)=-0.2, clearly separated from actinide-normal stars."
+    ],
+    [
+     "From the abstract (2)",
+     "Chemical evolution models show that such a plateau can arise, even at [Fe/H] = -1, when a single actinide-rich event dominates the r-process content of a small or gas-depleted system."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "neutron-star"
+   ],
+   "links": [
+    "obj:enceladus",
+    "obj:milky-way",
+    "canon:hewish-1968"
+   ]
+  },
+  {
+   "id": "2611-21042",
+   "arxiv": "2611.21042",
+   "t": "The Velocity Curves and Three-Dimensional Kinematics of the Milky Way from Gaia DR3",
+   "by": "Petr Zavada and Karel Píška",
+   "date": "2026-11-16",
+   "added": "2026-11-18",
+   "cat": "astro-ph.GA",
+   "status": "19 pages, 17 figures, 4 tables. Published in Galaxies 2026, 14(6), 101",
+   "url": "https://arxiv.org/abs/2611.21042",
+   "one": "To facilitate the description of the observations, we employ a simplified axisymmetric Monte Carlo model with several free parameters that reproduces the main kinematic trends.",
+   "q": "From these data, we determine the local solar velocity (U☉,V☉,W☉) = (10.5±0.7,14.5±0.9,7.33±0.1) ~km/s, the average rotation velocity\\linebreak V₀ = (228±4) km/s, and the circular velocity V_c = (234±4) {km/s,} both at the radius R☉. Next, within the range of 3-14 kpc, we derive the Galactic circular velocity curve V_c(R) and determine the average spherical components of the stellar velocities as functions of both Galactocentric radius R and distance from the Galactic plane vertZvert.",
+   "how": "We investigate the fundamental kinematic parameters of stellar motions in the Milky Way using a statistical sample of 27,485,720 stars with measured three-dimensional velocities from the Gaia DR3 catalogue.",
+   "found": [
+    [
+     "From the abstract",
+     "In particular, the pattern observed at R ≲ 5 kpc can be associated with the influence of the Galactic bar."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "parsec"
+   ],
+   "links": [
+    "obj:milky-way",
+    "canon:gaia-2016"
+   ]
+  },
+  {
    "id": "2611-18056",
    "arxiv": "2611.18056",
    "t": "Unsupervised Machine Learning Classification of FRB 20121102A across Distinct Active Episodes: Implications for FRB Emission Physics and Source Environments",

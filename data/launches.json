@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-17T16:09:06.111Z",
+ "fetched": "2026-11-18T01:00:13.628Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
@@ -101,14 +101,14 @@
   {
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-23T00:00:00.000Z",
+   "net": "2026-11-23T11:09:00.000Z",
    "win": [
-    "2026-11-23T00:00:00.000Z",
-    "2026-11-23T00:00:00.000Z"
+    "2026-11-23T11:09:00.000Z",
+    "2026-11-23T11:38:00.000Z"
    ],
-   "prec": "Day",
-   "status": "TBD",
-   "statusName": "To Be Determined",
+   "prec": "Minute",
+   "status": "Go",
+   "statusName": "Go for Launch",
    "provider": "Arianespace",
    "ptype": "Commercial",
    "country": "GF",
