@@ -1,16 +1,60 @@
 {
- "fetched": "2026-11-18T01:00:25.323Z",
+ "fetched": "2026-11-18T15:45:19.318Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
   "ESA": "failed",
-  "ESO": "failed",
+  "ESO": 10,
   "NASA": 10,
   "NOIRLab": 10,
   "Universe Today": 20,
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "ef89a7b50f05",
+   "t": "Microscopic Space Dust Reveals A Hidden Reservoir Of \"Heavy Water\" Beyond Neptune",
+   "url": "https://www.universetoday.com/articles/microscopic-space-dust-reveals-a-hidden-reservoir-of-heavy-water-beyond-neptune",
+   "site": "Universe Today",
+   "date": "2026-11-18T15:01:09.000Z",
+   "sum": "Astronomers can find valuable information in even the tiniest objects. That was certainly the case recently when twelve dust grains collected by a high-altitude aircraft helped solve a mystery about the birth of our Solar System. Or at least that is the argument in a new paper published in Science Advances by researchers at NASA’s Johnson Space Center and UCLA. According to the paper, the region beyond Neptune once…",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "ae0f85f220b7",
+   "t": "PLD Space Investor Selects MIURA 5 to Launch Demo Mission",
+   "url": "https://europeanspaceflight.com/pld-space-investor-selects-miura-5-to-launch-demo-mission/",
+   "site": "European Spaceflight",
+   "date": "2026-11-18T07:25:17.000Z",
+   "sum": "Japanese satellite manufacturer Mitsubishi Electric has signed a contract with Spanish rocket builder PLD Space to launch a small satellite aboard the company’s second MIURA 5 test flight. PLD Space announced that it had signed the launch contract on 18 November, describing the agreement as “a new stage in the relationship between the two companies.” […] The post PLD Space Investor Selects MIURA 5 to Launch Demo…",
+   "desk": "launch",
+   "who": [
+    "JAXA"
+   ]
+  },
+  {
+   "id": "bb697c970496",
+   "t": "Sierra Snow Season Spins Up",
+   "url": "https://science.nasa.gov/earth/earth-observatory/sierra-snow-season-spins-up/",
+   "site": "NASA",
+   "date": "2026-11-18T05:01:00.000Z",
+   "sum": "A widespread, early-season snowstorm blanketed California’s mountains in white in mid-November 2026.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "ba548412fff3",
+   "t": "ULA Investigating Low Booster Performance in Vulcan Launch Failure",
+   "url": "https://spacepolicyonline.com/news/ula-investigating-low-booster-performance-in-vulcan-launch-failure/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-18T03:52:35.000Z",
+   "sum": "The United Launch Alliance said today that low performance of its first stage booster is suspected of causing the failure of Vulcan Leo 1 on Sunday. It was the first […]",
+   "desk": "launch",
+   "who": []
+  },
   {
    "id": "0d77de9a27ab",
    "t": "Computer Simulations Provide the Best Explanation for Those \"Little Red Dots\" Yet!",
@@ -833,18 +877,6 @@
    "who": []
   },
   {
-   "id": "01481460077e",
-   "t": "Euclid's First Data Release: A Stepping Stone to its 3D Map of the Sky",
-   "url": "https://www.universetoday.com/articles/euclids-first-data-release-a-stepping-stone-to-its-3d-map-of-the-sky",
-   "site": "Universe Today",
-   "date": "2026-11-12T23:04:05.000Z",
-   "sum": "The ESA's Euclid Space Telescope has released its first huge batch of data. It's all part of the telescope's mission to study dark energy and dark matter. The telescope is busy creating the largest ever 3D map of the Universe with its huge 600 megapixel camera, and new images give us some highlights.",
-   "desk": "missions",
-   "who": [
-    "ESA"
-   ]
-  },
-  {
    "id": "4bb676381451",
    "t": "Photo Release: NSF NOIRLab-operated Facilities Capture Brightening Nearby Supernova",
    "url": "http://noirlab.edu/public/news/noirlab2628/",
@@ -888,28 +920,6 @@
    "who": []
   },
   {
-   "id": "14c088e766cd",
-   "t": "Heart in the Sky at NASA Kennedy",
-   "url": "https://www.nasa.gov/image-article/heart-in-the-sky-at-nasa-kennedy/",
-   "site": "NASA",
-   "date": "2026-11-12T19:12:49.000Z",
-   "sum": "The U.S. Air Force Thunderbirds create a heart-shaped smoke trail during a flight maneuver near NASA’s Vehicle Assembly Building during the agency’s MAX POWER expo and air show on Sunday, Nov. 8, 2026, at NASA’s Kennedy Space Center in Florida. NASA’s MAX POWER is an aerospace festival celebrating the past, present, and future of flight […]",
-   "desk": "policy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "d42cc838cfce",
-   "t": "Building a rocket is hard. AST SpaceMobile thinks it's \"simple.\"",
-   "url": "https://arstechnica.com/space/2026/11/building-a-rocket-is-hard-ast-spacemobile-thinks-its-simple/",
-   "site": "Arstechnica",
-   "date": "2026-11-12T18:28:22.000Z",
-   "sum": "\"We're not doing this thing because we like rockets.\"",
-   "desk": "launch",
-   "who": []
-  },
-  {
    "id": "bf9962047050",
    "t": "Euclid Space Telescope Is Filling Its Treasure Chest",
    "url": "https://skyandtelescope.org/astronomy-news/euclid-space-telescope-is-filling-its-treasure-chest/",
@@ -917,28 +927,6 @@
    "date": "2026-11-12T18:01:50.000Z",
    "sum": "With 30 times more sky surveyed and thousands of new strong-lens candidates found, the European satellite’s latest data release lays the groundwork for cosmology breakthroughs. The post Euclid Space Telescope Is Filling Its Treasure Chest appeared first on Sky & Telescope.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "d0db878e429d",
-   "t": "NASA Ames Stars of the Month: November 2026",
-   "url": "https://www.nasa.gov/general/nasa-ames-stars-of-the-month-november-2026/",
-   "site": "NASA",
-   "date": "2026-11-12T17:54:32.000Z",
-   "sum": "The NASA Ames Science Directorate recognizes the outstanding contributions of (pictured left to right) Alyssa Villanueva, Steve Howell, and Samuel LeBlanc. Their commitment to the NASA mission represents the entrepreneurial spirit, technical expertise, and collaborative disposition needed to explore this world and beyond. Space Biosciences Star: Alyssa Villanueva Alyssa Villaneuva is an engineer at Blue […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "5ec46dd0d112",
-   "t": "ULA’s Vulcan set to return to flight with first Amazon Leo payload",
-   "url": "https://www.nasaspaceflight.com/2026/11/amazon-leo-lv-01/",
-   "site": "NASASpaceflight",
-   "date": "2026-11-12T17:44:44.000Z",
-   "sum": "United Launch Alliance’s current flagship launch vehicle, Vulcan, is scheduled to return to flight after… The post ULA’s Vulcan set to return to flight with first Amazon Leo payload appeared first on NASASpaceFlight.com.",
-   "desk": "launch",
    "who": []
   },
   {
