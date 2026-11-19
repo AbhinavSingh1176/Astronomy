@@ -1,16 +1,16 @@
 {
- "fetched": "2026-11-19T00:28:18.708Z",
+ "fetched": "2026-11-19T15:50:23.176Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
    "name": "Falcon 9 Block 5 | USSF-317",
-   "net": "2026-11-20T02:46:00.000Z",
+   "net": "2026-11-20T04:32:55.000Z",
    "win": [
     "2026-11-20T02:46:00.000Z",
     "2026-11-20T06:46:00.000Z"
    ],
-   "prec": "Minute",
+   "prec": "Second",
    "status": "Go",
    "statusName": "Go for Launch",
    "provider": "SpaceX",
@@ -485,12 +485,12 @@
   {
    "id": "22e117bf-041c-49d5-9d09-7b180036e143",
    "name": "Ariane 62 | Metop-SG B1",
-   "net": "2026-12-31T00:00:00.000Z",
+   "net": "2026-12-17T00:00:00.000Z",
    "win": [
-    "2026-12-31T00:00:00.000Z",
-    "2026-12-31T00:00:00.000Z"
+    "2026-12-17T00:00:00.000Z",
+    "2026-12-17T00:00:00.000Z"
    ],
-   "prec": "Month",
+   "prec": "Day",
    "status": "TBD",
    "statusName": "To Be Determined",
    "provider": "Arianespace",

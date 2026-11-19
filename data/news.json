@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-19T00:28:18.680Z",
+ "fetched": "2026-11-19T15:50:23.009Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,141 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "40a274e83685",
+   "t": "Making the case for optical",
+   "url": "https://spacenews.com/making-the-case-for-optical/",
+   "site": "SpaceNews",
+   "date": "2026-11-19T15:38:18.000Z",
+   "sum": "In this episode of Space Minds, SpaceNews’ Mike Gruss speaks with Jean-François Morizur, the co-founder and CEO of Cailabs, at Space Tech Expo Europe. Morizur discusses the misconceptions with laser […] The post Making the case for optical appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "230e1560daf2",
+   "t": "NASA Science Data Powers New Method to Discover Hard-to-Find Pulsars",
+   "url": "https://science.nasa.gov/open-science/fermi-data-pulsar-discovery/",
+   "site": "NASA",
+   "date": "2026-11-19T15:33:55.000Z",
+   "sum": "Open data from NASA’s Fermi mission helped an international team of scientists develop a method for finding pulsars about a million times faster than before.",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "470f7b58a80a",
+   "t": "Lake Pelku",
+   "url": "https://www.nasa.gov/image-article/lake-pelku/",
+   "site": "NASA",
+   "date": "2026-11-19T15:32:39.000Z",
+   "sum": "An astronaut on the International Space Station captured this photograph of Lake Pelku (near center) as the station orbited above Asia. The International Space Station serves as a unique platform for observing Earth with both hands-on and automated equipment. Station crew members have produced hundreds of thousands of images. These images record phenomena in real […]",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "78e6a4126547",
+   "t": "ESA's Hera Probe Uses \"Superhuman\" Vision to Inspect NASA's Asteroid Crash Site",
+   "url": "https://www.universetoday.com/articles/esas-hera-probe-uses-superhuman-vision-to-inspect-nasas-asteroid-crash-site",
+   "site": "Universe Today",
+   "date": "2026-11-19T14:50:33.000Z",
+   "sum": "Around four years ago, humanity intentionally hit an asteroid. The Double Asteroid Redirection Test (DART) was by pretty much all measures a resounding success when it struck the asteroid moonlet Dimorphos going more than 22,000 kilometers per hour. However, we still don’t know just how much of a success it actually was - DART was a one-way mission with no real way to track the results of the impact close up. Enter…",
+   "desk": "missions",
+   "who": [
+    "NASA",
+    "ESA"
+   ]
+  },
+  {
+   "id": "76db8fd09732",
+   "t": "Euclid's Hunt for Strong Gravitational Lenses is Off to a Strong Start",
+   "url": "https://www.universetoday.com/articles/euclids-hunt-for-strong-gravitational-lenses-is-off-to-a-strong-start",
+   "site": "Universe Today",
+   "date": "2026-11-19T14:49:01.000Z",
+   "sum": "Euclid was launched to build a 3D map of the sky to probe cosmic structure and the Universe's expansion. Part of its job is to hunt for strong gravitational lenses, important probes of dark matter. So far it's off to a great start. It found 15,000 strong gravitational lens candidates in its first data relase.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "634743bc9709",
+   "t": "NASA Conducts Latest RS-25 Engine Test in Support of Future Artemis Missions",
+   "url": "https://www.nasa.gov/image-article/latest-rs-25-engine-test-in-support-of-future-artemis-missions/",
+   "site": "NASA",
+   "date": "2026-11-19T14:44:39.000Z",
+   "sum": "NASA tested RS-25 engine No. 10001 on Nov. 18 on the Fred Haise Test Stand at NASA’s Stennis Space Center near Bay St. Louis, Mississippi. Test teams fired the developmental engine for the planned duration of three minutes and 20 seconds (200 seconds). While this developmental engine will not be used in flight, the hot […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "4cc59e849f09",
+   "t": "NASA’s Voyager 1 Makes History Reaching One Light-Day From Earth",
+   "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
+   "site": "NASA",
+   "date": "2026-11-19T14:31:15.000Z",
+   "sum": "NASA’s Voyager 1 probe, humanity’s farthest-flying spacecraft, has reached one light-day from Earth, after more than 49 years of constant travel. A light-day is the distance light travels in 24 hours, equaling about 16.1 billion miles (25.9 billion kilometers). The spacecraft achieved the milestone at 2:16 a.m. PST (5:16 a.m. EST) Nov. 18. Voyager team […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "c6dacc24752b",
+   "t": "Feast Your Eyes on Uranus at Opposition This Thanksgiving 2026",
+   "url": "https://www.universetoday.com/articles/feast-your-eyes-on-uranus-at-opposition-this-thanksgiving-2026",
+   "site": "Universe Today",
+   "date": "2026-11-19T14:00:00.000Z",
+   "sum": "The outer planets are ever so slowly starting to sneak back into the evening sky this month. First, Saturn crossed this mark last month on October 4th, then Neptune followed suit on September 26th. Now, the planet Uranus makes the transition, crossing opposition next week.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "a2d0889c92df",
+   "t": "To make Moon landings easier, NASA is making life harder for Orion",
+   "url": "https://arstechnica.com/space/2026/11/to-make-moon-landings-easier-nasa-is-making-life-harder-for-orion/",
+   "site": "Arstechnica",
+   "date": "2026-11-19T13:40:02.000Z",
+   "sum": "\"We also have a responsibility to not go too fast and cut too many corners.\"",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "d6607c551ca9",
+   "t": "ESA Awards OHB €102M Contract for ClearSpace-1 Debris Removal Mission",
+   "url": "https://europeanspaceflight.com/esa-awards-ohb-e102m-contract-for-clearspace-1-debris-removal-mission/",
+   "site": "European Spaceflight",
+   "date": "2026-11-19T06:41:35.000Z",
+   "sum": "The European Space Agency has awarded German satellite builder OHB a €102 million contract to build ClearSpace-1, a spacecraft designed to capture and remove the agency’s Proba-1 satellite after it is retired from service. Signed on 17 November at Space Tech Expo Europe in Bremen, Germany, the contract marks the start of the mission’s implementation […] The post ESA Awards OHB €102M Contract for ClearSpace-1 Debris…",
+   "desk": "missions",
+   "who": [
+    "ESA"
+   ]
+  },
+  {
+   "id": "0c57e789aab0",
+   "t": "El Niño Rains Paint the Atacama",
+   "url": "https://science.nasa.gov/earth/earth-observatory/el-nino-rains-paint-the-atacama/",
+   "site": "NASA",
+   "date": "2026-11-19T05:00:00.000Z",
+   "sum": "Winter precipitation helped wake dormant seeds in northern Chile, carpeting the desert with what may be the region’s most extensive flowering of the satellite era.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "2d55bf0a3e58",
+   "t": "Voyager 1 Reaches New Milestone: One Light-Day from Earth",
+   "url": "https://spacepolicyonline.com/news/voyager-1-reaches-new-milestone-one-light-day-from-earth/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-19T03:05:00.000Z",
+   "sum": "NASA’s Voyager 1 spacecraft achieved another milestone this morning. Launched in 1977, it became the first human object to pass into interstellar space in August 2012 and is so far […]",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
   {
    "id": "02bbbcfe7a7c",
    "t": "NASA and FCC Nominations Advance Out of Committee Despite Democratic Boycott",
@@ -730,48 +865,6 @@
    "who": []
   },
   {
-   "id": "ac9e3c882739",
-   "t": "What’s Happening in Space Policy November 15-21, 2026",
-   "url": "https://spacepolicyonline.com/news/whats-happening-in-space-policy-november-15-21-2026/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-15T23:13:57.000Z",
-   "sum": "Here is SpacePolicyOnline.com’s list of space policy events for the week of November 15-21, 2026 and any insight we can offer about them. The House and Senate are in session […]",
-   "desk": "policy",
-   "who": []
-  },
-  {
-   "id": "c143ae11a0c0",
-   "t": "Vulcan’s Return-to-Flight Fails",
-   "url": "https://spacepolicyonline.com/news/vulcans-return-to-flight-fails/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-15T22:35:19.000Z",
-   "sum": "The United Launch Alliance’s eagerly awaited return-to-flight of the Vulcan rocket today did not go as planned. An anomaly 10 minutes after launch meant the 40 Amazon Leo satellites did […]",
-   "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "f3543d47b1b8",
-   "t": "Starship Returns to its Launch Pad From Orbit",
-   "url": "https://www.spacescout.info/2026/11/starship-returns-to-its-launch-pad-from-orbit/",
-   "site": "Space Scout",
-   "date": "2026-11-15T21:27:36.000Z",
-   "sum": "Starship has completed its most ambitious test flight yet, with Ship 42 achieving the system’s first ever catch from orbit",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "0054e860a0a0",
-   "t": "ULA suffers first total mission failure with loss of Vulcan rocket carrying 40 Amazon Leo satellites",
-   "url": "https://spaceflightnow.com/2026/11/15/ula-suffers-first-total-mission-failure-with-loss-of-vulcan-rocket-carrying-40-amazon-leo-satellites/",
-   "site": "Spaceflight Now",
-   "date": "2026-11-15T19:16:59.000Z",
-   "sum": "In a major setback for United Launch Alliance, the company's new heavy-lift Vulcan rocket carrying a batch of Amazon Leo internet satellites, malfunctioned during the climb to space Sunday, dooming the payload and throwing a costly wrench into the launch schedule of both companies.",
-   "desk": "launch",
-   "who": []
-  },
-  {
    "id": "b1a7f66a0df8",
    "t": "Navigating Lunar Orbit Using Nothing But Shadows And A Power Meter",
    "url": "https://www.universetoday.com/articles/navigating-lunar-orbit-using-nothing-but-shadows-and-a-power-meter",
@@ -781,18 +874,6 @@
    "desk": "launch",
    "who": [
     "NASA"
-   ]
-  },
-  {
-   "id": "ce3d0293b235",
-   "t": "With Starship catch, SpaceX still shows it can dazzle the world",
-   "url": "https://arstechnica.com/space/2026/11/with-starship-catch-spacex-still-shows-it-can-dazzle-the-world/",
-   "site": "Arstechnica",
-   "date": "2026-11-15T00:40:59.000Z",
-   "sum": "It felt like stepping into the future.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
    ]
   },
   {
@@ -806,84 +887,6 @@
    "who": [
     "CNSA"
    ]
-  },
-  {
-   "id": "7bf5f4ded96f",
-   "t": "SpaceX Catches a Starship",
-   "url": "https://spacepolicyonline.com/news/spacex-catches-a-starship/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-14T21:53:18.000Z",
-   "sum": "SpaceX’s 15th Starship Integrated Flight Test (IFT-15) returned to Earth today and was “caught” back at the launch tower after orbiting Earth 14 times. It’s a milestone achievement for the […]",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "d8a027593f82",
-   "t": "Baby, She's Back! SpaceX Catches a Starship From Orbit for First Time",
-   "url": "https://www.universetoday.com/articles/baby-shes-back-spacex-catches-a-starship-from-orbit-for-first-time",
-   "site": "Universe Today",
-   "date": "2026-11-14T21:40:00.000Z",
-   "sum": "SpaceX brought back its Starship rocket's second stage for a first-ever midair capture at its launch pad, capping a record-setting, 22.5-hour orbital flight test.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "59c356865348",
-   "t": "Next Vega C Launch Edges Closer to Christmas Day as Satellites Arrive Late",
-   "url": "https://europeanspaceflight.com/next-vega-c-launch-edges-closer-to-christmas-day-as-satellites-arrive-late/",
-   "site": "European Spaceflight",
-   "date": "2026-11-14T06:00:41.000Z",
-   "sum": "Italian rocket manufacturer Avio has revealed that delays in the delivery of customer satellites have pushed the third Vega C launch of 2026 back toward Christmas, several weeks later than previously planned. Speaking during the company’s third-quarter earnings call on 11 November, Avio CEO Giulio Ranzo explained that the mission, which will carry six satellites, […] The post Next Vega C Launch Edges Closer to…",
-   "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "46f76adf161f",
-   "t": "Starship flight 15 powers to orbit—setting up a possible catch on Saturday",
-   "url": "https://arstechnica.com/space/2026/11/starship-flight-15-powers-to-orbit-setting-up-a-possible-catch-on-saturday/",
-   "site": "Arstechnica",
-   "date": "2026-11-14T00:49:13.000Z",
-   "sum": "One way or another, the company will get some more data on Saturday.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "e310e737e8bc",
-   "t": "When Einstein's Gravitational Waves Meet Newton's Tides",
-   "url": "https://www.universetoday.com/articles/when-einsteins-gravitational-waves-meet-newtons-tides",
-   "site": "Universe Today",
-   "date": "2026-11-14T00:35:51.000Z",
-   "sum": "A researcher at Freie Universität Berlin has developed a theoretical framework for searching high-precision measurements for possible relativistic traces in lunar tides.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "57e5c13ef14a",
-   "t": "Starship IFT-15 is in Orbit — Will it be “Caught” When It Returns to Earth?",
-   "url": "https://spacepolicyonline.com/news/starship-ift-15-is-in-orbit-will-it-be-caught-when-it-returns-to-earth/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-13T23:54:54.000Z",
-   "sum": "SpaceX launched the 15th Starship Integrated Flight Test (IFT-15) early this evening from Starbase, Texas. Plans to bring the first stage Booster back to the launch tower for a “catch” […]",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "8fa90561555d",
-   "t": "Astrophysicists Cross Another Dark Matter Candidate Off Their List: Stupendously Large Black Holes",
-   "url": "https://www.universetoday.com/articles/astrophysicists-cross-another-dark-matter-candidate-off-their-list-stupendously-large-black-holes",
-   "site": "Universe Today",
-   "date": "2026-11-13T23:49:58.000Z",
-   "sum": "Astrophysicists are leaving no stone unturned in their search for what dark matter is. Different particles have been proposed, like WIMPs and axions. Hypothetical rimordial black holes have also been proposed. But there's another less well-known candidate, SLABs or Stupendously Large Black holes, a sub-type of primordial black holes. Alas, SLABs can't account for dark matter either, according to new research.",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "d84615798113",

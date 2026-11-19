@@ -1,46 +1,11 @@
 {
- "fetched": "2026-11-19T00:28:17.344Z",
+ "fetched": "2026-11-19T15:50:22.135Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
    "id": "gdscc",
    "name": "Goldstone, California",
    "dishes": [
-    {
-     "name": "DSS24",
-     "az": 132,
-     "el": 36,
-     "up": [
-      {
-       "sc": "Korea Pathfinder Lunar Orbiter",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Korea Pathfinder Lunar Orbiter",
-       "rate": 8500000,
-       "band": "X",
-       "power": -95
-      },
-      {
-       "sc": "Korea Pathfinder Lunar Orbiter",
-       "rate": 8192,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "KPLO",
-       "name": "Korea Pathfinder Lunar Orbiter",
-       "km": 384000,
-       "rtlt": 2.56
-      }
-     ]
-    },
     {
      "name": "DSS14",
      "az": 0,
@@ -55,215 +20,81 @@
      "el": 90,
      "up": [],
      "down": [],
-     "targets": []
+     "targets": [
+      {
+       "code": "JNO",
+       "name": "Juno",
+       "km": 779000000,
+       "rtlt": 5200
+      }
+     ]
     },
     {
      "name": "DSS23",
-     "az": 180,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
-    {
-     "name": "DSS26",
-     "az": 143,
-     "el": 53,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "MMS4",
-       "name": "MMS 4",
-       "km": 140000,
-       "rtlt": 0.93
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "mdscc",
-   "name": "Madrid, Spain",
-   "dishes": [
-    {
-     "name": "DSS65",
-     "az": 238,
-     "el": 53,
+     "az": 239,
+     "el": 56,
      "up": [
       {
-       "sc": "Roman Space Telescope",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 354500,
-       "band": "S",
-       "power": -100
-      }
-     ],
-     "targets": [
-      {
-       "code": "RST",
-       "name": "Roman Space Telescope",
-       "km": 1280000,
-       "rtlt": 8.56
-      }
-     ]
-    },
-    {
-     "name": "DSS56",
-     "az": 148,
-     "el": 60,
-     "up": [
-      {
-       "sc": "James Webb Space Telescope",
+       "sc": "Mars Science Laboratory (Curiosity)",
        "rate": 0,
        "band": "X",
-       "power": 0.1
+       "power": 18
       }
      ],
      "down": [
       {
-       "sc": "James Webb Space Telescope",
-       "rate": 28000000,
-       "band": "K",
-       "power": -91
-      },
-      {
-       "sc": "James Webb Space Telescope",
-       "rate": 40000,
-       "band": "S",
+       "sc": "Mars Odyssey",
+       "rate": 14220,
+       "band": "X",
        "power": -130
       }
      ],
      "targets": [
       {
-       "code": "JWST",
-       "name": "James Webb Space Telescope",
-       "km": 1670000,
-       "rtlt": 11.2
+       "code": "M01O",
+       "name": "Mars Odyssey",
+       "km": 191000000,
+       "rtlt": 1270
+      },
+      {
+       "code": "TGO",
+       "name": "Trace Gas Orbiter",
+       "km": 191000000,
+       "rtlt": 1270
+      },
+      {
+       "code": "MSL",
+       "name": "Mars Science Laboratory (Curiosity)",
+       "km": 191000000,
+       "rtlt": 1270
       }
      ]
     },
     {
-     "name": "DSS63",
-     "az": 70,
-     "el": 39,
-     "up": [],
-     "down": [
-      {
-       "sc": "ESCAPADE Gold",
-       "rate": 8000,
-       "band": "X",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "ESCG",
-       "name": "ESCAPADE Gold",
-       "km": 2790000,
-       "rtlt": 18.6
-      }
-     ]
-    },
-    {
-     "name": "DSS53",
-     "az": 264,
-     "el": 18,
-     "up": [
-      {
-       "sc": "MMS 3",
-       "rate": 0,
-       "band": "X",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "MMS 3",
-       "rate": 2500000,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "MMS3",
-       "name": "MMS 3",
-       "km": 142000,
-       "rtlt": 0.95
-      }
-     ]
-    },
-    {
-     "name": "DSS55",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
-    {
-     "name": "DSS54",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    }
-   ]
-  },
-  {
-   "id": "cdscc",
-   "name": "Canberra, Australia",
-   "dishes": [
-    {
-     "name": "DSS35",
-     "az": 0,
+     "name": "DSS24",
+     "az": 180,
      "el": 90,
      "up": [],
      "down": [],
      "targets": [
       {
-       "code": "LUCY",
-       "name": "Lucy",
-       "km": 926000000,
-       "rtlt": 6180
+       "code": "MRO",
+       "name": "Mars Reconnaissance Orbiter",
+       "km": 191000000,
+       "rtlt": 1270
       }
      ]
     },
     {
-     "name": "DSS43",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
-    {
-     "name": "DSS36",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
-    {
-     "name": "DSS34",
-     "az": 46,
-     "el": 62,
+     "name": "DSS26",
+     "az": 123,
+     "el": 17,
      "up": [
       {
        "sc": "SOHO",
        "rate": 0,
        "band": "S",
-       "power": 1.8
+       "power": 0.1
       }
      ],
      "down": [
@@ -279,7 +110,188 @@
        "code": "SOHO",
        "name": "SOHO",
        "km": 1240000,
-       "rtlt": 8.24
+       "rtlt": 8.26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mdscc",
+   "name": "Madrid, Spain",
+   "dishes": [
+    {
+     "name": "DSS55",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS54",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS63",
+     "az": 235,
+     "el": 50,
+     "up": [],
+     "down": [
+      {
+       "sc": "Voyager 1",
+       "rate": 40,
+       "band": "X",
+       "power": -160
+      }
+     ],
+     "targets": [
+      {
+       "code": "VGR1",
+       "name": "Voyager 1",
+       "km": 25900000000,
+       "rtlt": 173000
+      }
+     ]
+    },
+    {
+     "name": "DSS53",
+     "az": 90,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "SPP",
+       "name": "Parker Solar Probe",
+       "km": 138000000,
+       "rtlt": 919
+      }
+     ]
+    },
+    {
+     "name": "DSS65",
+     "az": 111,
+     "el": 21,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "KPLO",
+       "name": "Korea Pathfinder Lunar Orbiter",
+       "km": 385000,
+       "rtlt": 2.57
+      }
+     ]
+    },
+    {
+     "name": "DSS56",
+     "az": 90,
+     "el": 90,
+     "up": [
+      {
+       "sc": "OSIRIS-REx",
+       "rate": 0,
+       "band": "S",
+       "power": 18
+      }
+     ],
+     "down": [],
+     "targets": [
+      {
+       "code": "ORX",
+       "name": "OSIRIS-REx",
+       "km": 84200000,
+       "rtlt": 561
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cdscc",
+   "name": "Canberra, Australia",
+   "dishes": [
+    {
+     "name": "DSS43",
+     "az": 13,
+     "el": 84,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "RST",
+       "name": "Roman Space Telescope",
+       "km": 1280000,
+       "rtlt": 8.55
+      }
+     ]
+    },
+    {
+     "name": "DSS34",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "JWST",
+       "name": "James Webb Space Telescope",
+       "km": 1680000,
+       "rtlt": 11.2
+      }
+     ]
+    },
+    {
+     "name": "DSS35",
+     "az": 63,
+     "el": 11,
+     "up": [],
+     "down": [
+      {
+       "sc": "Emirates Mars Mission (Hope)",
+       "rate": 241900,
+       "band": "X",
+       "power": -110
+      },
+      {
+       "sc": "Mars Reconnaissance Orbiter",
+       "rate": 2400000,
+       "band": "X",
+       "power": -97
+      }
+     ],
+     "targets": [
+      {
+       "code": "EMM",
+       "name": "Emirates Mars Mission (Hope)",
+       "km": 191000000,
+       "rtlt": 1270
+      },
+      {
+       "code": "MRO",
+       "name": "Mars Reconnaissance Orbiter",
+       "km": 191000000,
+       "rtlt": 1270
+      }
+     ]
+    },
+    {
+     "name": "DSS36",
+     "az": 64,
+     "el": 11,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "M01O",
+       "name": "Mars Odyssey",
+       "km": 191000000,
+       "rtlt": 1270
       }
      ]
     }
