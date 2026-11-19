@@ -2,6 +2,110 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-22150",
+   "arxiv": "2611.22150",
+   "t": "Exomoons and Exorings with the Habitable Worlds Observatory. III. Icy Moons and Rings Often Outshine Their Planets",
+   "by": "Sam Hopper, Mary Anne Limbach and Rachel Bowens-Rubin",
+   "date": "2026-11-17",
+   "added": "2026-11-19",
+   "cat": "astro-ph.EP",
+   "status": "Accepted to AJ",
+   "url": "https://arxiv.org/abs/2611.22150",
+   "one": "We find that reflected light from Triton-analog exomoons and Saturn-analog exorings is detectable with HWO over a broad parameter space.",
+   "q": "If we could observe the Solar System's giant planets with the upcoming Habitable Worlds Observatory (HWO), the dominant sources of reflected near-infrared light would not always be the planets themselves. In fact, the brightest sources are split roughly evenly between the giants and their icy companions: at the locations of the giant planets, the dominant point sources would be Jupiter, Saturn's rings, Uranus, and Triton (Neptune's icy moon).",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "In the nearest systems, icy Titan-sized moons are detectable at star-moon separations of ~2 AU and icy Earth-sized moons out to ~6 AU."
+    ],
+    [
+     "From the abstract (2)",
+     "Moreover, Saturn-like exorings are likely to be the brightest point sources in many extrasolar systems, capable of greatly outshining any planets, while remaining potentially detectable at system distances out to 100 pc."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [],
+   "links": [
+    "obj:jupiter",
+    "obj:saturn",
+    "canon:mayor-queloz-1995"
+   ]
+  },
+  {
+   "id": "2611-22487",
+   "arxiv": "2611.22487",
+   "t": "Dual and Binary AGN at Cosmic Dawn: The need for a JWST Program to resolve the merger channel of Early Black Hole Growth",
+   "by": "Filippo Mannucci, Matteo Ceci, Norman A. Grogin and 11 others",
+   "date": "2026-11-17",
+   "added": "2026-11-19",
+   "cat": "astro-ph.GA",
+   "status": "MCT Concept White Paper, Genesis initiative, comments are welcome",
+   "url": "https://arxiv.org/abs/2611.22487",
+   "one": "The census will deliver pair fractions as functions of redshift, separation and luminosity, BH masses and mass ratios, host properties and environments, and the empirical anchor needed to turn merger models into realistic LISA rate forecasts.",
+   "q": "The discovery with JWST of accreting black holes (BHs) at z=4-9 in numbers far exceeding pre-JWST expectations, many of them overmassive relative to their hosts and linked to the enigmatic Little Red Dots (LRDs), raises the question of how early BHs form and grow. Hierarchical assembly predicts that galaxy mergers drive gas to galactic nuclei and bring BHs together, leaving a direct observational signature: dual AGN at tens of kpc separations and sub-kpc to few-kpc \"duets\" in post-merger galaxies, which are the progenitors of the low-frequency GW sources targeted by pulsar timing arrays and LISA.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "JWST has opened the window to study these systems at z>3."
+    ],
+    [
+     "From the abstract (2)",
+     "Confirming and characterising about 100 pairs requires of order 1000 hr, well beyond the ceiling of standard TAC programs, and demands multi-cycle continuity."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "active-galactic-nucleus",
+    "black-hole",
+    "parsec",
+    "pulsar"
+   ],
+   "links": [
+    "canon:nanograv-2023"
+   ]
+  },
+  {
+   "id": "2611-23011",
+   "arxiv": "2611.23011",
+   "t": "The low-luminosity state of the Be/X-ray pulsar IGR J06074+2205",
+   "by": "Alexander Salganik, Sergey S. Tsygankov, Roman Krivonos and 2 others",
+   "date": "2026-11-17",
+   "added": "2026-11-19",
+   "cat": "astro-ph.HE",
+   "status": "6 pages, 3 figures, 1 table. Accepted for publication in A&A",
+   "url": "https://arxiv.org/abs/2611.23011",
+   "one": "IGR J06074+2205 thus joins the very limited sample of X-ray pulsars with cyclotron-line energies that have been observed with a double-humped spectral shape.",
+   "q": "At low accretion rates, X-ray pulsars can develop a two-hump spectrum through the thermalization and Comptonization of cyclotron photons in an accretion-heated, strongly magnetized atmosphere. Sources with independently measured cyclotron-line energies, E_cyc, are particularly important because they provide a direct estimate of magnetic field strength and allow the continuum shape to be tested against spectral formation models.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "We investigate the luminosity-dependent spectral evolution of the Be/X-ray pulsar IGR J06074+2205 and constrain the accretion regime in its newly observed low-luminosity state."
+    ],
+    [
+     "From the abstract (2)",
+     "We analyzed three NuSTAR observations obtained during the 2023 and 2025 outbursts, corresponding to the high-, intermediate-, and low-luminosity states at L₃₋₇₉ ≃ 5×10³⁶, 4×10³⁵, and 6×10³⁴ erg s⁻¹, respectively."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "accretion-disc",
+    "pulsar",
+    "spectrum"
+   ],
+   "links": [
+    "canon:hewish-1968"
+   ]
+  },
+  {
    "id": "2611-21468",
    "arxiv": "2611.21468",
    "t": "The JWST Sub-Jupiters Survey: Observed Sensitivities to the Wide-Separation, Cold, Sub-Jupiter Exoplanet Population",

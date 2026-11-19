@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-18T15:45:19.318Z",
+ "fetched": "2026-11-19T00:28:18.680Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,249 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "02bbbcfe7a7c",
+   "t": "NASA and FCC Nominations Advance Out of Committee Despite Democratic Boycott",
+   "url": "https://spacepolicyonline.com/news/nasa-and-fcc-nominations-advance-out-of-committee-despite-democratic-boycott/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-18T23:40:38.000Z",
+   "sum": "Nominations for two positions at NASA and one at the FCC were reported from the Senate Commerce Committee today even though no Democrats were in attendance. Committee rules state that […]",
+   "desk": "policy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "2b43fabf0350",
+   "t": "NASA Sets Coverage for Northrop Grumman CRS-25 Launch, Prelaunch",
+   "url": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-northrop-grumman-crs-25-launch-prelaunch/",
+   "site": "NASA",
+   "date": "2026-11-18T22:19:17.000Z",
+   "sum": "NASA, Northrop Grumman, and SpaceX are targeting no earlier than 10:47 a.m. EST, Sunday, Nov. 29, for the next launch delivering science investigations, supplies, and equipment to the International Space Station. The agency also will hold a prelaunch media teleconference on Monday, Nov. 23. Filled with approximately 11,000 pounds of cargo, the Northrop Grumman Cygnus […]",
+   "desk": "launch",
+   "who": [
+    "NASA",
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "88b8dc036148",
+   "t": "Flexell Space and ALATYR Sign MoU to Explore Solar Power Solutions for Orbital Data Centers",
+   "url": "https://spacenews.com/flexell-space-and-alatyr-sign-mou-to-explore-solar-power-solutions-for-orbital-data-centers/",
+   "site": "SpaceNews",
+   "date": "2026-11-18T22:02:00.000Z",
+   "sum": "– Collaboration to assess next-generation ultralight solar cells for space-based computing infrastructure – Partnership brings together Korean space energy technology and French orbital infrastructure expertise Bremen, Germany – Flexell Space, […] The post Flexell Space and ALATYR Sign MoU to Explore Solar Power Solutions for Orbital Data Centers appeared first on SpaceNews.",
+   "desk": "other",
+   "who": [
+    "KASA"
+   ]
+  },
+  {
+   "id": "8389f3135b4f",
+   "t": "Voyager 1 reaches one light-day nearly 50 years after launch",
+   "url": "https://www.nasaspaceflight.com/2026/11/voyager-1-light-day/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-18T21:48:55.000Z",
+   "sum": "At 5:16:07 AM EST (10:16 UTC) on Nov. 18, and at a distance of 26… The post Voyager 1 reaches one light-day nearly 50 years after launch appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "9578a8fc1643",
+   "t": "Vulcan failure investigation focuses on ‘inadequate fuel supply’ to booster engines",
+   "url": "https://spaceflightnow.com/2026/11/18/vulcan-failure-investigation-focuses-on-inadequate-fuel-supply-to-booster-engines/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-18T21:11:37.000Z",
+   "sum": "United Launch Alliance said Wednesday that a preliminary review of flight data points to an inadequate supply of fuel to the Blue Origin-manufactured engines of its Vulcan rocket, rather than a problem with the engines themselves, as the reason Sunday's launch fell short of orbit with 40 Amazon Leo internet satellites aboard.",
+   "desk": "launch",
+   "who": [
+    "Blue Origin"
+   ]
+  },
+  {
+   "id": "9c7e485ac030",
+   "t": "Reconstructing Cosmic History and Earth's Evolution From Cosmic Explosions",
+   "url": "https://www.universetoday.com/articles/reconstructing-cosmic-history-and-earths-evolution-from-cosmic-explosions",
+   "site": "Universe Today",
+   "date": "2026-11-18T21:07:58.000Z",
+   "sum": "53 Mn), can only be synthesized in supernova explosions. Credit: NASA\" width=\"1280\" height=\"720\" /> The European Research Council (ERC) announced the winners of its latest Advanced Grant competition. Among the awardees is Prof. Anton Wallner from the Helmholtz-Zentrum Dresden-Rossendorf (HZDR), whose project SUPREME attempts to reconstruct the history of nearby cosmic explosions over the past 500 million years and…",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3ef3637c083f",
+   "t": "All Points Logistics Announces Partnership with Expeditors for Space Prep Logistics Center at Kennedy Space Center",
+   "url": "https://spacenews.com/all-points-logistics-announces-partnership-with-expeditors-for-space-prep-logistics-center-at-kennedy-space-center/",
+   "site": "SpaceNews",
+   "date": "2026-11-18T20:31:51.000Z",
+   "sum": "MERRITT ISLAND, FL, November 18, 2026 — All Points Logistics has announced a partnership with Expeditors International of Washington, Inc. (NYSE: EXPD) to serve as the exclusive logistics provider for […] The post All Points Logistics Announces Partnership with Expeditors for Space Prep Logistics Center at Kennedy Space Center appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "4dd048eddeb7",
+   "t": "The Simons Observatory is Online and Surveying the Cosmic Microwave Background",
+   "url": "https://www.universetoday.com/articles/the-simons-observatory-is-online-and-surveying-the-cosmic-microwave-background",
+   "site": "Universe Today",
+   "date": "2026-11-18T20:05:05.000Z",
+   "sum": "The Simons Observatory is online and surveying the Cosmic Microwave Background (CMB) in greater detail than ever before. It's looking for tiny fluctuations in the CMB caused by primordial gravitational waves. These waves, if detected, would be as close to slam-dunk evidence for the Big Bang that we can expect to find.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "b598d1a6b86f",
+   "t": "Insufficient Fuel Flow May Have Doomed Vulcan",
+   "url": "https://spacepolicyonline.com/news/insufficient-fuel-flow-may-have-doomed-vulcan/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-18T19:27:13.000Z",
+   "sum": "The United Launch Alliance said today that insufficient fuel flow from the launch vehicle to the BE-4 engines may have led to the failure of Vulcan Leo 1 on Sunday. […]",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "2d8f21a9606b",
+   "t": "Are Uranus and Neptune Secretly \"Rock Giants\"? A Noble Gas Might Hold the Answer",
+   "url": "https://www.universetoday.com/articles/are-uranus-and-neptune-secretly-rock-giants-a-noble-gas-might-hold-the-answer",
+   "site": "Universe Today",
+   "date": "2026-11-18T19:11:15.000Z",
+   "sum": "For decades, astronomers have divided the planets in the outer solar system into two distinct camps. Jupiter and Saturn were the “gas giants” made up primarily of hydrogen and helium. Uranus and Neptune were the “ice giants”, and were much smaller but were packed with heavier elements. A new paper from Olivier Mousis of the Southwest Research Institute and his co-authors, available in The Planetary Science Journal,…",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "af5d0c9506bd",
+   "t": "MAF EAP – Holidays – How to manage the BAH HUMBUG that tries to sneak in",
+   "url": "https://www.nasa.gov/centers-and-facilities/michoud/maf-eap/maf-eap-holidays-how-to-manage-the-bah-humbug-that-tries-to-sneak-in/",
+   "site": "NASA",
+   "date": "2026-11-18T18:58:27.000Z",
+   "sum": "Holidays are often a fun break during a busy year – a long weekend here and there is an event many of us can get behind. However, when a short holiday break turns into a full holiday season, we know that this is a different “ball game”. Everyone has stress about something – some people […]",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "0e229a79566c",
+   "t": "NASA Announces Mid-Power Electric Rocket Challenge for US Companies",
+   "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-announces-mid-power-electric-rocket-challenge-for-us-companies/",
+   "site": "NASA",
+   "date": "2026-11-18T18:12:32.000Z",
+   "sum": "NASA launched a new competition inviting U.S. companies to produce prototypes of mid-power Hall effect thrusters – a type of electric propulsion system considered crucial for future space operations and exploration. Hall effect thrusters use an electric field to accelerate a propellant gas, producing efficient thrust for long-duration missions. Used for propelling satellites and deep […]",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "9b896caf0bb4",
+   "t": "Empire State Building Goes Gold for Voyager",
+   "url": "https://www.nasa.gov/image-article/empire-state-building-goes-gold-for-voyager/",
+   "site": "NASA",
+   "date": "2026-11-18T17:50:26.000Z",
+   "sum": "The Empire State Building is seen illuminated in gold to celebrate NASA’s Voyager 1 spacecraft as it was about to pass one light-day away from Earth, a distance reached by no other human-made object, Nov. 17, 2026. The color gold represents the gold-plated copper phonograph record that is flying on Voyager; the Golden Record contains […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "96ff36896ce9",
+   "t": "NASA’s Voyager 1 is one light-day from Earth",
+   "url": "https://spaceflightnow.com/2026/11/18/nasas-voyager-1-is-one-light-day-from-earth/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-18T17:46:40.000Z",
+   "sum": "NASA's Voyager 1 spacecraft became the first human-made object to reach a distance of one light-day from Earth early Wednesday, crossing the threshold at 5:16:07 a.m. EST (10:16:07 UTC) as it sped away from the sun at nearly 38,000 mph.",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "962b33f384d1",
+   "t": "Extremely Accurate Measurements of a Pair of Flaring Red Dwarfs",
+   "url": "https://www.universetoday.com/articles/extremely-accurate-measurements-of-a-pair-of-flaring-red-dwarfs",
+   "site": "Universe Today",
+   "date": "2026-11-18T17:41:05.000Z",
+   "sum": "Astronomers used the Very Large Baseline Array of radio telescopes to measure a pair of active red dwarfs with extreme precision. One of the stars is an extreme type of red dwarf called a Complex Periodic Variable. This is the first time one of these stars has been measured accurately in a binary system.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "4860f27995d2",
+   "t": "What Is the Moon Base?",
+   "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-the-moon-base/",
+   "site": "NASA",
+   "date": "2026-11-18T17:36:03.000Z",
+   "sum": "This article is for students. NASA is returning astronauts to the Moon – and this time they will spend more time on the lunar surface. The Moon Base is humanity’s first lunar outpost. It will be a place where astronauts live, work, and explore. ______________________________________________________________________ Words to Know outpost: a station or base located in […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "883e59987eb4",
+   "t": "Thank You for Doing NASA Science!",
+   "url": "https://science.nasa.gov/get-involved/citizen-science/thank-you-for-doing-nasa-science/",
+   "site": "NASA",
+   "date": "2026-11-18T17:32:52.000Z",
+   "sum": "It’s Thanksgiving time, and we’re giving thanks to you for doing NASA Science with us! You and NASA’s other volunteers have enabled an incredible banquet of discoveries—by taking data, analyzing data, writing code, writing papers, and even inventing your own science projects. Whether you’re an expert participant or someone who’s just started your science journey, […]",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "c54b3b1d4e68",
+   "t": "Fermi’s 14-Year All-Sky Map Bridges Astronomy’s Elusive \"MeV Gap\"",
+   "url": "https://www.universetoday.com/articles/fermis-14-year-all-sky-map-bridges-astronomys-elusive-mev-gap",
+   "site": "Universe Today",
+   "date": "2026-11-18T17:23:14.000Z",
+   "sum": "Gamma rays, the most high-energy type of electromagnetic radiation in the universe, have always had a blind spot. We’ve always had trouble measuring them in the “mega-electron volt” (MeV) energy range, which astronomers have taken to calling the “MeV gap”. But a new paper from an international group of scientists working with the Fermi Large Area Telescope (LAT) Collaboration recently published a paper in The…",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "db952f913324",
+   "t": "Vulcan failure caused by inadequate fuel supply to engines, ULA says",
+   "url": "https://arstechnica.com/space/2026/11/vulcan-failure-caused-by-inadequate-fuel-supply-to-engines-ula-says/",
+   "site": "Arstechnica",
+   "date": "2026-11-18T16:58:32.000Z",
+   "sum": "\"ULA is a valued partner, and we look forward to Vulcan's return to flight.\"",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "7caf86df745a",
+   "t": "Origami and solar arrays",
+   "url": "https://spacenews.com/origami-and-solar-arrays/",
+   "site": "SpaceNews",
+   "date": "2026-11-18T16:56:05.000Z",
+   "sum": "In this episode of SpaceMinds, SpaceNews’ Mike Gruss talks with Thomas Sinn, the CEO of Dcubed, at Space Tech Expo Europe. They discuss the company’s new $30 million funding round, […] The post Origami and solar arrays appeared first on SpaceNews.",
+   "desk": "policy",
+   "who": []
+  },
+  {
+   "id": "fe0c8b02ff6b",
+   "t": "Watch Jupiter's Moons Eclipse and Occult One Another",
+   "url": "https://skyandtelescope.org/astronomy-news/watch-jupiters-moons-eclipse-and-occult-one-another/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-18T16:46:25.000Z",
+   "sum": "Jupiter routinely occults and eclipses its four bright Galilean moons. Over the next few months, the moons get in on the act, eclipsing and occulting one another! The post Watch Jupiter's Moons Eclipse and Occult One Another appeared first on Sky & Telescope.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "49c56cb191c4",
+   "t": "NASA Data Clinches First-of-Its-Kind Stellar Merger",
+   "url": "https://science.nasa.gov/missions/webb/nasa-data-clinches-first-of-its-kind-stellar-merger/",
+   "site": "NASA",
+   "date": "2026-11-18T16:00:00.000Z",
+   "sum": "Researchers recently identified a first of its kind: A star slightly less massive than the Sun spiraled into and merged with a puffy supergiant star at the outskirts of our neighboring Andromeda galaxy. They nicknamed the newly single, potentially “rejuvenated” star Bao. Their NASA-funded discovery was then bolstered by quick-turn observations from NASA’s James Webb […]",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
   {
    "id": "ef89a7b50f05",
    "t": "Microscopic Space Dust Reveals A Hidden Reservoir Of \"Heavy Water\" Beyond Neptune",
@@ -159,18 +402,6 @@
    ]
   },
   {
-   "id": "c00a30f7ecef",
-   "t": "NICER Status Updates",
-   "url": "https://www.nasa.gov/missions/station/nicer-status-updates/",
-   "site": "NASA",
-   "date": "2026-11-17T18:18:16.000Z",
-   "sum": "November 17, 2026 NASA’s NICER Telescope Ends Science Operations After studying the universe for six and a half years beyond its initial mission, NASA’s NICER (Neutron star Interior Composition Explorer) telescope on the International Space Station has ended science operations. The mission and space station teams are now focused on plans to finalize NICER’s 8-year […]",
-   "desk": "launch",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
    "id": "1cc34e861f35",
    "t": "The data is very preliminary, but Vulcan failure may not be due to BE-4 engines",
    "url": "https://arstechnica.com/features/2026/11/sources-vulcan-launch-anomaly-investigation-is-complex/",
@@ -203,18 +434,6 @@
    "sum": "As the Universe's very first light, the Cosmic Microwave Background holds clues to the very foundation of the cosmos. But, of course, the cosmos doesn't give up its secrets to a casual observer. Only years of work by dedicated scientists with purpose-built tools can make progress.",
    "desk": "astronomy",
    "who": []
-  },
-  {
-   "id": "eb8ae8da944a",
-   "t": "NASA to Conduct Low-Altitude Flights Over Texas Farmland",
-   "url": "https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/",
-   "site": "NASA",
-   "date": "2026-11-17T17:12:20.000Z",
-   "sum": "Editor’s Note: This article was originally published on Oct. 15, 2026, and has been updated to correct the location and update the duration of the flight deployment. A NASA Dynamic Aviation A200 aircraft will conduct low-flying research flights over farmland near Amarillo, Texas, from Thursday, Oct. 22, through Monday, Nov. 2. These flights will measure […]",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
   },
   {
    "id": "6404bbe8c5c3",
@@ -667,70 +886,6 @@
    "who": []
   },
   {
-   "id": "294ac86f23bf",
-   "t": "SpaceX Launches Starship But Passes Up Booster Catch for Safety's Sake",
-   "url": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake",
-   "site": "Universe Today",
-   "date": "2026-11-13T23:12:00.000Z",
-   "sum": "SpaceX sent its Starship on a flight that was meant to feature a first-ever retrieval of both rocket stages, but a launch-pad catch of the first-stage booster had to be canceled due to safety concerns.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "227597207835",
-   "t": "LOFAR Takes the Deepest Image of the Low-Frequency Radio Sky to Date",
-   "url": "https://www.universetoday.com/articles/lofar-takes-the-deepest-image-of-the-low-frequency-radio-sky-to-date",
-   "site": "Universe Today",
-   "date": "2026-11-13T21:30:58.000Z",
-   "sum": "Using the Low Frequency Array (LOFAR), an international team led by Leiden University has produced the sharpest and most sensitive radio image of the sky ever made at low radio frequencies.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "7eafd996c8cb",
-   "t": "Live Coverage: Starship Flight 15 attempts to recover full vehicle in double launch pad catch",
-   "url": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/",
-   "site": "Spaceflight Now",
-   "date": "2026-11-13T19:15:11.000Z",
-   "sum": "Liftoff of the integrated Starship vehicle from Starbase in Texas is scheduled during a 75-minute launch window that opens at 4:45 p.m. CST (5:45 p.m. EST / 2245 UTC) on Friday, Nov. 13.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "68075b1fada3",
-   "t": "Commercial Space Federation Welcomes CesiumAstro as a New Associate Member",
-   "url": "https://spacenews.com/commercial-space-federation-welcomes-cesiumastro-as-a-new-associate-member/",
-   "site": "SpaceNews",
-   "date": "2026-11-13T18:00:00.000Z",
-   "sum": "November 13, 2026— Washington, D.C.—The Commercial Space Federation (CSF) is pleased to welcome CesiumAstro as its newest Associate Member. A global leader in advanced connectivity solutions for the space and […] The post Commercial Space Federation Welcomes CesiumAstro as a New Associate Member appeared first on SpaceNews.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "96a0c26f86f2",
-   "t": "Dense Galaxy Clusters Foster Mechanisms That Throttle Star Formation",
-   "url": "https://www.universetoday.com/articles/dense-galaxy-clusters-foster-mechanisms-that-throttle-star-formation",
-   "site": "Universe Today",
-   "date": "2026-11-13T17:51:07.000Z",
-   "sum": "The Cosmic Noon was when the Universe's Stelliferous Era Began, and star formation was prodigious during that epoch. But since then, star formation has slowed to a relative crawl, despite the fact that we can watch them forming in regions throughout the Milky Way. What happened to the hydrogen gas that forms stars? New research found clues in a particulary dense galaxy cluster.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "699313c64fb8",
-   "t": "Shape-Shifting Robotic \"Slugs\" Could One Day Crawl Across Alien Worlds",
-   "url": "https://www.universetoday.com/articles/shape-shifting-robotic-slugs-could-one-day-crawl-across-alien-worlds",
-   "site": "Universe Today",
-   "date": "2026-11-13T17:10:44.000Z",
-   "sum": "Robots have been a mainstay of our early space exploration efforts. But they normally have wheels. Or in some cases, rotors. While those solutions are great on flat ground, they struggle with jagged boulders or tight crevices. So engineers have been working on alternative robotic form factors, and a recent paper in Nature Machine Intelligence from researchers at Colorado State University’s Adaptive Robotics Lab,…",
-   "desk": "other",
-   "who": []
-  },
-  {
    "id": "d84615798113",
    "t": "This Week's Sky at a Glance, November 13 – 22",
    "url": "https://skyandtelescope.org/astronomy-news/observing-news/this-weeks-sky-at-a-glance-november-13-22/",
@@ -739,30 +894,6 @@
    "sum": "Jupiter and Mars creep through their pre-dawn conjunction this week. Far lower left of them, Venus and Mercury rise to shine in early dawn. The post This Week's Sky at a Glance, November 13 – 22 appeared first on Sky & Telescope.",
    "desk": "missions",
    "who": []
-  },
-  {
-   "id": "1cbd2bca9bd5",
-   "t": "Outbursts from a Massive Star",
-   "url": "https://www.nasa.gov/image-article/outbursts-from-a-massive-star/",
-   "site": "NASA",
-   "date": "2026-11-13T16:39:33.000Z",
-   "sum": "Using NASA’s Chandra X-ray Observatory, astronomers have discovered what is triggering repeated outbursts from a giant, unstable star located in the galaxy shown in this image released on Nov. 9, 2026. The volatile star, known as AT 2016blu, is in the spiral galaxy NGC 4559, located about 30 million light-years from Earth. Astronomers estimate the […]",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "17ce9d884138",
-   "t": "Gemini Astronaut Photos Inspired Early Earth Observation Program",
-   "url": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program/",
-   "site": "NASA",
-   "date": "2026-11-13T16:05:54.000Z",
-   "sum": "Astronauts James A. Lovell Jr. and Edwin E. “Buzz” Aldrin Jr. orbited Earth from November 11 to 15, 1966, on Gemini XII, the final mission of NASA’s Gemini program. In addition to successfully completing rendezvous maneuvers and spacewalks, procedures vital to sending American astronauts to the Moon, the crew was also spurring the development of […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
   },
   {
    "id": "6282c590db75",
@@ -777,106 +908,6 @@
    ]
   },
   {
-   "id": "2c08176372c4",
-   "t": "Tears of the Lion: Catching the 2026 Leonid Meteors",
-   "url": "https://www.universetoday.com/articles/tears-of-the-lion-catching-the-2026-leonid-meteors",
-   "site": "Universe Today",
-   "date": "2026-11-13T13:21:00.000Z",
-   "sum": "It’s always worth being vigilant when skywatching in mid- to late November. Every year, a few Leonid meteors punctuate the November morning sky around the 17th. These silent harbingers are only a hint at the shower’s true storm potential, which culminates once every three decades. The Leonid meteor shower can put on a true spectacle, and while 2026 isn’t expected to be a ‘storm year,’ we could be due for some…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "5459684a14c7",
-   "t": "ULA’s Vulcan rocket plans return to flight with launch of 40 Leo satellites for Amazon",
-   "url": "https://spaceflightnow.com/2026/11/13/ulas-vulcan-rocket-plans-return-to-flight-with-launch-of-40-leo-satellites-for-amazon/",
-   "site": "Spaceflight Now",
-   "date": "2026-11-13T12:25:06.000Z",
-   "sum": "Liftoff from Space Launch Complex 41 at Cape Canaveral Space Force Station is scheduled for 12:54 p.m. EST (1754 UTC), at the opening of a 29-minute window.",
-   "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "0d4614944ee4",
-   "t": "Rocket Report: Starship set for historic test flight; a century of Electron",
-   "url": "https://arstechnica.com/space/2026/11/rocket-report-starship-set-for-historic-test-flight-a-century-of-electron/",
-   "site": "Arstechnica",
-   "date": "2026-11-13T12:00:40.000Z",
-   "sum": "\"You can simplify it as a big tank feeding engines.\"",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "9137c9c46950",
-   "t": "ESA Confirms Latest Prometheus Tests Not Connected to Themis Hop Preparations",
-   "url": "https://europeanspaceflight.com/esa-confirms-latest-prometheus-tests-not-connected-to-themis-hop-preparations/",
-   "site": "European Spaceflight",
-   "date": "2026-11-13T07:57:07.000Z",
-   "sum": "The European Space Agency (ESA) and ArianeGroup have confirmed that Prometheus engine tests conducted in Lampoldshausen in October were carried out independently of preparations for the long-delayed inaugural flight of the Themis reusable booster demonstrator. In a 6 November press release, ArianeGroup announced that it had completed a series of hot-fire tests of the latest […] The post ESA Confirms Latest…",
-   "desk": "launch",
-   "who": [
-    "ESA"
-   ]
-  },
-  {
-   "id": "17b6995f9ce6",
-   "t": "A Global Rebound for Mangroves",
-   "url": "https://science.nasa.gov/earth/earth-observatory/a-global-rebound-for-mangroves/",
-   "site": "NASA",
-   "date": "2026-11-13T05:01:00.000Z",
-   "sum": "After decades of decline, this ecologically significant type of forest is making a comeback.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "60d08c053ac7",
-   "t": "Senate Appropriations CJS Subcommittee Proposes $24.9 Billion for NASA in FY2027",
-   "url": "https://spacepolicyonline.com/news/senate-appropriations-cjs-subcommittee-proposes-24-9-billion-for-nasa-in-fy2027/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-13T04:55:42.000Z",
-   "sum": "The Senate Appropriations Committee released five more FY2027 bills this evening, including the Commerce-Justice-Science bill that funds NASA. The CJS subcommittee is proposing $24.874 billion for NASA, slightly more than […]",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "1451b7da66fb",
-   "t": "Starship Flight 15 to attempt first catch of both stages",
-   "url": "https://www.nasaspaceflight.com/2026/11/starship-flight-15-spacex-history/",
-   "site": "NASASpaceflight",
-   "date": "2026-11-13T04:24:28.000Z",
-   "sum": "After 14 full-stack flights, SpaceX is set to attempt something no one in spaceflight history… The post Starship Flight 15 to attempt first catch of both stages appeared first on NASASpaceFlight.com.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "a5e8b6a89189",
-   "t": "NASA Looking for New Ways to Return Perseverance Samples From Mars",
-   "url": "https://spacepolicyonline.com/news/nasa-looking-for-new-ways-to-return-perseverance-samples-from-mars/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-13T02:48:46.000Z",
-   "sum": "In January, NASA will begin assessing new strategies to return the samples now being collected by the Mars Perseverance rover to Earth. The agency ended an earlier Mars Sample Return […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "682fc7923a51",
-   "t": "AST SpaceMobile presses case for developing own launch vehicle",
-   "url": "https://spacenews.com/ast-spacemobile-presses-case-for-developing-own-launch-vehicle/",
-   "site": "SpaceNews",
-   "date": "2026-11-13T01:15:21.000Z",
-   "sum": "AST SpaceMobile executives expressed confidence in the company’s ability to field a new reusable launch vehicle in just two years despite widespread industry skepticism. The post AST SpaceMobile presses case for developing own launch vehicle appeared first on SpaceNews.",
-   "desk": "launch",
-   "who": []
-  },
-  {
    "id": "4bb676381451",
    "t": "Photo Release: NSF NOIRLab-operated Facilities Capture Brightening Nearby Supernova",
    "url": "http://noirlab.edu/public/news/noirlab2628/",
@@ -884,39 +915,6 @@
    "date": "2026-11-12T21:23:32.000Z",
    "sum": "Newly discovered supernova SN 2026ahvu in the nearby spiral galaxy NGC 1433 bedazzles new images from the Dark Energy Camera and the International Gemini Observatory. Caught early and still approaching its expected maximum brightness, SN 2026ahvu gives astronomers a valuable opportunity to study a stellar explosion as it unfolds. NSF NOIRLab is coordinating observations across the facilities it operates, working…",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "341a4664d13d",
-   "t": "I Am Artemis Katie Spicer",
-   "url": "https://www.nasa.gov/missions/artemis/i-am-artemis-katie-spicer/",
-   "site": "NASA",
-   "date": "2026-11-12T20:10:02.000Z",
-   "sum": "For Katie Spicer, embracing opportunity and challenge has led to giant leaps during her time at NASA. Now as the NASA lander integration lead for Blue Origin’s Blue Moon Mark 2 lander, one of the commercially provided human landing systems for NASA’s Artemis program, Spicer will have her handprint on history. Spicer works in the […]",
-   "desk": "missions",
-   "who": [
-    "NASA",
-    "Blue Origin"
-   ]
-  },
-  {
-   "id": "6241768f8156",
-   "t": "UARX Space Marks a Milestone for Spain’s Space Industry with the Maiden Flight of OSSIE-D, Featuring a Complete Power Subsystem Supplied by DHV Technology",
-   "url": "https://spacenews.com/uarx-space-marks-a-milestone-for-spains-space-industry-with-the-maiden-flight-of-ossie-d-featuring-a-complete-power-subsystem-supplied-by-dhv-technology/",
-   "site": "SpaceNews",
-   "date": "2026-11-12T20:00:00.000Z",
-   "sum": "Nigrán, Spain | November 12 2026 – UARX Space has achieved a major milestone for Spain’s space industry with the deployment of OSSIE-D, an Orbital Transfer Vehicle (OTV) designed and […] The post UARX Space Marks a Milestone for Spain’s Space Industry with the Maiden Flight of OSSIE-D, Featuring a Complete Power Subsystem Supplied by DHV Technology appeared first on SpaceNews.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "217d1e075d2d",
-   "t": "What role does industry play in Europe’s space sovereignty push?",
-   "url": "https://spacenews.com/what-role-does-industry-play-in-europes-space-sovereignty-push/",
-   "site": "SpaceNews",
-   "date": "2026-11-12T19:40:35.000Z",
-   "sum": "In this episode, SpaceNews’ Jason Rainbow interviews Atle Woello, the CEO and senior vice president of the space systems and surveillance business unit at Kongsberg NanoAvionics. They discuss the role […] The post What role does industry play in Europe’s space sovereignty push? appeared first on SpaceNews.",
-   "desk": "other",
    "who": []
   },
   {
@@ -945,7 +943,7 @@
    "url": "http://noirlab.edu/public/news/noirlab2627/",
    "site": "NOIRLab",
    "date": "2026-11-10T18:00:00.000Z",
-   "sum": "The oldest pair of compact quasars ever observed has been found only 900 million years after the Big Bang. Scientists say there is no theoretical explanation for how the pair of actively feeding black holes grew so massive at such an early time in the history of the Universe. The pair of quasars has been given the Hawaiian nickname Nāpōwawāʻenakaulua.",
+   "sum": "The oldest pair of compact quasars ever observed has been found only 900 million years after the Big Bang. Scientists say there is no theoretical explanation for how the pair of actively feeding black holes grew so massive at such an early time in the history of the Universe. The pair of quasars has been given the Hawaiian name Nāpōwawāʻenakaulua.",
    "desk": "astronomy",
    "who": []
   },
@@ -970,16 +968,6 @@
    "who": [
     "NASA"
    ]
-  },
-  {
-   "id": "36c72eaa3a80",
-   "t": "Margaret Hamilton, Apollo Software Engineer (1936 – 2026)",
-   "url": "https://skyandtelescope.org/astronomy-news/people-places-and-events/margaret-hamilton-apollo-software-engineer-1936-2026/",
-   "site": "Sky & Telescope",
-   "date": "2026-11-05T13:00:00.000Z",
-   "sum": "Hamilton’s code sent humans to the Moon with a “defensive programming” mindset. The post Margaret Hamilton, Apollo Software Engineer (1936 – 2026) appeared first on Sky & Telescope.",
-   "desk": "astronomy",
-   "who": []
   }
  ]
 }
