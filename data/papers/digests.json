@@ -2,6 +2,104 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-23818",
+   "arxiv": "2611.23818",
+   "t": "NEXONN: Advancing the NEXOTRANS Exoplanet Atmospheric Retrieval Framework with Transformer-Based Neural Posterior Estimation for JWST Transmission Spectroscopy of WASP-39b",
+   "by": "Tasneem Basra Khan, Liton Majumdar, Mithun Patra and 4 others",
+   "date": "2026-11-18",
+   "added": "2026-11-20",
+   "cat": "astro-ph.EP",
+   "status": "28 pages, 11 figures, 3 tables. Revised and resubmitted to The Astronomical Journal. We thank the anonymous referee for their constructive comments. Further comments are welcome",
+   "url": "https://arxiv.org/abs/2611.23818",
+   "one": "Once trained, NEXONN performs posterior inference within seconds, enabling scalable population studies of exoplanet atmospheric composition, formation, and evolution.",
+   "q": "The James Webb Space Telescope is delivering unprecedented constraints on exoplanet atmospheres, but computationally intensive Bayesian retrievals challenge the transition from individual planets to population-level studies of planetary formation and evolution. For simulated MIRI/LRS data, eight posteriors achieve a mean overlap of 80.32%.",
+   "how": "We introduce NEXONN, a transformer-conditioned normalizing-flow framework within NEXOTRANS that enables rapid atmospheric posterior estimation with uncertainty quantification. Incorporating PandExo-based JWST noise, we benchmark NEXONN against PyMultiNest using simulated spectra and JWST observations of WASP-39 b (0.6-12 microns).",
+   "found": [
+    [
+     "From the abstract",
+     "For the full dataset, NEXONN infers C/O = 0.82 (+0.01/-0.02) and [M/H] = 1.13 (+0.04/-0.04), compared with PyMultiNest values of 0.80 (+0.03/-0.01) and 1.19 (+0.05/-0.03)."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "spectrum"
+   ],
+   "links": [
+    "obj:jwst",
+    "canon:mayor-queloz-1995"
+   ]
+  },
+  {
+   "id": "2611-24838",
+   "arxiv": "2611.24838",
+   "t": "Deconstructing the cosmic baryon distribution with fast radio bursts",
+   "by": "Koustav Konar, Yin-Zhe Ma, Léon V. E. Koopmans and P. Daniel Meerburg",
+   "date": "2026-11-18",
+   "added": "2026-11-20",
+   "cat": "astro-ph.CO",
+   "status": "Accepted for publication in A&A",
+   "url": "https://arxiv.org/abs/2611.24838",
+   "one": "Our bin-wise electron density estimate reproduces the simulation ground truth to within 10 per cent and gives gas fractions of 0.186 ±0.012, 0.179 ±0.015 and 0.046 ±0.014 in voids, filaments and haloes, against ground truths of 0.167…",
+   "q": "The precise distribution of baryons in the Universe remains an open question in cosmology, as their highly diffuse nature hinders direct observation. However, mapping it is integral for precision cosmology in studies of gravitational lensing, galaxy evolution and the cosmic microwave background with current and upcoming surveys.",
+   "how": "We use fast radio bursts (FRBs) and their dispersion measures (DMs) to probe and localise this baryon distribution in the large-scale structure (LSS). Using IllustrisTNG simulations, we classify the LSS into eight bins of increasing matter density, analogous to voids, filaments, and haloes.",
+   "found": [
+    [
+     "From the abstract",
+     "Combining the FRB and galaxy density estimators, we recover the density of ionised baryons as Ω_b fᵢₒₙ = 0.0455^+0.0028_-0.0026 (simulation: 0.0462), corresponding to Ω_b = 0.0479^+0.0029_-0.0027 for fᵢₒₙ=0.95."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "cosmic-microwave-background",
+    "fast-radio-burst",
+    "gravitational-lensing"
+   ],
+   "links": [
+    "obj:cmb",
+    "canon:rubin-ford-1970"
+   ]
+  },
+  {
+   "id": "2611-23372",
+   "arxiv": "2611.23372",
+   "t": "Gaia's promise to detect compact-object binaries II: Predictions for dormant neutron star binaries in DR4 and beyond",
+   "by": "Chirag Chawla, Sourav Chatterjee and Katelyn Breivik",
+   "date": "2026-11-17",
+   "added": "2026-11-20",
+   "cat": "astro-ph.SR",
+   "status": "28 pages, 13 figures, 1 table, submitted to the Astrophysical Journal; comments welcome",
+   "url": "https://arxiv.org/abs/2611.23372",
+   "one": "Interestingly, our models suggest that future releases will also include 22⁺⁷₋₅ (13⁺⁵₋₄) and 124⁺¹⁴₋₁₅ (53⁺¹⁰₋₆) gaiamock-detectable pulsar--MS binaries in DR4 and DR5, respectively, for the rapid (delayed) model, which are prime targets for radio follow-up.",
+   "q": "With the fourth data release (DR4) from Gaia imminent, we predict neutron star (NS) binaries with luminous companions (LCs) expected to be detectable in DR4 and the final data release (DR5). Across supernova models and statistical fluctuations, the former (gaiamock) pipeline predicts ~14--29 (~1--8), 4500--4700 (100--110), and 4800--5000 (300--380) detectable NS--LC binaries in DR3, DR4, and DR5, respectively.",
+   "how": "We create realistic synthetic populations of NS--LC binaries in the Milky Way using COSMIC, assuming (a) observationally motivated initial distributions of binary properties, (b) metallicity and location dependent star formation history of the MW adopted from the FIRE-2 galaxy m12i, and (c) all relevant binary interaction physics, with the rapid and delayed supernova prescriptions. We estimate the detectable NS--LC population using an approximate Gaia\\ selection function based on projected orbital size of the LC as well as gaiamock, which emulates Gaia's multi-epoch astrometry and orbit-fitting pipeline- both after taking into account extinction and reddening.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "While the orbital-size based pipeline brackets the DR3 yield of NS--LC candidates, the gaiamock prediction falls short, suggesting uncertainties in the modeled binary evolution or contributions from other formation channels."
+    ],
+    [
+     "From the abstract (2)",
+     "DR4 is expected to directly shed light on the the relative importance of detectable NS--LC binaries from isolated binary evolution vis a vis other channels such as dynamical formation."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "neutron-star",
+    "pulsar",
+    "supernova"
+   ],
+   "links": [
+    "obj:milky-way",
+    "canon:hewish-1968"
+   ]
+  },
+  {
    "id": "2611-22150",
    "arxiv": "2611.22150",
    "t": "Exomoons and Exorings with the Habitable Worlds Observatory. III. Icy Moons and Rings Often Outshine Their Planets",

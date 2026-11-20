@@ -1,11 +1,11 @@
 {
- "fetched": "2026-11-19T15:50:23.176Z",
+ "fetched": "2026-11-20T00:41:07.930Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
    "name": "Falcon 9 Block 5 | USSF-317",
-   "net": "2026-11-20T04:32:55.000Z",
+   "net": "2026-11-20T06:43:59.000Z",
    "win": [
     "2026-11-20T02:46:00.000Z",
     "2026-11-20T06:46:00.000Z"
@@ -171,30 +171,6 @@
    "url": null
   },
   {
-   "id": "5ce59e3a-c343-430f-ae4e-e608ba536754",
-   "name": "Long March 12 | SatNet LEO Group",
-   "net": "2026-11-24T07:00:00.000Z",
-   "win": [
-    "2026-11-24T07:00:00.000Z",
-    "2026-11-24T10:00:00.000Z"
-   ],
-   "prec": "Hour",
-   "status": "TBC",
-   "statusName": "To Be Confirmed",
-   "provider": "China Aerospace Science and Technology Corporation",
-   "ptype": "Government",
-   "country": "CN",
-   "rocket": "Long March 12",
-   "mission": "SatNet LEO Group",
-   "mtype": "Communications",
-   "orbit": "Low Earth Orbit",
-   "desc": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group. The constellation will eventually consists of 13000 satellites.",
-   "pad": "Commercial LC-2",
-   "loc": "Wenchang Space Launch Site, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
-  {
    "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
    "name": "Long March 2F/G | Shenzhou 24",
    "net": "2026-11-25T00:00:00.000Z",
@@ -243,6 +219,30 @@
    "url": null
   },
   {
+   "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
+   "name": "Electron | Night Owls Never Sleep (StriX Launch 14)",
+   "net": "2026-11-27T00:00:00.000Z",
+   "win": [
+    "2026-11-27T00:00:00.000Z",
+    "2026-11-27T00:00:00.000Z"
+   ],
+   "prec": "Minute",
+   "status": "Go",
+   "statusName": "Go for Launch",
+   "provider": "Rocket Lab",
+   "ptype": "Commercial",
+   "country": "NZ",
+   "rocket": "Electron",
+   "mission": "Night Owls Never Sleep (StriX Launch 14)",
+   "mtype": "Earth Science",
+   "orbit": "Low Earth Orbit",
+   "desc": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
+   "pad": "Unknown Pad",
+   "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+   "fail": null,
+   "url": null
+  },
+  {
    "id": "b0d27def-0a88-44c3-a947-1fd5b8503e2c",
    "name": "Falcon 9 Block 5 | USSF-380",
    "net": "2026-11-28T04:53:00.000Z",
@@ -267,6 +267,30 @@
    "url": null
   },
   {
+   "id": "8b46d360-6b3b-423f-9036-d5568e485624",
+   "name": "Kinetica 1 | Undisclosed payload",
+   "net": "2026-11-29T01:00:00.000Z",
+   "win": [
+    "2026-11-29T01:00:00.000Z",
+    "2026-11-29T04:00:00.000Z"
+   ],
+   "prec": "Hour",
+   "status": "TBC",
+   "statusName": "To Be Confirmed",
+   "provider": "CAS Space",
+   "ptype": "Commercial",
+   "country": "CN",
+   "rocket": "Kinetica 1",
+   "mission": "Undisclosed payload",
+   "mtype": "Unknown",
+   "orbit": "Unknown",
+   "desc": "Details TBD.",
+   "pad": "South China Sea (launch location 3)",
+   "loc": "Haiyang Oriental Spaceport",
+   "fail": null,
+   "url": null
+  },
+  {
    "id": "d74afbc7-0de5-491c-be05-4e9c31f736ac",
    "name": "Falcon 9 Block 5 | Cygnus CRS-2 NG-25",
    "net": "2026-11-29T15:47:00.000Z",
@@ -287,30 +311,6 @@
    "desc": "This is the 25th flight of the Orbital ATK's uncrewed resupply spacecraft Cygnus and its 24th flight to the International Space Station under the Commercial Resupply Services contract with NASA.",
    "pad": "Space Launch Complex 40",
    "loc": "Cape Canaveral SFS, FL, USA",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
-   "name": "Electron | StriX Launch 14",
-   "net": "2026-11-30T00:00:00.000Z",
-   "win": [
-    "2026-11-30T00:00:00.000Z",
-    "2026-11-30T00:00:00.000Z"
-   ],
-   "prec": "Month",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "Rocket Lab",
-   "ptype": "Commercial",
-   "country": "NZ",
-   "rocket": "Electron",
-   "mission": "StriX Launch 14",
-   "mtype": "Earth Science",
-   "orbit": "Sun-Synchronous Orbit",
-   "desc": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
-   "pad": "Unknown Pad",
-   "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
    "fail": null,
    "url": null
   },
@@ -411,30 +411,6 @@
    "url": null
   },
   {
-   "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
-   "name": "Launch Vehicle Mark-3 (GSLV Mk III) | Gaganyaan-1",
-   "net": "2026-11-30T00:00:00.000Z",
-   "win": [
-    "2026-11-30T00:00:00.000Z",
-    "2026-11-30T00:00:00.000Z"
-   ],
-   "prec": "Month",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "Indian Space Research Organization",
-   "ptype": "Government",
-   "country": "IN",
-   "rocket": "Launch Vehicle Mark-3 (GSLV Mk III)",
-   "mission": "Gaganyaan-1",
-   "mtype": "Test Flight",
-   "orbit": "Low Earth Orbit",
-   "desc": "First uncrewed orbital test flight of the Gaganyaan capsule.",
-   "pad": "Satish Dhawan Space Centre Second Launch Pad",
-   "loc": "Satish Dhawan Space Centre, India",
-   "fail": null,
-   "url": null
-  },
-  {
    "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
    "name": "Mir | Demo Flight",
    "net": "2026-11-30T00:00:00.000Z",
@@ -459,26 +435,26 @@
    "url": null
   },
   {
-   "id": "b5a9bccb-30d7-4af6-8ad1-fabb563be53c",
-   "name": "PSLV XL | TDS-01",
-   "net": "2026-11-30T00:00:00.000Z",
+   "id": "5ce59e3a-c343-430f-ae4e-e608ba536754",
+   "name": "Long March 12 | SatNet LEO Group",
+   "net": "2026-12-10T07:00:00.000Z",
    "win": [
-    "2026-11-30T00:00:00.000Z",
-    "2026-11-30T00:00:00.000Z"
+    "2026-12-10T07:00:00.000Z",
+    "2026-12-10T10:00:00.000Z"
    ],
-   "prec": "Month",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "Indian Space Research Organization",
+   "prec": "Hour",
+   "status": "TBC",
+   "statusName": "To Be Confirmed",
+   "provider": "China Aerospace Science and Technology Corporation",
    "ptype": "Government",
-   "country": "IN",
-   "rocket": "PSLV XL",
-   "mission": "TDS-01",
-   "mtype": "Technology",
-   "orbit": "Geostationary Transfer Orbit",
-   "desc": "TDS-01 (Technology Demonstration Satellite-01) is an Indian geostationary orbit technology demonstration satellite carrying payloads for the Indian Space Research Organisation (ISRO)’s Institute of Plasma Research, Gandhinagar and the CSIR-CEERI, Pilani. Payloads to be tested included an internally developed 300 mN electric powered thrusters, atomic clocks, travelling wave tube amplifiers (TWTA) & a quantum…",
-   "pad": "Satish Dhawan Space Centre First Launch Pad",
-   "loc": "Satish Dhawan Space Centre, India",
+   "country": "CN",
+   "rocket": "Long March 12",
+   "mission": "SatNet LEO Group",
+   "mtype": "Communications",
+   "orbit": "Low Earth Orbit",
+   "desc": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group. The constellation will eventually consists of 13000 satellites.",
+   "pad": "Commercial LC-2",
+   "loc": "Wenchang Space Launch Site, People's Republic of China",
    "fail": null,
    "url": null
   },
@@ -603,8 +579,8 @@
    "url": null
   },
   {
-   "id": "0cf92611-82a8-4095-a0b4-dda2e74b1fff",
-   "name": "Launch Vehicle Mark-3 (GSLV Mk III) | GSAT-32 (GSAT-N3)",
+   "id": "dfac5ab7-7017-454f-b6cf-eeed277a97b5",
+   "name": "Launch Vehicle Mark-3 (GSLV Mk III) | Gaganyaan-1",
    "net": "2026-12-31T00:00:00.000Z",
    "win": [
     "2026-12-31T00:00:00.000Z",
@@ -617,10 +593,10 @@
    "ptype": "Government",
    "country": "IN",
    "rocket": "Launch Vehicle Mark-3 (GSLV Mk III)",
-   "mission": "GSAT-32 (GSAT-N3)",
-   "mtype": "Communications",
-   "orbit": "Geostationary Transfer Orbit",
-   "desc": "GSAT-32 is a geostationary communications satellite for the Indian Space Research Organization (ISRO). The spacecraft is a replacement for GSAT-6A that failed before reaching geostationary orbit after launch in 2018.",
+   "mission": "Gaganyaan-1",
+   "mtype": "Test Flight",
+   "orbit": "Low Earth Orbit",
+   "desc": "First uncrewed orbital test flight of the Gaganyaan capsule.",
    "pad": "Satish Dhawan Space Centre Second Launch Pad",
    "loc": "Satish Dhawan Space Centre, India",
    "fail": null,
@@ -959,6 +935,30 @@
    "desc": "LOXSAT 1 is a demonstration satellite of a complete cryogenic oxygen fluid management system in orbit, developed by Eta Space and sponsored by NASA's Tipping Point program. The system will be integrated on a Rocket Lab Photon-LEO satellite bus and collect critical cryogenic fluid management data in orbit for 9 months, demonstrating capabilities of in-space cryogenic storage and transferal. Eta Space plans to use…",
    "pad": "Unknown Pad",
    "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+   "fail": null,
+   "url": null
+  },
+  {
+   "id": "dfd444f9-ddda-4b35-8f51-cda7cd801809",
+   "name": "Falcon 9 Block 5 | Rivada 1",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "Rivada 1",
+   "mtype": "Communications",
+   "orbit": "Polar Orbit",
+   "desc": "24 satellites for Rivada's internet constellation.",
+   "pad": "Space Launch Complex 4E",
+   "loc": "Vandenberg SFB, CA, USA",
    "fail": null,
    "url": null
   }

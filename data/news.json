@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-19T15:50:23.009Z",
+ "fetched": "2026-11-20T00:41:07.974Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,84 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "63dbb453e523",
+   "t": "Live coverage: SpaceX to launch classified payload for the U.S. Space Force",
+   "url": "https://spaceflightnow.com/2026/11/19/live-coverage-spacex-to-launch-classified-payload-for-the-u-s-space-force-2/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-19T23:51:47.000Z",
+   "sum": "The mission is the latest in the series of ‘R’ missions tasked by the U.S. Space Force. Liftoff from pad 4 East is scheduled for 8:32 p.m. PST (11:32 p.m. EST / 432 UTC).",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "856071885831",
+   "t": "Relativity tests Terran R second stage, completes structural qualifications ahead of inaugural launch",
+   "url": "https://www.nasaspaceflight.com/2026/11/relativity-update-1116/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-19T22:08:32.000Z",
+   "sum": "Relativity Space is advancing Terran R’s flight one hardware and ground infrastructure across NASA’s Stennis… The post Relativity tests Terran R second stage, completes structural qualifications ahead of inaugural launch appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "2d0b2d5da160",
+   "t": "Astronomers Watch One Star Swallow Another",
+   "url": "https://skyandtelescope.org/astronomy-news/astronomers-watch-one-star-swallow-another/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-19T20:19:59.000Z",
+   "sum": "For the first time, astronomers have followed the years-long infall of a star as it spiraled into its giant stellar companion — ultimately splashing into its core. The post Astronomers Watch One Star Swallow Another appeared first on Sky & Telescope.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "2fefa24a16c2",
+   "t": "Google turns to Blue Origin for a rocket, but its long-term problem remains",
+   "url": "https://arstechnica.com/space/2026/11/google-turns-to-blue-origin-for-a-rocket-but-its-long-term-problem-remains/",
+   "site": "Arstechnica",
+   "date": "2026-11-19T19:52:54.000Z",
+   "sum": "\"Project Suncatcher is a long-term moonshot.\"",
+   "desk": "launch",
+   "who": [
+    "Blue Origin"
+   ]
+  },
+  {
+   "id": "472edcef85ab",
+   "t": "Challenge: Public Input on Life and the World in 2075",
+   "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/challenge-public-input-on-life-and-the-world-in-2075/",
+   "site": "NASA",
+   "date": "2026-11-19T19:34:20.000Z",
+   "sum": "NASA’s Transformational Tools and Technologies (TTT) is gathering public perspectives on life today and how the world may change by 2075. This challenge asks for conceptual ideas about life in 2075 across four challenge topics. Ideas should explore how future aviation or aerospace systems could: Ideas should be conceptual rather than technical. Award: $20,000 in […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "17659340747c",
+   "t": "Earth's Atmosphere Took Three Deep Breaths of Oxygen Before the Oceans Caught Up",
+   "url": "https://www.universetoday.com/articles/earths-atmosphere-took-three-deep-breaths-of-oxygen-before-the-oceans-caught-up",
+   "site": "Universe Today",
+   "date": "2026-11-19T18:04:23.000Z",
+   "sum": "The accumulation of oxygen in Earth's atmosphere and oceans was a multi-stage process that played out over geologic timescales. Scientists have worked hard to understand all the details of this complex process. New research writes a revised timeline for how it all played out.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "b58593dee0ab",
+   "t": "The sweet spot for constellation size",
+   "url": "https://spacenews.com/the-sweet-spot-for-constellation-size/",
+   "site": "SpaceNews",
+   "date": "2026-11-19T17:25:17.000Z",
+   "sum": "In this episode of Space Minds, SpaceNews’ Mike Gruss speaks with Jan Smolders, the chief commercial officer at Space Inventor. During a conversation at Space Tech Expo Europe, they discuss […] The post The sweet spot for constellation size appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
   {
    "id": "40a274e83685",
    "t": "Making the case for optical",
@@ -811,40 +889,6 @@
    ]
   },
   {
-   "id": "af3371b2a8d1",
-   "t": "UK MOD Defends Satcom Resilience Amid SpaceX Starshield Concerns",
-   "url": "https://europeanspaceflight.com/uk-mod-defends-satcom-resilience-amid-spacex-starshield-concerns/",
-   "site": "European Spaceflight",
-   "date": "2026-11-16T17:50:24.000Z",
-   "sum": "The UK government has defended the resilience of its satellite-based military communications, saying that while it uses SpaceX’s Starshield service, it does not depend on any single commercial provider for critical communications. The assurance comes amid concerns about reliance on SpaceX after it emerged that restrictions had been placed on Ukraine’s access to the company’s […] The post UK MOD Defends Satcom…",
-   "desk": "policy",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "2eb37a9d39b5",
-   "t": "Contractor to Civil Servant: NASA Welcomes Jim Mirandy",
-   "url": "https://www.nasa.gov/centers-and-facilities/stennis/contractor-to-civil-servant-jim-mirandy/",
-   "site": "NASA",
-   "date": "2026-11-16T15:22:09.000Z",
-   "sum": "The rumble of a rocket engine might be considered a soundtrack for Jim Mirandy’s life. Mirandy has grown up with NASA as a constant presence, and his path to becoming a civil servant at NASA’s Stennis Space Center near Bay St. Louis, Mississippi, has been decades in the making. Hired under the agency’s workforce directive […]",
-   "desk": "launch",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "dbe0ef71effd",
-   "t": "Analysis: Vulcan Failure Reflects an Industry in Disarray",
-   "url": "https://www.spacescout.info/2026/11/analysis-vulcan-failure-reflects-an-industry-in-disarray/",
-   "site": "Space Scout",
-   "date": "2026-11-16T15:01:11.000Z",
-   "sum": "The industry is in desperate need of new reliable launch options to maintain space access for The United States.",
-   "desk": "launch",
-   "who": []
-  },
-  {
    "id": "cb448e90c116",
    "t": "Four Telescopes for New Observers",
    "url": "https://skyandtelescope.org/astronomy-equipment/four-telescopes-for-new-observers/",
@@ -852,16 +896,6 @@
    "date": "2026-11-16T13:00:00.000Z",
    "sum": "For $200 or less, you can buy a complete telescope for first-person contact with the Moon, planets, and deep-sky showpieces. The post Four Telescopes for New Observers appeared first on Sky & Telescope.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "89f4b6682ce6",
-   "t": "The Last Ice on Puncak Jaya",
-   "url": "https://science.nasa.gov/earth/earth-observatory/the-last-ice-on-puncak-jaya/",
-   "site": "NASA",
-   "date": "2026-11-16T05:00:00.000Z",
-   "sum": "Ice near the summit of the Indonesian mountain peak has shrunk to scattered patches too small to flow like glaciers.",
-   "desk": "other",
    "who": []
   },
   {
@@ -874,18 +908,6 @@
    "desk": "launch",
    "who": [
     "NASA"
-   ]
-  },
-  {
-   "id": "f732e0708d2c",
-   "t": "The First Foreign Astronaut Will Visit China's Tiangong Space Station in Two Weeks",
-   "url": "https://www.universetoday.com/articles/the-first-foreign-astronaut-will-visit-chinas-tiangong-space-station-in-two-weeks",
-   "site": "Universe Today",
-   "date": "2026-11-14T22:07:56.000Z",
-   "sum": "The China Manned Space Agency (CMSA) will be taking a Pakistani astronaut to Tiangong as part of the Shenzou 24 mission, marking the first time a foreign astronaut has been to the station.",
-   "desk": "missions",
-   "who": [
-    "CNSA"
    ]
   },
   {
@@ -959,18 +981,6 @@
    "sum": "The odor of hydrogen chloride in Mars’s atmosphere indicates that some form of volcanic activity is still going on. The post Noxious Smoke Hints at Active Volcanoes on Mars appeared first on Sky & Telescope.",
    "desk": "missions",
    "who": []
-  },
-  {
-   "id": "d1d11f3027de",
-   "t": "NASA Moves Ahead with Ultraviolet Space Telescope",
-   "url": "https://skyandtelescope.org/astronomy-news/nasa-moves-ahead-with-ultraviolet-space-telescope/",
-   "site": "Sky & Telescope",
-   "date": "2026-11-05T21:11:45.000Z",
-   "sum": "A new ultraviolet space telescope will fill a gap in the spectrum, bearing witness to cosmic cataclysms and probing the evolution of the early universe. The post NASA Moves Ahead with Ultraviolet Space Telescope appeared first on Sky & Telescope.",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
   }
  ]
 }
