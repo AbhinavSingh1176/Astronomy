@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-20T00:41:07.974Z",
+ "fetched": "2026-11-20T15:32:59.657Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,66 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "c92c7d1fb77f",
+   "t": "Sound Waves From Sunspots Launch Fiery Plasma Jets Across the Sun",
+   "url": "https://www.universetoday.com/articles/sound-waves-from-sunspots-launch-fiery-plasma-jets-across-the-sun",
+   "site": "Universe Today",
+   "date": "2026-11-20T14:58:26.000Z",
+   "sum": "It feels like every week for the past few months we’ve been reporting on more research regarding the temperature difference between the Sun’s surface and its corona. This week is no exception, with a new paper in The Astrophysical Journal detailing the formation and tracking of around two hundred jet-like bursts of plasma from the surface known as “dynamic fibrils.” They serve as another piece of the puzzle of why…",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "ac0215ca184a",
+   "t": "This is the First Time Astronomers Have Seen One of These Stellar Mergers",
+   "url": "https://www.universetoday.com/articles/this-is-the-first-time-astronomers-have-seen-one-of-these-stellar-mergers",
+   "site": "Universe Today",
+   "date": "2026-11-20T13:04:40.000Z",
+   "sum": "Some binary stars end up sharing a common envelope of gas, as the primary star draws material away from its companion. The envelope exerts drag on the stars and they can spiral toward each other. In some cases, this creates an eruption or explosion called a luminous red nova. For the first time, astronomers got to observe one of these in real time.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "208cdc9bd3cc",
+   "t": "Tiny Grains of Sand Act as Cosmic Speedometers for Alien Winds",
+   "url": "https://www.universetoday.com/articles/tiny-grains-of-sand-act-as-cosmic-speedometers-for-alien-winds",
+   "site": "Universe Today",
+   "date": "2026-11-20T11:57:20.000Z",
+   "sum": "We’ve managed to take high-resolution orbital images of many worlds across our solar system, and many of them with an atmosphere have one feature in common - sand dunes. Scientists have been using the size and orientation of these dunes for decades to act like a weather vane, figuring out which way the wind blows on these other worlds. Unfortunately, weather vanes aren’t good at telling the full windy story - they…",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "0884c399946c",
+   "t": "This Week's Sky at a Glance, November 20 – 29",
+   "url": "https://skyandtelescope.org/astronomy-news/observing-news/this-weeks-sky-at-a-glance-november-20-29/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-20T10:07:00.000Z",
+   "sum": "A full Moon in late November always shines near the Pleiades. Before dawn now, the high triangle of Jupiter, Mars, and Regulus continues changing shape. The post This Week's Sky at a Glance, November 20 – 29 appeared first on Sky & Telescope.",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "05bd53cdaa94",
+   "t": "Danish Soldiers Are Sneaking Starlink Terminals into Greenland",
+   "url": "https://europeanspaceflight.com/danish-soldiers-are-sneaking-starlink-terminals-into-greenland/",
+   "site": "European Spaceflight",
+   "date": "2026-11-20T07:09:49.000Z",
+   "sum": "A parliamentary question from Greenlandic politician Pele Broberg has suggested that Danish soldiers are bringing privately owned Starlink terminals into Greenland despite restrictions. Broberg raised the allegations on 23 October, explaining that he had received information from multiple sources claiming that Danish soldiers were bringing their own Starlink terminals from Denmark and using them to […] The post…",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "ea6f6bfd95ee",
+   "t": "The Stormy Southwest Pacific",
+   "url": "https://science.nasa.gov/earth/earth-observatory/the-stormy-southwest-pacific/",
+   "site": "NASA",
+   "date": "2026-11-20T05:01:00.000Z",
+   "sum": "Tropical Cyclone Xavier launched the basin’s storm season with a bang.",
+   "desk": "launch",
+   "who": []
+  },
   {
    "id": "63dbb453e523",
    "t": "Live coverage: SpaceX to launch classified payload for the U.S. Space Force",
@@ -813,16 +873,6 @@
    ]
   },
   {
-   "id": "f667d33b61fb",
-   "t": "This Supernova is 50 Million Light Years Away, But That's Close Enough For Astronomers",
-   "url": "https://www.universetoday.com/articles/this-supernova-is-50-million-light-years-away-but-thats-close-enough-for-astronomers",
-   "site": "Universe Today",
-   "date": "2026-11-16T21:11:30.000Z",
-   "sum": "A new supernova has been detected in a spiral galaxy about 50 million light years away. That's close enough for detatiled follow-up observations, which have already begun. It's a type Ia supernova, meaning it's an exploding white dwarf rather than a massive star ending its life in a core-collapse detonation. Astronomers will watch as its light fades and changes over the next days, months, and years to track the…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "6e0c614892de",
    "t": "NASA Receives 16th Consecutive ‘Clean’ Financial Audit Opinion",
    "url": "https://www.nasa.gov/news-release/nasa-receives-16th-consecutive-clean-financial-audit-opinion/",
@@ -845,50 +895,6 @@
    "who": []
   },
   {
-   "id": "6fa189556cdd",
-   "t": "When will humans actually fly on Starship?",
-   "url": "https://arstechnica.com/space/2026/11/when-will-humans-actually-fly-on-starship/",
-   "site": "Arstechnica",
-   "date": "2026-11-16T19:46:08.000Z",
-   "sum": "All estimates of human spaceflight on Starship should be taken with a gigantic grain of salt.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "233999d10f85",
-   "t": "This Rare Binary Star Emits Radio Pulses Every Few Minutes. Will It Eventually Explode?",
-   "url": "https://www.universetoday.com/articles/this-rare-binary-star-emits-radio-pulses-every-few-minutes-will-it-eventually-explode",
-   "site": "Universe Today",
-   "date": "2026-11-16T19:30:47.000Z",
-   "sum": "Astronomers have found a Long Period Radio Transient about 5,000 light years away that's different from other LPTs. Other LPTs have a white dwarf and a red dwarf, but this one has a white dwarf and a main sequence star. The exact cause of the binary pair's radio pulses isn't certain, but this work narrows it down. It also shows that these binaries could be common progenitors for Type Ia supernova explosions.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "149de7498bd8",
-   "t": "Sentinel-6B in Orbit Around Earth",
-   "url": "https://science.nasa.gov/photojournal/sentinel-6b-in-orbit-around-earth/",
-   "site": "NASA",
-   "date": "2026-11-16T18:52:32.000Z",
-   "sum": "Description This artist’s concept shows the Sentinel-6B satellite, which will become the reference satellite for other missions studying sea surface height.",
-   "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "c6377ff964f9",
-   "t": "Thunderbirds in Formation",
-   "url": "https://www.nasa.gov/image-article/thunderbirds-in-formation/",
-   "site": "NASA",
-   "date": "2026-11-16T18:34:47.000Z",
-   "sum": "U.S. Air Force Thunderbirds fighter jets pass overhead during the agency’s MAX POWER expo and air show on Saturday, Nov. 7, 2026, at NASA’s Kennedy Space Center in Florida. NASA’s inaugural MAX POWER was an aerospace festival celebrating the past, present, and future of flight and space exploration in honor of America’s 250th anniversary. Image […]",
-   "desk": "policy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
    "id": "cb448e90c116",
    "t": "Four Telescopes for New Observers",
    "url": "https://skyandtelescope.org/astronomy-equipment/four-telescopes-for-new-observers/",
@@ -896,28 +902,6 @@
    "date": "2026-11-16T13:00:00.000Z",
    "sum": "For $200 or less, you can buy a complete telescope for first-person contact with the Moon, planets, and deep-sky showpieces. The post Four Telescopes for New Observers appeared first on Sky & Telescope.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "b1a7f66a0df8",
-   "t": "Navigating Lunar Orbit Using Nothing But Shadows And A Power Meter",
-   "url": "https://www.universetoday.com/articles/navigating-lunar-orbit-using-nothing-but-shadows-and-a-power-meter",
-   "site": "Universe Today",
-   "date": "2026-11-15T13:22:00.000Z",
-   "sum": "Humanity is quickly starting to saturate our ability to track all of the satellites we have in deep space. NASA’s Deep Space Network (DSN) has been the workhorse for tracking such things for decades, but is quickly being overwhelmed by the number of requests it receives. Which in turn makes it harder to track some of the missions that have been launched recently. A new paper, available in pre-print on arXiv, from…",
-   "desk": "launch",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "d84615798113",
-   "t": "This Week's Sky at a Glance, November 13 – 22",
-   "url": "https://skyandtelescope.org/astronomy-news/observing-news/this-weeks-sky-at-a-glance-november-13-22/",
-   "site": "Sky & Telescope",
-   "date": "2026-11-13T16:47:00.000Z",
-   "sum": "Jupiter and Mars creep through their pre-dawn conjunction this week. Far lower left of them, Venus and Mercury rise to shine in early dawn. The post This Week's Sky at a Glance, November 13 – 22 appeared first on Sky & Telescope.",
-   "desk": "missions",
    "who": []
   },
   {
