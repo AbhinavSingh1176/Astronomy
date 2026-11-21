@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-21T07:17:57.275Z",
+ "fetched": "2026-11-21T19:23:14.725Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,28 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "0e4307d65ddc",
+   "t": "Live coverage: SpaceX to launch intelligence-gathering satellites for the National Reconnaissance Office",
+   "url": "https://spaceflightnow.com/2026/11/21/live-coverage-spacex-to-launch-intelligence-gathering-satellites-for-the-national-reconnaissance-office-3/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-21T16:50:51.000Z",
+   "sum": "The NROL-136 mission will be the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled during a window that opens at 4:16 a.m. PST (7:16 a.m. EST / 1216 UTC).",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "24f4e6969b7b",
+   "t": "Space Entrepreneurs Should Look To 16th Century Spice Trade For Inspiration",
+   "url": "https://www.universetoday.com/articles/space-entrepreneurs-should-look-to-16th-century-spice-trade-for-inspiration",
+   "site": "Universe Today",
+   "date": "2026-11-21T10:39:27.000Z",
+   "sum": "In the short term, human exploration of the Moon and Mars seems practical, but for the next 50 years at least, robotic exploration may be the most cost-effective and efficient. Human exploration requires an imperative return on capital.",
+   "desk": "missions",
+   "who": []
+  },
   {
    "id": "0f63a437fa69",
    "t": "Denmark’s GomSpace Secures €8M Contract for Blue Origin Moon Mission",
@@ -879,16 +901,6 @@
    ]
   },
   {
-   "id": "f25ba6ca27f7",
-   "t": "Did The First Quarks and Gluons Experience Brownian Motion? Sometimes.",
-   "url": "https://www.universetoday.com/articles/did-the-first-quarks-and-gluons-experience-brownian-motion-sometimes",
-   "site": "Universe Today",
-   "date": "2026-11-17T14:47:25.000Z",
-   "sum": "The quark-gluon plasma of the early universe experienced Brownian motion, but a new theory predicts how a particle moving at close to the speed of light is likely to be pushed and pulled by a fluid as it flies through it. The result shows that Brownian statistics doesn't always apply.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "5499709ba059",
    "t": "Voyager 1's Linda Spilker on the Mission's Light-Day Milestone",
    "url": "https://skyandtelescope.org/astronomy-news/voyager-1s-linda-spilker-on-the-light-day-milestone/",
@@ -896,16 +908,6 @@
    "date": "2026-11-17T13:00:00.000Z",
    "sum": "Hear from Voyager Project Scientist Linda Spilker as she discusses the latest updates from the Voyager probes — and what it means now that Voyager 1 has reached 1 light-day from Earth. The post Voyager 1's Linda Spilker on the Mission's Light-Day Milestone appeared first on Sky & Telescope.",
    "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "f0893f3467d5",
-   "t": "ICEYE Launches €2.05B Takeover Bid for Italian Rocket Builder Avio",
-   "url": "https://europeanspaceflight.com/iceye-launches-e2-05b-takeover-bid-for-italian-rocket-builder-avio/",
-   "site": "European Spaceflight",
-   "date": "2026-11-17T08:08:40.000Z",
-   "sum": "Finnish satellite builder and operator ICEYE has launched a €2.05 billion takeover bid for Avio, with the aim of building a “true European sovereign space and defense champion.” The company has also outlined plans to invest an additional €1 billion in Italy if the acquisition goes through. On 17 November, ICEYE’s indirectly wholly owned Italian […] The post ICEYE Launches €2.05B Takeover Bid for Italian Rocket…",
-   "desk": "launch",
    "who": []
   },
   {
