@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-21T00:00:39.001Z",
+ "fetched": "2026-11-21T07:17:57.275Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,30 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "0f63a437fa69",
+   "t": "Denmark’s GomSpace Secures €8M Contract for Blue Origin Moon Mission",
+   "url": "https://europeanspaceflight.com/denmarks-gomspace-secures-e8m-contract-for-blue-origin-moon-mission/",
+   "site": "European Spaceflight",
+   "date": "2026-11-21T06:00:35.000Z",
+   "sum": "Danish satellite manufacturer GomSpace has secured an €8 million contract to continue developing two spacecraft for Blue Origin’s lunar resource prospecting mission. In its 19 November announcement confirming the start of phase two of the project’s development, GomSpace did not identify Blue Origin as the customer, referring to it only as a “leading North American […] The post Denmark’s GomSpace Secures €8M Contract…",
+   "desk": "missions",
+   "who": [
+    "Blue Origin"
+   ]
+  },
+  {
+   "id": "4254262d52d5",
+   "t": "BepiColombo Arrives at Mercury After 8-Year Odyssey",
+   "url": "https://skyandtelescope.org/astronomy-news/bepicolombo-arrives-at-mercury-after-8-year-odyssey/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-21T01:38:13.000Z",
+   "sum": "Europe's and Japan’s twin orbiters will reach the innermost planet on November 21st, set to explore its many mysteries. The post BepiColombo Arrives at Mercury After 8-Year Odyssey appeared first on Sky & Telescope.",
+   "desk": "missions",
+   "who": [
+    "JAXA"
+   ]
+  },
   {
    "id": "b61998a18fb4",
    "t": "Curiosity Spots Drifting Twilight Clouds",
@@ -885,18 +909,6 @@
    "who": []
   },
   {
-   "id": "bc36921aad2d",
-   "t": "Cosmo Bee to flight-test Honeybee Hall thruster with D-Orbit in 2027",
-   "url": "https://spacenews.com/cosmo-bee-to-flight-test-honeybee-hall-thruster-with-d-orbit-in-2027/",
-   "site": "SpaceNews",
-   "date": "2026-11-17T08:00:00.000Z",
-   "sum": "Daejeon, Republic of Korea – October 14, 2026: South Korean space electric propulsion startup Cosmo Bee plans to conduct an in-orbit flight test of its 10 mN-class Honeybee Hall thruster […] The post Cosmo Bee to flight-test Honeybee Hall thruster with D-Orbit in 2027 appeared first on SpaceNews.",
-   "desk": "policy",
-   "who": [
-    "KASA"
-   ]
-  },
-  {
    "id": "cb448e90c116",
    "t": "Four Telescopes for New Observers",
    "url": "https://skyandtelescope.org/astronomy-equipment/four-telescopes-for-new-observers/",
@@ -956,16 +968,6 @@
    "date": "2026-11-10T18:00:00.000Z",
    "sum": "The oldest pair of compact quasars ever observed has been found only 900 million years after the Big Bang. Scientists say there is no theoretical explanation for how the pair of actively feeding black holes grew so massive at such an early time in the history of the Universe. The pair of quasars has been given the Hawaiian name Nāpōwawāʻenakaulua.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "1abc1302dc16",
-   "t": "Noxious Smoke Hints at Active Volcanoes on Mars",
-   "url": "https://skyandtelescope.org/astronomy-news/noxious-smoke-hints-at-active-volcanoes-on-mars/",
-   "site": "Sky & Telescope",
-   "date": "2026-11-09T13:00:00.000Z",
-   "sum": "The odor of hydrogen chloride in Mars’s atmosphere indicates that some form of volcanic activity is still going on. The post Noxious Smoke Hints at Active Volcanoes on Mars appeared first on Sky & Telescope.",
-   "desk": "missions",
    "who": []
   }
  ]

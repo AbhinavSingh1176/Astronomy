@@ -1,31 +1,7 @@
 {
- "fetched": "2026-11-21T00:00:44.333Z",
+ "fetched": "2026-11-21T07:18:10.998Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
-  {
-   "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
-   "name": "Falcon 9 Block 5 | USSF-317",
-   "net": "2026-11-21T04:20:35.000Z",
-   "win": [
-    "2026-11-21T02:32:00.000Z",
-    "2026-11-21T06:32:00.000Z"
-   ],
-   "prec": "Second",
-   "status": "Go",
-   "statusName": "Go for Launch",
-   "provider": "SpaceX",
-   "ptype": "Commercial",
-   "country": "US",
-   "rocket": "Falcon 9 Block 5",
-   "mission": "USSF-317",
-   "mtype": "Government/Top Secret",
-   "orbit": "Low Earth Orbit",
-   "desc": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
-   "pad": "Space Launch Complex 4E",
-   "loc": "Vandenberg SFB, CA, USA",
-   "fail": null,
-   "url": null
-  },
   {
    "id": "951a341f-236b-42fe-a667-4ab2fcf36eac",
    "name": "Falcon 9 Block 5 | NROL-136",
@@ -961,9 +937,57 @@
    "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
    "fail": null,
    "url": null
+  },
+  {
+   "id": "dfd444f9-ddda-4b35-8f51-cda7cd801809",
+   "name": "Falcon 9 Block 5 | Rivada 1",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "Rivada 1",
+   "mtype": "Communications",
+   "orbit": "Polar Orbit",
+   "desc": "24 satellites for Rivada's internet constellation.",
+   "pad": "Space Launch Complex 4E",
+   "loc": "Vandenberg SFB, CA, USA",
+   "fail": null,
+   "url": null
   }
  ],
  "recent": [
+  {
+   "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
+   "name": "Falcon 9 Block 5 | USSF-317",
+   "net": "2026-11-21T04:20:35.000Z",
+   "win": [
+    "2026-11-21T02:32:00.000Z",
+    "2026-11-21T06:32:00.000Z"
+   ],
+   "prec": "Second",
+   "status": "Success",
+   "statusName": "Launch Successful",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "USSF-317",
+   "mtype": "Government/Top Secret",
+   "orbit": "Low Earth Orbit",
+   "desc": "A classified mission for the United States Space Force. It is possibly a batch of classified LEO satellites based on SpaceX’s Starshield satellite bus, based on locations of rocket stage drop zones being exact fits with previous Starlink Group 15 launches.",
+   "pad": "Space Launch Complex 4E",
+   "loc": "Vandenberg SFB, CA, USA",
+   "fail": null,
+   "url": null
+  },
   {
    "id": "a2975167-7c6f-4403-99e1-b40df17c8140",
    "name": "Long March 8A | SatNet LEO Group 30",
@@ -1417,30 +1441,6 @@
    "desc": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group. The constellation will eventually consists of 13000 satellites.",
    "pad": "Commercial LC-1",
    "loc": "Wenchang Space Launch Site, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "f6af629d-39b5-4f86-bc0c-f8776444a858",
-   "name": "Falcon 9 Block 5 | Starlink Group 15-15",
-   "net": "2026-10-23T22:48:44.000Z",
-   "win": [
-    "2026-10-23T21:30:00.000Z",
-    "2026-10-24T01:30:00.000Z"
-   ],
-   "prec": "Second",
-   "status": "Success",
-   "statusName": "Launch Successful",
-   "provider": "SpaceX",
-   "ptype": "Commercial",
-   "country": "US",
-   "rocket": "Falcon 9 Block 5",
-   "mission": "Starlink Group 15-15",
-   "mtype": "Communications",
-   "orbit": "Low Earth Orbit",
-   "desc": "A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system.",
-   "pad": "Space Launch Complex 4E",
-   "loc": "Vandenberg SFB, CA, USA",
    "fail": null,
    "url": null
   }
