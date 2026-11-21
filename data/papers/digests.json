@@ -2,6 +2,107 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-26548",
+   "arxiv": "2611.26548",
+   "t": "Demographic inference in exoplanet chemistry is shaped by retrieval assumptions",
+   "by": "Dwaipayan Dubey, Karan Molaverdikhani, Barbara Ercolano and 3 others",
+   "date": "2026-11-19",
+   "added": "2026-11-21",
+   "cat": "astro-ph.EP",
+   "status": "52 Figures, 10 Tables, Accepted in Communications Chemistry",
+   "url": "https://arxiv.org/abs/2611.26548",
+   "one": "Our results suggest that population-level chemical trends inferred from free-chemistry retrievals should be interpreted with caution unless sample selection, residual structure, prior sensitivity, and chemical assumptions are explicitly tested.",
+   "q": "Understanding the chemical diversity of exoplanet atmospheres is crucial for linking atmospheric composition to planetary formation history. Atmospheric C/O can provide clues about where and how planets form, particularly through the accretion of gas and solids across disk snowlines.",
+   "how": "We present atmospheric retrievals for 20 transiting planets with published JWST transmission spectra, including complementary HST spectra for targets where such data are available, spanning gas giants, warm Neptunes, and temperate/warm sub-Neptunes, to test how population-level chemical inferences depend on retrieval assumptions.",
+   "found": [
+    [
+     "From the abstract",
+     "Several hot Jupiters converge to low C/O ( ≤ 0.05), whereas colder, cloudy planets retain broad posteriors that reflect limited information content of their spectra."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "accretion-disc",
+    "spectrum",
+    "transit"
+   ],
+   "links": [
+    "canon:mayor-queloz-1995"
+   ]
+  },
+  {
+   "id": "2611-25704",
+   "arxiv": "2611.25704",
+   "t": "False Periodicities in Repeating Fast Radio Bursts Caused by Burst Clustering",
+   "by": "Hao-Tian Lan, Qin Wu, Jia-Wei Luo and 2 others",
+   "date": "2026-11-19",
+   "added": "2026-11-21",
+   "cat": "astro-ph.HE",
+   "status": "Accepted for publication in ApJ; 8 figures, 1 table",
+   "url": "https://arxiv.org/abs/2611.25704",
+   "one": "Robust periodicity searches must evaluate significance against null models that account for the observed waiting-time statistics and the full search procedure.",
+   "q": "Fast radio bursts (FRBs) are millisecond-duration radio transients with high brightness temperatures, but their physical origin remains uncertain. The association of FRB 200428 with a Galactic magnetar provides compelling evidence that at least some FRBs originate from magnetar-like systems.",
+   "how": "Motivated by the reported 1.7 s periodicity in the active repeater FRB 20201124A, we conduct a systematic search for short-timescale periodicity in four highly active repeating FRB sources.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "The search yields apparent period candidates with nominal Poisson-calibrated significances comparable to that reported for the 1.7 s signal, although the inferred periods vary substantially among sources and observing windows."
+    ],
+    [
+     "From the abstract (2)",
+     "We therefore find no robust evidence for a short intrinsic periodicity in these data, and the reported 1.7 s signal is not uniquely distinguished from clustering-induced candidates."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "fast-radio-burst",
+    "magnetar"
+   ],
+   "links": [
+    "canon:lorimer-2007"
+   ]
+  },
+  {
+   "id": "2611-25110",
+   "arxiv": "2611.25110",
+   "t": "A novel pathway to stellar-mass black hole growth: Re-accretion of gas from stellar wind bubbles",
+   "by": "D. Kománek, R. Wünsch, S. Martínez-González and 2 others",
+   "date": "2026-11-18",
+   "added": "2026-11-21",
+   "cat": "astro-ph.GA",
+   "status": "Accepted for publication in A&A",
+   "url": "https://arxiv.org/abs/2611.25110",
+   "one": "Conversely, we find no significant re-accretion in scenarios involving an SN explosion or high-metallicity progenitors; in these cases, fast winds or SN ejecta efficiently evacuate dense structures from the bubble interior, leaving behind a hot, low-density medium. [abridged] This mechanism…",
+   "q": "We investigate whether newly formed stellar-mass BHs in dense molecular clouds can significantly increase their final mass by accreting gas from pre-existing, wind-blown interstellar bubbles produced by their progenitor stars. We performed 1D and 3D hydrodynamic simulations of interstellar bubbles driven by stellar feedback, incorporating thermal conduction, radiative cooling, gravity, ionizing radiation, stellar winds, and supernova (SN) explosions.",
+   "how": "The formation of high-mass stellar black holes (BHs) observed in mergers by gravitational wave observatories remains difficult to explain using standard models of stellar evolution. Scenarios exhibiting significant re-accretion were further validated using high-resolution 3D simulations.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "Our parameter space study encompasses over 500 1D simulations, varying initial cloud densities, gravitational binding energies, progenitor masses (40-257 M☉), and metallicities (0.66 Z☉ and 0.016 Z☉), and tracks the bubble evolution for millions of years post-BH formation."
+    ],
+    [
+     "From the abstract (2)",
+     "Our simulations show that BHs formed via direct collapse from low-metallicity progenitors can accrete up to 6.9 M☉ of gas from massive inner shells formed by late-stage slow winds, resulting in final BH masses of up to 93 M☉."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "accretion-disc",
+    "black-hole",
+    "gravitational-wave",
+    "supernova"
+   ],
+   "links": [
+    "canon:ligo-2016"
+   ]
+  },
+  {
    "id": "2611-23818",
    "arxiv": "2611.23818",
    "t": "NEXONN: Advancing the NEXOTRANS Exoplanet Atmospheric Retrieval Framework with Transformer-Based Neural Posterior Estimation for JWST Transmission Spectroscopy of WASP-39b",

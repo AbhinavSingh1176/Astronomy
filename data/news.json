@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-20T15:32:59.657Z",
+ "fetched": "2026-11-21T00:00:39.001Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,108 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "b61998a18fb4",
+   "t": "Curiosity Spots Drifting Twilight Clouds",
+   "url": "https://science.nasa.gov/photojournal/curiosity-spots-drifting-twilight-clouds/",
+   "site": "NASA",
+   "date": "2026-11-20T22:27:05.000Z",
+   "sum": "Description NASA’s Curiosity Mars rover captured these drifting clouds on Oct. 31, 2026, the 5,061st Martian day, or sol, of the mission. The rover uses its navigation cameras to capture post-sunset clouds, called twilight clouds, which appear for only a short time each fall over Gale Crater, which it has been exploring for more than […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3a6032c14ad0",
+   "t": "Incoming House chair threatens SpaceX funding over Ukraine controversy",
+   "url": "https://arstechnica.com/space/2026/11/incoming-house-chair-threatens-spacex-funding-over-ukraine-controversy/",
+   "site": "Arstechnica",
+   "date": "2026-11-20T22:16:51.000Z",
+   "sum": "\"Explain the changes that were made to the Starshield service in October 2026.\"",
+   "desk": "policy",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "2c15e84b8a09",
+   "t": "New NASA Seed Funding Primes Small Businesses for Innovation",
+   "url": "https://www.nasa.gov/directorates/rtmd/new-nasa-seed-funding-primes-small-businesses-for-innovation/",
+   "site": "NASA",
+   "date": "2026-11-20T20:46:14.000Z",
+   "sum": "Awards to small businesses around the country are addressing some of NASA’s most crucial technology needs for exploration of the Moon and Mars while fueling the U.S. space economy. NASA’s Small Business Innovation Research/Small Business Technology Transfer (SBIR/STTR) program recently selected 302 innovative projects, for a total investment of up to $171 million in seed […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "55bb2b6b99a7",
+   "t": "Complex Life on Earth May Not Have Appeared Without Tall Mountains",
+   "url": "https://www.universetoday.com/articles/complex-life-on-earth-may-not-have-appeared-without-tall-mountains",
+   "site": "Universe Today",
+   "date": "2026-11-20T20:22:08.000Z",
+   "sum": "As Earth's surface area grew, weathering fed more nutrients into Earth's ancient oceans. This eventually resulted in more oxygen, making Earth more habitable. New research identifies two ancient mountain growth spurts on Earth that directly preceded two of Earth's oxygenation events. The researchers say that taller mountains encouraged habitability and led to complex life.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "49577626bfe2",
+   "t": "A Radical Theory about the Universe Just Passed Some Key Tests. So... What Does that Mean?",
+   "url": "https://www.universetoday.com/articles/a-radical-theory-about-the-universe-just-passed-some-key-tests-so-what-does-that-mean",
+   "site": "Universe Today",
+   "date": "2026-11-20T20:07:21.000Z",
+   "sum": "An alternative model in which the Universe is 26.7 billion years old and needs neither dark matter nor dark energy has held up against several major cosmology tests, according to a new University of Ottawa study.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "7d1dcbbcdde6",
+   "t": "Following Ship 42’s catch, SpaceX looks to the future",
+   "url": "https://www.nasaspaceflight.com/2026/11/ship-42-catch-future/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-20T19:49:06.000Z",
+   "sum": "On Nov. 14, 2026, SpaceX made spaceflight history as teams brought Ship 42 back from… The post Following Ship 42’s catch, SpaceX looks to the future appeared first on NASASpaceFlight.com.",
+   "desk": "other",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "b8f87589f0c6",
+   "t": "A Triple Star System 'That Shouldn't Exist,' Only 28 Light-Years from Earth",
+   "url": "https://www.universetoday.com/articles/a-triple-star-system-that-shouldnt-exist-only-28-light-years-from-earth",
+   "site": "Universe Today",
+   "date": "2026-11-20T16:52:03.000Z",
+   "sum": "Astronomers have found a triple star system in our neighborhood that has defied the odds. It shouldn't really exist, according to astronomers' understanding of stellar evolution and common envelopes. Yet, there it is.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "57bebe29f83b",
+   "t": "NASA Honor Awards Ceremony Recognizes Employees at Stennis Space Center",
+   "url": "https://www.nasa.gov/centers-and-facilities/stennis/honor-awards-ceremony-at-stennis/",
+   "site": "NASA",
+   "date": "2026-11-20T16:27:46.000Z",
+   "sum": "Employees contributing to NASA’s mission at the agency’s Stennis Space Center near Bay St. Louis, Mississippi, were recognized during the center’s Honor Awards ceremony on Nov. 18. Presenting the awards were Christine Powell, NASA Stennis center director, and Jeremy Parsons, the agency’s Artemis program manager responsible for management and oversight of NASA’s initiative to return […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3c75783da394",
+   "t": "NASA’s Curiosity Mars Rover Collects Samples",
+   "url": "https://www.nasa.gov/image-article/nasas-curiosity-mars-rover-collects-samples/",
+   "site": "NASA",
+   "date": "2026-11-20T15:53:24.000Z",
+   "sum": "This Nov. 16 collage shows 49 drill holes captured by NASA’s Curiosity Mars rover as of November 2026. Each hole represents a sample collected from rocks on the Martian surface; Curiosity’s drill, located on the end of its robotic arm, drops pulverized rock samples into instruments in its belly that analyze their composition. Learn more […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
   {
    "id": "c92c7d1fb77f",
    "t": "Sound Waves From Sunspots Launch Fiery Plasma Jets Across the Sun",
@@ -763,18 +865,6 @@
    "who": []
   },
   {
-   "id": "433559b4a753",
-   "t": "China Signals Its Intention to Land on Jupiter's Moon Callisto",
-   "url": "https://www.universetoday.com/articles/china-signals-its-intention-to-land-on-jupiters-moon-callisto",
-   "site": "Universe Today",
-   "date": "2026-11-17T14:33:05.000Z",
-   "sum": "China is outlining plans to place a small lander on the surface of Jupiter's moon Callisto, the outermost of the four Galilean moons. It's an ambitious plan, and would be only the second time anything's landed on a Solar System body beyond Mars. But the payoff would be huge, even if the lander only carries its two proposed instruments.",
-   "desk": "missions",
-   "who": [
-    "CNSA"
-   ]
-  },
-  {
    "id": "5499709ba059",
    "t": "Voyager 1's Linda Spilker on the Mission's Light-Day Milestone",
    "url": "https://skyandtelescope.org/astronomy-news/voyager-1s-linda-spilker-on-the-light-day-milestone/",
@@ -783,18 +873,6 @@
    "sum": "Hear from Voyager Project Scientist Linda Spilker as she discusses the latest updates from the Voyager probes — and what it means now that Voyager 1 has reached 1 light-day from Earth. The post Voyager 1's Linda Spilker on the Mission's Light-Day Milestone appeared first on Sky & Telescope.",
    "desk": "missions",
    "who": []
-  },
-  {
-   "id": "bc9f56756bd6",
-   "t": "Galaxy Outflows Likely Regulate Star Formation At ‘Cosmic Noon’ NASA’s Webb Reveals",
-   "url": "https://www.universetoday.com/articles/galaxy-outflows-likely-regulate-star-formation-at-cosmic-noon-nasas-webb-reveals",
-   "site": "Universe Today",
-   "date": "2026-11-17T09:29:00.000Z",
-   "sum": "A galaxy’s ultimate habitability is likely linked to massive gaseous outflows that regulate star formation.",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
   },
   {
    "id": "f0893f3467d5",
@@ -817,82 +895,6 @@
    "who": [
     "KASA"
    ]
-  },
-  {
-   "id": "947da179bbec",
-   "t": "Tossing Fireworks from Cloud to Cloud",
-   "url": "https://science.nasa.gov/earth/earth-observatory/tossing-fireworks-from-cloud-to-cloud/",
-   "site": "NASA",
-   "date": "2026-11-17T05:01:00.000Z",
-   "sum": "For many astronauts, the spectacular sight of lightning stands out when looking back at Earth from the International Space Station.",
-   "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "357adaed724a",
-   "t": "Ringing Black Holes Offer Precision Tests of Relativity",
-   "url": "https://www.universetoday.com/articles/ringing-black-holes-offer-precision-tests-of-relativity",
-   "site": "Universe Today",
-   "date": "2026-11-17T04:40:38.000Z",
-   "sum": "Black holes remain some of the most mysterious and awe-inspiring celestial objects ever studied. This primarily comes from the fact that they literally can’t be observed unless they interact with something in its surrounding environment, most notably a star. Adding to their mystery, several types of black holes exist, including free-floating black holes that drift independently throughout space, stellar-mass and are…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "d622b8aed7bb",
-   "t": "Perseverance Update: The Ghostly Rocks of ‘Idubi’ — Bright Remnants of Aqueous Systems from Long Ago",
-   "url": "https://science.nasa.gov/blog/perseverance-update-the-ghostly-rocks-of-idubi-bright-remnants-of-aqueous-systems-from-long-ago/",
-   "site": "NASA",
-   "date": "2026-11-16T23:12:45.000Z",
-   "sum": "Written by Candice Bedford, Research Scientist at Purdue University Date: Nov. 16, 2026 During the Perseverance rover’s investigation of “Idubi” — an area of ancient Martian crust exposed in the “Lac de Charmes” region, outside of Jezero crater — the Perseverance rover team has been captivated by a cluster of eerily bright, light-toned rocks in […]",
-   "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "52b415c3a5a5",
-   "t": "A Collage Showing 49 Drill Holes Made by NASA’s Curiosity Mars Rover",
-   "url": "https://science.nasa.gov/photojournal/a-collage-showing-49-drill-holes-made-by-nasas-curiosity-mars-rover/",
-   "site": "NASA",
-   "date": "2026-11-16T22:05:23.000Z",
-   "sum": "Description This collage shows 49 drill holes captured by NASA’s Curiosity Mars rover as of November 2026. Each hole represents a sample collected from rocks on the Martian surface; Curiosity’s drill, located on the end of its robotic arm, drops pulverized rock samples into instruments in its belly that analyze their composition. These images were […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "5aff358b7a20",
-   "t": "Launch Preview: Ariane 6 to launch Amazon satellites, Falcon 9 to launch government missions",
-   "url": "https://www.nasaspaceflight.com/2026/11/launch-preview-111626/",
-   "site": "NASASpaceflight",
-   "date": "2026-11-16T21:57:02.000Z",
-   "sum": "Following a week of busy launch activity, the worldwide launch manifest is set to see… The post Launch Preview: Ariane 6 to launch Amazon satellites, Falcon 9 to launch government missions appeared first on NASASpaceFlight.com.",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "6e0c614892de",
-   "t": "NASA Receives 16th Consecutive ‘Clean’ Financial Audit Opinion",
-   "url": "https://www.nasa.gov/news-release/nasa-receives-16th-consecutive-clean-financial-audit-opinion/",
-   "site": "NASA",
-   "date": "2026-11-16T20:30:40.000Z",
-   "sum": "For the 16th consecutive year, NASA has received an unmodified, or “clean,” opinion from an external auditor on its fiscal year 2026 financial statements. The rating is the best possible audit opinion, certifying that NASA’s financial statements conform with Generally Accepted Accounting Principles for federal agencies and accurately present the agency’s financial position. “Our responsibility […]",
-   "desk": "policy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "69932f359c93",
-   "t": "SpaceNukes Opens Los Alamos Manufacture and Materials Facility to Build Its Next-Generation Space Reactor",
-   "url": "https://spacenews.com/spacenukes-opens-los-alamos-manufacture-and-materials-facility-to-build-its-next-generation-space-reactor/",
-   "site": "SpaceNews",
-   "date": "2026-11-16T20:00:00.000Z",
-   "sum": "LOS ALAMOS, N.M., Nov. 16, 2026 — Space Nuclear Power Corp. (SpaceNukes) opened its Manufacture and Materials Development Facility at 150 Central Park Square in Los Alamos on Nov. 13. […] The post SpaceNukes Opens Los Alamos Manufacture and Materials Facility to Build Its Next-Generation Space Reactor appeared first on SpaceNews.",
-   "desk": "other",
-   "who": []
   },
   {
    "id": "cb448e90c116",
