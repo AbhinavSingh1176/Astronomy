@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-21T19:23:14.725Z",
+ "fetched": "2026-11-22T06:58:28.232Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -108,7 +108,7 @@
    "t": "A Radical Theory about the Universe Just Passed Some Key Tests. So... What Does that Mean?",
    "url": "https://www.universetoday.com/articles/a-radical-theory-about-the-universe-just-passed-some-key-tests-so-what-does-that-mean",
    "site": "Universe Today",
-   "date": "2026-11-20T20:07:21.000Z",
+   "date": "2026-11-20T20:07:00.000Z",
    "sum": "An alternative model in which the Universe is 26.7 billion years old and needs neither dark matter nor dark energy has held up against several major cosmology tests, according to a new University of Ottawa study.",
    "desk": "astronomy",
    "who": []
@@ -884,18 +884,6 @@
    "date": "2026-11-17T17:00:29.000Z",
    "sum": "NASA will release the first images from its Nancy Grace Roman Space Telescope during a live stream from the American Geophysical Union (AGU) Annual Meeting in San Francisco at 3:30 p.m. EST (12:30 p.m. PST) Monday, Dec. 7. The images will showcase the unique scientific capabilities of Roman, which will soon capture deep, panoramic, never-before-seen […]",
    "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "3feff6ed9928",
-   "t": "Space Selfie",
-   "url": "https://www.nasa.gov/image-article/space-selfie-2/",
-   "site": "NASA",
-   "date": "2026-11-17T16:51:14.000Z",
-   "sum": "NASA astronaut Anil Menon took this selfie during a spacewalk on Oct. 29, 2026. He and CSA (Canadian Space Agency) astronaut Joshua Kutryk installed a new roll-out solar array on the International Space Station. Get daily updates from the space station. Image credit: NASA/Anil Menon",
-   "desk": "missions",
    "who": [
     "NASA"
    ]

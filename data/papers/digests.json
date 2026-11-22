@@ -2,6 +2,69 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-25355",
+   "arxiv": "2611.25355",
+   "t": "The Cosmic Infrared Background from Population III.1 Supermassive Stars and Black Holes",
+   "by": "Emir Tataroglu, Jonathan C. Tan, Rosalia D. O'Brien and Devesh Nandal",
+   "date": "2026-11-19",
+   "added": "2026-11-22",
+   "cat": "astro-ph.GA",
+   "status": "Submitted to ApJ, comments welcome",
+   "url": "https://arxiv.org/abs/2611.25355",
+   "one": "Latest CIB observations place constraints of λ_Edd ≲ 0.3 for the fiducial Pop III.1 model during these epochs.",
+   "q": "We investigate the cosmic infrared background (CIB) that is expected to arise from the Population (Pop) III.1 supermassive black hole (SMBH) formation scenario, which involves early SMBH seeding via supermassive primordial star formation enabled by dark matter annihilation heating. The CIB is composed of stellar and SMBH accretion disk continuum radiation, nebular continuum emission, and Lyα radiation redistributed through scattering in the neutral intergalactic medium.",
+   "how": "We model the emission from Pop III.1 supermassive stars, including their growth phase, flash ionization phase, and early black hole accretion phase, as well as accompanying emission from lower-mass Pop III.2 stars. Based on the feedback regulated Pop III.1 model of Petkova et al.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "(2026), our fiducial model assumes ~10⁵ M☉ Pop III.1 stars forming by z_flash=20 with a comoving number density of ~0.2 cMpc⁻³."
+    ],
+    [
+     "From the abstract (2)",
+     "For this model, the combined stellar contribution is less than 1% of existing direct and diffuse CIB measurements."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "accretion-disc",
+    "black-hole",
+    "dark-matter",
+    "population-iii"
+   ],
+   "links": [
+    "canon:rubin-ford-1970"
+   ]
+  },
+  {
+   "id": "2611-25312",
+   "arxiv": "2611.25312",
+   "t": "First Ωₘ-w Measurement Using Only Fast Radio Burst Observations",
+   "by": "Yi-Ying Wang, Shi-Jie Gao, Chi Zhang and Yi-Zhong Fan",
+   "date": "2026-11-19",
+   "added": "2026-11-22",
+   "cat": "astro-ph.CO",
+   "status": "8 pages, 5 figures. Table I of the Supplemental Material lists 169 localized FRBs",
+   "url": "https://arxiv.org/abs/2611.25312",
+   "one": "Benefiting from a rapidly growing localized sample and a novel statistical framework for modeling the dispersion measure (DM), we report the first simultaneous inference of the matter density Ωₘ and dark energy equation of state parameter w from FRBs alone…",
+   "q": "Though fast radio bursts (FRBs) are widely advocated as a dark energy probe, no valid Ωₘ-w constraint has been obtained exclusively from FRB data to date. Within this unified analysis framework, the mean and variance of DM respond self-consistently to the same underlying cosmology, directly connecting the FRB likelihood to both cosmic expansion and structure growth.",
+   "how": "We combine a multi-parameter emulator for the nonlinear matter power spectrum with a physically motivated electron prescription to construct a cosmology-dependent cosmic-DM distribution. Analyzing 125 localized FRBs at 0.105 ≤ z ≤ 2.148, we obtain Ωₘ = 0.33^+0.10_-0.11 and w = -0.80^+0.28_-0.38 under the flat wCDM model.",
+   "found": [],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "dark-energy",
+    "dispersion-measure",
+    "fast-radio-burst",
+    "spectrum"
+   ],
+   "links": [
+    "canon:lorimer-2007"
+   ]
+  },
+  {
    "id": "2611-26548",
    "arxiv": "2611.26548",
    "t": "Demographic inference in exoplanet chemistry is shaped by retrieval assumptions",
@@ -64,6 +127,29 @@
    ],
    "links": [
     "canon:lorimer-2007"
+   ]
+  },
+  {
+   "id": "2611-25255",
+   "arxiv": "2611.25255",
+   "t": "Transition Zone from ExoEarth to ExoVenus: Critical Insight from Planets on the Edge",
+   "by": "Lisa Kaltenegger, Abigail Bohl, Connor Novak and Gillis Lowry",
+   "date": "2026-11-18",
+   "added": "2026-11-22",
+   "cat": "astro-ph.EP",
+   "status": "9 pages, accepted ApJ",
+   "url": "https://arxiv.org/abs/2611.25255",
+   "one": "Characterizing exoplanets in the Transition Zone will be critical to investigating open questions about the emergence and decline of habitability on rocky worlds, the evolution from an exo-Earth to an exo-Venus, and Earth's future.",
+   "q": "Venus and Earth, planets with similar masses and radii, provide astonishingly different environments, raising the question of why these two rocky worlds evolved so differently. Explaining this divergence is a central challenge in comparative planetology and astrobiology.",
+   "how": "Here, we analyze NASA's Exoplanet Archive, updated with Gaia DR3 data, and provide a target list of 23 rocky exoplanets in the Earth-to-Venus Transition Zone, along with 2 planets in the Venus Evolution Zone (EV).",
+   "found": [],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [],
+   "links": [
+    "obj:venus",
+    "canon:mayor-queloz-1995"
    ]
   },
   {
