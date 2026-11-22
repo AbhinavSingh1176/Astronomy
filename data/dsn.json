@@ -1,19 +1,11 @@
 {
- "fetched": "2026-11-22T06:58:27.646Z",
+ "fetched": "2026-11-22T19:46:45.834Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
    "id": "gdscc",
    "name": "Goldstone, California",
    "dishes": [
-    {
-     "name": "DSS25",
-     "az": 203,
-     "el": 50,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
     {
      "name": "DSS14",
      "az": 0,
@@ -23,89 +15,90 @@
      "targets": []
     },
     {
-     "name": "DSS24",
-     "az": 233,
-     "el": 59,
+     "name": "DSS25",
+     "az": 208,
+     "el": 37,
      "up": [
       {
-       "sc": "Lunar Reconnaissance Orbiter",
+       "sc": "BepiColombo",
        "rate": 0,
-       "band": "S",
-       "power": 0.3
+       "band": "X",
+       "power": 2.2
       }
      ],
      "down": [
       {
-       "sc": "Lunar Reconnaissance Orbiter",
-       "rate": 146400,
-       "band": "S",
-       "power": -110
+       "sc": "BepiColombo",
+       "rate": 174700,
+       "band": "X",
+       "power": -130
       }
      ],
      "targets": [
       {
-       "code": "LRO",
-       "name": "Lunar Reconnaissance Orbiter",
-       "km": 363000,
-       "rtlt": 2.42
-      }
-     ]
-    },
-    {
-     "name": "DSS23",
-     "az": 62,
-     "el": 28,
-     "up": [
-      {
-       "sc": "ESCAPADE Blue",
-       "rate": 0,
-       "band": "X",
-       "power": 0
-      }
-     ],
-     "down": [
-      {
-       "sc": "ESCAPADE Blue",
-       "rate": 8000,
-       "band": "X",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "ESCB",
-       "name": "ESCAPADE Blue",
-       "km": 4170000,
-       "rtlt": 27.8
+       "code": "BEPI",
+       "name": "BepiColombo",
+       "km": 157000000,
+       "rtlt": 1040
       }
      ]
     },
     {
      "name": "DSS26",
-     "az": 255,
-     "el": 24,
+     "az": 155,
+     "el": 21,
      "up": [
       {
-       "sc": "MMS 1",
+       "sc": "Europa Clipper",
        "rate": 0,
-       "band": "S",
-       "power": 0.2
+       "band": "X",
+       "power": 18
       }
      ],
      "down": [
       {
-       "sc": "MMS 1",
-       "rate": 2500000,
-       "band": "S",
-       "power": -110
+       "sc": "Europa Clipper",
+       "rate": 25000,
+       "band": "X",
+       "power": -140
       }
      ],
      "targets": [
       {
-       "code": "MMS1",
-       "name": "MMS 1",
-       "km": 157000,
-       "rtlt": 1.05
+       "code": "EURC",
+       "name": "Europa Clipper",
+       "km": 11100000,
+       "rtlt": 74.3
+      }
+     ]
+    },
+    {
+     "name": "DSS23",
+     "az": 180,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "CHDR",
+       "name": "Chandra",
+       "km": 136000,
+       "rtlt": 0.91
+      }
+     ]
+    },
+    {
+     "name": "DSS24",
+     "az": 180,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "SPP",
+       "name": "Parker Solar Probe",
+       "km": 135000000,
+       "rtlt": 901
       }
      ]
     }
@@ -116,21 +109,131 @@
    "name": "Madrid, Spain",
    "dishes": [
     {
-     "name": "DSS53",
+     "name": "DSS55",
      "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS54",
+     "az": 108,
+     "el": 49,
+     "up": [
+      {
+       "sc": "Roman Space Telescope",
+       "rate": 0,
+       "band": "S",
+       "power": 0.4
+      }
+     ],
+     "down": [
+      {
+       "sc": "Roman Space Telescope",
+       "rate": 780000,
+       "band": "S",
+       "power": -97
+      }
+     ],
+     "targets": [
+      {
+       "code": "RST",
+       "name": "Roman Space Telescope",
+       "km": 1250000,
+       "rtlt": 8.35
+      }
+     ]
+    },
+    {
+     "name": "DSS53",
+     "az": 114,
+     "el": 50,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "LRO",
+       "name": "Lunar Reconnaissance Orbiter",
+       "km": 363000,
+       "rtlt": 2.42
+      }
+     ]
+    },
+    {
+     "name": "DSS56",
+     "az": 182,
+     "el": 67,
+     "up": [
+      {
+       "sc": "MMS 4",
+       "rate": 0,
+       "band": "X",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "MMS 4",
+       "rate": 2500000,
+       "band": "S",
+       "power": -110
+      }
+     ],
+     "targets": [
+      {
+       "code": "MMS4",
+       "name": "MMS 4",
+       "km": 109000,
+       "rtlt": 0.73
+      }
+     ]
+    },
+    {
+     "name": "DSS65",
+     "az": 80,
      "el": 90,
      "up": [],
      "down": [],
      "targets": [
       {
+       "code": "KPLO",
+       "name": "Korea Pathfinder Lunar Orbiter",
+       "km": 362000,
+       "rtlt": 2.42
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cdscc",
+   "name": "Canberra, Australia",
+   "dishes": [
+    {
+     "name": "DSS43",
+     "az": 5,
+     "el": 41,
+     "up": [
+      {
+       "sc": "Mars Reconnaissance Orbiter",
+       "rate": 0,
+       "band": "X",
+       "power": 1
+      }
+     ],
+     "down": [
+      {
+       "sc": "Mars Odyssey",
+       "rate": 14220,
+       "band": "X",
+       "power": -130
+      }
+     ],
+     "targets": [
+      {
        "code": "M01O",
        "name": "Mars Odyssey",
-       "km": 187000000,
-       "rtlt": 1250
-      },
-      {
-       "code": "M20",
-       "name": "Mars 2020 (Perseverance)",
        "km": 187000000,
        "rtlt": 1250
       },
@@ -143,50 +246,8 @@
      ]
     },
     {
-     "name": "DSS55",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
-    {
-     "name": "DSS54",
-     "az": 202,
-     "el": 62,
-     "up": [],
-     "down": [
-      {
-       "sc": "Mars Odyssey",
-       "rate": 14220,
-       "band": "X",
-       "power": -130
-      },
-      {
-       "sc": "Mars Express",
-       "rate": 262200,
-       "band": "X",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "M01O",
-       "name": "Mars Odyssey",
-       "km": 187000000,
-       "rtlt": 1250
-      },
-      {
-       "code": "MEX",
-       "name": "Mars Express",
-       "km": 187000000,
-       "rtlt": 1250
-      }
-     ]
-    },
-    {
-     "name": "DSS63",
-     "az": 146,
+     "name": "DSS34",
+     "az": 57,
      "el": 41,
      "up": [
       {
@@ -199,7 +260,7 @@
      "down": [
       {
        "sc": "STEREO A",
-       "rate": 720000,
+       "rate": 480000,
        "band": "X",
        "power": -120
       }
@@ -210,108 +271,6 @@
        "name": "STEREO A",
        "km": 172000000,
        "rtlt": 1150
-      }
-     ]
-    },
-    {
-     "name": "DSS65",
-     "az": 129,
-     "el": 20,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "CGO",
-       "name": "Carruthers Geocorona Observatory",
-       "km": null,
-       "rtlt": null
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "cdscc",
-   "name": "Canberra, Australia",
-   "dishes": [
-    {
-     "name": "DSS34",
-     "az": 204,
-     "el": 16,
-     "up": [
-      {
-       "sc": "X-ray Multi-Mirror Mission (XMM-Newton)",
-       "rate": 0,
-       "band": "S",
-       "power": 0.2
-      }
-     ],
-     "down": [
-      {
-       "sc": "X-ray Multi-Mirror Mission (XMM-Newton)",
-       "rate": 80660,
-       "band": "S",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "XMM",
-       "name": "X-ray Multi-Mirror Mission (XMM-Newton)",
-       "km": null,
-       "rtlt": null
-      }
-     ]
-    },
-    {
-     "name": "DSS36",
-     "az": 86,
-     "el": 10,
-     "up": [],
-     "down": [],
-     "targets": []
-    },
-    {
-     "name": "DSS43",
-     "az": 271,
-     "el": 48,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "GBRA",
-       "name": "Ground Based Radio Astronomy",
-       "km": null,
-       "rtlt": null
-      }
-     ]
-    },
-    {
-     "name": "DSS35",
-     "az": 268,
-     "el": 44,
-     "up": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 80.13,
-       "band": "X",
-       "power": -150
-      }
-     ],
-     "targets": [
-      {
-       "code": "SPP",
-       "name": "Parker Solar Probe",
-       "km": 136000000,
-       "rtlt": 904
       }
      ]
     }

@@ -1,31 +1,7 @@
 {
- "fetched": "2026-11-22T06:58:28.746Z",
+ "fetched": "2026-11-22T19:46:46.319Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
-  {
-   "id": "951a341f-236b-42fe-a667-4ab2fcf36eac",
-   "name": "Falcon 9 Block 5 | NROL-136",
-   "net": "2026-11-22T12:23:56.000Z",
-   "win": [
-    "2026-11-22T12:16:00.000Z",
-    "2026-11-22T12:46:00.000Z"
-   ],
-   "prec": "Second",
-   "status": "Go",
-   "statusName": "Go for Launch",
-   "provider": "SpaceX",
-   "ptype": "Commercial",
-   "country": "US",
-   "rocket": "Falcon 9 Block 5",
-   "mission": "NROL-136",
-   "mtype": "Government/Top Secret",
-   "orbit": "Low Earth Orbit",
-   "desc": "Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities.",
-   "pad": "Space Launch Complex 4E",
-   "loc": "Vandenberg SFB, CA, USA",
-   "fail": null,
-   "url": null
-  },
   {
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
@@ -143,30 +119,6 @@
    "desc": "Details TBD.",
    "pad": "Launch Complex 3 (LC-3/LA-1)",
    "loc": "Xichang Satellite Launch Center, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
-   "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
-   "net": "2026-11-26T20:00:00.000Z",
-   "win": [
-    "2026-11-26T20:00:00.000Z",
-    "2026-11-26T21:30:00.000Z"
-   ],
-   "prec": "Hour",
-   "status": "TBC",
-   "statusName": "To Be Confirmed",
-   "provider": "Isar Aerospace",
-   "ptype": "Private",
-   "country": "NO",
-   "rocket": "Spectrum",
-   "mission": "AT-Astra and Others (Spectrum Flight 3)",
-   "mtype": "Technology",
-   "orbit": "Sun-Synchronous Orbit",
-   "desc": "Third test flight of the Isar Spectrum launch vehicle. This launch will carry various satellites including R-Space’s AT-Astra/IOD-01, which will perform in-orbit demonstrations for ENPULSION, SUNBOOSTER GmbH, and Synopsis Planet.",
-   "pad": "Orbital Launch Pad",
-   "loc": "Andøya Spaceport",
    "fail": null,
    "url": null
   },
@@ -843,6 +795,30 @@
    "url": null
   },
   {
+   "id": "dff42a2e-f047-48d7-b260-3888d3a4fe33",
+   "name": "Spectrum | AT-Astra and Others (Spectrum Flight 3)",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Quarter 4",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "Isar Aerospace",
+   "ptype": "Private",
+   "country": "NO",
+   "rocket": "Spectrum",
+   "mission": "AT-Astra and Others (Spectrum Flight 3)",
+   "mtype": "Technology",
+   "orbit": "Sun-Synchronous Orbit",
+   "desc": "Third test flight of the Isar Spectrum launch vehicle. This launch will carry various satellites including R-Space’s AT-Astra/IOD-01, which will perform in-orbit demonstrations for ENPULSION, SUNBOOSTER GmbH, and Synopsis Planet.",
+   "pad": "Orbital Launch Pad",
+   "loc": "Andøya Spaceport",
+   "fail": null,
+   "url": null
+  },
+  {
    "id": "b48e32c5-3776-4684-a956-5ea4df032e90",
    "name": "Spectrum | ΣYNDEO-3",
    "net": "2026-12-31T00:00:00.000Z",
@@ -961,9 +937,57 @@
    "loc": "Vandenberg SFB, CA, USA",
    "fail": null,
    "url": null
+  },
+  {
+   "id": "511a3ef8-799e-4723-9293-b954d9d2eb83",
+   "name": "Falcon 9 Block 5 | Rivada 10",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "Rivada 10",
+   "mtype": "Communications",
+   "orbit": "Polar Orbit",
+   "desc": "24 satellites for Rivada's internet constellation.",
+   "pad": "Space Launch Complex 4E",
+   "loc": "Vandenberg SFB, CA, USA",
+   "fail": null,
+   "url": null
   }
  ],
  "recent": [
+  {
+   "id": "951a341f-236b-42fe-a667-4ab2fcf36eac",
+   "name": "Falcon 9 Block 5 | NROL-136",
+   "net": "2026-11-22T12:23:56.000Z",
+   "win": [
+    "2026-11-22T12:16:00.000Z",
+    "2026-11-22T12:46:00.000Z"
+   ],
+   "prec": "Second",
+   "status": "Success",
+   "statusName": "Launch Successful",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "NROL-136",
+   "mtype": "Government/Top Secret",
+   "orbit": "Low Earth Orbit",
+   "desc": "Fifteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities.",
+   "pad": "Space Launch Complex 4E",
+   "loc": "Vandenberg SFB, CA, USA",
+   "fail": null,
+   "url": null
+  },
   {
    "id": "76617033-4dc0-4448-b50c-e5b0d5a18539",
    "name": "Falcon 9 Block 5 | USSF-317",
@@ -1417,30 +1441,6 @@
    "desc": "A batch of 27 satellites for the Starlink mega-constellation - SpaceX's project for space-based Internet communication system.",
    "pad": "Space Launch Complex 4E",
    "loc": "Vandenberg SFB, CA, USA",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "6b95bcc8-1f88-4539-84fe-f63630138766",
-   "name": "Long March 8A | SatNet LEO Group 28",
-   "net": "2026-10-25T02:03:00.000Z",
-   "win": [
-    "2026-10-25T01:42:00.000Z",
-    "2026-10-25T02:32:00.000Z"
-   ],
-   "prec": "Minute",
-   "status": "Success",
-   "statusName": "Launch Successful",
-   "provider": "China Aerospace Science and Technology Corporation",
-   "ptype": "Government",
-   "country": "CN",
-   "rocket": "Long March 8A",
-   "mission": "SatNet LEO Group 28",
-   "mtype": "Communications",
-   "orbit": "Low Earth Orbit",
-   "desc": "A batch of 9 Low Earth Orbit communication satellites for the Chinese state owned SatNet constellation operated by the China Satellite Network Group. The constellation will eventually consists of 13000 satellites.",
-   "pad": "Commercial LC-1",
-   "loc": "Wenchang Space Launch Site, People's Republic of China",
    "fail": null,
    "url": null
   }

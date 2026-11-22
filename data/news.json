@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-22T06:58:28.232Z",
+ "fetched": "2026-11-22T19:46:46.563Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,18 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "8a2dbf593542",
+   "t": "65 Years of Human Spaceflight at NASA Johnson",
+   "url": "https://www.nasa.gov/centers-and-facilities/johnson/65-years-of-human-spaceflight-at-nasa-johnson/",
+   "site": "NASA",
+   "date": "2026-11-22T19:13:25.000Z",
+   "sum": "For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking techniques needed for Apollo to the research conducted aboard the International Space Station, which has supported a continuous human presence for more than 26 years. Today, Johnson teams are preparing crews and […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
   {
    "id": "0e4307d65ddc",
    "t": "Live coverage: SpaceX to launch intelligence-gathering satellites for the National Reconnaissance Office",
@@ -875,18 +887,6 @@
    "sum": "During the first day of Space Tech Expo Europe, SpaceNews’ Mike Gruss sits down with Pieter van Duijn, the chief technology officer of Loft Orbital. They discuss the growing level […] The post How AI is pushing satellites to evolve appeared first on SpaceNews.",
    "desk": "other",
    "who": []
-  },
-  {
-   "id": "bcd64c149894",
-   "t": "NASA Invites Media, Public to View Roman Telescope’s First Images",
-   "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-view-roman-telescopes-first-images/",
-   "site": "NASA",
-   "date": "2026-11-17T17:00:29.000Z",
-   "sum": "NASA will release the first images from its Nancy Grace Roman Space Telescope during a live stream from the American Geophysical Union (AGU) Annual Meeting in San Francisco at 3:30 p.m. EST (12:30 p.m. PST) Monday, Dec. 7. The images will showcase the unique scientific capabilities of Roman, which will soon capture deep, panoramic, never-before-seen […]",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
   },
   {
    "id": "5499709ba059",
