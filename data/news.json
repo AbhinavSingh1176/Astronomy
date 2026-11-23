@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-22T19:46:46.563Z",
+ "fetched": "2026-11-23T07:48:17.396Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,40 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "3f6729e1f5d8",
+   "t": "Laser Focus at the Top of the World",
+   "url": "https://science.nasa.gov/earth/earth-observatory/laser-focus-at-the-top-of-the-world/",
+   "site": "NASA",
+   "date": "2026-11-23T05:01:00.000Z",
+   "sum": "A next-generation geodetic instrument developed by NASA, part of a network that helps measure satellites’ orbits and the planet’s shape, has debuted in Svalbard, Norway.",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "fc3f35dac0ed",
+   "t": "China details its path to a crewed Moon landing before 2030",
+   "url": "https://www.nasaspaceflight.com/2026/11/china-roundup-2026-11/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-22T22:31:24.000Z",
+   "sum": "China has set out its most detailed roadmap yet for landing astronauts on the Moon… The post China details its path to a crewed Moon landing before 2030 appeared first on NASASpaceFlight.com.",
+   "desk": "missions",
+   "who": [
+    "CNSA"
+   ]
+  },
+  {
+   "id": "45781c18c29d",
+   "t": "What’s Happening in Space Policy November 22-29, 2026",
+   "url": "https://spacepolicyonline.com/news/whats-happening-in-space-policy-november-22-29-2026/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-22T21:50:55.000Z",
+   "sum": "Here is SpacePolicyOnline.com’s list of space policy events for the week plus a day of November 22-29, 2026 and any insight we can offer about them. The House and Senate […]",
+   "desk": "policy",
+   "who": []
+  },
   {
    "id": "8a2dbf593542",
    "t": "65 Years of Human Spaceflight at NASA Johnson",
@@ -835,30 +869,6 @@
    ]
   },
   {
-   "id": "1cc34e861f35",
-   "t": "The data is very preliminary, but Vulcan failure may not be due to BE-4 engines",
-   "url": "https://arstechnica.com/features/2026/11/sources-vulcan-launch-anomaly-investigation-is-complex/",
-   "site": "Arstechnica",
-   "date": "2026-11-17T18:00:51.000Z",
-   "sum": "Information about the Vulcan failure is being closely held by ULA and Blue Origin.",
-   "desk": "launch",
-   "who": [
-    "Blue Origin"
-   ]
-  },
-  {
-   "id": "f92fb8a98d24",
-   "t": "Sources: Vulcan launch anomaly investigation is complex",
-   "url": "https://arstechnica.com/space/2026/11/sources-vulcan-launch-anomaly-investigation-is-complex/",
-   "site": "Arstechnica",
-   "date": "2026-11-17T18:00:51.000Z",
-   "sum": "Information about the Vulcan failure is being closely held by ULA and Blue Origin.",
-   "desk": "launch",
-   "who": [
-    "Blue Origin"
-   ]
-  },
-  {
    "id": "67b3eaeb6204",
    "t": "Searching for Elusive Signals in the Cosmic Microwave Background from the South Pole",
    "url": "https://www.universetoday.com/articles/searching-for-elusive-signals-in-the-cosmic-microwave-background-from-the-south-pole",
@@ -866,26 +876,6 @@
    "date": "2026-11-17T17:50:51.000Z",
    "sum": "As the Universe's very first light, the Cosmic Microwave Background holds clues to the very foundation of the cosmos. But, of course, the cosmos doesn't give up its secrets to a casual observer. Only years of work by dedicated scientists with purpose-built tools can make progress.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "6404bbe8c5c3",
-   "t": "Curiosity Blog, Sols 5072-5076: The Return of the Polygons",
-   "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5072-5076-the-return-of-the-polygons/",
-   "site": "NASA",
-   "date": "2026-11-17T17:06:07.000Z",
-   "sum": "Written by Abigail Fraeman, Deputy Project Scientist, Jet Propulsion Laboratory, California Institute of Technology Earth planning date: Friday, Nov. 13, 2026 Curiosity’s past several weeks have been very focused on drilling and analysis of the “Basque Lakes” and “Nazca” samples. We learned a lot from those drilled samples, but it’s time to hit the Martian […]",
-   "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "58de49ec1dea",
-   "t": "How AI is pushing satellites to evolve",
-   "url": "https://spacenews.com/how-ai-is-pushing-satellites-to-evolve/",
-   "site": "SpaceNews",
-   "date": "2026-11-17T17:02:33.000Z",
-   "sum": "During the first day of Space Tech Expo Europe, SpaceNews’ Mike Gruss sits down with Pieter van Duijn, the chief technology officer of Loft Orbital. They discuss the growing level […] The post How AI is pushing satellites to evolve appeared first on SpaceNews.",
-   "desk": "other",
    "who": []
   },
   {

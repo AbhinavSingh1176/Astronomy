@@ -2,6 +2,71 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-27693",
+   "arxiv": "2611.27693",
+   "t": "Probing for relativistic outflows in the Ultraluminous X-ray pulsar RX J0209.6-7427",
+   "by": "F. Barra, C. Pinto, T. di Salvo and 2 others",
+   "date": "2026-11-20",
+   "added": "2026-11-23",
+   "cat": "astro-ph.HE",
+   "status": "14 pages, 14 figures, accepted for publication in Astronomy & Astrophysics",
+   "url": "https://arxiv.org/abs/2611.27693",
+   "one": "If associated with outflows, the inferred column densities appear lower than those reported for some persistent ULXs, potentially reflecting differences in the accretion-flow properties or the shorter super-Eddington phase of RX J0209.6-7427.",
+   "q": "Relativistic winds have been observed in Ultraluminous X-ray sources (ULXs), but their detection at large distances remains limited. Galactic neutron stars accreting matter from Be-star companions provide a valuable opportunity to improve our understanding of these outflows.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "RX J0209.6-7427 is a Be-XRB, powered by a neutron star with a spin period of 9.3 seconds, that underwent an outburst in 2019, exceeding a bolometric luminosity of 10³⁹ erg s⁻¹ at its peak."
+    ],
+    [
+     "From the abstract (2)",
+     "The RGS spectrum yields 105,000 counts, a factor of two higher than any other deep ULX RGS spectrum."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "accretion-disc",
+    "neutron-star",
+    "pulsar"
+   ],
+   "links": [
+    "canon:hewish-1968"
+   ]
+  },
+  {
+   "id": "2611-26660",
+   "arxiv": "2611.26660",
+   "t": "An ALMA Survey of Molecular Gas in the Host Galaxies of Fast Radio Bursts",
+   "by": "Bunyo Hatsukade, Tetsuya Hashimoto, Yuu Niino and 4 others",
+   "date": "2026-11-19",
+   "added": "2026-11-23",
+   "cat": "astro-ph.GA",
+   "status": "Accepted for publication in PASJ",
+   "url": "https://arxiv.org/abs/2611.26660",
+   "one": "These results allow a compact persistent-source contribution and a possible spectral turnover between centimeter and millimeter wavelengths, although the present sensitivity and resolution prevent a firm separation from surrounding star-forming emission.",
+   "q": "CO emission is significantly detected in 6 hosts and tentatively detected in one, yielding molecular gas masses of 2.2x10^8-1.0x10^10 Mo for a Milky Way CO-to-H2 conversion factor. All 6 detections show spatially resolved emission and large-scale velocity gradients, several consistent with ordered disk rotation.",
+   "how": "We present ALMA observations of CO(1-0) and CO(2-1) emission and millimeter continuum measurements for 9 localized fast radio burst (FRB) hosts at z=0.05-0.38.",
+   "found": [
+    [
+     "From the abstract",
+     "At the position of the repeating FRB20201124A, the measured 98 GHz continuum flux density is above the predicted star-formation contribution and lies at the lower end of or below an extrapolation of the VLA spectrum."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "fast-radio-burst"
+   ],
+   "links": [
+    "obj:milky-way",
+    "canon:lorimer-2007"
+   ]
+  },
+  {
    "id": "2611-25355",
    "arxiv": "2611.25355",
    "t": "The Cosmic Infrared Background from Population III.1 Supermassive Stars and Black Holes",
@@ -127,6 +192,32 @@
    ],
    "links": [
     "canon:lorimer-2007"
+   ]
+  },
+  {
+   "id": "2611-25040",
+   "arxiv": "2611.25040",
+   "t": "Subsolar neutron star-black hole binaries from collapsars: Gravitational waveform models and detectability in current searches",
+   "by": "Vishal Baibhav, Valerio De Luca, Loris Del Grosso and 3 others",
+   "date": "2026-11-18",
+   "added": "2026-11-23",
+   "cat": "gr-qc",
+   "status": "14 pages, 5 figures",
+   "url": "https://arxiv.org/abs/2611.25040",
+   "one": "We show that current subsolar searches may miss a significant fraction of these neutron star-black hole mergers, because their templates do not account for the small mass ratios, the tidal disruption of the neutron star, and the effects of the…",
+   "q": "Detecting subsolar objects in binary mergers would be an exceptional discovery in gravitational wave astronomy. So far, dedicated searches for subsolar coalescences reported no confident detections, setting upper bounds on their merger rate.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "black-hole",
+    "gravitational-wave",
+    "neutron-star"
+   ],
+   "links": [
+    "canon:ligo-2016"
    ]
   },
   {
