@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-23T07:48:19.567Z",
+ "fetched": "2026-11-23T23:59:02.889Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
@@ -29,14 +29,14 @@
   {
    "id": "7bdc412b-c965-4517-a131-f57a01189803",
    "name": "Ariane 64 Block 2 | Amazon Leo (LE-04)",
-   "net": "2026-11-24T11:09:00.000Z",
+   "net": "2026-11-24T10:45:00.000Z",
    "win": [
-    "2026-11-24T11:09:00.000Z",
-    "2026-11-24T11:38:00.000Z"
+    "2026-11-24T10:45:00.000Z",
+    "2026-11-24T11:14:00.000Z"
    ],
-   "prec": "Hour",
-   "status": "TBC",
-   "statusName": "To Be Confirmed",
+   "prec": "Minute",
+   "status": "Go",
+   "statusName": "Go for Launch",
    "provider": "Arianespace",
    "ptype": "Commercial",
    "country": "GF",
@@ -171,30 +171,6 @@
    "url": null
   },
   {
-   "id": "8b46d360-6b3b-423f-9036-d5568e485624",
-   "name": "Kinetica 1 | Undisclosed payload",
-   "net": "2026-11-29T01:00:00.000Z",
-   "win": [
-    "2026-11-29T01:00:00.000Z",
-    "2026-11-29T04:00:00.000Z"
-   ],
-   "prec": "Hour",
-   "status": "TBC",
-   "statusName": "To Be Confirmed",
-   "provider": "CAS Space",
-   "ptype": "Commercial",
-   "country": "CN",
-   "rocket": "Kinetica 1",
-   "mission": "Undisclosed payload",
-   "mtype": "Unknown",
-   "orbit": "Unknown",
-   "desc": "Details TBD.",
-   "pad": "South China Sea (launch location 3)",
-   "loc": "Haiyang Oriental Spaceport",
-   "fail": null,
-   "url": null
-  },
-  {
    "id": "13270554-4bdb-42ae-916f-1bb54492204f",
    "name": "Long March 6C | Undisclosed payload",
    "net": "2026-11-29T03:50:00.000Z",
@@ -311,6 +287,54 @@
    "desc": "Note: Launch vehicle name is provisional. First orbital full version launch of the South Korean military small satellite launch vehicle, after 2 sub-orbital tests of individual stages on 30 March and 30 December 2022, and 1 orbital test flight without the 2nd stage on 4 December 2023. Details TBD.",
    "pad": "ADD Offshore launch platform",
    "loc": "Sea Launch",
+   "fail": null,
+   "url": null
+  },
+  {
+   "id": "8b46d360-6b3b-423f-9036-d5568e485624",
+   "name": "Kinetica 1 | Undisclosed payload",
+   "net": "2026-12-01T01:45:00.000Z",
+   "win": [
+    "2026-12-01T01:38:00.000Z",
+    "2026-12-01T02:03:00.000Z"
+   ],
+   "prec": "Hour",
+   "status": "Go",
+   "statusName": "Go for Launch",
+   "provider": "CAS Space",
+   "ptype": "Commercial",
+   "country": "CN",
+   "rocket": "Kinetica 1",
+   "mission": "Undisclosed payload",
+   "mtype": "Unknown",
+   "orbit": "Unknown",
+   "desc": "Details TBD.",
+   "pad": "South China Sea (launch location 4)",
+   "loc": "Haiyang Oriental Spaceport",
+   "fail": null,
+   "url": null
+  },
+  {
+   "id": "5591cfa3-6336-41ab-a37a-7c57aa28ab5f",
+   "name": "Falcon 9 Block 5 | NROL-132",
+   "net": "2026-12-02T20:30:00.000Z",
+   "win": [
+    "2026-12-02T20:30:00.000Z",
+    "2026-12-03T00:30:00.000Z"
+   ],
+   "prec": "Minute",
+   "status": "TBC",
+   "statusName": "To Be Confirmed",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "NROL-132",
+   "mtype": "Government/Top Secret",
+   "orbit": "Low Earth Orbit",
+   "desc": "Sixteenth batch of satellites for a reconnaissance satellite constellation built by SpaceX and Northrop Grumman for the National Reconnaissance Office to provide imaging and other reconnaissance capabilities.",
+   "pad": "Space Launch Complex 4E",
+   "loc": "Vandenberg SFB, CA, USA",
    "fail": null,
    "url": null
   },
@@ -930,30 +954,6 @@
    "country": "US",
    "rocket": "Falcon 9 Block 5",
    "mission": "Rivada 1",
-   "mtype": "Communications",
-   "orbit": "Polar Orbit",
-   "desc": "24 satellites for Rivada's internet constellation.",
-   "pad": "Space Launch Complex 4E",
-   "loc": "Vandenberg SFB, CA, USA",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "511a3ef8-799e-4723-9293-b954d9d2eb83",
-   "name": "Falcon 9 Block 5 | Rivada 10",
-   "net": "2026-12-31T00:00:00.000Z",
-   "win": [
-    "2026-12-31T00:00:00.000Z",
-    "2026-12-31T00:00:00.000Z"
-   ],
-   "prec": "Year",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "SpaceX",
-   "ptype": "Commercial",
-   "country": "US",
-   "rocket": "Falcon 9 Block 5",
-   "mission": "Rivada 10",
    "mtype": "Communications",
    "orbit": "Polar Orbit",
    "desc": "24 satellites for Rivada's internet constellation.",

@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-23T07:48:17.396Z",
+ "fetched": "2026-11-23T23:59:02.533Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,224 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "441e0830693d",
+   "t": "Northrop books sixth Falcon 9 for Cygnus as Antares 330 waits",
+   "url": "https://www.nasaspaceflight.com/2026/11/northrop-sixth-f9-cygnus-antares-waits/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-23T23:28:00.000Z",
+   "sum": "Northrop Grumman has contracted a sixth Falcon 9 launch for its Cygnus resupply spacecraft, extending… The post Northrop books sixth Falcon 9 for Cygnus as Antares 330 waits appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "12214a47136d",
+   "t": "Making Sense of Chaotic Supernova Ejecta With the JWST",
+   "url": "https://www.universetoday.com/articles/making-sense-of-chaotic-supernova-ejecta-with-the-jwst",
+   "site": "Universe Today",
+   "date": "2026-11-23T22:32:05.000Z",
+   "sum": "It's impossible to see inside a star. But some stars explode, spreading their insides out and letting astronomers examine them in detail. It's messy, but astronomers are skilled at stellar forensics, and they have a fine tool at their disposal: the JWST.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "a102ef894568",
+   "t": "Live coverage: SpaceX to launch classified payload for the U.S. Space Force",
+   "url": "https://spaceflightnow.com/2026/11/23/live-coverage-spacex-to-launch-classified-payload-for-the-u-s-space-force-3/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-23T22:21:32.000Z",
+   "sum": "The mission is the third in a series of flights for the U.S. Space Force with a ‘TH’ designation in public filings. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled during a window that opens at 7:55 a.m. PST (10:55 a.m. EST / 1555 UTC).",
+   "desk": "launch",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "f88e7c68619f",
+   "t": "Live coverage: Arianespace to launch Amazon Leo sats amid rocket crunch",
+   "url": "https://spaceflightnow.com/2026/11/23/live-coverage-arianespaces-launches-amazon-leo-sats-amid-rocket-crunch/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-23T22:14:49.000Z",
+   "sum": "The Leo Europe 4 mission will the fourth flight of Amazon Leo satellites on an Ariane 6 rocket and the 16th launch for the constellation. Liftoff from Europe’s Spaceport in French Guiana is scheduled during a window that opens at 8:09 a.m. Kourou Time (6:09 a.m. EST / 1109 UTC).",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "e747137f6267",
+   "t": "NASA seeks to begin ‘intergalactic freight network’ with $1.3 billion block purchase of rockets, orbital transfer vehicles",
+   "url": "https://spaceflightnow.com/2026/11/23/nasa-seeks-to-begin-intergalactic-freight-network-with-1-3-billion-block-purchase-of-rockets-orbital-transfer-vehicles/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-23T21:49:16.000Z",
+   "sum": "NASA announced the purchase of multiple modes of transportation to the Moon’s surface and cis-lunar space to help establish an understanding of what’s needed to execute on their Moon Base program agenda.",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "f7e00e01281c",
+   "t": "Progress MS-36 set to launch to ISS from Baikonur",
+   "url": "https://www.nasaspaceflight.com/2026/11/progress-ms-36/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-23T21:32:11.000Z",
+   "sum": "The fourth and final Progress cargo ship resupply mission to the International Space Station of… The post Progress MS-36 set to launch to ISS from Baikonur appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "02af000e203f",
+   "t": "NASA Awards Contract for NOAA’s Near Earth Orbit Network Program",
+   "url": "https://www.nasa.gov/news-release/nasa-awards-contract-for-noaas-near-earth-orbit-network-program/",
+   "site": "NASA",
+   "date": "2026-11-23T21:10:03.000Z",
+   "sum": "NASA, on behalf of the National Oceanic and Atmospheric Administration (NOAA), has awarded a contract to Northrop Grumman Systems Corporation for the Sounder for Microwave-Based Applications (SMBA) instruments on NOAA’s Near Earth Orbit Network (NEON) satellites. The cost-plus-fixed-fee, firm-fixed-price, and time-and-materials hybrid contract has a value of $290.6 million. The period of performance runs from […]",
+   "desk": "policy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3f6e6e0248b4",
+   "t": "Russia will launch a routine ISS supply mission tomorrow—apparently, it's a big secret",
+   "url": "https://arstechnica.com/space/2026/11/russia-will-launch-a-routine-iss-supply-mission-tomorrow-apparently-its-a-big-secret/",
+   "site": "Arstechnica",
+   "date": "2026-11-23T20:34:51.000Z",
+   "sum": "\"I would ask you to please reach out to Roscosmos directly.\"",
+   "desk": "launch",
+   "who": [
+    "Roscosmos"
+   ]
+  },
+  {
+   "id": "5de8eb0d8783",
+   "t": "New Research Reveals Europa's Sodium Cloud Originated from its Interior Ocean",
+   "url": "https://www.universetoday.com/articles/new-research-reveals-europas-sodium-cloud-originated-from-its-interior-ocean",
+   "site": "Universe Today",
+   "date": "2026-11-23T19:45:30.000Z",
+   "sum": "Scientists using the W.M. Keck Observatory's HIRISE spectrometer have revealed new information about the origin of Europa's sodium cloud.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "ebebcc02fa7b",
+   "t": "Detecting Primordial Black Holes By The Stars They Destroy",
+   "url": "https://www.universetoday.com/articles/detecting-primordial-black-holes-by-the-stars-they-destroy",
+   "site": "Universe Today",
+   "date": "2026-11-23T19:39:15.000Z",
+   "sum": "Astrophysicists wonder if primordial black holes could be part, or maybe all, of dark matter. They're theorized to have formed immediately after the Big Bang from pockets of dense matter. New research shows how they might be detected: in the bbright flash generated by the stars they consume from the inside out.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "e2c5d985046e",
+   "t": "Ultra-Thin \"Rainbow\" Sails Could Power Spacecraft and Shade the Earth",
+   "url": "https://www.universetoday.com/articles/ultra-thin-rainbow-sails-could-power-spacecraft-and-shade-the-earth",
+   "site": "Universe Today",
+   "date": "2026-11-23T18:59:42.000Z",
+   "sum": "For years, whimsically minded space enthusiasts have been dreaming of sailing across the vastness of the void on beams of sunlight. Photons, the massless particles that make up those beams of sunlight, still carry momentum, and can therefore impart a gentle push when they bounce off a surface. This force is the concept behind “solar sailing”, which has been having a bit of a moment in the last decade as several…",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "216c428804e1",
+   "t": "As it happened: NG-25 preview news teleconference",
+   "url": "https://spaceflightnow.com/2026/11/23/as-it-happened-ng-25-preview-news-teleconference/",
+   "site": "Spaceflight Now",
+   "date": "2026-11-23T18:00:35.000Z",
+   "sum": "Live launch coverage and running updates from the Spaceflight Now team. Between broadcasts, Launch Pad Live streams 24/7 from Cape Canaveral.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "25af7379426c",
+   "t": "Studying Cancer Cells in Microgravity",
+   "url": "https://www.nasa.gov/image-article/studying-cancer-cells-in-microgravity/",
+   "site": "NASA",
+   "date": "2026-11-23T17:28:37.000Z",
+   "sum": "This Nov. 19, 2026, image shows gastric microtumors grown within an Encapsulates biochip. The Encapsulate-1 investigation studies patient-derived tumor samples aboard the International Space Station to better understand how cancer cells move and interact in microgravity. The results could help researchers develop further testing to predict a patient’s risk of metastasis and support more personalized […]",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "d7229f632137",
+   "t": "NASA Seeks Partners to Design First Nuclear Reactor for the Moon",
+   "url": "https://www.nasa.gov/directorates/rtmd/nasa-seeks-partners-to-design-first-nuclear-reactor-for-the-moon/",
+   "site": "NASA",
+   "date": "2026-11-23T17:23:50.000Z",
+   "sum": "NASA is seeking industry partners to develop and test the first nuclear reactor designed to provide electricity on the Moon, a major step toward establishing a sustained human presence on the lunar surface. Lunar Reactor-1 (LR-1) will be a small fission power system that will generate 20 kilowatts of electricity, enough to power approximately 16 […]",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3c5d358cbe9f",
+   "t": "LISA's Gravitational Wave Detections Could Reveal Exoplanets",
+   "url": "https://www.universetoday.com/articles/lisas-gravitational-wave-detections-could-reveal-exoplanets",
+   "site": "Universe Today",
+   "date": "2026-11-23T16:44:24.000Z",
+   "sum": "LISA, the ESA's Laser Interferometry Space Antenna, is being built to detect gravitational waves emitted when massive objects spiral together and merge. New research shows that exoplanets can exert a small but perceptible tug on those objects, leaving a signature on the gravitational waves. In some cases, LISA should be able to detect their signatures.",
+   "desk": "astronomy",
+   "who": [
+    "ESA"
+   ]
+  },
+  {
+   "id": "bac9e080d06b",
+   "t": "NASA+ Documentary Captures Europa Clipper’s Journey Into Deep Space",
+   "url": "https://www.nasa.gov/missions/europa-clipper/nasa-documentary-captures-europa-clippers-journey-into-deep-space/",
+   "site": "NASA",
+   "date": "2026-11-23T16:08:23.000Z",
+   "sum": "NASA invites the world behind the scenes to witness the story of Europa Clipper’s journey from a far-off vision to a cutting-edge deep space exploration mission with the release of the agency’s newest documentary, “The Europa Concept.” The documentary will air on NASA+, the NASA app, and the agency’s website starting Monday, Nov. 23, and […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "27d18c82bf6d",
+   "t": "Photo Release: Dark Energy Camera Captures the Betta Fish Nebula Swimming Through Space",
+   "url": "http://noirlab.edu/public/news/noirlab2629/",
+   "site": "NOIRLab",
+   "date": "2026-11-23T16:00:00.000Z",
+   "sum": "Wispy blue ribbons of stellar matter float deep in the cosmos, appearing like the waving tails of betta fish. This stunning snapshot features the best, most detailed view of supernova remnant SNR G295.5+09.7 to date. It was captured by the U.S. Department of Energy-fabricated Dark Energy Camera, mounted on the U.S. National Science Foundation Víctor M. Blanco 4-meter Telescope at Cerro Tololo Inter-American…",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "dc5537864b3e",
+   "t": "Bacteria and Nuclear Power Could Grow Ready-Made Homes on Mars Before Astronauts Arrive",
+   "url": "https://www.universetoday.com/articles/bacteria-and-nuclear-power-could-grow-ready-made-homes-on-mars-before-astronauts-arrive",
+   "site": "Universe Today",
+   "date": "2026-11-23T15:14:35.000Z",
+   "sum": "As we gear up to eventually land a human on Mars, more and more ideas are coming out about how to prepare for that. A recent one from Pioneer Labs, a research institute founded by bioengineer Erika DeBenedictis to develop biological technologies for space exploration, is now available on arXiv, without any plans to release it in a paid journal as part of the “Open Science” policy of The Astera Institute, who funded…",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "bc82422266c7",
+   "t": "Eutelsat Wins $60 Million US Space Force Contract",
+   "url": "https://europeanspaceflight.com/eutelsat-wins-60-million-us-space-force-contract/",
+   "site": "European Spaceflight",
+   "date": "2026-11-23T15:02:19.000Z",
+   "sum": "The US arm of European satellite operator Eutelsat has secured a two-year contract worth more than $60 million to provide satellite communications services to the US armed forces. Announced on 17 November, the contract covers the provision of satellite connectivity through Eutelsat’s OneWeb low Earth orbit constellation, alternative positioning, navigation and timing (PNT) capabilities, and […] The post Eutelsat…",
+   "desk": "policy",
+   "who": []
+  },
+  {
+   "id": "67813de0a1c8",
+   "t": "NASA’s Webb Shows How Supernova Dust Chronicles Star Evolution",
+   "url": "https://science.nasa.gov/missions/webb/nasas-webb-shows-how-supernova-dust-chronicles-star-evolution/",
+   "site": "NASA",
+   "date": "2026-11-23T15:00:00.000Z",
+   "sum": "NASA’s James Webb Space Telescope has painted a vibrant tapestry of the legendary supernova remnant Cassiopeia A (Cas A). Remnants like these are the clouds of gas and dust that remain following the explosion of a massive star and will eventually seed a new generation of stars and planets. This high-resolution, mid-infrared observation from Webb […]",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
   {
    "id": "3f6729e1f5d8",
    "t": "Laser Focus at the Top of the World",
@@ -264,18 +482,6 @@
    "sum": "Tropical Cyclone Xavier launched the basin’s storm season with a bang.",
    "desk": "launch",
    "who": []
-  },
-  {
-   "id": "63dbb453e523",
-   "t": "Live coverage: SpaceX to launch classified payload for the U.S. Space Force",
-   "url": "https://spaceflightnow.com/2026/11/19/live-coverage-spacex-to-launch-classified-payload-for-the-u-s-space-force-2/",
-   "site": "Spaceflight Now",
-   "date": "2026-11-19T23:51:47.000Z",
-   "sum": "The mission is the latest in the series of ‘R’ missions tasked by the U.S. Space Force. Liftoff from pad 4 East is scheduled for 8:32 p.m. PST (11:32 p.m. EST / 432 UTC).",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
   },
   {
    "id": "856071885831",
@@ -636,16 +842,6 @@
    ]
   },
   {
-   "id": "962b33f384d1",
-   "t": "Extremely Accurate Measurements of a Pair of Flaring Red Dwarfs",
-   "url": "https://www.universetoday.com/articles/extremely-accurate-measurements-of-a-pair-of-flaring-red-dwarfs",
-   "site": "Universe Today",
-   "date": "2026-11-18T17:41:05.000Z",
-   "sum": "Astronomers used the Very Large Baseline Array of radio telescopes to measure a pair of active red dwarfs with extreme precision. One of the stars is an extreme type of red dwarf called a Complex Periodic Variable. This is the first time one of these stars has been measured accurately in a binary system.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "4860f27995d2",
    "t": "What Is the Moon Base?",
    "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-the-moon-base/",
@@ -670,16 +866,6 @@
    ]
   },
   {
-   "id": "c54b3b1d4e68",
-   "t": "Fermi’s 14-Year All-Sky Map Bridges Astronomy’s Elusive \"MeV Gap\"",
-   "url": "https://www.universetoday.com/articles/fermis-14-year-all-sky-map-bridges-astronomys-elusive-mev-gap",
-   "site": "Universe Today",
-   "date": "2026-11-18T17:23:14.000Z",
-   "sum": "Gamma rays, the most high-energy type of electromagnetic radiation in the universe, have always had a blind spot. We’ve always had trouble measuring them in the “mega-electron volt” (MeV) energy range, which astronomers have taken to calling the “MeV gap”. But a new paper from an international group of scientists working with the Fermi Large Area Telescope (LAT) Collaboration recently published a paper in The…",
-   "desk": "launch",
-   "who": []
-  },
-  {
    "id": "db952f913324",
    "t": "Vulcan failure caused by inadequate fuel supply to engines, ULA says",
    "url": "https://arstechnica.com/space/2026/11/vulcan-failure-caused-by-inadequate-fuel-supply-to-engines-ula-says/",
@@ -690,191 +876,12 @@
    "who": []
   },
   {
-   "id": "7caf86df745a",
-   "t": "Origami and solar arrays",
-   "url": "https://spacenews.com/origami-and-solar-arrays/",
-   "site": "SpaceNews",
-   "date": "2026-11-18T16:56:05.000Z",
-   "sum": "In this episode of SpaceMinds, SpaceNews’ Mike Gruss talks with Thomas Sinn, the CEO of Dcubed, at Space Tech Expo Europe. They discuss the company’s new $30 million funding round, […] The post Origami and solar arrays appeared first on SpaceNews.",
-   "desk": "policy",
-   "who": []
-  },
-  {
    "id": "fe0c8b02ff6b",
    "t": "Watch Jupiter's Moons Eclipse and Occult One Another",
    "url": "https://skyandtelescope.org/astronomy-news/watch-jupiters-moons-eclipse-and-occult-one-another/",
    "site": "Sky & Telescope",
    "date": "2026-11-18T16:46:25.000Z",
    "sum": "Jupiter routinely occults and eclipses its four bright Galilean moons. Over the next few months, the moons get in on the act, eclipsing and occulting one another! The post Watch Jupiter's Moons Eclipse and Occult One Another appeared first on Sky & Telescope.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "49c56cb191c4",
-   "t": "NASA Data Clinches First-of-Its-Kind Stellar Merger",
-   "url": "https://science.nasa.gov/missions/webb/nasa-data-clinches-first-of-its-kind-stellar-merger/",
-   "site": "NASA",
-   "date": "2026-11-18T16:00:00.000Z",
-   "sum": "Researchers recently identified a first of its kind: A star slightly less massive than the Sun spiraled into and merged with a puffy supergiant star at the outskirts of our neighboring Andromeda galaxy. They nicknamed the newly single, potentially “rejuvenated” star Bao. Their NASA-funded discovery was then bolstered by quick-turn observations from NASA’s James Webb […]",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "ef89a7b50f05",
-   "t": "Microscopic Space Dust Reveals A Hidden Reservoir Of \"Heavy Water\" Beyond Neptune",
-   "url": "https://www.universetoday.com/articles/microscopic-space-dust-reveals-a-hidden-reservoir-of-heavy-water-beyond-neptune",
-   "site": "Universe Today",
-   "date": "2026-11-18T15:01:09.000Z",
-   "sum": "Astronomers can find valuable information in even the tiniest objects. That was certainly the case recently when twelve dust grains collected by a high-altitude aircraft helped solve a mystery about the birth of our Solar System. Or at least that is the argument in a new paper published in Science Advances by researchers at NASA’s Johnson Space Center and UCLA. According to the paper, the region beyond Neptune once…",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "ae0f85f220b7",
-   "t": "PLD Space Investor Selects MIURA 5 to Launch Demo Mission",
-   "url": "https://europeanspaceflight.com/pld-space-investor-selects-miura-5-to-launch-demo-mission/",
-   "site": "European Spaceflight",
-   "date": "2026-11-18T07:25:17.000Z",
-   "sum": "Japanese satellite manufacturer Mitsubishi Electric has signed a contract with Spanish rocket builder PLD Space to launch a small satellite aboard the company’s second MIURA 5 test flight. PLD Space announced that it had signed the launch contract on 18 November, describing the agreement as “a new stage in the relationship between the two companies.” […] The post PLD Space Investor Selects MIURA 5 to Launch Demo…",
-   "desk": "launch",
-   "who": [
-    "JAXA"
-   ]
-  },
-  {
-   "id": "bb697c970496",
-   "t": "Sierra Snow Season Spins Up",
-   "url": "https://science.nasa.gov/earth/earth-observatory/sierra-snow-season-spins-up/",
-   "site": "NASA",
-   "date": "2026-11-18T05:01:00.000Z",
-   "sum": "A widespread, early-season snowstorm blanketed California’s mountains in white in mid-November 2026.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "ba548412fff3",
-   "t": "ULA Investigating Low Booster Performance in Vulcan Launch Failure",
-   "url": "https://spacepolicyonline.com/news/ula-investigating-low-booster-performance-in-vulcan-launch-failure/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-18T03:52:35.000Z",
-   "sum": "The United Launch Alliance said today that low performance of its first stage booster is suspected of causing the failure of Vulcan Leo 1 on Sunday. It was the first […]",
-   "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "0d77de9a27ab",
-   "t": "Computer Simulations Provide the Best Explanation for Those \"Little Red Dots\" Yet!",
-   "url": "https://www.universetoday.com/articles/computer-simulations-provide-the-best-explanation-for-those-little-red-dots-yet",
-   "site": "Universe Today",
-   "date": "2026-11-17T22:58:52.000Z",
-   "sum": "Tiny ‘Little Red Dot’ galaxies found by the James Webb Space Telescope are revealed to be the remnants of supermassive primordial stars surrounded by dense gaseous envelopes.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "4ab4597eb49d",
-   "t": "Rocket Lab’s Electron completes 100th mission, Neutron progresses toward debut mission",
-   "url": "https://www.nasaspaceflight.com/2026/11/rocket-lab-update-1126/",
-   "site": "NASASpaceflight",
-   "date": "2026-11-17T22:24:58.000Z",
-   "sum": "Last weekend, Rocket Lab’s workhorse Electron rocket officially completed its 100th mission, becoming the fastest… The post Rocket Lab’s Electron completes 100th mission, Neutron progresses toward debut mission appeared first on NASASpaceFlight.com.",
-   "desk": "launch",
-   "who": [
-    "Rocket Lab"
-   ]
-  },
-  {
-   "id": "32110fc5e0f5",
-   "t": "NASA Launches Nuclear Power Systems Student Contest",
-   "url": "https://science.nasa.gov/centers-and-facilities/glenn/nasa-launches-nuclear-power-systems-student-contest/",
-   "site": "NASA",
-   "date": "2026-11-17T22:02:48.000Z",
-   "sum": "NASA’s Power to Explore Student Challenge kicked off Tuesday, Nov. 17. The science, engineering, technology, and mathematics (STEM) challenge invites kindergarten through 12th grade students in the United States to learn about space nuclear power systems and illustrate how these nuclear “batteries” could help power their lunar exploration vision. Students are also invited to write […]",
-   "desk": "launch",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "310b0bf5a829",
-   "t": "NASA Space Apps Challenge Breaks Global Hackathon Records",
-   "url": "https://science.nasa.gov/open-science/nasa-space-apps-challenge-breaks-global-hackathon-records/",
-   "site": "NASA",
-   "date": "2026-11-17T21:50:34.000Z",
-   "sum": "On Nov. 14 and 15, NASA held the annual Space Apps Challenge with a record-breaking 181,835 registered participants taking part in 593 events around the world. The annual hackathon invites participants to use NASA’s open data to address one of 14 challenges focused on space exploration or Earth science. This year, the hackathon drew 59% […]",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "a5ce76106b9d",
-   "t": "Black Holes and Their Mysterious Bright Structures Explained",
-   "url": "https://www.universetoday.com/articles/black-holes-and-their-mysterious-bright-structures-explained",
-   "site": "Universe Today",
-   "date": "2026-11-17T21:23:46.000Z",
-   "sum": "Black hole jets from the SMBH in Centaurus A, and from some other SMBH, are brighter on their edges than in their centers. It's called limb brightening, and it's unexpected, and astrophysicists want to know what causes it. They found their answer in detailed plasma physics simulations, and the results could also help efforts to develop fusion power.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "69fee50cb49a",
-   "t": "BPS Digital AVATAR Challenge",
-   "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/bps-digital-avatar-challenge/",
-   "site": "NASA",
-   "date": "2026-11-17T20:39:38.000Z",
-   "sum": "The NASA Space Biology Program within the Biological and Physical Sciences (BPS) Division investigates how living systems respond across the full spectrum of biological organization to advance understanding of how living systems respond to the unique stressors of space exploration—including microgravity, ionizing radiation, low magnetic fields, and elevated CO₂. As NASA prepares for long-duration deep […]",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "8be607bf9db1",
-   "t": "Senate Appropriators Release $1.072 Trillion Defense Bill",
-   "url": "https://spacepolicyonline.com/news/senate-appropriators-release-1-072-trillion-defense-bill/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-17T20:34:15.000Z",
-   "sum": "The Senate Appropriations Committee released its FY2027 defense spending bill last night. The total includes $1.072 trillion for DOD, essentially the same as the Trump Administration’s appropriations request, but it […]",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "322fa129b2e5",
-   "t": "New Album of Baby Star Sounds Shared by NASA’s Chandra",
-   "url": "https://science.nasa.gov/missions/chandra/new-album-of-baby-star-sounds-shared-by-nasas-chandra/",
-   "site": "NASA",
-   "date": "2026-11-17T20:26:17.000Z",
-   "sum": "A new album from NASA’s Chandra X-ray Observatory collects snapshots of baby stars across the galaxy and beyond and transforms that data into sound. Four new sonifications use data of stars that are actively forming, captured by Chandra and other NASA telescopes By studying places in the universe where stars are currently being born and […]",
-   "desk": "astronomy",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "33623c6d773d",
-   "t": "NASA to Cover 35th SpaceX Resupply Mission Space Station Departure",
-   "url": "https://www.nasa.gov/news-release/nasa-to-cover-35th-spacex-resupply-mission-space-station-departure/",
-   "site": "NASA",
-   "date": "2026-11-17T19:16:22.000Z",
-   "sum": "NASA and its international partners are set to receive scientific research samples and hardware as a SpaceX Dragon spacecraft departs the International Space Station no earlier than Wednesday, Nov. 18, for its return to Earth. Pending weather conditions, the Dragon spacecraft will undock from the Harmony module’s space-facing port at 11:05 a.m. EST, following a […]",
-   "desk": "missions",
-   "who": [
-    "NASA",
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "67b3eaeb6204",
-   "t": "Searching for Elusive Signals in the Cosmic Microwave Background from the South Pole",
-   "url": "https://www.universetoday.com/articles/searching-for-elusive-signals-in-the-cosmic-microwave-background-from-the-south-pole",
-   "site": "Universe Today",
-   "date": "2026-11-17T17:50:51.000Z",
-   "sum": "As the Universe's very first light, the Cosmic Microwave Background holds clues to the very foundation of the cosmos. But, of course, the cosmos doesn't give up its secrets to a casual observer. Only years of work by dedicated scientists with purpose-built tools can make progress.",
    "desk": "astronomy",
    "who": []
   },

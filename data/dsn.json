@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-23T07:48:16.807Z",
+ "fetched": "2026-11-23T23:59:01.991Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -22,25 +22,47 @@
      "down": [],
      "targets": [
       {
-       "code": "KPLO",
-       "name": "Korea Pathfinder Lunar Orbiter",
-       "km": 359000,
-       "rtlt": 2.4
+       "code": "SOHO",
+       "name": "SOHO",
+       "km": 1240000,
+       "rtlt": 8.27
       }
      ]
     },
     {
-     "name": "DSS26",
-     "az": 79,
-     "el": 9,
+     "name": "DSS25",
+     "az": 180,
+     "el": 90,
      "up": [],
      "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS26",
+     "az": 213,
+     "el": 16,
+     "up": [
+      {
+       "sc": "Europa Clipper",
+       "rate": 0,
+       "band": "X",
+       "power": 18
+      }
+     ],
+     "down": [
+      {
+       "sc": "Europa Clipper",
+       "rate": 25000,
+       "band": "X",
+       "power": -140
+      }
+     ],
      "targets": [
       {
-       "code": "MRO",
-       "name": "Mars Reconnaissance Orbiter",
-       "km": 186000000,
-       "rtlt": 1240
+       "code": "EURC",
+       "name": "Europa Clipper",
+       "km": 9930000,
+       "rtlt": 66.3
       }
      ]
     }
@@ -51,35 +73,6 @@
    "name": "Madrid, Spain",
    "dishes": [
     {
-     "name": "DSS63",
-     "az": 224,
-     "el": 57,
-     "up": [
-      {
-       "sc": "Mars Reconnaissance Orbiter",
-       "rate": 0,
-       "band": "X",
-       "power": 1.1
-      }
-     ],
-     "down": [
-      {
-       "sc": "Mars Reconnaissance Orbiter",
-       "rate": 4000000,
-       "band": "X",
-       "power": -110
-      }
-     ],
-     "targets": [
-      {
-       "code": "MRO",
-       "name": "Mars Reconnaissance Orbiter",
-       "km": 186000000,
-       "rtlt": 1240
-      }
-     ]
-    },
-    {
      "name": "DSS55",
      "az": 0,
      "el": 90,
@@ -88,84 +81,90 @@
      "targets": []
     },
     {
-     "name": "DSS54",
-     "az": 224,
-     "el": 56,
-     "up": [
-      {
-       "sc": "Trace Gas Orbiter",
-       "rate": 0,
-       "band": "X",
-       "power": 10
-      }
-     ],
-     "down": [
-      {
-       "sc": "Mars Odyssey",
-       "rate": 14220,
-       "band": "X",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "M01O",
-       "name": "Mars Odyssey",
-       "km": 186000000,
-       "rtlt": 1240
-      },
-      {
-       "code": "TGO",
-       "name": "Trace Gas Orbiter",
-       "km": 186000000,
-       "rtlt": 1240
-      }
-     ]
-    },
-    {
-     "name": "DSS65",
-     "az": 163,
-     "el": 45,
-     "up": [],
-     "down": [
-      {
-       "sc": "STEREO A",
-       "rate": 480000,
-       "band": "X",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
-       "code": "STA",
-       "name": "STEREO A",
-       "km": 172000000,
-       "rtlt": 1150
-      }
-     ]
-    },
-    {
-     "name": "DSS53",
+     "name": "DSS56",
      "az": 90,
      "el": 90,
      "up": [],
      "down": [],
      "targets": [
       {
-       "code": "CGO",
-       "name": "Carruthers Geocorona Observatory",
-       "km": null,
-       "rtlt": null
+       "code": "RST",
+       "name": "Roman Space Telescope",
+       "km": 1240000,
+       "rtlt": 8.27
       }
      ]
     },
     {
-     "name": "DSS56",
-     "az": 0,
-     "el": 90,
+     "name": "DSS53",
+     "az": 142,
+     "el": 57,
+     "up": [
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 0,
+       "band": "S",
+       "power": 0.1
+      }
+     ],
+     "down": [
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 28000000,
+       "band": "K",
+       "power": -90
+      },
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 40000,
+       "band": "S",
+       "power": -120
+      }
+     ],
+     "targets": [
+      {
+       "code": "JWST",
+       "name": "James Webb Space Telescope",
+       "km": 1690000,
+       "rtlt": 11.3
+      }
+     ]
+    },
+    {
+     "name": "DSS63",
+     "az": 80,
+     "el": 8,
      "up": [],
      "down": [],
-     "targets": []
+     "targets": [
+      {
+       "code": "JNO",
+       "name": "Juno",
+       "km": 768000000,
+       "rtlt": 5120
+      }
+     ]
+    },
+    {
+     "name": "DSS54",
+     "az": 77,
+     "el": 42,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "M01O",
+       "name": "Mars Odyssey",
+       "km": 185000000,
+       "rtlt": 1240
+      },
+      {
+       "code": "MRO",
+       "name": "Mars Reconnaissance Orbiter",
+       "km": 185000000,
+       "rtlt": 1240
+      }
+     ]
     }
    ]
   },
@@ -175,11 +174,11 @@
    "dishes": [
     {
      "name": "DSS34",
-     "az": 261,
-     "el": 32,
+     "az": 295,
+     "el": 16,
      "up": [
       {
-       "sc": "Parker Solar Probe",
+       "sc": "Psyche",
        "rate": 0,
        "band": "X",
        "power": 18
@@ -187,113 +186,72 @@
      ],
      "down": [
       {
-       "sc": "Parker Solar Probe",
-       "rate": 80.13,
+       "sc": "Psyche",
+       "rate": 358700,
        "band": "X",
-       "power": -160
+       "power": -120
       }
      ],
      "targets": [
       {
-       "code": "SPP",
-       "name": "Parker Solar Probe",
-       "km": 135000000,
-       "rtlt": 898
+       "code": "PSYC",
+       "name": "Psyche",
+       "km": 234000000,
+       "rtlt": 1560
       }
      ]
     },
     {
      "name": "DSS35",
-     "az": 259,
-     "el": 40,
+     "az": 297,
+     "el": 13,
      "up": [
       {
-       "sc": "Europa Clipper",
+       "sc": "Juno",
        "rate": 0,
-       "band": "S",
+       "band": "X",
        "power": 18
       }
      ],
      "down": [
       {
-       "sc": "Europa Clipper",
-       "rate": 25000,
+       "sc": "Juno",
+       "rate": 35090,
        "band": "X",
        "power": -130
       }
      ],
      "targets": [
       {
-       "code": "EURC",
-       "name": "Europa Clipper",
-       "km": 10600000,
-       "rtlt": 70.9
+       "code": "JNO",
+       "name": "Juno",
+       "km": 768000000,
+       "rtlt": 5120
       }
      ]
     },
     {
      "name": "DSS36",
-     "az": 259,
-     "el": 14,
-     "up": [
-      {
-       "sc": "SOHO",
-       "rate": 0,
-       "band": "S",
-       "power": 0.1
-      }
-     ],
-     "down": [
-      {
-       "sc": "SOHO",
-       "rate": 54620,
-       "band": "S",
-       "power": -130
-      }
-     ],
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
      "targets": [
       {
-       "code": "SOHO",
-       "name": "SOHO",
-       "km": 1240000,
-       "rtlt": 8.26
+       "code": "MRO",
+       "name": "Mars Reconnaissance Orbiter",
+       "km": 185000000,
+       "rtlt": 1240
       }
      ]
     },
     {
      "name": "DSS43",
-     "az": 284,
-     "el": 53,
-     "up": [
-      {
-       "sc": "New Horizons",
-       "rate": 0,
-       "band": "S",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "New Horizons",
-       "rate": 0,
-       "band": "X",
-       "power": -160
-      },
-      {
-       "sc": "New Horizons",
-       "rate": 793.6,
-       "band": "X",
-       "power": -150
-      }
-     ],
-     "targets": [
-      {
-       "code": "NHPC",
-       "name": "New Horizons",
-       "km": 9990000000,
-       "rtlt": 66700
-      }
-     ]
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
     }
    ]
   }
