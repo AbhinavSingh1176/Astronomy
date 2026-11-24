@@ -1,18 +1,18 @@
 {
- "fetched": "2026-11-23T23:59:02.889Z",
+ "fetched": "2026-11-24T09:59:50.738Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
    "id": "8dd5de11-831b-445f-86f0-bffefe0550d9",
    "name": "Soyuz 2.1b | Progress MS-36 (97P)",
-   "net": "2026-11-24T10:13:00.000Z",
+   "net": "2026-11-24T10:17:00.000Z",
    "win": [
-    "2026-11-24T10:13:00.000Z",
-    "2026-11-24T10:13:00.000Z"
+    "2026-11-24T10:17:00.000Z",
+    "2026-11-24T10:17:00.000Z"
    ],
    "prec": "Minute",
-   "status": "TBC",
-   "statusName": "To Be Confirmed",
+   "status": "Go",
+   "statusName": "Go for Launch",
    "provider": "Russian Federal Space Agency (ROSCOSMOS)",
    "ptype": "Government",
    "country": "KZ",
@@ -53,12 +53,12 @@
   {
    "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
    "name": "Falcon 9 Block 5 | USSF-266",
-   "net": "2026-11-24T15:55:00.000Z",
+   "net": "2026-11-24T16:08:59.000Z",
    "win": [
     "2026-11-24T15:55:00.000Z",
     "2026-11-24T19:55:00.000Z"
    ],
-   "prec": "Minute",
+   "prec": "Second",
    "status": "Go",
    "statusName": "Go for Launch",
    "provider": "SpaceX",

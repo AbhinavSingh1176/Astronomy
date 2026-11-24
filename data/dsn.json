@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-23T23:59:01.991Z",
+ "fetched": "2026-11-24T09:59:50.162Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -15,54 +15,69 @@
      "targets": []
     },
     {
-     "name": "DSS23",
-     "az": 180,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "SOHO",
-       "name": "SOHO",
-       "km": 1240000,
-       "rtlt": 8.27
-      }
-     ]
-    },
-    {
-     "name": "DSS25",
-     "az": 180,
-     "el": 90,
+     "name": "DSS24",
+     "az": 102,
+     "el": 18,
      "up": [],
      "down": [],
      "targets": []
     },
     {
+     "name": "DSS23",
+     "az": 99,
+     "el": 36,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "TGO",
+       "name": "Trace Gas Orbiter",
+       "km": null,
+       "rtlt": null
+      }
+     ]
+    },
+    {
      "name": "DSS26",
-     "az": 213,
-     "el": 16,
+     "az": 264,
+     "el": 53,
      "up": [
       {
-       "sc": "Europa Clipper",
+       "sc": "Korea Pathfinder Lunar Orbiter",
        "rate": 0,
-       "band": "X",
-       "power": 18
+       "band": "S",
+       "power": 0.2
       }
      ],
      "down": [
       {
-       "sc": "Europa Clipper",
-       "rate": 25000,
-       "band": "X",
-       "power": -140
+       "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 8192,
+       "band": "S",
+       "power": -110
       }
      ],
      "targets": [
       {
-       "code": "EURC",
-       "name": "Europa Clipper",
-       "km": 9930000,
-       "rtlt": 66.3
+       "code": "KPLO",
+       "name": "Korea Pathfinder Lunar Orbiter",
+       "km": 356000,
+       "rtlt": 2.37
+      }
+     ]
+    },
+    {
+     "name": "DSS25",
+     "az": 99,
+     "el": 36,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "M01O",
+       "name": "Mars Odyssey",
+       "km": 185000000,
+       "rtlt": 1230
       }
      ]
     }
@@ -82,87 +97,124 @@
     },
     {
      "name": "DSS56",
-     "az": 90,
-     "el": 90,
-     "up": [],
-     "down": [],
+     "az": 209,
+     "el": 42,
+     "up": [
+      {
+       "sc": "STEREO A",
+       "rate": 0,
+       "band": "X",
+       "power": 9.9
+      }
+     ],
+     "down": [
+      {
+       "sc": "STEREO A",
+       "rate": 480000,
+       "band": "X",
+       "power": -120
+      }
+     ],
      "targets": [
       {
-       "code": "RST",
-       "name": "Roman Space Telescope",
-       "km": 1240000,
-       "rtlt": 8.27
+       "code": "STA",
+       "name": "STEREO A",
+       "km": 172000000,
+       "rtlt": 1150
       }
      ]
     },
     {
-     "name": "DSS53",
-     "az": 142,
-     "el": 57,
+     "name": "DSS54",
+     "az": 158,
+     "el": 26,
      "up": [
       {
-       "sc": "James Webb Space Telescope",
+       "sc": "IMAP",
        "rate": 0,
-       "band": "S",
+       "band": "X",
+       "power": 2
+      }
+     ],
+     "down": [
+      {
+       "sc": "IMAP",
+       "rate": 714300,
+       "band": "X",
+       "power": -110
+      }
+     ],
+     "targets": [
+      {
+       "code": "IMAP",
+       "name": "IMAP",
+       "km": null,
+       "rtlt": null
+      }
+     ]
+    },
+    {
+     "name": "DSS63",
+     "az": 108,
+     "el": 38,
+     "up": [],
+     "down": [
+      {
+       "sc": "Voyager 1",
+       "rate": 40,
+       "band": "X",
+       "power": -160
+      },
+      {
+       "sc": "Voyager 1",
+       "rate": 40,
+       "band": "X",
+       "power": -160
+      }
+     ],
+     "targets": [
+      {
+       "code": "VGR1",
+       "name": "Voyager 1",
+       "km": 25900000000,
+       "rtlt": 173000
+      }
+     ]
+    },
+    {
+     "name": "DSS65",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
+     "name": "DSS53",
+     "az": 141,
+     "el": 23,
+     "up": [
+      {
+       "sc": "SOHO",
+       "rate": 0,
+       "band": "X",
        "power": 0.1
       }
      ],
      "down": [
       {
-       "sc": "James Webb Space Telescope",
-       "rate": 28000000,
-       "band": "K",
-       "power": -90
-      },
-      {
-       "sc": "James Webb Space Telescope",
-       "rate": 40000,
+       "sc": "SOHO",
+       "rate": 245800,
        "band": "S",
        "power": -120
       }
      ],
      "targets": [
       {
-       "code": "JWST",
-       "name": "James Webb Space Telescope",
-       "km": 1690000,
-       "rtlt": 11.3
-      }
-     ]
-    },
-    {
-     "name": "DSS63",
-     "az": 80,
-     "el": 8,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "JNO",
-       "name": "Juno",
-       "km": 768000000,
-       "rtlt": 5120
-      }
-     ]
-    },
-    {
-     "name": "DSS54",
-     "az": 77,
-     "el": 42,
-     "up": [],
-     "down": [],
-     "targets": [
-      {
-       "code": "M01O",
-       "name": "Mars Odyssey",
-       "km": 185000000,
-       "rtlt": 1240
-      },
-      {
-       "code": "MRO",
-       "name": "Mars Reconnaissance Orbiter",
-       "km": 185000000,
-       "rtlt": 1240
+       "code": "SOHO",
+       "name": "SOHO",
+       "km": 1240000,
+       "rtlt": 8.27
       }
      ]
     }
@@ -173,85 +225,112 @@
    "name": "Canberra, Australia",
    "dishes": [
     {
-     "name": "DSS34",
-     "az": 295,
-     "el": 16,
-     "up": [
-      {
-       "sc": "Psyche",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Psyche",
-       "rate": 358700,
-       "band": "X",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
-       "code": "PSYC",
-       "name": "Psyche",
-       "km": 234000000,
-       "rtlt": 1560
-      }
-     ]
-    },
-    {
-     "name": "DSS35",
-     "az": 297,
-     "el": 13,
-     "up": [
-      {
-       "sc": "Juno",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Juno",
-       "rate": 35090,
-       "band": "X",
-       "power": -130
-      }
-     ],
-     "targets": [
-      {
-       "code": "JNO",
-       "name": "Juno",
-       "km": 768000000,
-       "rtlt": 5120
-      }
-     ]
-    },
-    {
      "name": "DSS36",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
+     "az": 244,
+     "el": 14,
+     "up": [
+      {
+       "sc": "Europa Clipper",
+       "rate": 0,
+       "band": "S",
+       "power": 18
+      }
+     ],
+     "down": [
+      {
+       "sc": "Europa Clipper",
+       "rate": 31250,
+       "band": "X",
+       "power": -140
+      }
+     ],
      "targets": [
       {
-       "code": "MRO",
-       "name": "Mars Reconnaissance Orbiter",
-       "km": 185000000,
-       "rtlt": 1240
+       "code": "EURC",
+       "name": "Europa Clipper",
+       "km": 9510000,
+       "rtlt": 63.4
       }
      ]
     },
     {
      "name": "DSS43",
-     "az": 0,
-     "el": 90,
+     "az": 262,
+     "el": 25,
+     "up": [
+      {
+       "sc": "New Horizons",
+       "rate": 0,
+       "band": "X",
+       "power": 19
+      }
+     ],
+     "down": [
+      {
+       "sc": "New Horizons",
+       "rate": 631.2,
+       "band": "X",
+       "power": -150
+      },
+      {
+       "sc": "New Horizons",
+       "rate": 0,
+       "band": "X",
+       "power": -160
+      }
+     ],
+     "targets": [
+      {
+       "code": "NHPC",
+       "name": "New Horizons",
+       "km": 10000000000,
+       "rtlt": 66700
+      }
+     ]
+    },
+    {
+     "name": "DSS35",
+     "az": 299,
+     "el": 65,
+     "up": [
+      {
+       "sc": "MMS 3",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "MMS 3",
+       "rate": 2500000,
+       "band": "S",
+       "power": -110
+      }
+     ],
+     "targets": [
+      {
+       "code": "MMS3",
+       "name": "MMS 3",
+       "km": 150000,
+       "rtlt": 1
+      }
+     ]
+    },
+    {
+     "name": "DSS34",
+     "az": 37,
+     "el": 23,
      "up": [],
      "down": [],
-     "targets": []
+     "targets": [
+      {
+       "code": "RST",
+       "name": "Roman Space Telescope",
+       "km": 1240000,
+       "rtlt": 8.27
+      }
+     ]
     }
    ]
   }

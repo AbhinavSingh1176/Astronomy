@@ -2,6 +2,92 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-30497",
+   "arxiv": "2611.30497",
+   "t": "Two-Component Model for the Unidentified Extended Fermi-LAT Source 4FGL J1908.6+0915e / FL16Y J1908.6+0915e in the SGR 1900+14--W49A Sky Region",
+   "by": "Vadym Voitsekhovskyi, Roman Hnatyk, Bohdan Hnatyk and 4 others",
+   "date": "2026-11-23",
+   "added": "2026-11-24",
+   "cat": "astro-ph.HE",
+   "status": "NN pages, 10 figures, 6 tables. Accepted for publication in Galaxies",
+   "url": "https://arxiv.org/abs/2611.30497",
+   "one": "However, due to the considerable distance to the magnetar (d=12.5 kpc), the required cosmic-ray energy budget in both hadronic and leptonic scenarios corresponds to a hypernova explosion and/or a powerful magnetar wind nebula created by a newly born millisecond magnetar…",
+   "q": "Galactic PeVatrons are expected to be powerful sources of non-thermal high-energy (HE, E>100 MeV) and very-high-energy (VHE, E>100 GeV) γ-ray emission as a manifestation of acceleration processes in supernova remnants (SNRs), star formation regions (SFRs), and pulsar wind nebulae (PWNe). In the sky region containing the magnetar SGR 1900+14 and the young massive star cluster (YMSC) W49A, there is one recently identified point-like source FL16Y J1910.2+0903, and there are three unidentified gamma-ray sources: the Fermi-LAT extended source FL16Y J1908.6+0915e, the HAWC extended source 4HWC J1908+0845, and the LHAASO point-like source LHAASO J1907+0913.",
+   "how": "We investigate the possibility of explaining the HE and VHE γ-ray emission from the SGR 1900+14--W49A sky region using a model of the Fermi-LAT extended source FL16Y J1908.6+0915e as superposition of two extended sources -- a potential SNR/PWN associated with the magnetar SGR 1900+14 and the stellar-wind superbubble adjacent to the YMSC W49A complex. To this end, we simulate the observed γ-ray emission in hadronic and leptonic models using the open NAIMA code and show that it consists of two extended regions: the stellar wind superbubble in W49A region -- an analog of the Westerlund 1 superbubble -- powered by the YMSC W49A (the southern part of the extended source FL16Y J1908.6+0915e); and the SGR 1900+14 region, powered by a potential SNR/PWN associated with the magnetar (the northern part of the extended source FL16Y J1908.6+0915e).",
+   "found": [],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "magnetar",
+    "parsec",
+    "pulsar",
+    "supernova"
+   ],
+   "links": [
+    "canon:hewish-1968"
+   ]
+  },
+  {
+   "id": "2611-27530",
+   "arxiv": "2611.27530",
+   "t": "Blowing star formation away in AGN Hosts (BAH) - VI. Warm Molecular Outflows Driven by the Low-Luminosity AGN in NGC 3884",
+   "by": "José Henrique Costa-Souza, Rogemar A. Riffel, Nadia L. Zakamska and 5 others",
+   "date": "2026-11-20",
+   "added": "2026-11-24",
+   "cat": "astro-ph.GA",
+   "status": "Accepted for publication by AAS",
+   "url": "https://arxiv.org/abs/2611.27530",
+   "one": "By decomposing the emission-line profiles into multiple Gaussian components, we detect both ionized and warm molecular outflows, traced by [Ar ii] 6.99 um and H2 0-0 S(5), respectively.",
+   "q": "The ionized and warm molecular components both extend to similar distances from the nucleus, reaching approximately ~1.2 kpc. In addition to an outflow component, we detect a double narrow emission component in both ionized and molecular lines, clearly observed along the minor axis with similar amplitudes, while their intensity ratio varies systematically along the major axis.",
+   "how": "We use the James Webb Space Telescope (JWST) Mid-Infrared Instrument (MIRI) Medium Resolution Spectrograph (MRS) to investigate the warm molecular and low ionization gas outflows driven by the low-luminosity Active Galactic Nucleus (AGN) in NGC 3884.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "We estimate that the outflow injects momentum into the interstellar medium (ISM) at a rate corresponding to ~0.015 percent of the AGN bolometric luminosity, consistent with a radiation-driven origin."
+    ],
+    [
+     "From the abstract (2)",
+     "Assuming a constant outflow rate, the gas reservoir would be depleted on a timescale of ~26 Myr, potentially suppressing nuclear star formation in the host galaxy."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "active-galactic-nucleus",
+    "parsec",
+    "spectrum"
+   ],
+   "links": [
+    "obj:jwst",
+    "obj:milky-way"
+   ]
+  },
+  {
+   "id": "2611-28186",
+   "arxiv": "2611.28186",
+   "t": "Updated View on Titan's Habitability: Interior and Surface Aqueous Environments",
+   "by": "Diogo Gonçalves, Lígia F. Coelho, Catarina Miranda and Zita Martins",
+   "date": "2026-11-20",
+   "added": "2026-11-24",
+   "cat": "astro-ph.EP",
+   "status": "45 pages, 3 figures, 1 table. Manuscript published in Front. Astron. Space Sci. Published in Front. Astron. Space Sci. (2026) 13:1916097",
+   "url": "https://arxiv.org/abs/2611.28186",
+   "one": "For each setting, we identify the enabling factors and the principal bottlenecks that limit prebiotic complexification.",
+   "q": "Saturn's moon Titan is the only world beyond Earth where abundant organic molecules and liquid water are expected to interact. Crucially, these interactions yield prebiotic molecules central to terrestrial biochemistry.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [],
+   "links": [
+    "obj:saturn",
+    "obj:titan"
+   ]
+  },
+  {
    "id": "2611-27693",
    "arxiv": "2611.27693",
    "t": "Probing for relativistic outflows in the Ultraluminous X-ray pulsar RX J0209.6-7427",

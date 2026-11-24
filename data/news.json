@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-23T23:59:02.533Z",
+ "fetched": "2026-11-24T09:59:50.613Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,38 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "fb5c2e8a6279",
+   "t": "A Star’s ‘Obliquity’ Likely Has Little Impact On A Given Planet’s Habitability",
+   "url": "https://www.universetoday.com/articles/a-stars-obliquity-likely-has-little-impact-on-a-given-planets-habitability",
+   "site": "Universe Today",
+   "date": "2026-11-24T09:42:27.000Z",
+   "sum": "For decades, astronomers have puzzled over whether a star’s given obliquity, or axial tilt, changes over time and space. A new paper says large obliquity changes appear to be uncommon.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "9955d03265a0",
+   "t": "BepiColombo Enters Orbit Around Mercury Despite “Software Glitch”",
+   "url": "https://europeanspaceflight.com/bepicolombo-enters-orbit-around-mercury-despite-software-glitch/",
+   "site": "European Spaceflight",
+   "date": "2026-11-24T08:50:01.000Z",
+   "sum": "The European Space Agency’s BepiColombo mission has successfully entered orbit around Mercury despite a software glitch that resulted in a shorter-than-planned thruster burn. According to the agency’s 23 November update, the BepiColombo spacecraft reoriented itself at 17:51 CET on 21 November, resulting in a planned loss of communications with Earth. At 19:24 CET, the spacecraft […] The post BepiColombo Enters Orbit…",
+   "desk": "missions",
+   "who": [
+    "ESA"
+   ]
+  },
+  {
+   "id": "e3618abe24d1",
+   "t": "Eruption Extends Iwo Jima’s Beach",
+   "url": "https://science.nasa.gov/earth/earth-observatory/eruption-extends-iwo-jimas-beach/",
+   "site": "NASA",
+   "date": "2026-11-24T05:01:00.000Z",
+   "sum": "A volcanic eruption just off the southeast shore of the Pacific island has reshaped the coast, but it’s unclear how long the new land will survive.",
+   "desk": "other",
+   "who": []
+  },
   {
    "id": "441e0830693d",
    "t": "Northrop books sixth Falcon 9 for Cygnus as Antares 330 waits",
@@ -786,16 +818,6 @@
    "who": []
   },
   {
-   "id": "2d8f21a9606b",
-   "t": "Are Uranus and Neptune Secretly \"Rock Giants\"? A Noble Gas Might Hold the Answer",
-   "url": "https://www.universetoday.com/articles/are-uranus-and-neptune-secretly-rock-giants-a-noble-gas-might-hold-the-answer",
-   "site": "Universe Today",
-   "date": "2026-11-18T19:11:15.000Z",
-   "sum": "For decades, astronomers have divided the planets in the outer solar system into two distinct camps. Jupiter and Saturn were the “gas giants” made up primarily of hydrogen and helium. Uranus and Neptune were the “ice giants”, and were much smaller but were packed with heavier elements. A new paper from Olivier Mousis of the Southwest Research Institute and his co-authors, available in The Planetary Science Journal,…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "af5d0c9506bd",
    "t": "MAF EAP – Holidays – How to manage the BAH HUMBUG that tries to sneak in",
    "url": "https://www.nasa.gov/centers-and-facilities/michoud/maf-eap/maf-eap-holidays-how-to-manage-the-bah-humbug-that-tries-to-sneak-in/",
@@ -840,40 +862,6 @@
    "who": [
     "NASA"
    ]
-  },
-  {
-   "id": "4860f27995d2",
-   "t": "What Is the Moon Base?",
-   "url": "https://www.nasa.gov/learning-resources/for-kids-and-students/what-is-the-moon-base/",
-   "site": "NASA",
-   "date": "2026-11-18T17:36:03.000Z",
-   "sum": "This article is for students. NASA is returning astronauts to the Moon – and this time they will spend more time on the lunar surface. The Moon Base is humanity’s first lunar outpost. It will be a place where astronauts live, work, and explore. ______________________________________________________________________ Words to Know outpost: a station or base located in […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "883e59987eb4",
-   "t": "Thank You for Doing NASA Science!",
-   "url": "https://science.nasa.gov/get-involved/citizen-science/thank-you-for-doing-nasa-science/",
-   "site": "NASA",
-   "date": "2026-11-18T17:32:52.000Z",
-   "sum": "It’s Thanksgiving time, and we’re giving thanks to you for doing NASA Science with us! You and NASA’s other volunteers have enabled an incredible banquet of discoveries—by taking data, analyzing data, writing code, writing papers, and even inventing your own science projects. Whether you’re an expert participant or someone who’s just started your science journey, […]",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "db952f913324",
-   "t": "Vulcan failure caused by inadequate fuel supply to engines, ULA says",
-   "url": "https://arstechnica.com/space/2026/11/vulcan-failure-caused-by-inadequate-fuel-supply-to-engines-ula-says/",
-   "site": "Arstechnica",
-   "date": "2026-11-18T16:58:32.000Z",
-   "sum": "\"ULA is a valued partner, and we look forward to Vulcan's return to flight.\"",
-   "desk": "launch",
-   "who": []
   },
   {
    "id": "fe0c8b02ff6b",
