@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-25T08:44:04.062Z",
+ "fetched": "2026-11-25T21:46:09.659Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
@@ -243,6 +243,30 @@
    "url": null
   },
   {
+   "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
+   "name": "Falcon 9 Block 5 | CHORUS",
+   "net": "2026-12-04T12:55:00.000Z",
+   "win": [
+    "2026-12-04T12:55:00.000Z",
+    "2026-12-04T13:24:00.000Z"
+   ],
+   "prec": "Minute",
+   "status": "Go",
+   "statusName": "Go for Launch",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "CHORUS",
+   "mtype": "Earth Science",
+   "orbit": "Low Earth Orbit",
+   "desc": "CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes. A collaborative multi-sensor constellation, CHORUS will bring together diverse and unique imagery and data sources and provide a new level of near real-time insight and innovative Earth observation…",
+   "pad": "Space Launch Complex 40",
+   "loc": "Cape Canaveral SFS, FL, USA",
+   "fail": null,
+   "url": null
+  },
+  {
    "id": "5ce59e3a-c343-430f-ae4e-e608ba536754",
    "name": "Long March 12 | SatNet LEO Group",
    "net": "2026-12-10T07:00:00.000Z",
@@ -269,14 +293,14 @@
   {
    "id": "22e117bf-041c-49d5-9d09-7b180036e143",
    "name": "Ariane 62 | Metop-SG B1",
-   "net": "2026-12-17T00:00:00.000Z",
+   "net": "2026-12-18T00:36:00.000Z",
    "win": [
-    "2026-12-17T00:00:00.000Z",
-    "2026-12-17T00:00:00.000Z"
+    "2026-12-18T00:36:00.000Z",
+    "2026-12-18T00:36:00.000Z"
    ],
-   "prec": "Day",
-   "status": "TBD",
-   "statusName": "To Be Determined",
+   "prec": "Minute",
+   "status": "Go",
+   "statusName": "Go for Launch",
    "provider": "Arianespace",
    "ptype": "Commercial",
    "country": "GF",
@@ -309,30 +333,6 @@
    "mtype": "Communications",
    "orbit": "Low Earth Orbit",
    "desc": "Amazon Leo, formerly known as Project Kuiper, is a mega constellation of satellites in Low Earth Orbit designed to offer broadband internet access managed by Kuiper Systems LLC, a subsidiary of Amazon. This constellation is planned to be composed of 3,276 satellites. The satellites are projected to be placed in 98 orbital planes in three orbital layers, one at 590 km, 610 km and 630 km altitude.",
-   "pad": "Unknown Pad",
-   "loc": "Cape Canaveral SFS, FL, USA",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "8bf5f61e-a7e1-41e6-aede-7b87e4beebab",
-   "name": "Falcon 9 Block 5 | CHORUS",
-   "net": "2026-12-31T00:00:00.000Z",
-   "win": [
-    "2026-12-31T00:00:00.000Z",
-    "2026-12-31T00:00:00.000Z"
-   ],
-   "prec": "Month",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "SpaceX",
-   "ptype": "Commercial",
-   "country": "US",
-   "rocket": "Falcon 9 Block 5",
-   "mission": "CHORUS",
-   "mtype": "Earth Science",
-   "orbit": "Low Earth Orbit",
-   "desc": "CHORUS is MDA's next generation Earth observation constellation, consisting of 2 radar satellites (C-band SAR and X-band SAR), in a 53.5 degree 600 km altitude LEO, with the X-band trailing the C-band by 60 minutes. A collaborative multi-sensor constellation, CHORUS will bring together diverse and unique imagery and data sources and provide a new level of near real-time insight and innovative Earth observation…",
    "pad": "Unknown Pad",
    "loc": "Cape Canaveral SFS, FL, USA",
    "fail": null,

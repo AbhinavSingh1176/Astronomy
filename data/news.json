@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-25T08:44:00.927Z",
+ "fetched": "2026-11-25T21:46:09.311Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,158 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "772cb48c4e8e",
+   "t": "The Event Horizon Telescope Views the Dynamics and Geometry of a Black Hole Jet in Extreme Detail",
+   "url": "https://www.universetoday.com/articles/the-event-horizon-telescope-views-the-dynamics-and-geometry-of-a-black-hole-jet-in-extreme-detailele",
+   "site": "Universe Today",
+   "date": "2026-11-25T20:25:00.000Z",
+   "sum": "Observations by the Event Horizon Telescope Collaboration resolved the innermost region of the blazar 3C 279 powerful jet emitted in unprecedented detail.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "157b60a92812",
+   "t": "The Physics Wall Facing Orbital AI Data Centers",
+   "url": "https://www.universetoday.com/articles/the-physics-wall-facing-orbital-ai-data-centers",
+   "site": "Universe Today",
+   "date": "2026-11-25T19:36:56.000Z",
+   "sum": "Basing entire business plans on back-of-the-envelope calculations might not seem like the best idea. However, according to a new paper available in preprint on arXiv by Dr. Slava Turyshev of NASA’s Jet Propulsion Laboratory, that is precisely what the companies touting orbital AI data centers are doing. While on paper, the math looks good, the physical constraints of actually utilizing all the processing power and…",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "ecb5d293ef4c",
+   "t": "NASA Enhances Supplier Program, Announces Mentor-Protégé Agreement",
+   "url": "https://www.nasa.gov/organizations/osbp/nasa-enhances-supplier-program-announces-mentor-protege-agreement/",
+   "site": "NASA",
+   "date": "2026-11-25T19:06:56.000Z",
+   "sum": "How NASA works with small businesses is evolving, and as a result, the agency is strengthening the domestic aerospace industrial base to support future exploration missions through its recently renamed Small Business Supplier Development Program. As part of the program, NASA announced its latest Mentor-Protégé Agreement, this one signed between The Boeing Company and GRACE […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "744d1cca5201",
+   "t": "MaiaSpace Ships Maia Mechanical Models to Launch Site",
+   "url": "https://europeanspaceflight.com/maiaspace-ships-maia-mechanical-models-to-launch-site/",
+   "site": "European Spaceflight",
+   "date": "2026-11-25T18:51:13.000Z",
+   "sum": "ArianeGroup subsidiary MaiaSpace has shipped full-scale mechanical models of the first and second stages of its Maia rocket to French Guiana. The stages will be used for a series of combined tests at the Guiana Space Centre in the first half of 2027. MaiaSpace announced on 25 November that the two stages left the company’s […] The post MaiaSpace Ships Maia Mechanical Models to Launch Site appeared first on European…",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "8540e8010e35",
+   "t": "The FCC has authorized SpaceX to deploy 1 million satellites",
+   "url": "https://arstechnica.com/space/2026/11/the-fcc-has-authorized-spacex-to-deploy-1-million-satellites/",
+   "site": "Arstechnica",
+   "date": "2026-11-25T18:22:38.000Z",
+   "sum": "This constellation would increase the number of satellites in orbit by roughly 50-fold.",
+   "desk": "policy",
+   "who": [
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "8cd7bb44a04c",
+   "t": "NASA Eyes Crop Candidates for Future Menus",
+   "url": "https://science.nasa.gov/directorates/smd/nasa-eyes-crop-candidates-for-future-menus/",
+   "site": "NASA",
+   "date": "2026-11-25T17:53:42.000Z",
+   "sum": "As NASA prepares for future missions to the Moon and Mars, researchers are studying crops that could provide astronauts with fresh food, nutrition, and variety far from Earth. Such crop variety can help with menus in deep space, something top of mind this week as the nation celebrates Thanksgiving. Recent testing points to strawberries, […]",
+   "desk": "missions",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "f2c96cf1e648",
+   "t": "ALMA Reveals a Dying Star's Final Breath, Encoded In a Giant Ring of Gas",
+   "url": "https://www.universetoday.com/articles/alma-reveals-a-dying-stars-final-breath-encoded-in-a-giant-ring-of-gas",
+   "site": "Universe Today",
+   "date": "2026-11-25T17:24:35.000Z",
+   "sum": "About 6,500 years ago, a dying star emitted its final thermal pulse. That dying breath created a giant ring of gas detected by ALMA. Then only 700 years ago, the star formed an hourglass nebula. Theory predicted this, but this is the first direct evidence supporting it.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "2ce157bbec38",
+   "t": "Uranus Joins the Thanksgiving Feast",
+   "url": "https://skyandtelescope.org/astronomy-news/uranus-joins-the-thanksgiving-feast/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-25T17:03:52.000Z",
+   "sum": "Uranus joins Venus, Mercury, Mars, Jupiter, Saturn, and Neptune in an all-night feast of planets this Thanksgiving. The post Uranus Joins the Thanksgiving Feast appeared first on Sky & Telescope.",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "afc105b15bba",
+   "t": "Childhood, Career Come Full Circle for Budget Analyst at NASA Goddard",
+   "url": "https://www.nasa.gov/centers-and-facilities/goddard/childhood-career-come-full-circle-for-budget-analyst-at-nasa-goddard/",
+   "site": "NASA",
+   "date": "2026-11-25T16:47:29.000Z",
+   "sum": "Conversations about NASA were the norm around the dinner table during Ashley Knight’s childhood. Her parents worked at NASA’s Goddard Space Flight Center in Greenbelt, Maryland, and discussions about happenings at the agency continued even when they came home from the office. “I remember a poignant dialogue we had after the space shuttle Challenger disaster,” […]",
+   "desk": "policy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "0a54c50cca1e",
+   "t": "Eye of the Sahara",
+   "url": "https://www.nasa.gov/image-article/eye-of-the-sahara/",
+   "site": "NASA",
+   "date": "2026-11-25T16:21:04.000Z",
+   "sum": "The Richat Structure, also known as the “Eye of the Sahara,” is seen from the International Space Station as it orbited above on Nov. 14, 2026. It is an eroded geological dome about 100 million years old created by igneous activity and uplift in the nation of Mauritania. In this type of geologic structure, rocks […]",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "5bfb69bf9021",
+   "t": "Using Lunar Craters as Free Radiation Shields for Moon Base Nuclear Reactors",
+   "url": "https://www.universetoday.com/articles/using-lunar-craters-as-free-radiation-shields-for-moon-base-nuclear-reactors",
+   "site": "Universe Today",
+   "date": "2026-11-25T16:03:13.000Z",
+   "sum": "Powering any future lunar base is a massive engineering challenge. The two-week lunar night can drain batteries charged by solar panels during the two-week day, if the batteries themselves can even withstand the freezing temperatures that go along with it. So, for decades at this point, engineers have planned to use a nuclear reactor to at least partially power any future human settlement on the Moon. A new paper…",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "1d9cf67cf255",
+   "t": "NASA’s Hubble Views Ocean of Stars in Groundwork for Roman",
+   "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-views-ocean-of-stars-in-groundwork-for-roman/",
+   "site": "NASA",
+   "date": "2026-11-25T14:56:54.000Z",
+   "sum": "These Hubble observations are part of a survey that will help researchers better interpret upcoming Nancy Grace Roman Space Telescope observations as they seek to characterize the stars and search for exoplanets in this busy region of our galaxy.",
+   "desk": "astronomy",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "87b8109efa24",
+   "t": "A New Discovery is Re-Drawing the Map of the Milky Way",
+   "url": "https://www.universetoday.com/articles/a-new-discovery-is-re-drawing-the-map-of-the-milky-way",
+   "site": "Universe Today",
+   "date": "2026-11-25T13:13:45.000Z",
+   "sum": "New research shows that star formation is occurring in the Milky Way's central bar. This goes against previous research, and against observations of other barred spiral galaxies. The discovery by a PhD student shows a vast rotating structure of stars near the centre of our Galaxy is driving enormous shock fronts through clouds of gas, compressing them and creating conditions for new stars to form.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "9ab83d7ee14a",
+   "t": "Comet Encke's Shape and Heat Revealed in Thermal Glow",
+   "url": "https://www.universetoday.com/articles/comet-enckes-shape-and-heat-revealed-in-thermal-glow",
+   "site": "Universe Today",
+   "date": "2026-11-25T09:45:07.000Z",
+   "sum": "Comets are time capsules of the origins of the solar system, containing materials that have existed for billions of years. While comets primarily orbit in the farthest reaches of the solar system, specifically the Kuiper Belt or Oort Cloud, some make their way closer to the Sun. When this happens, the increased heat cause cometary icy material to evaporate, producing a spectacular tail while also revealing the rocky…",
+   "desk": "launch",
+   "who": []
+  },
   {
    "id": "cecb33e1b7ed",
    "t": "Georgia’s Pecan Belt",
@@ -532,16 +684,6 @@
    "who": []
   },
   {
-   "id": "dc5537864b3e",
-   "t": "Bacteria and Nuclear Power Could Grow Ready-Made Homes on Mars Before Astronauts Arrive",
-   "url": "https://www.universetoday.com/articles/bacteria-and-nuclear-power-could-grow-ready-made-homes-on-mars-before-astronauts-arrive",
-   "site": "Universe Today",
-   "date": "2026-11-23T15:14:35.000Z",
-   "sum": "As we gear up to eventually land a human on Mars, more and more ideas are coming out about how to prepare for that. A recent one from Pioneer Labs, a research institute founded by bioengineer Erika DeBenedictis to develop biological technologies for space exploration, is now available on arXiv, without any plans to release it in a paid journal as part of the “Open Science” policy of The Astera Institute, who funded…",
-   "desk": "missions",
-   "who": []
-  },
-  {
    "id": "bc82422266c7",
    "t": "Eutelsat Wins $60 Million US Space Force Contract",
    "url": "https://europeanspaceflight.com/eutelsat-wins-60-million-us-space-force-contract/",
@@ -622,16 +764,6 @@
    ]
   },
   {
-   "id": "24f4e6969b7b",
-   "t": "Space Entrepreneurs Should Look To 16th Century Spice Trade For Inspiration",
-   "url": "https://www.universetoday.com/articles/space-entrepreneurs-should-look-to-16th-century-spice-trade-for-inspiration",
-   "site": "Universe Today",
-   "date": "2026-11-21T10:39:27.000Z",
-   "sum": "In the short term, human exploration of the Moon and Mars seems practical, but for the next 50 years at least, robotic exploration may be the most cost-effective and efficient. Human exploration requires an imperative return on capital.",
-   "desk": "missions",
-   "who": []
-  },
-  {
    "id": "0f63a437fa69",
    "t": "Denmark’s GomSpace Secures €8M Contract for Blue Origin Moon Mission",
    "url": "https://europeanspaceflight.com/denmarks-gomspace-secures-e8m-contract-for-blue-origin-moon-mission/",
@@ -692,26 +824,6 @@
    ]
   },
   {
-   "id": "55bb2b6b99a7",
-   "t": "Complex Life on Earth May Not Have Appeared Without Tall Mountains",
-   "url": "https://www.universetoday.com/articles/complex-life-on-earth-may-not-have-appeared-without-tall-mountains",
-   "site": "Universe Today",
-   "date": "2026-11-20T20:22:08.000Z",
-   "sum": "As Earth's surface area grew, weathering fed more nutrients into Earth's ancient oceans. This eventually resulted in more oxygen, making Earth more habitable. New research identifies two ancient mountain growth spurts on Earth that directly preceded two of Earth's oxygenation events. The researchers say that taller mountains encouraged habitability and led to complex life.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "49577626bfe2",
-   "t": "A Radical Theory about the Universe Just Passed Some Key Tests. So... What Does that Mean?",
-   "url": "https://www.universetoday.com/articles/a-radical-theory-about-the-universe-just-passed-some-key-tests-so-what-does-that-mean",
-   "site": "Universe Today",
-   "date": "2026-11-20T20:07:00.000Z",
-   "sum": "An alternative model in which the Universe is 26.7 billion years old and needs neither dark matter nor dark energy has held up against several major cosmology tests, according to a new University of Ottawa study.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "7d1dcbbcdde6",
    "t": "Following Ship 42’s catch, SpaceX looks to the future",
    "url": "https://www.nasaspaceflight.com/2026/11/ship-42-catch-future/",
@@ -722,16 +834,6 @@
    "who": [
     "SpaceX"
    ]
-  },
-  {
-   "id": "b8f87589f0c6",
-   "t": "A Triple Star System 'That Shouldn't Exist,' Only 28 Light-Years from Earth",
-   "url": "https://www.universetoday.com/articles/a-triple-star-system-that-shouldnt-exist-only-28-light-years-from-earth",
-   "site": "Universe Today",
-   "date": "2026-11-20T16:52:03.000Z",
-   "sum": "Astronomers have found a triple star system in our neighborhood that has defied the odds. It shouldn't really exist, according to astronomers' understanding of stellar evolution and common envelopes. Yet, there it is.",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "57bebe29f83b",
@@ -756,16 +858,6 @@
    "who": [
     "NASA"
    ]
-  },
-  {
-   "id": "c92c7d1fb77f",
-   "t": "Sound Waves From Sunspots Launch Fiery Plasma Jets Across the Sun",
-   "url": "https://www.universetoday.com/articles/sound-waves-from-sunspots-launch-fiery-plasma-jets-across-the-sun",
-   "site": "Universe Today",
-   "date": "2026-11-20T14:58:26.000Z",
-   "sum": "It feels like every week for the past few months we’ve been reporting on more research regarding the temperature difference between the Sun’s surface and its corona. This week is no exception, with a new paper in The Astrophysical Journal detailing the formation and tracking of around two hundred jet-like bursts of plasma from the surface known as “dynamic fibrils.” They serve as another piece of the puzzle of why…",
-   "desk": "launch",
-   "who": []
   },
   {
    "id": "0884c399946c",
@@ -798,18 +890,6 @@
    "who": []
   },
   {
-   "id": "856071885831",
-   "t": "Relativity tests Terran R second stage, completes structural qualifications ahead of inaugural launch",
-   "url": "https://www.nasaspaceflight.com/2026/11/relativity-update-1116/",
-   "site": "NASASpaceflight",
-   "date": "2026-11-19T22:08:32.000Z",
-   "sum": "Relativity Space is advancing Terran R’s flight one hardware and ground infrastructure across NASA’s Stennis… The post Relativity tests Terran R second stage, completes structural qualifications ahead of inaugural launch appeared first on NASASpaceFlight.com.",
-   "desk": "launch",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
    "id": "2d0b2d5da160",
    "t": "Astronomers Watch One Star Swallow Another",
    "url": "https://skyandtelescope.org/astronomy-news/astronomers-watch-one-star-swallow-another/",
@@ -817,72 +897,6 @@
    "date": "2026-11-19T20:19:59.000Z",
    "sum": "For the first time, astronomers have followed the years-long infall of a star as it spiraled into its giant stellar companion — ultimately splashing into its core. The post Astronomers Watch One Star Swallow Another appeared first on Sky & Telescope.",
    "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "2fefa24a16c2",
-   "t": "Google turns to Blue Origin for a rocket, but its long-term problem remains",
-   "url": "https://arstechnica.com/space/2026/11/google-turns-to-blue-origin-for-a-rocket-but-its-long-term-problem-remains/",
-   "site": "Arstechnica",
-   "date": "2026-11-19T19:52:54.000Z",
-   "sum": "\"Project Suncatcher is a long-term moonshot.\"",
-   "desk": "launch",
-   "who": [
-    "Blue Origin"
-   ]
-  },
-  {
-   "id": "472edcef85ab",
-   "t": "Challenge: Public Input on Life and the World in 2075",
-   "url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/challenge-public-input-on-life-and-the-world-in-2075/",
-   "site": "NASA",
-   "date": "2026-11-19T19:34:20.000Z",
-   "sum": "NASA’s Transformational Tools and Technologies (TTT) is gathering public perspectives on life today and how the world may change by 2075. This challenge asks for conceptual ideas about life in 2075 across four challenge topics. Ideas should explore how future aviation or aerospace systems could: Ideas should be conceptual rather than technical. Award: $20,000 in […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "b58593dee0ab",
-   "t": "The sweet spot for constellation size",
-   "url": "https://spacenews.com/the-sweet-spot-for-constellation-size/",
-   "site": "SpaceNews",
-   "date": "2026-11-19T17:25:17.000Z",
-   "sum": "In this episode of Space Minds, SpaceNews’ Mike Gruss speaks with Jan Smolders, the chief commercial officer at Space Inventor. During a conversation at Space Tech Expo Europe, they discuss […] The post The sweet spot for constellation size appeared first on SpaceNews.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "40a274e83685",
-   "t": "Making the case for optical",
-   "url": "https://spacenews.com/making-the-case-for-optical/",
-   "site": "SpaceNews",
-   "date": "2026-11-19T15:38:18.000Z",
-   "sum": "In this episode of Space Minds, SpaceNews’ Mike Gruss speaks with Jean-François Morizur, the co-founder and CEO of Cailabs, at Space Tech Expo Europe. Morizur discusses the misconceptions with laser […] The post Making the case for optical appeared first on SpaceNews.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "230e1560daf2",
-   "t": "NASA Science Data Powers New Method to Discover Hard-to-Find Pulsars",
-   "url": "https://science.nasa.gov/open-science/fermi-data-pulsar-discovery/",
-   "site": "NASA",
-   "date": "2026-11-19T15:33:55.000Z",
-   "sum": "Open data from NASA’s Fermi mission helped an international team of scientists develop a method for finding pulsars about a million times faster than before.",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "470f7b58a80a",
-   "t": "Lake Pelku",
-   "url": "https://www.nasa.gov/image-article/lake-pelku/",
-   "site": "NASA",
-   "date": "2026-11-19T15:32:39.000Z",
-   "sum": "An astronaut on the International Space Station captured this photograph of Lake Pelku (near center) as the station orbited above Asia. The International Space Station serves as a unique platform for observing Earth with both hands-on and automated equipment. Station crew members have produced hundreds of thousands of images. These images record phenomena in real […]",
-   "desk": "missions",
    "who": []
   },
   {
@@ -914,18 +928,6 @@
    "sum": "For $200 or less, you can buy a complete telescope for first-person contact with the Moon, planets, and deep-sky showpieces. The post Four Telescopes for New Observers appeared first on Sky & Telescope.",
    "desk": "astronomy",
    "who": []
-  },
-  {
-   "id": "6282c590db75",
-   "t": "Hera Spacecraft Peeks at Asteroid Moonlet",
-   "url": "https://skyandtelescope.org/astronomy-news/spacecraft-investigates-asteroid-after-impact/",
-   "site": "Sky & Telescope",
-   "date": "2026-11-13T16:02:08.000Z",
-   "sum": "Europe's Hera spacecraft is visiting the Dimorphos-Didymos asteroid system to take a close look at the aftermath of NASA's impact in 2022. The post Hera Spacecraft Peeks at Asteroid Moonlet appeared first on Sky & Telescope.",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
   },
   {
    "id": "4bb676381451",
