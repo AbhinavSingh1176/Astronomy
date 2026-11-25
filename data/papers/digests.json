@@ -2,6 +2,107 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-32885",
+   "arxiv": "2611.32885",
+   "t": "On the potential of widening the band of X-ray polarimetry",
+   "by": "Nicolas De Angelis",
+   "date": "2026-11-24",
+   "added": "2026-11-25",
+   "cat": "astro-ph.HE",
+   "status": "17 pages, 2 figures, PoS paper from the Multifrequency Behaviour of High Energy Cosmic Sources - XV (MULTIF2025) workshop, https://pos.sissa.it/506/069/. Published in PoS(MULTIF2025)069",
+   "url": "https://arxiv.org/abs/2611.32885",
+   "one": "We then summarise how these techniques are being implemented, or could be, in REDSoX and GOSoX, eXTP, XPP, WXPT and in EXPO and PHEMTO, proposed to the ESA M8 call, as well as in the wide-field transient polarimeter POLAR-2, and…",
+   "q": "The Imaging X-ray Polarimetry Explorer (IXPE) has made X-ray polarimetry a routine astrophysical diagnostic, but its sensitivity is confined to the 2-8 keV band, where the photoelectric effect in a gas is most efficiently exploited. Several of the questions raised by its results, as well as some classical goals of high-energy astrophysics, require polarimetry below 2~keV, to reach the thermal emission of neutron stars, black-hole discs and blazars, and above 8~keV, where reflection, cyclotron lines and the non-thermal emission of supernova remnants, pulsar wind nebulae and magnetars can be isolated.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract",
+     "Following a recent review of the subject, we discuss the scientific case for extending the band over roughly 0.1-80 keV and beyond, and the techniques that can deliver it: Bragg diffraction on graded multilayers, photoelectric gas imagers read out by pixel ASICs with time-of-arrival capability, time projection chambers and focal-plane Compton polarimeters, including their combination in stacked focal planes."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "magnetar",
+    "neutron-star",
+    "pulsar",
+    "supernova"
+   ],
+   "links": [
+    "canon:hewish-1968"
+   ]
+  },
+  {
+   "id": "2611-31385",
+   "arxiv": "2611.31385",
+   "t": "Euclid: Discovery of a quasar at z = 8.13 hosting a 360-million-solar-mass black hole",
+   "by": "J. Wolf, S. Belladitta, D. Yang and 57 others",
+   "date": "2026-11-23",
+   "added": "2026-11-25",
+   "cat": "astro-ph.GA",
+   "status": "Published in Astronomy & Astrophysics, Volume 715, Article A356 on November 24, 2026. Published in Astron. Astrophys. 715, A356 (2026)",
+   "url": "https://arxiv.org/abs/2611.31385",
+   "one": "Conversely, previously known reionisation-era quasars may represent the rapidly accreting end of a broader population of already massive black holes spanning a wider range of accretion states.",
+   "q": "Quasars powered by rapid accretion onto supermassive black holes (SMBHs) have been uncovered deep into the first gigayear of cosmic history. J1504+6252 exhibits the defining spectral signatures of archetypal quasars at lower redshift, including a luminous blue power-law continuum and broad permitted emission lines, indicating a classical broad-line region.",
+   "how": "We present the discovery of EUCL J150452.291+625224.39 (J1504+6252), selected from Euclid Wide Survey imaging and spectroscopically confirmed as the first quasar at z > 8 through observations with Keck, HST, LBT, and JWST.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "JWST/NIRSpec G395M spectroscopy yields a systemic redshift of z = 8.129 +/- 0.005, corresponding to 630 Myr after the Big Bang and shifting the quasar redshift frontier by about 39 Myr (6% of the age of the Universe at that epoch)."
+    ],
+    [
+     "From the abstract (2)",
+     "From H-beta and Mg II, we measured intrinsic broad-line-region FWHM of 3160 +/- 270 and 3740 (+160/-170) km/s, respectively."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "accretion-disc",
+    "black-hole",
+    "quasar",
+    "redshift"
+   ],
+   "links": [
+    "canon:schmidt-1963"
+   ]
+  },
+  {
+   "id": "2611-31467",
+   "arxiv": "2611.31467",
+   "t": "The Jupiter ICy moons Explorer (JUICE) Mission: Post-Launch Status and Mission Overview",
+   "by": "Olivier Witasse, Giuseppe Sarri, Christian Erd and 57 others",
+   "date": "2026-11-23",
+   "added": "2026-11-25",
+   "cat": "astro-ph.EP",
+   "status": "47 pages, 14 figures. Published in Space Science Reviews (2026) 222:85",
+   "url": "https://arxiv.org/abs/2611.31467",
+   "one": "The payload includes 10 instruments and one experiment using the spacecraft's telecommunications system to connect with ground-based radio telescopes, plus an onboard radiation monitor.",
+   "q": "The JUpiter ICy Moons Explorer (JUICE) is the first large-class mission in ESA's Cosmic Vision programme. Proposed in 2007 and selected in 2012, it was launched on 14 April 2023 from Kourou and is now en route towards Jupiter.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "After arrival in July 2031, JUICE will spend approximately four years studying the Jupiter system, performing multiple flybys of three of its Galilean moons, the icy moons Ganymede, Europa, and Callisto, before entering orbit around Ganymede for its final year."
+    ],
+    [
+     "From the abstract (2)",
+     "JUICE will also conduct a global investigation of the Jupiter system as the archetype for gaseous giant planet systems: it will study Jupiter's atmospheric circulation, composition, and flow of energy from the cloud tops to the thermosphere and characterise the 3D structure of the magnetosphere and its coupling with the ionosphere and thermosphere."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [],
+   "links": [
+    "obj:jupiter",
+    "obj:europa",
+    "canon:kivelson-2000"
+   ]
+  },
+  {
    "id": "2611-30497",
    "arxiv": "2611.30497",
    "t": "Two-Component Model for the Unidentified Extended Fermi-LAT Source 4FGL J1908.6+0915e / FL16Y J1908.6+0915e in the SGR 1900+14--W49A Sky Region",

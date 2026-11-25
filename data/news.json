@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-24T22:31:07.866Z",
+ "fetched": "2026-11-25T08:44:00.927Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,62 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "cecb33e1b7ed",
+   "t": "Georgia’s Pecan Belt",
+   "url": "https://science.nasa.gov/earth/earth-observatory/georgias-pecan-belt/",
+   "site": "NASA",
+   "date": "2026-11-25T05:00:00.000Z",
+   "sum": "Since an early-1900s planting boom, orchards along the Flint River in southwest Georgia have become a center of U.S. pecan production.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "66245adc08ec",
+   "t": "Maybe Dark Energy Isn't so Inexplicable After All",
+   "url": "https://www.universetoday.com/articles/maybe-dark-energy-isnt-so-inexplicable-after-all",
+   "site": "Universe Today",
+   "date": "2026-11-25T02:59:47.000Z",
+   "sum": "The Universe as we know it is comprised of three \"things\": baryonic matter (planets, stars, galaxies, us), dark matter (still unexplained) and dark energy (really, really still unexplained). Of the three, dark energy remains challenging because it's driving the acceleration of the expanding Universe. However, we can't see it, or even put a description to it, other than, \"it's mysterious\".",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "8a9885b1f322",
+   "t": "Launch Preview: Russian, Chinese, and SpaceX rockets to launch space station missions",
+   "url": "https://www.nasaspaceflight.com/2026/11/launch-preview-112426/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-25T01:06:02.000Z",
+   "sum": "Ten rockets are set to launch over the next week, with three visiting two different… The post Launch Preview: Russian, Chinese, and SpaceX rockets to launch space station missions appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": [
+    "CNSA",
+    "Roscosmos",
+    "SpaceX"
+   ]
+  },
+  {
+   "id": "53b98f83ab11",
+   "t": "First Pakistani Astronaut Enroute to Tiangong",
+   "url": "https://spacepolicyonline.com/news/first-pakistani-astronaut-enroute-to-tiangong/",
+   "site": "SpacePolicyOnline.com",
+   "date": "2026-11-25T00:58:29.000Z",
+   "sum": "China launched a new crew to the Tiangong space station this evening EST. Joining two Chinese taikonauts is Pakistan’s first astronaut, Muhammad Zeeshan Ali. This is the first time China […]",
+   "desk": "launch",
+   "who": [
+    "CNSA"
+   ]
+  },
+  {
+   "id": "ff7362ec9d36",
+   "t": "A Brief-ish History of METI. Part IV: Millennial METI Experiments",
+   "url": "https://www.universetoday.com/articles/a-brief-ish-history-of-meti-part-iv-millennial-meti-experiments",
+   "site": "Universe Today",
+   "date": "2026-11-24T22:45:31.000Z",
+   "sum": "We continue with the history of METI with a look at public attempts to send messages to the cosmos around the turn of the century.",
+   "desk": "other",
+   "who": []
+  },
   {
    "id": "ba369696a818",
    "t": "White House Requests Billions for NASA, Golden Dome in Next CR",
@@ -712,26 +768,6 @@
    "who": []
   },
   {
-   "id": "ac0215ca184a",
-   "t": "This is the First Time Astronomers Have Seen One of These Stellar Mergers",
-   "url": "https://www.universetoday.com/articles/this-is-the-first-time-astronomers-have-seen-one-of-these-stellar-mergers",
-   "site": "Universe Today",
-   "date": "2026-11-20T13:04:40.000Z",
-   "sum": "Some binary stars end up sharing a common envelope of gas, as the primary star draws material away from its companion. The envelope exerts drag on the stars and they can spiral toward each other. In some cases, this creates an eruption or explosion called a luminous red nova. For the first time, astronomers got to observe one of these in real time.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
-   "id": "208cdc9bd3cc",
-   "t": "Tiny Grains of Sand Act as Cosmic Speedometers for Alien Winds",
-   "url": "https://www.universetoday.com/articles/tiny-grains-of-sand-act-as-cosmic-speedometers-for-alien-winds",
-   "site": "Universe Today",
-   "date": "2026-11-20T11:57:20.000Z",
-   "sum": "We’ve managed to take high-resolution orbital images of many worlds across our solar system, and many of them with an atmosphere have one feature in common - sand dunes. Scientists have been using the size and orientation of these dunes for decades to act like a weather vane, figuring out which way the wind blows on these other worlds. Unfortunately, weather vanes aren’t good at telling the full windy story - they…",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "0884c399946c",
    "t": "This Week's Sky at a Glance, November 20 – 29",
    "url": "https://skyandtelescope.org/astronomy-news/observing-news/this-weeks-sky-at-a-glance-november-20-29/",
@@ -848,54 +884,6 @@
    "sum": "An astronaut on the International Space Station captured this photograph of Lake Pelku (near center) as the station orbited above Asia. The International Space Station serves as a unique platform for observing Earth with both hands-on and automated equipment. Station crew members have produced hundreds of thousands of images. These images record phenomena in real […]",
    "desk": "missions",
    "who": []
-  },
-  {
-   "id": "634743bc9709",
-   "t": "NASA Conducts Latest RS-25 Engine Test in Support of Future Artemis Missions",
-   "url": "https://www.nasa.gov/image-article/latest-rs-25-engine-test-in-support-of-future-artemis-missions/",
-   "site": "NASA",
-   "date": "2026-11-19T14:44:39.000Z",
-   "sum": "NASA tested RS-25 engine No. 10001 on Nov. 18 on the Fred Haise Test Stand at NASA’s Stennis Space Center near Bay St. Louis, Mississippi. Test teams fired the developmental engine for the planned duration of three minutes and 20 seconds (200 seconds). While this developmental engine will not be used in flight, the hot […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "4cc59e849f09",
-   "t": "NASA’s Voyager 1 Makes History Reaching One Light-Day From Earth",
-   "url": "https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/",
-   "site": "NASA",
-   "date": "2026-11-19T14:31:15.000Z",
-   "sum": "NASA’s Voyager 1 probe, humanity’s farthest-flying spacecraft, has reached one light-day from Earth, after more than 49 years of constant travel. A light-day is the distance light travels in 24 hours, equaling about 16.1 billion miles (25.9 billion kilometers). The spacecraft achieved the milestone at 2:16 a.m. PST (5:16 a.m. EST) Nov. 18. Voyager team […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "a2d0889c92df",
-   "t": "To make Moon landings easier, NASA is making life harder for Orion",
-   "url": "https://arstechnica.com/space/2026/11/to-make-moon-landings-easier-nasa-is-making-life-harder-for-orion/",
-   "site": "Arstechnica",
-   "date": "2026-11-19T13:40:02.000Z",
-   "sum": "\"We also have a responsibility to not go too fast and cut too many corners.\"",
-   "desk": "other",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "d6607c551ca9",
-   "t": "ESA Awards OHB €102M Contract for ClearSpace-1 Debris Removal Mission",
-   "url": "https://europeanspaceflight.com/esa-awards-ohb-e102m-contract-for-clearspace-1-debris-removal-mission/",
-   "site": "European Spaceflight",
-   "date": "2026-11-19T06:41:35.000Z",
-   "sum": "The European Space Agency has awarded German satellite builder OHB a €102 million contract to build ClearSpace-1, a spacecraft designed to capture and remove the agency’s Proba-1 satellite after it is retired from service. Signed on 17 November at Space Tech Expo Europe in Bremen, Germany, the contract marks the start of the mission’s implementation […] The post ESA Awards OHB €102M Contract for ClearSpace-1 Debris…",
-   "desk": "missions",
-   "who": [
-    "ESA"
-   ]
   },
   {
    "id": "fe0c8b02ff6b",

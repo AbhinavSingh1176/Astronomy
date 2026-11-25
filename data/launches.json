@@ -1,31 +1,7 @@
 {
- "fetched": "2026-11-24T22:31:33.209Z",
+ "fetched": "2026-11-25T08:44:04.062Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
-  {
-   "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
-   "name": "Long March 2F/G | Shenzhou 24",
-   "net": "2026-11-25T00:18:00.000Z",
-   "win": [
-    "2026-11-25T00:08:00.000Z",
-    "2026-11-25T00:48:00.000Z"
-   ],
-   "prec": "Minute",
-   "status": "Go",
-   "statusName": "Go for Launch",
-   "provider": "China Aerospace Science and Technology Corporation",
-   "ptype": "Government",
-   "country": "CN",
-   "rocket": "Long March 2F/G",
-   "mission": "Shenzhou 24",
-   "mtype": "Human Exploration",
-   "orbit": "Low Earth Orbit",
-   "desc": "Shenzhou 24 will be the 24th flight of the Shenzhou program. The first astronaut from Pakistan, Muhammad Zeeshan Ali, will fly on this on a short duration mission, with Chinese astronaut Zhu Yangzhu of Shenzhou 23 to undergo a year long expedition and stay on the CSS in exchange.",
-   "pad": "Launch Area 91 (SLS-1 / 921)",
-   "loc": "Jiuquan Satellite Launch Center, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
   {
    "id": "b00f0e9a-48d6-4f26-9cb5-7d19169ff7c4",
    "name": "Long March 2D | Undisclosed payload",
@@ -961,9 +937,57 @@
    "loc": "Cape Canaveral SFS, FL, USA",
    "fail": null,
    "url": null
+  },
+  {
+   "id": "fc1bd321-e502-4d0f-81f4-1926dece81c6",
+   "name": "Falcon 9 Block 5 | VICTUS SURGO",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon 9 Block 5",
+   "mission": "VICTUS SURGO",
+   "mtype": "Government/Top Secret",
+   "orbit": "Low Earth Orbit",
+   "desc": "A new Tactically Responsive Space (TacRS) mission by the United States Space Force Space Systems Command to deliver responsive space delivery. The mission consists of an Impulse Space Mira orbital transfer vehicle that will operate in Geosynchronous Transfer Orbit (GTO), which would be transferred from Low Earth Orbit (LEO) on an Impulse Space Helios kick stage. A Helios rideshare payload will also be delivered to…",
+   "pad": "Unknown Pad",
+   "loc": "Cape Canaveral SFS, FL, USA",
+   "fail": null,
+   "url": null
   }
  ],
  "recent": [
+  {
+   "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
+   "name": "Long March 2F/G | Shenzhou 24",
+   "net": "2026-11-25T00:18:52.000Z",
+   "win": [
+    "2026-11-25T00:08:00.000Z",
+    "2026-11-25T00:48:00.000Z"
+   ],
+   "prec": "Second",
+   "status": "Success",
+   "statusName": "Launch Successful",
+   "provider": "China Aerospace Science and Technology Corporation",
+   "ptype": "Government",
+   "country": "CN",
+   "rocket": "Long March 2F/G",
+   "mission": "Shenzhou 24",
+   "mtype": "Human Exploration",
+   "orbit": "Low Earth Orbit",
+   "desc": "Shenzhou 24 will be the 24th flight of the Shenzhou program. The first astronaut from Pakistan, Muhammad Zeeshan Ali, will fly on this on a short duration mission, with Chinese astronaut Zhu Yangzhu of Shenzhou 23 to undergo a year long expedition and stay on the CSS in exchange.",
+   "pad": "Launch Area 91 (SLS-1 / 921)",
+   "loc": "Jiuquan Satellite Launch Center, People's Republic of China",
+   "fail": null,
+   "url": null
+  },
   {
    "id": "460d9db7-eaf6-4cd9-b095-cff433534c09",
    "name": "Falcon 9 Block 5 | USSF-266",
@@ -1417,30 +1441,6 @@
    "desc": "18 Low Earth Orbit communication satellites with Ku, Q and V band payloads for the G60 constellation operated by Shanghai Spacesail Technologies with funding backed by the Shanghai local government. Initial constellation will consist of 1296 satellites by 2027 with long term plans to expand it to 12000 satellites.",
    "pad": "Launch Area 140",
    "loc": "Jiuquan Satellite Launch Center, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "426bd2a5-02dd-4fbd-9f4d-2b8439c3a1ff",
-   "name": "Electron | The Sea God Surveys (iQPS Launch 9)",
-   "net": "2026-11-02T16:41:00.000Z",
-   "win": [
-    "2026-11-02T16:30:00.000Z",
-    "2026-11-02T18:20:00.000Z"
-   ],
-   "prec": "Minute",
-   "status": "Success",
-   "statusName": "Launch Successful",
-   "provider": "Rocket Lab",
-   "ptype": "Commercial",
-   "country": "NZ",
-   "rocket": "Electron",
-   "mission": "The Sea God Surveys (iQPS Launch 9)",
-   "mtype": "Earth Science",
-   "orbit": "Low Earth Orbit",
-   "desc": "Synthetic aperture radar Earth observation satellite for Japanese Earth imaging company iQPS.",
-   "pad": "Rocket Lab Launch Complex 1A",
-   "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
    "fail": null,
    "url": null
   }
