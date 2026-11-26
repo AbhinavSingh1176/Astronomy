@@ -1,31 +1,7 @@
 {
- "fetched": "2026-11-26T08:29:08.594Z",
+ "fetched": "2026-11-26T21:39:32.036Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
-  {
-   "id": "b00f0e9a-48d6-4f26-9cb5-7d19169ff7c4",
-   "name": "Long March 2D | Undisclosed payload",
-   "net": "2026-11-26T09:35:00.000Z",
-   "win": [
-    "2026-11-26T09:30:00.000Z",
-    "2026-11-26T09:52:00.000Z"
-   ],
-   "prec": "Hour",
-   "status": "Go",
-   "statusName": "Go for Launch",
-   "provider": "China Aerospace Science and Technology Corporation",
-   "ptype": "Government",
-   "country": "CN",
-   "rocket": "Long March 2D",
-   "mission": "Undisclosed payload",
-   "mtype": "Unknown",
-   "orbit": "Unknown",
-   "desc": "Details TBD.",
-   "pad": "Launch Complex 3 (LC-3/LA-1)",
-   "loc": "Xichang Satellite Launch Center, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
   {
    "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
    "name": "Electron | Night Owls Never Sleep (StriX Launch 14)",
@@ -961,9 +937,57 @@
    "loc": "Cape Canaveral SFS, FL, USA",
    "fail": null,
    "url": null
+  },
+  {
+   "id": "c1bd775a-2fff-45bb-9726-765b69817c19",
+   "name": "Falcon Heavy | USSF-75",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "SpaceX",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Falcon Heavy",
+   "mission": "USSF-75",
+   "mtype": "Government/Top Secret",
+   "orbit": "Geostationary Orbit",
+   "desc": "Classified payload for the United States Space Force",
+   "pad": "Launch Complex 39A",
+   "loc": "Kennedy Space Center, FL, USA",
+   "fail": null,
+   "url": null
   }
  ],
  "recent": [
+  {
+   "id": "b00f0e9a-48d6-4f26-9cb5-7d19169ff7c4",
+   "name": "Long March 2D | Yaogan 49 Group 01",
+   "net": "2026-11-26T09:38:00.000Z",
+   "win": [
+    "2026-11-26T09:30:00.000Z",
+    "2026-11-26T09:52:00.000Z"
+   ],
+   "prec": "Minute",
+   "status": "Success",
+   "statusName": "Launch Successful",
+   "provider": "China Aerospace Science and Technology Corporation",
+   "ptype": "Government",
+   "country": "CN",
+   "rocket": "Long March 2D",
+   "mission": "Yaogan 49 Group 01",
+   "mtype": "Government/Top Secret",
+   "orbit": "Low Earth Orbit",
+   "desc": "Chinese reconnaissance satellites of unknown functions.",
+   "pad": "Launch Complex 3 (LC-3/LA-1)",
+   "loc": "Xichang Satellite Launch Center, People's Republic of China",
+   "fail": null,
+   "url": null
+  },
   {
    "id": "c9605b67-8a53-4239-a8ae-577fe3b79799",
    "name": "Long March 2F/G | Shenzhou 24",
@@ -1417,30 +1441,6 @@
    "desc": "3 Chinese military “remote sensing” satellite of unknown purposes.",
    "pad": "Launch Complex 3 (LC-3/LA-1)",
    "loc": "Xichang Satellite Launch Center, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "f3f201cd-0ff9-4ff7-9aaa-1d22c399c75a",
-   "name": "Kinetica 2 | SpaceSail Polar Group #17",
-   "net": "2026-11-03T00:15:00.000Z",
-   "win": [
-    "2026-11-03T00:05:00.000Z",
-    "2026-11-03T00:33:00.000Z"
-   ],
-   "prec": "Minute",
-   "status": "Success",
-   "statusName": "Launch Successful",
-   "provider": "CAS Space",
-   "ptype": "Commercial",
-   "country": "CN",
-   "rocket": "Kinetica 2",
-   "mission": "SpaceSail Polar Group #17",
-   "mtype": "Communications",
-   "orbit": "Polar Orbit",
-   "desc": "18 Low Earth Orbit communication satellites with Ku, Q and V band payloads for the G60 constellation operated by Shanghai Spacesail Technologies with funding backed by the Shanghai local government. Initial constellation will consist of 1296 satellites by 2027 with long term plans to expand it to 12000 satellites.",
-   "pad": "Launch Area 140",
-   "loc": "Jiuquan Satellite Launch Center, People's Republic of China",
    "fail": null,
    "url": null
   }

@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-26T08:29:07.306Z",
+ "fetched": "2026-11-26T21:39:32.023Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,102 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "b4cb231df996",
+   "t": "Slingshot Earth: NASA's Europa Clipper Will Gain Speed and Tests Its Instruments During Its Earth Flyby",
+   "url": "https://www.universetoday.com/articles/slingshot-earth-nasas-europa-clipper-will-gain-speed-and-tests-its-instruments-during-its-earth-flyb",
+   "site": "Universe Today",
+   "date": "2026-11-26T21:04:40.000Z",
+   "sum": "NASA's Europa Clipper launched in October 2024, on its way to the Jupiter system. But it hasn't left the inner Solar System yet. It used a gravity braking maneuver at Mars in March 2025 to direct it back toward Earth. In a few days, it will use this encounter with Earth to boost its speed toward Jupiter and its moon Europa. This upcoming flyby is also a final opportunity to calibrate the spacecraft's instruments…",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "3fd0ea4b8f58",
+   "t": "The ‘bare-knuckled’ future of life in space with Tim Marshall",
+   "url": "https://spacenews.com/the-bare-knuckled-future-of-life-in-space-with-tim-marshall/",
+   "site": "SpaceNews",
+   "date": "2026-11-26T17:53:00.000Z",
+   "sum": "In this episode, Mike Gruss speaks with journalist and best-selling author Tim Marshall. They discuss how the war in Ukraine represented a wakeup call for how Europe and the United […] The post The ‘bare-knuckled’ future of life in space with Tim Marshall appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "2295eb31f28a",
+   "t": "AI Helps Three Powerful Supercomputers Simulate The Milky Way In Extraordinary Detail",
+   "url": "https://www.universetoday.com/articles/ai-helps-three-powerful-supercomputers-simulate-the-milky-way-in-extraordinary-detail",
+   "site": "Universe Today",
+   "date": "2026-11-26T17:31:34.000Z",
+   "sum": "Researchers have combined the power of three supercomputers to simulate the Milky Way in extraordinary detail. The effort also incorporated a new AI surrogate model of supernovae. The simulation employed 5.4 trillion particles, which is about 10,000 times more than other state-of-the-art simulations.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "96882d792a27",
+   "t": "ESO statement on approval of launch of one million space data centres",
+   "url": "https://www.eso.org/public/news/eso2614/",
+   "site": "ESO",
+   "date": "2026-11-26T17:00:00.000Z",
+   "sum": "",
+   "desk": "launch",
+   "who": [
+    "ESO"
+   ]
+  },
+  {
+   "id": "f79dcf57cbaf",
+   "t": "Detection of Vaporized Rock Reveals the Birth of a Solar System",
+   "url": "https://www.universetoday.com/articles/detection-of-vaporized-rock-reveals-the-birth-of-a-solar-system",
+   "site": "Universe Today",
+   "date": "2026-11-26T16:40:33.000Z",
+   "sum": "Astronomers have detected titanium oxide in gas form for the first time around a young, massive star. The detection offers a rare glimpse into the very earliest stages of solar system formation, before the formation of planets and asteroids.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "eaac8eb2e9e8",
+   "t": "Robots, Not Astronauts, Will Have to Fix Space Data Centers",
+   "url": "https://www.universetoday.com/articles/robots-not-astronauts-will-have-to-fix-space-data-centers",
+   "site": "Universe Today",
+   "date": "2026-11-26T16:28:12.000Z",
+   "sum": "Yesterday we explored some of the difficulties facing orbital data centers in our look at the bottleneck of launching enough solar panels and radiative cooling systems to power the AI computing boom in space. JPl physicist Dr. Slava Turyshev, who wrote the paper at the center of that article, also published a follow-up study in August, available in preprint on arXiv, about how getting the hardware off the ground is…",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "fc16ca5375fe",
+   "t": "Chang'e-6 Samples Reveal the Violent Chain Reaction That Built the Moon’s Largest Crater",
+   "url": "https://www.universetoday.com/articles/change-6-samples-reveal-the-violent-chain-reaction-that-built-the-moons-largest-crater",
+   "site": "Universe Today",
+   "date": "2026-11-26T13:31:00.000Z",
+   "sum": "One of the most prominent features on the Moon is one we can’t regularly see, at least not completely. The South Pole-Aitken (SPA) basin is one of the largest, oldest, and deepest impact craters on the Moon, and until recently we’ve only been able to observe it from afar - and even then only when we sent orbiters around to the far side, which is never in direct line of sight with the Earth. Recently China has been…",
+   "desk": "missions",
+   "who": [
+    "CNSA"
+   ]
+  },
+  {
+   "id": "3263af2535d3",
+   "t": "Thales Alenia Space to Establish Dedicated Company for Cargo Return Services",
+   "url": "https://europeanspaceflight.com/thales-alenia-space-to-establish-dedicated-company-for-cargo-return-services/",
+   "site": "European Spaceflight",
+   "date": "2026-11-26T13:13:32.000Z",
+   "sum": "Thales Alenia Space is planning to establish a dedicated company to support the development and commercialisation of its proposed space station cargo transportation service. In a joint statement published on 13 November, Italian trade unions FIM, FIOM and UILM detailed the outcome of a meeting with Thales Alenia Space’s executive management team. One of the […] The post Thales Alenia Space to Establish Dedicated…",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "a32129f81b9c",
+   "t": "Universe Today's AI Policy",
+   "url": "https://www.universetoday.com/articles/universe-todays-ai-policy",
+   "site": "Universe Today",
+   "date": "2026-11-26T09:45:00.000Z",
+   "sum": "AI is everywhere. But is it here, inside Universe Today right now? Here's a rant, loosely disguised as a policy, that's really just a pity party.",
+   "desk": "astronomy",
+   "who": []
+  },
   {
    "id": "cfea6ef40c3a",
    "t": "Seeking Refuge on Resolution Island",
@@ -485,19 +581,6 @@
    "who": []
   },
   {
-   "id": "6ed3f76b4781",
-   "t": "UK-Built X-Ray Telescope Ready For Action at Mercury",
-   "url": "https://www.universetoday.com/articles/uk-built-x-ray-telescope-ready-for-action-at-mercury",
-   "site": "Universe Today",
-   "date": "2026-11-24T15:30:00.000Z",
-   "sum": "The joint ESA/JAXA BepiColombo mission has arrived at Mercury, and among its arsenal of detectors ready to explore the innermost world is an innovative new instrument. A University of Leicester team recently released an image of an iconic deep-sky object as a proof of concept test for their Mercury Imaging X-ray Spectrometer (MIXS). This comes as BepiColombo entered orbit around Mercury this past week.",
-   "desk": "missions",
-   "who": [
-    "ESA",
-    "JAXA"
-   ]
-  },
-  {
    "id": "a11c17585fd3",
    "t": "Simera Sense, Spacemanic, Zaitra and World from Space Join Forces on an End-to-End Dual-Use Mission Solution",
    "url": "https://spacenews.com/simera-sense-spacemanic-zaitra-and-world-from-space-join-forces-on-an-end-to-end-dual-use-mission-solution/",
@@ -505,16 +588,6 @@
    "date": "2026-11-24T15:17:50.000Z",
    "sum": "Bremen, 18 November 2026 – Simera Sense, Spacemanic, Zaitra and World from Space have signed a Memorandum of Understanding in Bremen to cooperate on a complete mission solution built around […] The post Simera Sense, Spacemanic, Zaitra and World from Space Join Forces on an End-to-End Dual-Use Mission Solution appeared first on SpaceNews.",
    "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "894a841ab472",
-   "t": "Space Lasers Are Fast, But Clouds Still Rule the Forecast",
-   "url": "https://www.universetoday.com/articles/space-lasers-are-fast-but-clouds-still-rule-the-forecast",
-   "site": "Universe Today",
-   "date": "2026-11-24T14:02:17.000Z",
-   "sum": "Since the launch of Sputnik, humanity has talked to its spacecraft through radio waves. Radio is great for communication through any weather, but it has hit a limit – traditional radio frequencies are highly regulated by bodies like the International Telecommunications Union, which limits the scalability of radio communications networks to meet the growing demand of bandwidth to and from space. The obvious solution…",
-   "desk": "launch",
    "who": []
   },
   {
@@ -528,16 +601,6 @@
    "who": [
     "NASA"
    ]
-  },
-  {
-   "id": "fb5c2e8a6279",
-   "t": "A Star’s ‘Obliquity’ Likely Has Little Impact On A Given Planet’s Habitability",
-   "url": "https://www.universetoday.com/articles/a-stars-obliquity-likely-has-little-impact-on-a-given-planets-habitability",
-   "site": "Universe Today",
-   "date": "2026-11-24T09:42:27.000Z",
-   "sum": "For decades, astronomers have puzzled over whether a star’s given obliquity, or axial tilt, changes over time and space. A new paper says large obliquity changes appear to be uncommon.",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "9955d03265a0",
@@ -572,16 +635,6 @@
    "who": [
     "SpaceX"
    ]
-  },
-  {
-   "id": "12214a47136d",
-   "t": "Making Sense of Chaotic Supernova Ejecta With the JWST",
-   "url": "https://www.universetoday.com/articles/making-sense-of-chaotic-supernova-ejecta-with-the-jwst",
-   "site": "Universe Today",
-   "date": "2026-11-23T22:32:05.000Z",
-   "sum": "It's impossible to see inside a star. But some stars explode, spreading their insides out and letting astronomers examine them in detail. It's messy, but astronomers are skilled at stellar forensics, and they have a fine tool at their disposal: the JWST.",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "a102ef894568",
@@ -650,26 +703,6 @@
    "who": [
     "Roscosmos"
    ]
-  },
-  {
-   "id": "5de8eb0d8783",
-   "t": "New Research Reveals Europa's Sodium Cloud Originated from its Interior Ocean",
-   "url": "https://www.universetoday.com/articles/new-research-reveals-europas-sodium-cloud-originated-from-its-interior-ocean",
-   "site": "Universe Today",
-   "date": "2026-11-23T19:45:30.000Z",
-   "sum": "Scientists using the W.M. Keck Observatory's HIRISE spectrometer have revealed new information about the origin of Europa's sodium cloud.",
-   "desk": "other",
-   "who": []
-  },
-  {
-   "id": "ebebcc02fa7b",
-   "t": "Detecting Primordial Black Holes By The Stars They Destroy",
-   "url": "https://www.universetoday.com/articles/detecting-primordial-black-holes-by-the-stars-they-destroy",
-   "site": "Universe Today",
-   "date": "2026-11-23T19:39:15.000Z",
-   "sum": "Astrophysicists wonder if primordial black holes could be part, or maybe all, of dark matter. They're theorized to have formed immediately after the Big Bang from pockets of dense matter. New research shows how they might be detected: in the bbright flash generated by the stars they consume from the inside out.",
-   "desk": "astronomy",
-   "who": []
   },
   {
    "id": "216c428804e1",
@@ -875,30 +908,6 @@
    "desk": "other",
    "who": [
     "SpaceX"
-   ]
-  },
-  {
-   "id": "57bebe29f83b",
-   "t": "NASA Honor Awards Ceremony Recognizes Employees at Stennis Space Center",
-   "url": "https://www.nasa.gov/centers-and-facilities/stennis/honor-awards-ceremony-at-stennis/",
-   "site": "NASA",
-   "date": "2026-11-20T16:27:46.000Z",
-   "sum": "Employees contributing to NASA’s mission at the agency’s Stennis Space Center near Bay St. Louis, Mississippi, were recognized during the center’s Honor Awards ceremony on Nov. 18. Presenting the awards were Christine Powell, NASA Stennis center director, and Jeremy Parsons, the agency’s Artemis program manager responsible for management and oversight of NASA’s initiative to return […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "3c75783da394",
-   "t": "NASA’s Curiosity Mars Rover Collects Samples",
-   "url": "https://www.nasa.gov/image-article/nasas-curiosity-mars-rover-collects-samples/",
-   "site": "NASA",
-   "date": "2026-11-20T15:53:24.000Z",
-   "sum": "This Nov. 16 collage shows 49 drill holes captured by NASA’s Curiosity Mars rover as of November 2026. Each hole represents a sample collected from rocks on the Martian surface; Curiosity’s drill, located on the end of its robotic arm, drops pulverized rock samples into instruments in its belly that analyze their composition. Learn more […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
    ]
   },
   {
