@@ -2,6 +2,105 @@
  "note": "Recent arXiv papers, broken down from their abstracts. Each entry says what the authors claim, not more. status is the authors' own comment line. New entries are added by the daily digest job; the newest are first.",
  "papers": [
   {
+   "id": "2611-33798",
+   "arxiv": "2611.33798",
+   "t": "Less massive black holes in faint hosts: SED fitting of Little Red Dots within the Black Hole Star scenario",
+   "by": "Haitong Liu, Lulu Fan, Yunkun Han and Yibin Luo",
+   "date": "2026-11-25",
+   "added": "2026-11-26",
+   "cat": "astro-ph.GA",
+   "status": "21 pages, 7 figures. Accepted for publication in The Astrophysical Journal",
+   "url": "https://arxiv.org/abs/2611.33798",
+   "one": "The BH* scenario provides a self-consistent paradigm for LRDs, offering insights into the rapid growth of supermassive black hole seeds and their co-evolution with host galaxies during the cosmic dawn.",
+   "q": "The James Webb Space Telescope (JWST) has revealed a population of compact sources known as ``little red dots'' (LRDs), characterized by a distinctive V-shaped spectral energy distribution (SED) from UV to optical wavelengths. The physical nature of these sources remains debated.",
+   "how": "We construct a composite ``host galaxy + BH*'' model using the Cloudy photoionization code, and perform SED fitting with BayeSED3.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "We assemble a sample of 22 LRDs at 4.0 ≲ z ≲ 9.5 from the ASTRODEEP-JWST database."
+    ],
+    [
+     "From the abstract (2)",
+     "Our fits reveal that LRDs are black holes hosted by faint, low-mass galaxies with median stellar and black hole masses of M* = 10^8.7 M☉ and M_BH = 10^6.4 M☉, respectively."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "black-hole",
+    "reionisation"
+   ],
+   "links": [
+    "obj:jwst",
+    "canon:carniani-2024"
+   ]
+  },
+  {
+   "id": "2611-34720",
+   "arxiv": "2611.34720",
+   "t": "NASA's Pandora SmallSat Mission: Gaussian Processes for Simulated Stellar Heterogeneity Corrections under Imperfect Stellar Models",
+   "by": "Zoe Ko, Peter McGill, Benjamin V. Rackham and 18 others",
+   "date": "2026-11-25",
+   "added": "2026-11-26",
+   "cat": "astro-ph.SR",
+   "status": "21 pages, 11 figures, accepted for publication in AJ",
+   "url": "https://arxiv.org/abs/2611.34720",
+   "one": "This flexible, data-driven framework is a promising approach toward accurate stellar-contamination corrections and more robust atmospheric inference even when host-star model grids are inaccurate.",
+   "q": "Stellar contamination is the primary bottleneck limiting robust atmospheric characterization of exoplanets orbiting active K- and M-dwarfs with James Webb Space Telescope (JWST) transmission spectroscopy. Launched in January 2026, NASA's Pandora SmallSat mission addresses this challenge through long-term, simultaneous visible photometry and near-infrared spectroscopy of planet-hosting stars, providing the data to disentangle planetary and stellar signals.",
+   "how": "We present a Gaussian-process-aided stellar retrieval framework that learns wavelength-dependent deviations from current stellar model grids. Tests using simulated Pandora observations with realistic stellar model mismatch show that this framework consistently improves the recovery of disk-integrated stellar spectra.",
+   "found": [
+    [
+     "From the abstract",
+     "For a WASP-69 b-like system, this approach can reduce model-driven biases in inferred atmospheric properties, though degeneracies among stellar and atmospheric parameters can leave residual biases."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "spectrum"
+   ],
+   "links": [
+    "obj:jwst",
+    "canon:mayor-queloz-1995"
+   ]
+  },
+  {
+   "id": "2611-33541",
+   "arxiv": "2611.33541",
+   "t": "Inference of Cosmic Dawn and Reionization Parameters from the 21 cm Global Spectrum Measurement of the DSL Mission",
+   "by": "Chengliang Xu, Meng Zhou, Furen Deng and 2 others",
+   "date": "2026-11-24",
+   "added": "2026-11-26",
+   "cat": "astro-ph.CO",
+   "status": "16 pages, 8 figures, RAA accepted",
+   "url": "https://arxiv.org/abs/2611.33541",
+   "one": "We find that there is generally a degeneracy between the foreground and the 21 cm global signal, and one has to make some restrictions on the form of either the foreground or the 21 cm global spectrum to break this…",
+   "q": "The 21 cm global spectrum is an important observable for cosmic dawn and epoch of reionization. The Discovering the Sky at the Longest Wavelengths mission (DSL, also known as Hongmeng), will measure the 21 cm global spectrum from the lunar orbit, thus avoiding the systematic effects common in ground based experiments, potentially producing the most accurate measurement to date.",
+   "how": "In this paper, we present a Bayesian inference framework, and investigate the constraints that can be placed on the cosmic dawn and reionization model parameters, either from the 21 cm global spectrum data alone, or from its combination with 21\\,cm spatial power-spectrum data. Using the physically motivated emulator 21cmEMU, we generate the 21 cm global spectrum and power spectrum under a common astrophysical parameterization, while marginalizing over the foreground parameters.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "For the global spectrum data, we assume a residual error equivalent to the thermal noise of a total observation of 30, 300, or 3000 orbit cycles of DSL."
+    ],
+    [
+     "From the abstract (2)",
+     "We derive constraints for two representative models, with their global spectrum absorption minimum at 105 and 94 MHz respectively."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "reionisation",
+    "spectrum"
+   ],
+   "links": [
+    "canon:carniani-2024"
+   ]
+  },
+  {
    "id": "2611-32885",
    "arxiv": "2611.32885",
    "t": "On the potential of widening the band of X-ray polarimetry",

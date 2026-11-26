@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-25T21:46:09.659Z",
+ "fetched": "2026-11-26T08:29:08.594Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
   {
@@ -45,7 +45,7 @@
    "mtype": "Earth Science",
    "orbit": "Low Earth Orbit",
    "desc": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
-   "pad": "Unknown Pad",
+   "pad": "Rocket Lab Launch Complex 1B",
    "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
    "fail": null,
    "url": null
