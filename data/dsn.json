@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-26T21:39:31.708Z",
+ "fetched": "2026-11-27T08:43:23.891Z",
  "source": "NASA Deep Space Network Now (eyes.nasa.gov/dsn)",
  "stations": [
   {
@@ -16,40 +16,11 @@
     },
     {
      "name": "DSS26",
-     "az": 196,
-     "el": 29,
+     "az": 182,
+     "el": 67,
      "up": [
       {
-       "sc": "Parker Solar Probe",
-       "rate": 0,
-       "band": "X",
-       "power": 18
-      }
-     ],
-     "down": [
-      {
-       "sc": "Parker Solar Probe",
-       "rate": 160.3,
-       "band": "X",
-       "power": -160
-      }
-     ],
-     "targets": [
-      {
-       "code": "SPP",
-       "name": "Parker Solar Probe",
-       "km": 131000000,
-       "rtlt": 877
-      }
-     ]
-    },
-    {
-     "name": "DSS23",
-     "az": 206,
-     "el": 32,
-     "up": [
-      {
-       "sc": "SOHO",
+       "sc": "James Webb Space Telescope",
        "rate": 0,
        "band": "S",
        "power": 0.1
@@ -57,33 +28,81 @@
      ],
      "down": [
       {
-       "sc": "SOHO",
-       "rate": 245800,
+       "sc": "James Webb Space Telescope",
+       "rate": null,
+       "band": "S",
+       "power": -120
+      },
+      {
+       "sc": "James Webb Space Telescope",
+       "rate": 28000000,
+       "band": "K",
+       "power": -91
+      }
+     ],
+     "targets": [
+      {
+       "code": "JWST",
+       "name": "James Webb Space Telescope",
+       "km": 1690000,
+       "rtlt": 11.3
+      }
+     ]
+    },
+    {
+     "name": "DSS24",
+     "az": 107,
+     "el": 66,
+     "up": [
+      {
+       "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 0,
+       "band": "S",
+       "power": 0.2
+      }
+     ],
+     "down": [
+      {
+       "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 8500000,
+       "band": "X",
+       "power": -95
+      },
+      {
+       "sc": "Korea Pathfinder Lunar Orbiter",
+       "rate": 8192,
        "band": "S",
        "power": -110
       }
      ],
      "targets": [
       {
-       "code": "SOHO",
-       "name": "SOHO",
-       "km": 1250000,
-       "rtlt": 8.31
+       "code": "KPLO",
+       "name": "Korea Pathfinder Lunar Orbiter",
+       "km": 354000,
+       "rtlt": 2.36
       }
      ]
     },
     {
      "name": "DSS25",
-     "az": 163,
-     "el": 32,
+     "az": 73,
+     "el": 52,
      "up": [],
-     "down": [],
+     "down": [
+      {
+       "sc": "ESCAPADE Gold",
+       "rate": 8000,
+       "band": "X",
+       "power": -110
+      }
+     ],
      "targets": [
       {
-       "code": "NHPC",
-       "name": "New Horizons",
-       "km": 10000000000,
-       "rtlt": 66700
+       "code": "ESCG",
+       "name": "ESCAPADE Gold",
+       "km": 5100000,
+       "rtlt": 34
       }
      ]
     }
@@ -102,90 +121,111 @@
      "targets": []
     },
     {
-     "name": "DSS54",
-     "az": 133,
-     "el": 67,
-     "up": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 0,
-       "band": "S",
-       "power": 0.4
-      }
-     ],
-     "down": [
-      {
-       "sc": "Roman Space Telescope",
-       "rate": 780000,
-       "band": "S",
-       "power": -97
-      }
-     ],
-     "targets": [
-      {
-       "code": "RST",
-       "name": "Roman Space Telescope",
-       "km": 1220000,
-       "rtlt": 8.12
-      }
-     ]
-    },
-    {
      "name": "DSS53",
-     "az": 66,
-     "el": 31,
+     "az": 243,
+     "el": 46,
      "up": [
       {
-       "sc": "CAPSTONE",
+       "sc": "Emirates Mars Mission (Hope)",
        "rate": 0,
-       "band": "S",
-       "power": 2
+       "band": "X",
+       "power": 18
       }
      ],
      "down": [
       {
-       "sc": "CAPSTONE",
-       "rate": 256000,
+       "sc": "Emirates Mars Mission (Hope)",
+       "rate": 241900,
        "band": "X",
        "power": -120
       }
      ],
      "targets": [
       {
-       "code": "CAPS",
-       "name": "CAPSTONE",
-       "km": 314000,
-       "rtlt": 2.09
+       "code": "EMM",
+       "name": "Emirates Mars Mission (Hope)",
+       "km": 181000000,
+       "rtlt": 1210
+      }
+     ]
+    },
+    {
+     "name": "DSS63",
+     "az": 96,
+     "el": 26,
+     "up": [],
+     "down": [
+      {
+       "sc": "Voyager 1",
+       "rate": 40,
+       "band": "X",
+       "power": -160
+      },
+      {
+       "sc": "Voyager 1",
+       "rate": 40,
+       "band": "X",
+       "power": -160
+      }
+     ],
+     "targets": [
+      {
+       "code": "VGR1",
+       "name": "Voyager 1",
+       "km": 25900000000,
+       "rtlt": 173000
       }
      ]
     },
     {
      "name": "DSS56",
-     "az": 90,
-     "el": 90,
-     "up": [],
-     "down": [],
+     "az": 243,
+     "el": 46,
+     "up": [
+      {
+       "sc": "Trace Gas Orbiter",
+       "rate": 0,
+       "band": "X",
+       "power": 10
+      }
+     ],
+     "down": [
+      {
+       "sc": "Trace Gas Orbiter",
+       "rate": 1000000,
+       "band": "X",
+       "power": -120
+      }
+     ],
      "targets": [
       {
-       "code": "THB",
-       "name": "THEMIS B",
-       "km": 359000,
-       "rtlt": 2.39
+       "code": "TGO",
+       "name": "Trace Gas Orbiter",
+       "km": 181000000,
+       "rtlt": 1210
       }
      ]
     },
     {
+     "name": "DSS54",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": []
+    },
+    {
      "name": "DSS65",
-     "az": 79,
-     "el": 30,
+     "az": 124,
+     "el": 9,
      "up": [],
      "down": [],
      "targets": [
       {
-       "code": "KPLO",
-       "name": "Korea Pathfinder Lunar Orbiter",
-       "km": 359000,
-       "rtlt": 2.39
+       "code": "SOHO",
+       "name": "SOHO",
+       "km": 1250000,
+       "rtlt": 8.34
       }
      ]
     }
@@ -196,91 +236,76 @@
    "name": "Canberra, Australia",
    "dishes": [
     {
+     "name": "DSS36",
+     "az": 0,
+     "el": 90,
+     "up": [],
+     "down": [],
+     "targets": [
+      {
+       "code": "SOHO",
+       "name": "SOHO",
+       "km": 1250000,
+       "rtlt": 8.34
+      }
+     ]
+    },
+    {
      "name": "DSS43",
-     "az": 323,
-     "el": 34,
+     "az": 271,
+     "el": 39,
      "up": [
       {
-       "sc": "Juno",
+       "sc": "New Horizons",
        "rate": 0,
        "band": "X",
-       "power": 18
+       "power": 19
       }
      ],
      "down": [
       {
-       "sc": "Juno",
-       "rate": 152800,
+       "sc": "New Horizons",
+       "rate": 707.3,
        "band": "X",
-       "power": -130
+       "power": -150
+      },
+      {
+       "sc": "New Horizons",
+       "rate": 0,
+       "band": "X",
+       "power": -170
       }
      ],
      "targets": [
       {
-       "code": "JNO",
-       "name": "Juno",
-       "km": 761000000,
-       "rtlt": 5080
+       "code": "NHPC",
+       "name": "New Horizons",
+       "km": 10000000000,
+       "rtlt": 66700
       }
      ]
     },
     {
      "name": "DSS34",
-     "az": 328,
-     "el": 35,
+     "az": 249,
+     "el": 78,
      "up": [],
      "down": [
       {
-       "sc": "Mars Reconnaissance Orbiter",
-       "rate": 3000000,
-       "band": "X",
-       "power": -120
-      }
-     ],
-     "targets": [
-      {
-       "code": "MRO",
-       "name": "Mars Reconnaissance Orbiter",
-       "km": 181000000,
-       "rtlt": 1210
-      },
-      {
-       "code": "MSL",
-       "name": "Mars Science Laboratory (Curiosity)",
-       "km": 181000000,
-       "rtlt": 1210
-      }
-     ]
-    },
-    {
-     "name": "DSS36",
-     "az": 89,
-     "el": 46,
-     "up": [
-      {
-       "sc": "Space Weather Follow On-Lagrange 1",
-       "rate": 0,
+       "sc": "MMS 1",
+       "rate": 2500000,
        "band": "S",
-       "power": 0
+       "power": -110
       }
      ],
-     "down": [],
      "targets": [
       {
-       "code": "SWFO",
-       "name": "Space Weather Follow On-Lagrange 1",
-       "km": 1440000,
-       "rtlt": 9.62
+       "code": "MMS1",
+       "name": "MMS 1",
+       "km": 99200,
+       "rtlt": 0.66
       }
      ]
-    },
-    {
-     "name": "DSS35",
-     "az": 0,
-     "el": 90,
-     "up": [],
-     "down": [],
-     "targets": []
     }
    ]
   }

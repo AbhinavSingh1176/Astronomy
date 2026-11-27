@@ -1,31 +1,7 @@
 {
- "fetched": "2026-11-26T21:39:32.036Z",
+ "fetched": "2026-11-27T08:43:24.662Z",
  "source": "Launch Library 2 (The Space Devs)",
  "upcoming": [
-  {
-   "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
-   "name": "Electron | Night Owls Never Sleep (StriX Launch 14)",
-   "net": "2026-11-27T00:05:00.000Z",
-   "win": [
-    "2026-11-27T00:00:00.000Z",
-    "2026-11-27T00:05:00.000Z"
-   ],
-   "prec": "Minute",
-   "status": "Go",
-   "statusName": "Go for Launch",
-   "provider": "Rocket Lab",
-   "ptype": "Commercial",
-   "country": "NZ",
-   "rocket": "Electron",
-   "mission": "Night Owls Never Sleep (StriX Launch 14)",
-   "mtype": "Earth Science",
-   "orbit": "Low Earth Orbit",
-   "desc": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
-   "pad": "Rocket Lab Launch Complex 1B",
-   "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
-   "fail": null,
-   "url": null
-  },
   {
    "id": "a6421db3-7c8a-4cf7-a659-cec195140f7f",
    "name": "Long March 6A | Undisclosed payload",
@@ -123,30 +99,6 @@
    "url": null
   },
   {
-   "id": "9e27a1ed-e81a-4918-b32b-0380cf3a9f8f",
-   "name": "Mir | Demo Flight",
-   "net": "2026-11-30T00:00:00.000Z",
-   "win": [
-    "2026-11-30T00:00:00.000Z",
-    "2026-11-30T00:00:00.000Z"
-   ],
-   "prec": "Month",
-   "status": "TBD",
-   "statusName": "To Be Determined",
-   "provider": "Agency for Defense Development",
-   "ptype": "Government",
-   "country": "KR",
-   "rocket": "Mir",
-   "mission": "Demo Flight",
-   "mtype": "Test Flight",
-   "orbit": "Low Earth Orbit",
-   "desc": "Note: Launch vehicle name is provisional. First orbital full version launch of the South Korean military small satellite launch vehicle, after 2 sub-orbital tests of individual stages on 30 March and 30 December 2022, and 1 orbital test flight without the 2nd stage on 4 December 2023. Details TBD.",
-   "pad": "ADD Offshore launch platform",
-   "loc": "Sea Launch",
-   "fail": null,
-   "url": null
-  },
-  {
    "id": "8b46d360-6b3b-423f-9036-d5568e485624",
    "name": "Kinetica 1 | Undisclosed payload",
    "net": "2026-12-01T01:45:00.000Z",
@@ -173,14 +125,14 @@
   {
    "id": "e2523821-9760-4cb4-ad1f-7ce2e30419bd",
    "name": "Kuaizhou 11 | Undisclosed payload",
-   "net": "2026-12-01T08:00:00.000Z",
+   "net": "2026-12-02T11:55:00.000Z",
    "win": [
-    "2026-12-01T08:00:00.000Z",
-    "2026-12-01T16:00:00.000Z"
+    "2026-12-02T11:48:00.000Z",
+    "2026-12-02T12:33:00.000Z"
    ],
    "prec": "Hour",
-   "status": "TBC",
-   "statusName": "To Be Confirmed",
+   "status": "Go",
+   "statusName": "Go for Launch",
    "provider": "ExPace",
    "ptype": "Commercial",
    "country": "CN",
@@ -961,9 +913,81 @@
    "loc": "Kennedy Space Center, FL, USA",
    "fail": null,
    "url": null
+  },
+  {
+   "id": "4ca86de3-2ff8-4fd3-a22c-35b7fc618610",
+   "name": "Gravity-2 | Demo Flight",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "Orienspace Technology",
+   "ptype": "Commercial",
+   "country": "CN",
+   "rocket": "Gravity-2",
+   "mission": "Demo Flight",
+   "mtype": "Test Flight",
+   "orbit": "Unknown",
+   "desc": "First test launch of OrienSpace’s Gravity-2 rocket.",
+   "pad": "Unknown launch location",
+   "loc": "Haiyang Oriental Spaceport",
+   "fail": null,
+   "url": null
+  },
+  {
+   "id": "04522dea-1450-48f5-bc9d-2d7f1e637f9b",
+   "name": "HASTE | Leidos-3",
+   "net": "2026-12-31T00:00:00.000Z",
+   "win": [
+    "2026-12-31T00:00:00.000Z",
+    "2026-12-31T00:00:00.000Z"
+   ],
+   "prec": "Year",
+   "status": "TBD",
+   "statusName": "To Be Determined",
+   "provider": "Rocket Lab",
+   "ptype": "Commercial",
+   "country": "US",
+   "rocket": "Electron",
+   "mission": "",
+   "mtype": "",
+   "orbit": "",
+   "desc": "",
+   "pad": "Rocket Lab Launch Complex 2 (Launch Area 0 C)",
+   "loc": "Wallops Flight Facility, Virginia, USA",
+   "fail": null,
+   "url": null
   }
  ],
  "recent": [
+  {
+   "id": "2093e4fc-ac8c-4296-a1b5-deececee6a72",
+   "name": "Electron | Night Owls Never Sleep (StriX Launch 14)",
+   "net": "2026-11-27T00:15:00.000Z",
+   "win": [
+    "2026-11-27T00:00:00.000Z",
+    "2026-11-27T01:00:00.000Z"
+   ],
+   "prec": "Minute",
+   "status": "Success",
+   "statusName": "Launch Successful",
+   "provider": "Rocket Lab",
+   "ptype": "Commercial",
+   "country": "NZ",
+   "rocket": "Electron",
+   "mission": "Night Owls Never Sleep (StriX Launch 14)",
+   "mtype": "Earth Science",
+   "orbit": "Low Earth Orbit",
+   "desc": "Synthetic aperture radar satellite for Japanese Earth imaging company Synspective.",
+   "pad": "Rocket Lab Launch Complex 1B",
+   "loc": "Rocket Lab Launch Complex 1, Mahia Peninsula, New Zealand",
+   "fail": null,
+   "url": null
+  },
   {
    "id": "b00f0e9a-48d6-4f26-9cb5-7d19169ff7c4",
    "name": "Long March 2D | Yaogan 49 Group 01",
@@ -1417,30 +1441,6 @@
    "desc": "Share-ride of 4 commercial Earth observation and technology demonstration satellites to SSO, details TBD.",
    "pad": "Launch Area 95A",
    "loc": "Jiuquan Satellite Launch Center, People's Republic of China",
-   "fail": null,
-   "url": null
-  },
-  {
-   "id": "711de6bc-f755-475b-a12f-ec5240da3a11",
-   "name": "Long March 2C | Yaogan 51-07 to 09",
-   "net": "2026-11-05T15:58:00.000Z",
-   "win": [
-    "2026-11-05T15:52:00.000Z",
-    "2026-11-05T16:16:00.000Z"
-   ],
-   "prec": "Minute",
-   "status": "Success",
-   "statusName": "Launch Successful",
-   "provider": "China Aerospace Science and Technology Corporation",
-   "ptype": "Government",
-   "country": "CN",
-   "rocket": "Long March 2C",
-   "mission": "Yaogan 51-07 to 09",
-   "mtype": "Government/Top Secret",
-   "orbit": "Low Earth Orbit",
-   "desc": "3 Chinese military “remote sensing” satellite of unknown purposes.",
-   "pad": "Launch Complex 3 (LC-3/LA-1)",
-   "loc": "Xichang Satellite Launch Center, People's Republic of China",
    "fail": null,
    "url": null
   }

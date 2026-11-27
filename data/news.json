@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-26T21:39:32.023Z",
+ "fetched": "2026-11-27T08:43:24.286Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,40 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "0ec96d1f0c9d",
+   "t": "Shivelyuch Socked In",
+   "url": "https://science.nasa.gov/earth/earth-observatory/shivelyuch-socked-in/",
+   "site": "NASA",
+   "date": "2026-11-27T05:01:00.000Z",
+   "sum": "A cloud layer encircled the flanks of the volcano on the Kamchatka Peninsula but left its restless summit caldera in view.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "c17a567f5d37",
+   "t": "Astronomers Discover a Hidden Binary in a Star System Used to Calibrate the JWST",
+   "url": "https://www.universetoday.com/articles/astronomers-discover-a-hidden-binary-in-a-star-system-used-to-calibrate-the-jwst",
+   "site": "Universe Today",
+   "date": "2026-11-26T23:08:59.000Z",
+   "sum": "Researchers from the Xinjiang Astronomical Observatory of the Chinese Academy of Sciences have discovered a binary system in a field used to calibrate the JWST's optics.",
+   "desk": "astronomy",
+   "who": [
+    "CNSA"
+   ]
+  },
+  {
+   "id": "9f2a4f1eae45",
+   "t": "FCC authorizes SpaceX to deploy up to 1 million Starmind AI satellites by 2040",
+   "url": "https://www.nasaspaceflight.com/2026/11/fcc-authorizes-spacex-1-million-starmind-2040/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-26T22:40:55.000Z",
+   "sum": "The Federal Communications Commission has authorized SpaceX to deploy a constellation of up to 1… The post FCC authorizes SpaceX to deploy up to 1 million Starmind AI satellites by 2040 appeared first on NASASpaceFlight.com.",
+   "desk": "policy",
+   "who": [
+    "SpaceX"
+   ]
+  },
   {
    "id": "b4cb231df996",
    "t": "Slingshot Earth: NASA's Europa Clipper Will Gain Speed and Tests Its Instruments During Its Earth Flyby",
@@ -571,16 +605,6 @@
    ]
   },
   {
-   "id": "613b2a9bc668",
-   "t": "Why Mega-Constellations Have a Hidden Space Junk Blind Spot",
-   "url": "https://www.universetoday.com/articles/why-mega-constellations-have-a-hidden-space-junk-blind-spot",
-   "site": "Universe Today",
-   "date": "2026-11-24T15:43:59.000Z",
-   "sum": "We are consistently launching more and more stuff into space. As of now, space agencies track more than 30,000 objects larger than a softball, with an expected one million more bullet-sized pieces of debris orbiting Earth that are too small to spot from the ground.. Government agencies and private commercial entities are planning to have up to 100,000 active spacecraft in orbit by the early 2030s, turning some…",
-   "desk": "missions",
-   "who": []
-  },
-  {
    "id": "a11c17585fd3",
    "t": "Simera Sense, Spacemanic, Zaitra and World from Space Join Forces on an End-to-End Dual-Use Mission Solution",
    "url": "https://spacenews.com/simera-sense-spacemanic-zaitra-and-world-from-space-join-forces-on-an-end-to-end-dual-use-mission-solution/",
@@ -872,42 +896,6 @@
    "desk": "missions",
    "who": [
     "NASA"
-   ]
-  },
-  {
-   "id": "3a6032c14ad0",
-   "t": "Incoming House chair threatens SpaceX funding over Ukraine controversy",
-   "url": "https://arstechnica.com/space/2026/11/incoming-house-chair-threatens-spacex-funding-over-ukraine-controversy/",
-   "site": "Arstechnica",
-   "date": "2026-11-20T22:16:51.000Z",
-   "sum": "\"Explain the changes that were made to the Starshield service in October 2026.\"",
-   "desk": "policy",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "2c15e84b8a09",
-   "t": "New NASA Seed Funding Primes Small Businesses for Innovation",
-   "url": "https://www.nasa.gov/directorates/rtmd/new-nasa-seed-funding-primes-small-businesses-for-innovation/",
-   "site": "NASA",
-   "date": "2026-11-20T20:46:14.000Z",
-   "sum": "Awards to small businesses around the country are addressing some of NASA’s most crucial technology needs for exploration of the Moon and Mars while fueling the U.S. space economy. NASA’s Small Business Innovation Research/Small Business Technology Transfer (SBIR/STTR) program recently selected 302 innovative projects, for a total investment of up to $171 million in seed […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
-   ]
-  },
-  {
-   "id": "7d1dcbbcdde6",
-   "t": "Following Ship 42’s catch, SpaceX looks to the future",
-   "url": "https://www.nasaspaceflight.com/2026/11/ship-42-catch-future/",
-   "site": "NASASpaceflight",
-   "date": "2026-11-20T19:49:06.000Z",
-   "sum": "On Nov. 14, 2026, SpaceX made spaceflight history as teams brought Ship 42 back from… The post Following Ship 42’s catch, SpaceX looks to the future appeared first on NASASpaceFlight.com.",
-   "desk": "other",
-   "who": [
-    "SpaceX"
    ]
   },
   {
