@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-27T08:43:24.286Z",
+ "fetched": "2026-11-27T21:24:34.655Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,82 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "4d1316fc7582",
+   "t": "Governments Invest $71.8B in Space Defense as Militarization of Space Accelerates",
+   "url": "https://spacenews.com/governments-invest-71-8b-in-space-defense-as-militarization-of-space-accelerates/",
+   "site": "SpaceNews",
+   "date": "2026-11-27T15:35:22.000Z",
+   "sum": "Paris, France | November 2026 — Novaspace’s Space Defense & Security, 2nd Edition finds that governments invested approximately $71.8 billion in space defense and security activities globally in 2025, reflecting […] The post Governments Invest $71.8B in Space Defense as Militarization of Space Accelerates appeared first on SpaceNews.",
+   "desk": "other",
+   "who": []
+  },
+  {
+   "id": "b19d92564b49",
+   "t": "Artemis III Astronaut Andre Douglas Visits VAB",
+   "url": "https://www.nasa.gov/image-article/artemis-iii-astronaut-andre-douglas-visits-vab/",
+   "site": "NASA",
+   "date": "2026-11-27T15:01:00.000Z",
+   "sum": "NASA astronaut Andre Douglas, Artemis III mission specialist, stands inside an RS-25 engine test article during a visit to the Vehicle Assembly Building at NASA’s Kennedy Space Center in Florida on Tuesday, Nov. 17, 2026. During Artemis III, four RS-25 engines will power the SLS (Space Launch System) rocket core stage to send the Orion […]",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "a718103def77",
+   "t": "Stoke Space’s Nova Pathfinder booster arrives at SLC-14 ahead of 2027 debut",
+   "url": "https://www.nasaspaceflight.com/2026/11/stoke-nova-booster-slc-14-2027-debut/",
+   "site": "NASASpaceflight",
+   "date": "2026-11-27T14:52:40.000Z",
+   "sum": "Stoke Space’s Nova Pathfinder is moving toward an early 2027 inaugural launch following the arrival… The post Stoke Space’s Nova Pathfinder booster arrives at SLC-14 ahead of 2027 debut appeared first on NASASpaceFlight.com.",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "4ac137b7816e",
+   "t": "Hundreds of ArianeGroup Workers Strike in Bremen",
+   "url": "https://europeanspaceflight.com/hundreds-of-arianegroup-workers-strike-in-bremen/",
+   "site": "European Spaceflight",
+   "date": "2026-11-27T14:32:07.000Z",
+   "sum": "Nearly 650 employees at ArianeGroup’s facility in Bremen, Germany, participated in a 24-hour strike on 24 November. The facility is responsible for the production of Ariane 6 upper stages. In a statement published on 24 November, German trade union IG Metall announced that nearly 39,000 employees at 22 facilities across northern Germany had participated in […] The post Hundreds of ArianeGroup Workers Strike in…",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "6121335bd5a3",
+   "t": "NASA’s NG-25 Mission to Launch Pioneering Space Crops Research",
+   "url": "https://science.nasa.gov/science-research/biological-physical-sciences/nasas-ng-25-mission-to-launch-pioneering-space-crops-research/",
+   "site": "NASA",
+   "date": "2026-11-27T14:22:00.000Z",
+   "sum": "NASA experiments, including a first-of-its-kind space crop production system, will travel to the International Space Station aboard Northrop Grumman’s 25th Commercial Resupply Services mission for the agency. Investigations from NASA’s Biological and Physical Sciences Division will advance research that benefits life on Earth and future exploration, expanding knowledge of space crops and human health. Groundbreaking…",
+   "desk": "launch",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "005691c52f2b",
+   "t": "Should Space Data Centers Run on Solar Panels, Nuclear Reactors, or Both?",
+   "url": "https://www.universetoday.com/articles/should-space-data-centers-run-on-solar-panels-nuclear-reactors-or-both",
+   "site": "Universe Today",
+   "date": "2026-11-27T12:41:18.000Z",
+   "sum": "The last few days we’ve been covering a series of papers by Dr. Slava Turyshev of NASA’s Jet Propulsion Laboratory about the constraints surrounding the use of orbital data centers in space. One that has come up repeatedly is weight, and the solar panels used to power these data centers contribute a significant portion of that weight. So why not go with an alternative power source? Nuclear energy in space…",
+   "desk": "other",
+   "who": [
+    "NASA"
+   ]
+  },
+  {
+   "id": "244344bf90cf",
+   "t": "This Week's Sky at a Glance, November 27 – December 6",
+   "url": "https://skyandtelescope.org/astronomy-news/observing-news/this-weeks-sky-at-a-glance-november-27-december-6/",
+   "site": "Sky & Telescope",
+   "date": "2026-11-27T09:56:00.000Z",
+   "sum": "Orion rises in the east after dinnertime. On the opposite side of the sky the Northern Cross will later plant itself, then sink. The late-night waning Moon invites your telescope for unusual perspectives on the lunar landscape. The Moon moves on to collude with Jupiter, Mars, and Regulus. (What are they up to?) The post This Week's Sky at a Glance, November 27 – December 6 appeared first on Sky & Telescope.",
+   "desk": "missions",
+   "who": []
+  },
   {
    "id": "0ec96d1f0c9d",
    "t": "Shivelyuch Socked In",
@@ -104,8 +180,8 @@
    "t": "Robots, Not Astronauts, Will Have to Fix Space Data Centers",
    "url": "https://www.universetoday.com/articles/robots-not-astronauts-will-have-to-fix-space-data-centers",
    "site": "Universe Today",
-   "date": "2026-11-26T16:28:12.000Z",
-   "sum": "Yesterday we explored some of the difficulties facing orbital data centers in our look at the bottleneck of launching enough solar panels and radiative cooling systems to power the AI computing boom in space. JPl physicist Dr. Slava Turyshev, who wrote the paper at the center of that article, also published a follow-up study in August, available in preprint on arXiv, about how getting the hardware off the ground is…",
+   "date": "2026-11-26T16:28:00.000Z",
+   "sum": "Yesterday we explored some of the difficulties facing orbital data centers in our look at the bottleneck of launching enough solar panels and radiative cooling systems to power the AI computing boom in space. JPL physicist Dr. Slava Turyshev, who wrote the paper at the center of that article, also published a follow-up study in August, available in preprint on arXiv, about how getting the hardware off the ground is…",
    "desk": "missions",
    "who": []
   },
@@ -571,16 +647,6 @@
    ]
   },
   {
-   "id": "e657bc83531e",
-   "t": "A Dark Energy Camera Portrait of the Betta Fish Nebula",
-   "url": "https://www.universetoday.com/articles/a-dark-energy-camera-portrait-of-the-betta-fish-nebula",
-   "site": "Universe Today",
-   "date": "2026-11-24T16:21:06.000Z",
-   "sum": "The Betta Fish Nebula is a supernova remnant almost 7,000 light years away. It consists of the cast off layers of a star that exploded as a supernova. When those layers slammed into the interstellar medium, the energy of the shock lit them up. The DECam has captured the best image of the Betta Fish Nebula so far.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "4059bf6cbecc",
    "t": "NASA may get $2 billion boost as White House seeks to accelerate Artemis",
    "url": "https://arstechnica.com/space/2026/11/nasa-may-get-2-billion-boost-as-white-house-seeks-to-accelerate-artemis/",
@@ -851,30 +917,6 @@
    ]
   },
   {
-   "id": "0e4307d65ddc",
-   "t": "Live coverage: SpaceX to launch intelligence-gathering satellites for the National Reconnaissance Office",
-   "url": "https://spaceflightnow.com/2026/11/21/live-coverage-spacex-to-launch-intelligence-gathering-satellites-for-the-national-reconnaissance-office-3/",
-   "site": "Spaceflight Now",
-   "date": "2026-11-21T16:50:51.000Z",
-   "sum": "The NROL-136 mission will be the fourth launch of the year supporting the agency’s proliferated architecture satellite constellation in low Earth orbit. Liftoff from pad 4E at Vandenberg Space Force Base is scheduled during a window that opens at 4:16 a.m. PST (7:16 a.m. EST / 1216 UTC).",
-   "desk": "launch",
-   "who": [
-    "SpaceX"
-   ]
-  },
-  {
-   "id": "0f63a437fa69",
-   "t": "Denmark’s GomSpace Secures €8M Contract for Blue Origin Moon Mission",
-   "url": "https://europeanspaceflight.com/denmarks-gomspace-secures-e8m-contract-for-blue-origin-moon-mission/",
-   "site": "European Spaceflight",
-   "date": "2026-11-21T06:00:35.000Z",
-   "sum": "Danish satellite manufacturer GomSpace has secured an €8 million contract to continue developing two spacecraft for Blue Origin’s lunar resource prospecting mission. In its 19 November announcement confirming the start of phase two of the project’s development, GomSpace did not identify Blue Origin as the customer, referring to it only as a “leading North American […] The post Denmark’s GomSpace Secures €8M Contract…",
-   "desk": "missions",
-   "who": [
-    "Blue Origin"
-   ]
-  },
-  {
    "id": "4254262d52d5",
    "t": "BepiColombo Arrives at Mercury After 8-Year Odyssey",
    "url": "https://skyandtelescope.org/astronomy-news/bepicolombo-arrives-at-mercury-after-8-year-odyssey/",
@@ -884,18 +926,6 @@
    "desk": "missions",
    "who": [
     "JAXA"
-   ]
-  },
-  {
-   "id": "b61998a18fb4",
-   "t": "Curiosity Spots Drifting Twilight Clouds",
-   "url": "https://science.nasa.gov/photojournal/curiosity-spots-drifting-twilight-clouds/",
-   "site": "NASA",
-   "date": "2026-11-20T22:27:05.000Z",
-   "sum": "Description NASA’s Curiosity Mars rover captured these drifting clouds on Oct. 31, 2026, the 5,061st Martian day, or sol, of the mission. The rover uses its navigation cameras to capture post-sunset clouds, called twilight clouds, which appear for only a short time each fall over Gale Crater, which it has been exploring for more than […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
    ]
   },
   {
@@ -936,16 +966,6 @@
    "date": "2026-11-17T13:00:00.000Z",
    "sum": "Hear from Voyager Project Scientist Linda Spilker as she discusses the latest updates from the Voyager probes — and what it means now that Voyager 1 has reached 1 light-day from Earth. The post Voyager 1's Linda Spilker on the Mission's Light-Day Milestone appeared first on Sky & Telescope.",
    "desk": "missions",
-   "who": []
-  },
-  {
-   "id": "cb448e90c116",
-   "t": "Four Telescopes for New Observers",
-   "url": "https://skyandtelescope.org/astronomy-equipment/four-telescopes-for-new-observers/",
-   "site": "Sky & Telescope",
-   "date": "2026-11-16T13:00:00.000Z",
-   "sum": "For $200 or less, you can buy a complete telescope for first-person contact with the Moon, planets, and deep-sky showpieces. The post Four Telescopes for New Observers appeared first on Sky & Telescope.",
-   "desk": "astronomy",
    "who": []
   },
   {
