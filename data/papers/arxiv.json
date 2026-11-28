@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-26T08:29:06.099Z",
+ "fetched": "2026-11-28T07:56:55.524Z",
  "source": "arXiv API (export.arxiv.org)",
  "papers": [
   {
@@ -932,7 +932,8 @@
     "L. Ighina",
     "A. Moretti",
     "J. Afonso",
-    "S. Antón R. Carvajal",
+    "S. Antón",
+    "R. Carvajal",
     "Y. Gordon",
     "A. Hopkins",
     "M. J. Marchã",
@@ -2511,12 +2512,12 @@
     "Takashi Okajima",
     "Kikuko Miyata",
     "Noriyuki Narukage",
-    "Gota Yamaguchih",
+    "Gota Yamaguchi",
     "Hidekazu Takano",
     "Yoshiki Kohmura",
     "Shutaro Mohri",
     "Satoru Egawa",
-    "Hiroto Motoyamai",
+    "Hiroto Motoyama",
     "Takehiro Kume",
     "Yusuke Matsuzawa",
     "Yoichi Imamura",

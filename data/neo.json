@@ -1,20 +1,8 @@
 {
- "fetched": "2026-11-27T21:24:34.118Z",
+ "fetched": "2026-11-28T07:56:55.985Z",
  "source": "NASA/JPL CNEOS close-approach data",
  "note": "Sizes are a range from brightness alone (albedo 0.25 to 0.05).",
  "items": [
-  {
-   "des": "2026 WU1",
-   "when": "2026-11-27T04:33:00Z",
-   "au": 0.0322250298756685,
-   "ld": 12.54,
-   "kms": 12.3655536523895,
-   "h": 24.735,
-   "size": [
-    30,
-    67
-   ]
-  },
   {
    "des": "2026 WK3",
    "when": "2026-11-28T10:50:00Z",

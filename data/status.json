@@ -2,69 +2,67 @@
  "sources": {
   "arxiv": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
+   "at": "2026-11-28T07:56:59.167Z",
    "n": 250,
    "file": "data/papers/arxiv.json",
    "source": "arXiv"
   },
   "news": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
-   "n": 89,
+   "at": "2026-11-28T07:56:59.167Z",
+   "n": 88,
    "file": "data/news.json",
    "source": "Spaceflight News API and agency feeds"
   },
   "launches": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
+   "at": "2026-11-28T07:56:59.167Z",
    "n": 60,
    "file": "data/launches.json",
    "source": "Launch Library 2"
   },
   "spaceweather": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
+   "at": "2026-11-28T07:56:59.167Z",
    "n": 5,
    "file": "data/spaceweather.json",
    "source": "NOAA SWPC"
   },
   "tle": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
+   "at": "2026-11-28T07:56:59.167Z",
    "n": 14,
    "file": "data/tle.json",
    "source": "CelesTrak"
   },
   "neo": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
-   "n": 25,
+   "at": "2026-11-28T07:56:59.167Z",
+   "n": 24,
    "file": "data/neo.json",
    "source": "NASA/JPL CNEOS"
   },
   "apod": {
-   "ok": false,
-   "at": "2026-11-23T23:59:03.904Z",
-   "n": 7,
+   "ok": true,
+   "at": "2026-11-28T07:56:59.167Z",
+   "n": 8,
    "file": "data/apod.json",
-   "source": "NASA APOD",
-   "tried": "2026-11-27T21:24:44.502Z",
-   "error": "page: no credit line; API: HTTP 500"
+   "source": "NASA APOD"
   },
   "dsn": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
-   "n": 15,
+   "at": "2026-11-28T07:56:59.167Z",
+   "n": 14,
    "file": "data/dsn.json",
    "source": "NASA DSN Now"
   },
   "gallery": {
    "ok": true,
-   "at": "2026-11-27T21:24:44.502Z",
+   "at": "2026-11-28T07:56:59.167Z",
    "n": 81,
    "file": "data/gallery.json",
    "source": "NASA Image and Video Library"
   }
  },
- "run": "2026-11-27T21:24:44.502Z"
+ "run": "2026-11-28T07:56:59.167Z"
 }

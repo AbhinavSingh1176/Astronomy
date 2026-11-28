@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-27T21:24:34.655Z",
+ "fetched": "2026-11-28T07:56:56.347Z",
  "source": "Spaceflight News API and agency feeds",
  "feeds": {
   "Spaceflight News API": 60,
@@ -11,6 +11,59 @@
   "Sky & Telescope": 10
  },
  "items": [
+  {
+   "id": "3faa9475649e",
+   "t": "HyImpulse Completes First Hot-Fire Test with SL1 Thrust Vector Control System",
+   "url": "https://europeanspaceflight.com/hyimpulse-completes-first-hot-fire-test-with-sl1-thrust-vector-control-system/",
+   "site": "European Spaceflight",
+   "date": "2026-11-28T06:00:22.000Z",
+   "sum": "German rocket builder HyImpulse has completed the first hot-fire test of its HyPLOX-90 hybrid rocket motor equipped with a thrust vector control system, marking a milestone in the development of its SL1 orbital launch vehicle. HyImpulse announced the successful test in a 27 November update. Speaking to European Spaceflight, the company confirmed that the test […] The post HyImpulse Completes First Hot-Fire Test with…",
+   "desk": "launch",
+   "who": []
+  },
+  {
+   "id": "fd9005091ca3",
+   "t": "BepiColombo Captures Mercury Orbit After 8-Year Trip",
+   "url": "https://www.universetoday.com/articles/bepicolombo-captures-mercury-orbit-after-8-year-trip",
+   "site": "Universe Today",
+   "date": "2026-11-28T04:40:16.000Z",
+   "sum": "The planet Mercury might be one of the least explored planetary bodies in the solar system, but its is arguably the most crucial in helping scientists better understand the formation and evolution of the inner solar system. Its position as the closest planet to the Sun makes it a prime target for how the rocky planets formed and evolved and what this could mean for finding life beyond Earth. However, just traveling…",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "64d473c76517",
+   "t": "Nuclear Pathfinder Mission To Ceres Would Usher In Era Of Interplanetary Transport",
+   "url": "https://www.universetoday.com/articles/nuclear-pathfinder-mission-to-ceres-would-usher-in-era-of-interplanetary-transport",
+   "site": "Universe Today",
+   "date": "2026-11-28T04:12:20.000Z",
+   "sum": "The dwarf planet Ceres, the first object discovered in the Main Asteroid Belt, could play a revolutionary role in opening the outer solar system to a faster, cheaper means of interplanetary transport. Or say the proponents of a new initiative dubbed ‘Project CERES.’",
+   "desk": "missions",
+   "who": []
+  },
+  {
+   "id": "de0e2e20c06c",
+   "t": "All the Gaps We See in Protoplanetary Disks Aren't From Planets",
+   "url": "https://www.universetoday.com/articles/all-the-gaps-we-see-in-protoplanetary-disks-arent-from-planets",
+   "site": "Universe Today",
+   "date": "2026-11-27T22:54:51.000Z",
+   "sum": "Astronomers have observed dozens of protoplanetary disks around young stars. ALMA has proven to be especially effective at this task. It's found rings and gaps, and they signify young planets forming in the disks. But not all of these disk features are from planets, according to new research.",
+   "desk": "astronomy",
+   "who": []
+  },
+  {
+   "id": "93618e10a408",
+   "t": "The ESO is Deeply Concerned About Space Data Centers, and the Rest of Us Should Be Too",
+   "url": "https://www.universetoday.com/articles/the-eso-is-deeply-concerned-about-space-data-centers-and-the-rest-of-us-should-be-too",
+   "site": "Universe Today",
+   "date": "2026-11-27T22:51:28.000Z",
+   "sum": "The European Southern Observatory has expressed its dismay at the approval of SpaceX's satellite AI system. The system, called Starmind, calls for another 1 million satellites in Low Earth Orbit. All of those satellites, and all of the other systems being proposed, will have a serious effect on astronomy. Not only that, but the proliferation of AI, without appropriate safeguards, is a risk that extends well beyond…",
+   "desk": "other",
+   "who": [
+    "SpaceX",
+    "ESO"
+   ]
+  },
   {
    "id": "4d1316fc7582",
    "t": "Governments Invest $71.8B in Space Defense as Militarization of Space Accelerates",
@@ -444,16 +497,6 @@
    "who": []
   },
   {
-   "id": "66245adc08ec",
-   "t": "Maybe Dark Energy Isn't so Inexplicable After All",
-   "url": "https://www.universetoday.com/articles/maybe-dark-energy-isnt-so-inexplicable-after-all",
-   "site": "Universe Today",
-   "date": "2026-11-25T02:59:47.000Z",
-   "sum": "The Universe as we know it is comprised of three \"things\": baryonic matter (planets, stars, galaxies, us), dark matter (still unexplained) and dark energy (really, really still unexplained). Of the three, dark energy remains challenging because it's driving the acceleration of the expanding Universe. However, we can't see it, or even put a description to it, other than, \"it's mysterious\".",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "8a9885b1f322",
    "t": "Launch Preview: Russian, Chinese, and SpaceX rockets to launch space station missions",
    "url": "https://www.nasaspaceflight.com/2026/11/launch-preview-112426/",
@@ -478,16 +521,6 @@
    "who": [
     "CNSA"
    ]
-  },
-  {
-   "id": "ff7362ec9d36",
-   "t": "A Brief-ish History of METI. Part IV: Millennial METI Experiments",
-   "url": "https://www.universetoday.com/articles/a-brief-ish-history-of-meti-part-iv-millennial-meti-experiments",
-   "site": "Universe Today",
-   "date": "2026-11-24T22:45:31.000Z",
-   "sum": "We continue with the history of METI with a look at public attempts to send messages to the cosmos around the turn of the century.",
-   "desk": "other",
-   "who": []
   },
   {
    "id": "ba369696a818",
@@ -549,16 +582,6 @@
    ]
   },
   {
-   "id": "8277fedb2097",
-   "t": "A Gigantic Stellar Eruption Spreads Planetary Material Into Space",
-   "url": "https://www.universetoday.com/articles/a-gigantic-stellar-eruption-spreads-planetary-material-into-space",
-   "site": "Universe Today",
-   "date": "2026-11-24T20:08:06.000Z",
-   "sum": "Asymptotic Giant Branch (AGB) stars spread heavy elements into space with their stellar winds. This material eventually forms more stars, and even rocky planets like ours. For a long time, astronomers thought this important mass-loss was driven by stellar winds. But new research shows how magnetic fields play an important role. A vast flare and magnetic loop of material from the AGB star Mira provides the evidence.",
-   "desk": "astronomy",
-   "who": []
-  },
-  {
    "id": "30eb7a74ba9c",
    "t": "Arianespace Completes 10th Ariane 6 Flight With Next Expected on 17 December",
    "url": "https://europeanspaceflight.com/arianespace-completes-10th-ariane-6-flight-with-next-expected-on-17-december/",
@@ -576,16 +599,6 @@
    "date": "2026-11-24T19:19:52.000Z",
    "sum": "Neutron stars are the ultra-dense, city-sized leftovers of dead stars. When they collide, they can release a brief flash of light called a kilonova. These immensely powerful events forge much of the universe’s gold, platinum and other heavy elements. Since a kilonova fades within days, astronomers have to find it fast, and no single observatory […]",
    "desk": "launch",
-   "who": []
-  },
-  {
-   "id": "acf2006a88a2",
-   "t": "The Rise of Astrosociology: What Can Analogue Astronaut Studies Teach us About the Future of Humanity in Space?",
-   "url": "https://www.universetoday.com/articles/the-rise-of-astrosociology-what-can-analogue-astronaut-studies-teach-us-about-the-future-of-humanity",
-   "site": "Universe Today",
-   "date": "2026-11-24T19:11:49.000Z",
-   "sum": "The Astrosociology Research Institute was founded in 2008 as part of a growing movement dedicated to examining humanity's future in space through the lens of the social sciences and related disciplines. The goal is to approach human spaceflight with the intent of ensuring that humanity will not only survive in space, but flourish.",
-   "desk": "missions",
    "who": []
   },
   {
@@ -892,28 +905,6 @@
    "desk": "missions",
    "who": [
     "CNSA"
-   ]
-  },
-  {
-   "id": "45781c18c29d",
-   "t": "What’s Happening in Space Policy November 22-29, 2026",
-   "url": "https://spacepolicyonline.com/news/whats-happening-in-space-policy-november-22-29-2026/",
-   "site": "SpacePolicyOnline.com",
-   "date": "2026-11-22T21:50:55.000Z",
-   "sum": "Here is SpacePolicyOnline.com’s list of space policy events for the week plus a day of November 22-29, 2026 and any insight we can offer about them. The House and Senate […]",
-   "desk": "policy",
-   "who": []
-  },
-  {
-   "id": "8a2dbf593542",
-   "t": "65 Years of Human Spaceflight at NASA Johnson",
-   "url": "https://www.nasa.gov/centers-and-facilities/johnson/65-years-of-human-spaceflight-at-nasa-johnson/",
-   "site": "NASA",
-   "date": "2026-11-22T19:13:25.000Z",
-   "sum": "For 65 years, NASA’s Johnson Space Center in Houston has helped shape human spaceflight, from the Gemini missions that demonstrated rendezvous and docking techniques needed for Apollo to the research conducted aboard the International Space Station, which has supported a continuous human presence for more than 26 years. Today, Johnson teams are preparing crews and […]",
-   "desk": "missions",
-   "who": [
-    "NASA"
    ]
   },
   {

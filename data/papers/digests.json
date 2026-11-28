@@ -67,6 +67,104 @@
    ]
   },
   {
+   "id": "2611-32107",
+   "arxiv": "2611.32107",
+   "t": "Thermal evolution of Uranus and Neptune, hydrogen-water phase separation and the role of methane",
+   "by": "Marina Cano Amoros, Nicola Tosi and Nadine Nettelmann",
+   "date": "2026-11-24",
+   "added": "2026-11-28",
+   "cat": "astro-ph.EP",
+   "status": "12 main text and 5 appendix pages, 10 figures",
+   "url": "https://arxiv.org/abs/2611.32107",
+   "one": "Neptune requires an additional heat source unless its structure is primordial and the outer envelope is ice-poor, while hydrogen-water phase separation is an option to explain the structure and faintness of Uranus.",
+   "q": "Adiabatic evolution models of Uranus and Neptune with constant compositional stratification miss their observed luminosities: Uranus is fainter than commonly predicted, while improved equations of state (EoS) have recently led to a brightness problem for Neptune. In adiabatic models of Jupiter and Saturn, helium rain is thought to enhance luminosity.",
+   "how": "We use state-of-the-art EoS of H, He, H2O, and the H2-H2O phase diagram to build adiabatic three-layer models of the present-day structure that match the observed gravity field and the phase diagram.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "In the ice giants, hydrogen-water phase separation (H2-H2O demixing) with water rain has recently been predicted."
+    ],
+    [
+     "From the abstract (2)",
+     "We aim to understand how H2-H2O demixing and the EoS of water influence the luminosity of Uranus and Neptune."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [],
+   "links": [
+    "obj:jupiter",
+    "obj:saturn"
+   ]
+  },
+  {
+   "id": "2611-32692",
+   "arxiv": "2611.32692",
+   "t": "Stellar-evolution systematic biases on ¹²C(α,γ)¹⁶O constraints from the primordial-black-hole mass gap",
+   "by": "Jiancheng Wang, Xiaogu Zhong and Jirong Mao",
+   "date": "2026-11-24",
+   "added": "2026-11-28",
+   "cat": "astro-ph.HE",
+   "status": "5 pages, 6 figures, Accepted by MNRAS",
+   "url": "https://arxiv.org/abs/2611.32692",
+   "one": "We show that metallicity-dependent winds dominate helium-core retention; rotation suppresses carbon consumption via centrifugal cooling and meridional mixing; different mass-loss prescriptions produce 8-10 M☉ offsets in the black-hole-mass-gap edge.",
+   "q": "The ¹²C(α,γ)¹⁶O reaction determines helium-burning carbon-oxygen core masses and sets the pair-instability-supernova mass-gap boundary, which limits the maximum mass of stellar-origin primordial black holes. However, stellar-evolution systematic uncertainties from metallicity, rotation, and mass-loss prescriptions remain poorly quantified.",
+   "how": "Gravitational-wave population analyses using GWTC-4 report a low-spin-black-hole upper cutoff at 68.5^+19.8_-18.5 M☉, implying a low astrophysical S-factor S₃₀₀ ≈ 108.6 keV barn, in tension with canonical nuclear-astrophysics evaluations. Here we use the MESA stellar-evolution code to construct a three-dimensional parameter grid disentangling these coupled effects.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "A parameter combination Z ≈ 10⁻³, moderate rotation ω/ω_crit=0.4, and optically-thin C15 winds reproduces the GWTC-4 inferred maximum primordial-black-hole mass for S₃₀₀=108.6 keV barn."
+    ],
+    [
+     "From the abstract (2)",
+     "The canonical 45 M☉ gap boundary represents an overlapping statistical intersection of black-hole-population distributions rather than a universal physical threshold."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "black-hole",
+    "gravitational-wave",
+    "supernova"
+   ],
+   "links": []
+  },
+  {
+   "id": "2611-31805",
+   "arxiv": "2611.31805",
+   "t": "Tentative Excess Dispersion Measures toward DESI Galaxy Groups from Localized Fast Radio Bursts",
+   "by": "Jiale Wang and Taotao Fang",
+   "date": "2026-11-24",
+   "added": "2026-11-28",
+   "cat": "astro-ph.CO",
+   "status": "30 pages, 5 figures, 5 tables. Published in The Astrophysical Journal, 1012, 21 (2026)",
+   "url": "https://arxiv.org/abs/2611.31805",
+   "one": "Within the catalog footprint and at zₕₒₛₜ<0.5, we identify 23 sight lines intersecting foreground groups and 18 clean nonintersecting sight lines for the main comparison.",
+   "q": "Fast radio bursts (FRBs) provide sensitive probes of ionized baryons through their dispersion measures (DMs). In this work, we test whether localized FRB sight lines intersecting foreground galaxy groups exhibit a measurable excess in cosmic DM relative to clean nonintersecting sight lines.",
+   "how": "The abstract does not describe the method in detail.",
+   "found": [
+    [
+     "From the abstract (1)",
+     "We crossmatch 117 localized FRBs with measured DMs and host redshifts against a foreground group catalog from the DESI Legacy Imaging Surveys."
+    ],
+    [
+     "From the abstract (2)",
+     "A joint fit to this sample gives a positive offset of 143.3^+53.2_-53.0~mathrmpc cm⁻³ in the inferred cosmic DM, DM_cosmic, for the group-intersecting sight lines relative to the nonintersecting control sample."
+    ]
+   ],
+   "why": "",
+   "careful": "",
+   "auto": true,
+   "terms": [
+    "fast-radio-burst"
+   ],
+   "links": [
+    "canon:lorimer-2007"
+   ]
+  },
+  {
    "id": "2611-33290",
    "arxiv": "2611.33290",
    "t": "line racer: Rapid Calculation of Exoplanetary Radiative Opacities",
